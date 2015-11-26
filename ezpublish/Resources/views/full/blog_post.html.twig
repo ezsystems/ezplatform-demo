@@ -1,0 +1,116 @@
+{% extends "pagelayout.html.twig" %}
+
+{% block content %}
+    <header class="header-intro" style="background-image: url('{{ ez_field_value(content, 'image').uri }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="header-title"><strong>{{ ez_content_name(content) }}</strong></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-11 space-top">
+                            <div class="col-md-12 social-header">
+                                <div class="col-md-6 pull-left">
+
+                                    {% set randomFace = 'assets/images/faces/' ~ random('1234') ~ '.jpg' %}
+                                    <img class="rounded circle aligned blog-author-face" src="{{ asset(randomFace) }}" />
+
+                                    <div class="move-left">
+                                        <p class="person-name">{{ ez_field_value(content, 'author') }}</p>
+                                        <p class="person-date">{{ ez_field_value(content, 'publication_date')|localizeddate('full', 'none', app.request.locale) }}<p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="group-two aligned pull-right">
+                                        <img class="aligned" src="{{ asset('assets/images/social_bubble.svg') }}">
+                                        <div class="aligned">
+                                            <p class="disqus-comment-count" data-disqus-identifier="{{ content.id }}">{{ 'loading comments...'|trans }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="borderline borderline-extra"></div>
+                            </div>
+
+                            <div class="col-md-12 space-top">
+                                {{ ez_render_field(content, 'body', {
+                                    attr: {
+                                        class: 'text-main blog-post-body'
+                                    }
+                                }) }}
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="borderline"></div>
+                            </div>
+
+                            {% for post in randomPosts %}
+                                <div class="col-md-12 space-top space-bottom">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4 class="other-titles strong"><a href="{{ path('ez_urlalias', {contentId: post.id}) }}">{{ ez_content_name(post) }}</a></h4>
+                                            {{ ez_render_field(post, 'intro') }}
+                                            <div class="author">
+
+                                                {% set randomFace = 'assets/images/faces/' ~ random('1234') ~ '.jpg' %}
+                                                <img class="rounded circle aligned blog-author-face" src="{{ asset(randomFace) }}" />
+
+                                                <div class="move-left">
+                                                    <p class="person-name">{{ ez_field_value(post, 'author') }}</p>
+                                                    <p class="person-date">{{ ez_field_value(post, 'publication_date')|localizeddate('full', 'none', app.request.locale) }}<p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4"><a href="{{ path('ez_urlalias', {contentId: post.id}) }}">
+                                            {{ ez_render_field(post, 'image', {
+                                                parameters: {
+                                                    class: 'img-responsive',
+                                                    alias: 'blog_post_full_random'
+                                                }
+                                            }) }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                <div class="borderline"></div>
+                            </div>
+
+                            <div class="col-md-10 col-md-offset-1 space-top space-bottom">
+                                {{ ez_comments_render_content(content.contentInfo) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <h6 class="center-text extra-space">SHARE<br />THIS!</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-3"></div>
+                                    <div class="col-xs-6 center">
+                                        <ul class="list-inline-new">
+                                            <li><a href="//www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}{{ path(location) }}" target="_blank"><img src="{{ asset('assets/images/share_facebook.svg') }}" /></a></li>
+                                            <li><a href="//twitter.com/home?status={{ app.request.uri }}{{ path(location) }}" target="_blank"><img src="{{ asset('assets/images/share_twitter.svg') }}" /></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

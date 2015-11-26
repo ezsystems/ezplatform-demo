@@ -105,6 +105,7 @@
 
         # The following rule is needed to correctly display assets from eZ Platform / Symfony bundles
         RewriteRule ^/bundles/ - [L]
+        RewriteRule ^/assets/ - [L]
 
         # Additional Assetic rules for environments different from dev,
         # remember to run php ezpublish/console assetic:dump --env=prod

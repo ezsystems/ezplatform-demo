@@ -6,3 +6,36 @@ parameters:
 
     # Log path, where to store the log files. php://stderr may be used in order to log to standard error
     log_path: "%kernel.logs_dir%/%kernel.environment%.log"
+
+    # root locationId used for fetching top menu sub items
+    app.top_menu.location_id: 2
+
+    # says how many random posts should be displayed on blog post page
+    app.blog_post.random_posts_limit: 2
+
+    # says how many blog posts should be shown on home page
+    app.home.blog_post_limit: 3
+
+    # locationId used for fetching `blog_post` items on home page
+    app.home.blog_location_id: 62
+
+    # says how many images should be shown on home page
+    app.home.gallery_image_limit: 3
+
+    # locationId used for fetching `image` items on home page
+    app.home.gallery_location_id: 61
+
+    # number of `blog_post` items displayed per page in the blog view
+    app.blog_post_list_limit: 5
+
+    # e-mail address used for form submission
+    app.contact_form.sender_email: no-reply@ez.no
+
+    # e-mail address used as a message recipient
+    app.contact_form.recipient_email: no-reply@ez.no
+
+    # title of message used when sending e-mail
+    app.contact_form.email_title: You have a new message
+
+    # number of images displayed per page
+    app.gallery.images_limit: 6

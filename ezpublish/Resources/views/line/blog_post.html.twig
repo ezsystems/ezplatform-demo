@@ -1,0 +1,12 @@
+<a href="{{ path(location) }}">
+    {{ ez_render_field(content, 'image', {
+        parameters: {
+            alias: 'blog_post_line',
+            class: 'img-responsive img-rounded'
+        }
+    }) }}
+</a>
+<h3 class="header-text-one"><a href="{{ path(location) }}">{{ ez_content_name(content) }}</a></h3>
+<div class="small">
+    {{ ez_render_field(content, 'intro') }}
+</div>

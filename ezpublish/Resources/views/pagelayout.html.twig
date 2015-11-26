@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        {% if content is defined and title is not defined %}
+            {% set title = ez_content_name(content) %}
+        {% endif %}
+        <title>{{ title|default('Home')|trans }} - {{ 'eZ Platform Demo' }}</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {% include 'pagelayout_styles.html.twig' %}
+        {% include 'pagelayout_scripts.html.twig' %}
+    </head>
+    <body>
+        {% block header %}
+            {{ render_esi(controller('app.controller.menu:getChildNodesAction', {
+                template: 'pagelayout_header.html.twig'
+            })) }}
+        {% endblock %}
+
+        {% block content %}{% endblock %}
+
+        {% block footer %}
+            {% include 'pagelayout_footer.html.twig' %}
+        {% endblock %}
+    </body>
+</html>

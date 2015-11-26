@@ -1,3 +1,7 @@
+imports:
+    - { resource: image_variations.yml }
+    - { resource: views.yml }
+
 ezpublish:
     repositories:
         default:
@@ -18,3 +22,4 @@ ezpublish:
     system:
         site_group:
             languages: [eng-GB]
+            var_dir: var/site

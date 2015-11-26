@@ -46,6 +46,7 @@ class EzPublishKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformXmlTextFieldTypeBundle\EzSystemsEzPlatformXmlTextFieldTypeBundle(),
+            new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             new AppBundle\AppBundle(),
         );
 

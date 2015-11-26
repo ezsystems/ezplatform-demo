@@ -1,0 +1,57 @@
+ezpublish:
+    system:
+        default:
+            user:
+                layout: pagelayout.html.twig
+
+            location_view:
+                full:
+                    home_page:
+                        controller: app.controller.home:showAction
+                        template: full\home_page.html.twig
+                        match:
+                            Identifier\ContentType: [home_page]
+
+                    blog:
+                        controller: app.controller.blog:listBlogPostsAction
+                        template: full\blog.html.twig
+                        match:
+                            Identifier\ContentType: [blog]
+
+                    blog_post:
+                        controller: app.controller.blog:showBlogPostAction
+                        template: full\blog_post.html.twig
+                        match:
+                            Identifier\ContentType: [blog_post]
+
+                    contact_form:
+                        controller: app.controller.contactform:showContactFormAction
+                        template: full\contact_form.html.twig
+                        match:
+                            Identifier\ContentType: [contact_form]
+
+                    gallery:
+                        controller: app.controller.gallery:displayGalleryAction
+                        template: full\gallery.html.twig
+                        match:
+                            Identifier\ContentType: [gallery]
+
+                line:
+                    blog_post:
+                        template: line\blog_post.html.twig
+                        match:
+                            Identifier\ContentType: [blog_post]
+
+                home:
+                    image:
+                        template: home\image.html.twig
+                        match:
+                            Identifier\ContentType: [image]
+
+                    blog_post:
+                        template: home\blog_post.html.twig
+                        match:
+                            Identifier\ContentType: [blog_post]
+
+            field_templates:
+                - { template: content_fields.html.twig, priority: 100 }

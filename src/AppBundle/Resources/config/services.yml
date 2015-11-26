@@ -1,0 +1,101 @@
+parameters:
+    app.installer.class: AppBundle\Installer\AppInstaller
+    app.criteria.menu.class: AppBundle\Criteria\Menu
+    app.controller.menu.class: AppBundle\Controller\MenuController
+    app.criteria.children.class: AppBundle\Criteria\Children
+    app.controller.blog.class: AppBundle\Controller\BlogController
+    app.controller.home.class: AppBundle\Controller\HomeController
+    app.controller.contactform.class: AppBundle\Controller\ContactFormController
+    app.form.type.contact.class: AppBundle\Form\Type\ContactType
+    app.form.contact.form.class: AppBundle\Form\Contact\Form
+    app.entity.message.class: AppBundle\Entity\Message
+    app.mail.sender.class: AppBundle\Mail\Sender
+    app.controller.gallery.class: AppBundle\Controller\GalleryController
+
+services:
+    app.installer:
+        parent: ezplatform.installer.db_based_installer
+        class: %app.installer.class%
+        tags:
+            - { name: ezplatform.installer, type: demo }
+
+    app.criteria.menu:
+        class: %app.criteria.menu.class%
+
+    app.controller.menu:
+        class: %app.controller.menu.class%
+        arguments:
+            - @templating
+            - @ezpublish.api.service.search
+            - @ezpublish.api.service.location
+            - @ezpublish.config.resolver
+            - @app.criteria.menu
+            - %app.top_menu.location_id%
+
+    app.criteria.children:
+        class: %app.criteria.children.class%
+
+    app.controller.blog:
+        class: %app.controller.blog.class%
+        arguments:
+            - @ezpublish.api.service.content
+            - @ezpublish.api.service.search
+            - @ezpublish.api.service.location
+            - @ezpublish.config.resolver
+            - @app.criteria.children
+            - %app.blog_post.random_posts_limit%
+            - %app.blog_post_list_limit%
+
+    app.controller.home:
+        class: %app.controller.home.class%
+        arguments:
+            - @ezpublish.api.service.content
+            - @ezpublish.api.service.search
+            - @ezpublish.api.service.location
+            - @ezpublish.config.resolver
+            - @app.criteria.children
+            - %app.home.blog_post_limit%
+            - %app.home.blog_location_id%
+            - %app.home.gallery_image_limit%
+            - %app.home.gallery_location_id%
+
+    app.form.type.contact:
+        class: %app.form.type.contact.class%
+        tags:
+            - { name: form.type, alias: app_contact }
+
+    app.entity.message:
+        class: %app.entity.message.class%
+
+    app.form.contact.form:
+        class: %app.form.contact.form.class%
+        arguments:
+            - @app.entity.message
+            - @app.form.type.contact
+            - @form.factory
+
+    app.controller.contactform:
+        class: %app.controller.contactform.class%
+        arguments:
+            - @app.form.type.contact
+            - @app.form.contact.form
+            - @app.mail.sender
+            - @templating
+            - @hautelook.router.template
+            - %app.contact_form.sender_email%
+            - %app.contact_form.recipient_email%
+            - %app.contact_form.email_title%
+
+    app.mail.sender:
+        class: %app.mail.sender.class%
+        arguments:
+            - @mailer
+
+    app.controller.gallery:
+        class: %app.controller.gallery.class%
+        arguments:
+            - @ezpublish.api.service.content
+            - @ezpublish.api.service.search
+            - @ezpublish.config.resolver
+            - @app.criteria.children
+            - %app.gallery.images_limit%

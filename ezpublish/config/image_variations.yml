@@ -1,0 +1,38 @@
+ezpublish:
+    system:
+        default:
+            image_variations:
+                blog_post_line_home:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [295, 211] }
+
+                gallery_image_line_home:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [360, 241] }
+
+                blog_post_line:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [376, 252] }
+
+                blog_post_full_random:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [258, 193] }
+
+                contact_form_full:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [458, 304] }
+
+                gallery_full_thumbnail:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [354, 224] }
+
+                gallery_full_image:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [1000] }

@@ -1,0 +1,94 @@
+{% extends "pagelayout.html.twig" %}
+
+{% block content %}
+    <header id="map-container" class="header-intro"></header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 space-top-half space-bottom-min">
+                    <h1><strong>{{ ez_content_name(content) }}</strong></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-1 space-bottom">
+                        {{ form_start(form) }}
+                        <div class="form-group">
+                            {{ form_label(form.name, 'Name'|trans, {
+                                label_attr: {
+                                    class: 'text-about'
+                                }
+                            }) }}
+                            {{ form_widget(form.name, {
+                                attr: {
+                                    placeholder: 'Jane Doe',
+                                    class: 'form-control'
+                                }
+                            }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.email, 'E-mail'|trans, {
+                                label_attr: {
+                                    class: 'text-about'
+                                }
+                            }) }}
+                            {{ form_widget(form.email, {
+                                attr: {
+                                    placeholder: 'jane.doe@example.com',
+                                    class: 'form-control'
+                                }
+                            }) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form_label(form.body, 'Anything you want to add:'|trans, {
+                                label_attr: {
+                                    class: 'text-about'
+                                }
+                            }) }}
+                            {{ form_widget(form.body, {
+                                attr: {
+                                    placeholder: 'Your message'|trans,
+                                    class: 'form-control'
+                                }
+                            }) }}
+                        </div>
+                        {{ form_widget(form.submit, {
+                            attr: {
+                                class: 'btn btn-primary btn-lg'
+                            },
+                            label: 'Send'|trans
+                        }) }}
+                        {{ form_end(form) }}
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 space-bottom space-top">
+                        {{ ez_render_field(content, 'description') }}
+
+                        {{ ez_render_field(content, 'image', {
+                            parameters: {
+                                alias: 'contact_form_full',
+                                class: 'img-responsive space-top-half'
+                            }
+                        }) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        {% autoescape 'js' %}
+            function initialize() {
+                var mapProp = {
+                    center: new google.maps.LatLng({{ content.getField('location').value.latitude }}, {{ content.getField('location').value.longitude }}),
+                    zoom: 12,
+                    scrollwheel: false,
+                    mapTypeId:google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById('map-container'), mapProp);
+                var bikeLayer = new google.maps.BicyclingLayer();
+                bikeLayer.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        {% endautoescape %}
+    </script>
+{% endblock %}

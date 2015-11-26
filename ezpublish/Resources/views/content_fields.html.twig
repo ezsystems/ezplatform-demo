@@ -1,0 +1,13 @@
+{% extends 'EzPublishCoreBundle::content_fields.html.twig' %}
+
+{% block ezimage_field %}
+    {% spaceless %}
+        {% if not ez_is_field_empty(content, field) %}
+            {% set image_alt = parameters.alt|default(field.value.alternativeText) %}
+            {% set image_alias = ez_image_alias(field, versionInfo, parameters.alias|default('original')) %}
+            {% if image_alias %}
+                <img src="{{ asset(image_alias.uri) }}"{% if imageAlias.width is defined %} width="{{ image_alias.width }}"{% endif %}{% if imageAlias.height is defined %} height="{{ image_alias.height }}"{% endif %}{% if image_alt is not empty %} alt="{{ image_alt }}"{% endif %}{% if parameters.class is defined and parameters.class is not empty %} class="{{ parameters.class }}"{% endif %} />
+            {% endif %}
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}

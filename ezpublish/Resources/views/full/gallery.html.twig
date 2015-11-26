@@ -1,0 +1,53 @@
+{% extends "pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 gallery-header space-top-plus">
+                <h1 class="header-text-one center-block">
+                    <strong>{{ ez_content_name(content) }}</strong>
+                    <small>{{ ez_render_field(content, 'description') }}</small>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 main-block">
+                <div id="lightgallery" class="lightgallery-style">
+                    {% if images|length() > 0 %}
+                        {% for image in images %}
+                            {% set imageAlias = ez_image_alias(image.getField('image'), content.versionInfo, 'gallery_full_image') %}
+                            <a href="{{ imageAlias.uri }}" class="responsive" title="{{ ez_content_name(image) }}" data-sub-html="<h4>{{ ez_content_name(image) }}</h4>{{ ez_field_value(image, 'caption') }}">
+                                {{ ez_render_field(image, 'image', {
+                                    parameters: {
+                                        alias: 'gallery_full_thumbnail',
+                                    }
+                                }) }}
+                            </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-lg-12 space-bottom text-center">
+            {% if images.haveToPaginate() %}
+                {{ pagerfanta(images, 'twitter_bootstrap3_translated', {
+                    routeName: location
+                }) }}
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        {% autoescape 'js' %}
+            $(document).ready(function() {
+                $('#lightgallery').lightGallery();
+            });
+        {% endautoescape %}
+    </script>
+{% endblock %}

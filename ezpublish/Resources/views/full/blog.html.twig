@@ -1,0 +1,73 @@
+{% extends "pagelayout.html.twig" %}
+
+{% block content %}
+    <header class="header-intro" style="background-image: url('{{ ez_field_value(content, 'image').uri }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="header-title center-block">{{ ez_render_field(content, 'description') }}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% set postIndex = '' %}
+    {% if blogPosts|length() > 0 %}
+        {% for post in blogPosts %}
+            {% set postIndex = loop.index %}
+            {% if loop.index == 1 %}
+                <div class="container space-top">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 space-top">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <a href="{{ path('ez_urlalias', {contentId: post.id}) }}">
+                                        {{ ez_render_field(post, 'image', {
+                                            parameters: {
+                                                alias: 'blog_post_line',
+                                                class: 'img-responsive img-rounded'
+                                            }
+                                        }) }}
+                                    </a>
+                                </div>
+                                <div class="col-md-7">
+                                    <h2 class="header-text-one"><a href="{{ path('ez_urlalias', {contentId: post.id}) }}">{{ ez_content_name(post) }}</a></h2>
+                                    <div class="small">
+                                        {{ ez_render_field(post, 'intro') }}
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="space-top" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container"><div class="row"><div class="col-md-10 col-md-offset-1 space-bottom"><div class="row">
+            {% else %}
+                <div class="{% if loop.index % 2 == 1 %}col-md-offset-2 {% endif %}col-md-5 space-top">
+                    {{ render_esi(controller('ez_content:viewLocation', {
+                        locationId: post.contentInfo.mainLocationId,
+                        viewType: 'line'
+                    })) }}
+                </div>
+                {% if loop.index % 2 == 1 %}
+                    </div></div></div></div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        {% if postIndex < 3 %}
+            </div></div></div></div>
+        {% endif %}
+    {% endif %}
+
+    <div class="container">
+        <div class="col-lg-12 space-bottom text-center">
+            {% if blogPosts.haveToPaginate() %}
+                {{ pagerfanta(blogPosts, 'twitter_bootstrap3_translated', {
+                    routeName: location
+                }) }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

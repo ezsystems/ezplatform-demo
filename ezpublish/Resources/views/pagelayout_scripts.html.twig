@@ -1,0 +1,22 @@
+{% javascripts
+    '%kernel.root_dir%/../vendor/components/jquery/jquery.min.js'
+    '%kernel.root_dir%/../vendor/components/bootstrap/js/bootstrap.min.js'
+    'assets/js/custom.js'
+    'assets/js/lightgallery.min.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script type="text/javascript">
+    {% autoescape 'js' %}
+        {# TODO: move hardcoded identifier to configuration #}
+        var disqus_shortname = 'ezpublishplatformdemo';
+
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    {% endautoescape %}
+</script>
