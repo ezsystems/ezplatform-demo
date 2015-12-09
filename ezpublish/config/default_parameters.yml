@@ -13,6 +13,9 @@ parameters:
     # says how many random posts should be displayed on blog post page
     app.blog_post.random_posts_limit: 2
 
+    # locationId used for contact page
+    app.layout.contact_location_id: 60
+
     # says how many blog posts should be shown on home page
     app.home.blog_post_limit: 3
 

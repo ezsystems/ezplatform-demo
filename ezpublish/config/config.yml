@@ -82,6 +82,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        contactLocationId: %app.layout.contact_location_id%
 
 # Assetic Configuration
 assetic:
