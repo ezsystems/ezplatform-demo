@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h1 class="header-title">{{ ez_render_field(content, 'description') }}</h1>
-                    <a href="/Contact-Us" class="btn btn-primary btn-lg">{{ 'Contact us!'|trans }}</a>
+                    <a href="{{ path('ez_urlalias', {locationId: contactLocationId}) }}" class="btn btn-primary btn-lg">{{ 'Contact us!'|trans }}</a>
                 </div>
             </div>
         </div>
