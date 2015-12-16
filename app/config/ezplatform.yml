@@ -3,6 +3,7 @@ imports:
     - { resource: views.yml }
 
 ezpublish:
+    # Repositories configuration, setup default repository to support solr if enabled
     repositories:
         default:
             storage: ~
@@ -19,6 +20,7 @@ ezpublish:
         match:
             URIElement: 1
 
+    # System settings, grouped by siteaccess and/or siteaccess group
     system:
         site_group:
             languages: [eng-GB]

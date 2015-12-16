@@ -18,7 +18,7 @@ Features:
 - Contact Form
 
 ## Requirements
-**eZ Platform** currently has the same requirements as *eZ Publish Platform 5.4*, further details on the [requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
+Full requirements can be found on the [Requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
 
 *TL;DR: minimum PHP 5.4.4 and higher, using mod_php or php-fpm.*
 
@@ -55,8 +55,8 @@ php -d memory_limit=-1 composer.phar install
 Next, run the following commands to install the demo and dump the assets:
 
 ```bash
-ezpublish/console ezplatform:install demo
-ezpublish/console assetic:dump --env=dev web
+app/console ezplatform:install demo
+app/console assetic:dump --env=dev web
 ```
 
 ### 5. Configure virtual host
