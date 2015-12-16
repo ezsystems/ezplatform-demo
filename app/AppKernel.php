@@ -1,6 +1,6 @@
 <?php
 /**
- * File containing the EzPublishKernel class.
+ * File containing the AppKernel class.
  *
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
@@ -9,7 +9,7 @@
 use eZ\Bundle\EzPublishCoreBundle\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-class EzPublishKernel extends Kernel
+class AppKernel extends Kernel
 {
     /**
      * Returns an array of bundles to registers.
@@ -45,7 +45,6 @@ class EzPublishKernel extends Kernel
             new EzSystems\PlatformInstallerBundle\EzSystemsPlatformInstallerBundle(),
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
-            new EzSystems\EzPlatformXmlTextFieldTypeBundle\EzSystemsEzPlatformXmlTextFieldTypeBundle(),
             new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             new AppBundle\AppBundle(),
         );
