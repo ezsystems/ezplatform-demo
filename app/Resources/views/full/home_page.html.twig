@@ -23,7 +23,7 @@
                     <div class="row space-bottom-less">
                         {% if galleryImages|length > 0 %}
                             {% for image in galleryImages %}
-                                {{ render_esi(controller('ez_content:viewLocation', {
+                                {{ render(controller('ez_content:viewLocation', {
                                     locationId: image.contentInfo.mainLocationId,
                                     viewType: 'home'
                                 })) }}
@@ -48,7 +48,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     {% if blogPosts|length > 0 %}
                         {% for post in blogPosts %}
-                            {{ render_esi(controller('ez_content:viewLocation', {
+                            {{ render(controller('ez_content:viewLocation', {
                                 locationId: post.contentInfo.mainLocationId,
                                 viewType: 'home'
                             })) }}
