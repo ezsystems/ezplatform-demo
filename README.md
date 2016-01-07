@@ -79,6 +79,9 @@ You can access the demo using the following addresses (depending on the vhost co
 Submitting bugs, improvements and stories is possible on https://jira.ez.no/browse/EZP.
 If you discover a security issue, please see how to responsibly report such issues on https://doc.ez.no/Security.
 
+## Running BDD
+For instruction on how to run the functional tests, see [RUNNING_BEHAT.md](https://github.com/ezsystems/ezplatform/blob/master/RUNNING_BEHAT.md).
+
 ## COPYRIGHT
 Copyright (C) 1999-2015 eZ Systems AS. All rights reserved.
 
