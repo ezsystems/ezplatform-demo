@@ -1,5 +1,5 @@
 {
-    "name": "ezsystems/ezplatform",
+    "name": "ezsystems/ezplatform-demo",
     "description": "eZ Platform distribution",
     "homepage": "https://github.com/ezsystems/ezplatform",
     "license": "GPL-2.0",
@@ -8,9 +8,14 @@
         {
             "name": "eZ dev-team & eZ Community",
             "homepage": "https://github.com/ezsystems/ezplatform/contributors"
+        },
+        {
+            "name": "eZ dev-team & eZ Community",
+            "homepage": "https://github.com/ezsystems/ezplatform-demo/contributors"
         }
     ],
     "replace": {
+        "ezsystems/ezplatform": "self.version",
         "ezsystems/ezpublish-community": "*"
     },
     "autoload": {
