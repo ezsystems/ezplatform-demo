@@ -28,4 +28,3 @@ ezpublish:
             # need to manually modify your database data to reflect this to avoid exceptions.
             var_dir: var/site
             languages: [eng-GB]
-            var_dir: var/site
