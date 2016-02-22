@@ -20,7 +20,7 @@ Features:
 ## Requirements
 Full requirements can be found on the [Requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
 
-*TL;DR: supported PHP versions are 5.5, 5.6 and 7.0 (for dev use), using mod_php or php-fpm.*
+*TL;DR: supported PHP versions are 5.5, 5.6 and 7.0 (for dev use), using mod_php or php-fpm, and either MySQL 5.5/5.6 or MariaDB 5.5/10.0.*
 
 ## Installation
 
@@ -32,46 +32,44 @@ First, create a new database using the following command:
 CREATE DATABASE <database> CHARACTER SET utf8;
 ```
 
-### 2. Clone ezplatform-demo
+### 2. Install ezplatform-demo
 
-Clone the Github repository containing the demo:
-
-```bash
-git clone https://github.com/ezsystems/ezplatform-demo
-cd ezplatform-demo
-```
-
-### 3. Install dependencies
-
-Run `composer install` to install the required dependencies:
+Run `composer create-project` to install the demo with required dependencies:
 
 ```bash
 curl -sS https://getcomposer.org/installer | php
-php -d memory_limit=-1 composer.phar install
+php -d memory_limit=-1 composer.phar create-project --no-dev ezsystems/ezplatform-demo
 ```
 
-### 4. Install content
+*Installation will ask you for database credentials and secret token for Symfony, other settings can stay as default.*
+
+### 3. Install content
 
 Next, run the following commands to install the demo and dump the assets:
 
 ```bash
-app/console ezplatform:install demo
-app/console assetic:dump --env=dev web
+php app/console ezplatform:install demo
+php app/console assetic:dump --env=prod web
 ```
 
-### 5. Configure virtual host
+### 4. Configure virtual host
 
-Finally, configure virtual host by copying included file:
-
+Finally, configure virtual host by either taking examples from [Nginx](doc/nginx) or [Apache](doc/apache2) documentation,
+or by using provided script to generate from templates, for help see `./bin/vhost.sh -h`, example:
 ```bash
-cp doc/apache2/vhost.template /etc/apache2/sites-enabled/ezplatform.demo.conf
+./bin/vhost.sh --basedir=/var/www/ezplatform-demo \\
+  --template-file=doc/apache2/vhost.template \\
+  --host-name=ezplatform.demo \\
+  | sudo tee /etc/apache2/sites-enabled/ezplatform.demo.conf > /dev/null
 ```
-Manually configure the vhost and then restart Apache.
+Manually configure the vhost and then restart Apache or Nginx.
+*Note: If your web server is running as another user then owner of the files, [change permissions to avoid issues](http://symfony.com/doc/2.7/book/installation.html#checking-symfony-application-configuration-and-setup).*
+
 
 ## Accessing the Demo
 
 Your installation is now ready.
-You can access the demo using the following addresses (depending on the vhost configuration):
+You can access the demo using the following addresses *(depending on the vhost configuration)*:
 - Front office: http://ezplatform.demo
 - Admin access: http://ezplatform.demo/ez (login: admin, default password: publish)
 
@@ -83,7 +81,7 @@ If you discover a security issue, please see how to responsibly report such issu
 For instruction on how to run the functional tests, see [RUNNING_BEHAT.md](https://github.com/ezsystems/ezplatform/blob/master/RUNNING_BEHAT.md).
 
 ## COPYRIGHT
-Copyright (C) 1999-2015 eZ Systems AS. All rights reserved.
+Copyright (C) 1999-2016 eZ Systems AS. All rights reserved.
 
 ## LICENSE
 http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
