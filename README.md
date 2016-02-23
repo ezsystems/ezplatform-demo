@@ -54,7 +54,8 @@ php app/console assetic:dump --env=prod web
 
 ### 4. Configure virtual host
 
-Finally, configure virtual host by either taking examples from [Nginx](doc/nginx) or [Apache](doc/apache2) documentation,
+#### Recommended use
+Configure virtual host by either taking examples from [Nginx](doc/nginx) or [Apache2](doc/apache2) documentation,
 or by using provided script to generate from templates, for help see `./bin/vhost.sh -h`, example:
 ```bash
 ./bin/vhost.sh --basedir=/var/www/ezplatform-demo \\
@@ -62,8 +63,17 @@ or by using provided script to generate from templates, for help see `./bin/vhos
   --host-name=ezplatform.demo \\
   | sudo tee /etc/apache2/sites-enabled/ezplatform.demo.conf > /dev/null
 ```
-Manually configure the vhost and then restart Apache or Nginx.
+Check and adapt the generated vhost config, and then restart Apache or Nginx.
 *Note: If your web server is running as another user then owner of the files, [change permissions to avoid issues](http://symfony.com/doc/2.7/book/installation.html#checking-symfony-application-configuration-and-setup).*
+
+#### Testing use
+For just local testing without installing a full web-server, while slow you can also run PHP's built-in
+web server using the following command:
+```bash
+$ php app/console server:run
+```
+
+*Note: While far from meant for production use, you can run the command above with `--env=prod` to disable debug.*
 
 
 ## Accessing the Demo
