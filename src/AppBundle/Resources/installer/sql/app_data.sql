@@ -2516,6 +2516,7 @@ INSERT INTO `ezpolicy` VALUES ('read',328,'content',0,1);
 INSERT INTO `ezpolicy` VALUES ('pdf',329,'content',0,1);
 INSERT INTO `ezpolicy` VALUES ('*',330,'ezoe',0,3);
 INSERT INTO `ezpolicy` VALUES ('login',331,'user',0,1);
+INSERT INTO `ezpolicy` VALUES ('read',332,'content',0,4);
 /*!40000 ALTER TABLE `ezpolicy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2528,6 +2529,8 @@ LOCK TABLES `ezpolicy_limitation` WRITE;
 INSERT INTO `ezpolicy_limitation` VALUES (251,'Section',328);
 INSERT INTO `ezpolicy_limitation` VALUES (252,'Section',329);
 INSERT INTO `ezpolicy_limitation` VALUES (253,'SiteAccess',331);
+INSERT INTO `ezpolicy_limitation` VALUES (254,'Class',332);
+INSERT INTO `ezpolicy_limitation` VALUES (255,'Owner',332);
 /*!40000 ALTER TABLE `ezpolicy_limitation` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2540,6 +2543,8 @@ LOCK TABLES `ezpolicy_limitation_value` WRITE;
 INSERT INTO `ezpolicy_limitation_value` VALUES (477,251,'1');
 INSERT INTO `ezpolicy_limitation_value` VALUES (478,252,'1');
 INSERT INTO `ezpolicy_limitation_value` VALUES (479,253,'1766001124');
+INSERT INTO `ezpolicy_limitation_value` VALUES (480,254,'4');
+INSERT INTO `ezpolicy_limitation_value` VALUES (481,255,'1');
 /*!40000 ALTER TABLE `ezpolicy_limitation_value` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2642,6 +2647,7 @@ LOCK TABLES `ezrole` WRITE;
 INSERT INTO `ezrole` VALUES (1,0,'Anonymous','',0);
 INSERT INTO `ezrole` VALUES (2,0,'Administrator','*',0);
 INSERT INTO `ezrole` VALUES (3,0,'Editor','',0);
+INSERT INTO `ezrole` VALUES (4,0,'Member',NULL,0);
 /*!40000 ALTER TABLE `ezrole` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3165,6 +3171,7 @@ INSERT INTO `ezuser_role` VALUES (11,28,'','',1);
 INSERT INTO `ezuser_role` VALUES (42,31,'','',1);
 INSERT INTO `ezuser_role` VALUES (13,32,'Subtree','/1/2/',3);
 INSERT INTO `ezuser_role` VALUES (13,33,'Subtree','/1/43/',3);
+INSERT INTO `ezuser_role` VALUES (13,34,'','',4);
 /*!40000 ALTER TABLE `ezuser_role` ENABLE KEYS */;
 UNLOCK TABLES;
 
