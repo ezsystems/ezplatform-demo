@@ -15,6 +15,7 @@ rewrite "^/w3c/p3p\.xml" "/w3c/p3p.xml" break;
 
 # Following rule is needed to correctly display assets from eZ Platform / Symfony bundles
 rewrite "^/bundles/(.*)" "/bundles/$1" break;
+rewrite "^/assets/(.*)" "/assets/$1" break;
 
 rewrite "^(.*)$" "/app.php$1" last;
 
