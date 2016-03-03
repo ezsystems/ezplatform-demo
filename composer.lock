@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f2ea1de57f732d100df0ea880ea01f97",
-    "content-hash": "022dd905a0761aa31271dec5f25a8b52",
+    "hash": "d869a53457c63e34f3c8eb2a58db479c",
+    "content-hash": "1b8f7de983cf1e7cfaad58ce43e6702e",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -970,16 +970,16 @@
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.2.0-rc3",
+            "version": "v6.2.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "ec897baa77c63b745749acf201e85b92bd614723"
+                "reference": "1fe9337ea364b127135691dd49d62b79325fd659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/ec897baa77c63b745749acf201e85b92bd614723",
-                "reference": "ec897baa77c63b745749acf201e85b92bd614723",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/1fe9337ea364b127135691dd49d62b79325fd659",
+                "reference": "1fe9337ea364b127135691dd49d62b79325fd659",
                 "shasum": ""
             },
             "require": {
@@ -1046,7 +1046,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "http://share.ez.no",
-            "time": "2016-02-28 14:30:53"
+            "time": "2016-03-03 08:23:56"
         },
         {
             "name": "ezsystems/platform-ui-assets-bundle",
@@ -1086,16 +1086,16 @@
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.2.0-rc4",
+            "version": "v1.2.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
-                "reference": "5e765e22db8b19931ca73764b89123a2c23b984d"
+                "reference": "03247e718fd3418130a5ba252fd1fcda29f03df8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/5e765e22db8b19931ca73764b89123a2c23b984d",
-                "reference": "5e765e22db8b19931ca73764b89123a2c23b984d",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/03247e718fd3418130a5ba252fd1fcda29f03df8",
+                "reference": "03247e718fd3418130a5ba252fd1fcda29f03df8",
                 "shasum": ""
             },
             "require": {
@@ -1124,7 +1124,7 @@
                 "GPL-2.0"
             ],
             "description": "eZ Platform UI Bundle",
-            "time": "2016-03-01 12:35:09"
+            "time": "2016-03-02 12:59:39"
         },
         {
             "name": "ezsystems/repository-forms",
@@ -5534,7 +5534,7 @@
         {
             "alias": "6.2.0",
             "alias_normalized": "6.2.0.0",
-            "version": "6.2.0.0-RC3",
+            "version": "6.2.0.0-RC5",
             "package": "ezsystems/ezpublish-kernel"
         },
         {
@@ -5546,7 +5546,7 @@
         {
             "alias": "1.2.0",
             "alias_normalized": "1.2.0.0",
-            "version": "1.2.0.0-RC4",
+            "version": "1.2.0.0-RC5",
             "package": "ezsystems/platform-ui-bundle"
         },
         {
