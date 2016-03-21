@@ -2,37 +2,133 @@ ezpublish:
     system:
         default:
             image_variations:
+
+                # --
                 blog_post_line_home:
                     reference: ~
                     filters:
                         - { name: geometry/scaledownonly, params: [295, 211] }
 
-                gallery_image_line_home:
+                blog_post_line_home_mobile:
+                    reference: blog_post_line_home
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+                blog_post_line_home_retina:
                     reference: ~
                     filters:
-                        - { name: geometry/scaledownonly, params: [360, 241] }
+                        - { name: geometry/scaledownonly, params: [590, 422] }
 
+                # --
                 blog_post_line:
                     reference: ~
                     filters:
                         - { name: geometry/scaledownonly, params: [376, 252] }
 
+                blog_post_line_mobile:
+                    reference: blog_post_line
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+                blog_post_line_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [752, 504] }
+
+                # --
                 blog_post_full_random:
                     reference: ~
                     filters:
                         - { name: geometry/scaledownonly, params: [258, 193] }
 
+                blog_post_full_random_mobile:
+                    reference: blog_post_full_random
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+                blog_post_full_random_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [258, 193] }
+
+                # --
                 contact_form_full:
                     reference: ~
                     filters:
                         - { name: geometry/scaledownonly, params: [458, 304] }
 
+                contact_form_full_mobile:
+                    reference: contact_form_full
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+                contact_form_full_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [916, 608] }
+
+                # --
                 gallery_full_thumbnail:
                     reference: ~
                     filters:
                         - { name: geometry/scaledownonly, params: [354, 224] }
 
+                gallery_full_thumbnail_mobile:
+                    reference: gallery_full_thumbnail
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+                gallery_full_thumbnail_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [708, 448] }
+
+                # --
                 gallery_full_image:
                     reference: ~
                     filters:
                         - { name: geometry/scalewidthdownonly, params: [1000] }
+
+
+                gallery_full_image_mobile:
+                    reference: gallery_full_image
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+
+                gallery_full_image_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [2000] }
+
+                # Test
+                gallery_image_line_home:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [360, 241] }
+                        - { name: geometry/scalewidthdownonly, params: [300] }
+                        - { name: background, params: { size: [360, 241], color: '#FF9900' } }
+                        - { name: strip }
+
+                gallery_image_line_home_mobile_int:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [360, 241] }
+                        - { name: geometry/scalewidthdownonly, params: [300] }
+                        - { name: background, params: { size: [360, 241], color: '#FFAAFF' } }
+                        - { name: strip }
+
+                gallery_image_line_home_mobile:
+                    reference: gallery_image_line_home_mobile_int
+                    filters:
+                        - { name: geometry/scalewidthdownonly, params: [175] }
+
+
+                gallery_image_line_home_retina:
+                    reference: ~
+                    filters:
+                        - { name: geometry/scaledownonly, params: [720, 482] }
+                        - { name: geometry/scalewidthdownonly, params: [700] }
+                        - { name: background, params: { size: [720, 482], color: '#0000FF' } }
+                        - { name: strip }
+

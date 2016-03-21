@@ -18,6 +18,12 @@
         "ezsystems/ezplatform": "self.version",
         "ezsystems/ezpublish-community": "*"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/Novactive/NovaeZResponsiveImagesBundle.git"
+        }
+    ],
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -45,7 +51,8 @@
         "components/bootstrap": "3.3.5",
         "components/normalize.css": "3.0.3",
         "components/font-awesome": "4.4.0",
-        "ezsystems/comments-bundle": "~6.0.0"
+        "ezsystems/comments-bundle": "~6.0.0",
+        "novactive/ezresponsiveimagesbundle": "dev-master"
     },
     "require-dev": {
         "behat/behat": "~3.0",
