@@ -1,6 +1,7 @@
 ezpublish:
     system:
         default:
+            pagelayout: "pagelayout.html.twig"
             user:
                 layout: pagelayout.html.twig
 

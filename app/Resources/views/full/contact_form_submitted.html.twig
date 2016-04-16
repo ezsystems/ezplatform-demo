@@ -1,4 +1,4 @@
-{% extends "pagelayout.html.twig" %}
+{% extends noLayout == true ? viewbaseLayout : pagelayout %}
 
 {% block content %}
     <div class="top-separator"></div>
