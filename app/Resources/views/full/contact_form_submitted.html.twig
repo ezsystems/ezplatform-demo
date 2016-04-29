@@ -1,4 +1,4 @@
-{% extends noLayout == true ? viewbaseLayout : pagelayout %}
+{% extends ezpublish.configResolver.parameter('pagelayout') %}
 
 {% block content %}
     <div class="top-separator"></div>
