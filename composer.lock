@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8945402e8af74b8a45fc706efa2328ac",
-    "content-hash": "ee2b48da7550b54e4b4763e8e3ff7a04",
+    "hash": "b97791b5d9e8c30582a8ca76a7e388e0",
+    "content-hash": "5de6398fe061fbd1a30c985addc8aa04",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -114,16 +114,16 @@
         },
         {
             "name": "components/jquery",
-            "version": "2.2.1",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "7894addbce3c4de6f82449610e6f8e168b49e9b0"
+                "reference": "981036fcb56668433a7eb0d1e71190324b4574df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/7894addbce3c4de6f82449610e6f8e168b49e9b0",
-                "reference": "7894addbce3c4de6f82449610e6f8e168b49e9b0",
+                "url": "https://api.github.com/repos/components/jquery/zipball/981036fcb56668433a7eb0d1e71190324b4574df",
+                "reference": "981036fcb56668433a7eb0d1e71190324b4574df",
                 "shasum": ""
             },
             "type": "component",
@@ -152,7 +152,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2016-02-24 08:16:25"
+            "time": "2016-05-25 06:43:59"
         },
         {
             "name": "components/normalize.css",
@@ -1017,16 +1017,16 @@
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.3.0",
+            "version": "v6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "0d5a1559981a8df0ac22674e178dcd353ec77a66"
+                "reference": "581b00d24bcf26308ea5813a6a1e9574e335a4ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/0d5a1559981a8df0ac22674e178dcd353ec77a66",
-                "reference": "0d5a1559981a8df0ac22674e178dcd353ec77a66",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/581b00d24bcf26308ea5813a6a1e9574e335a4ed",
+                "reference": "581b00d24bcf26308ea5813a6a1e9574e335a4ed",
                 "shasum": ""
             },
             "require": {
@@ -1095,7 +1095,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "http://share.ez.no",
-            "time": "2016-04-26 12:18:07"
+            "time": "2016-05-19 11:31:42"
         },
         {
             "name": "ezsystems/platform-ui-assets-bundle",
@@ -1135,16 +1135,16 @@
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
-                "reference": "dfdd6d5b721cc94ffa710ff3dfd252966543267d"
+                "reference": "70fb88f988e7da8e2cbba275e5c1a3c0a18a5fb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/dfdd6d5b721cc94ffa710ff3dfd252966543267d",
-                "reference": "dfdd6d5b721cc94ffa710ff3dfd252966543267d",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/70fb88f988e7da8e2cbba275e5c1a3c0a18a5fb8",
+                "reference": "70fb88f988e7da8e2cbba275e5c1a3c0a18a5fb8",
                 "shasum": ""
             },
             "require": {
@@ -1174,24 +1174,24 @@
                 "GPL-2.0"
             ],
             "description": "eZ Platform UI Bundle",
-            "time": "2016-04-26 11:49:57"
+            "time": "2016-05-19 12:52:21"
         },
         {
             "name": "ezsystems/repository-forms",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/repository-forms.git",
-                "reference": "7accb0d75ef1b2385f3f35f9421c7e6ddbfb5d09"
+                "reference": "1ba5f41dd13353b238740a3ab720aae6cc363cec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/7accb0d75ef1b2385f3f35f9421c7e6ddbfb5d09",
-                "reference": "7accb0d75ef1b2385f3f35f9421c7e6ddbfb5d09",
+                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/1ba5f41dd13353b238740a3ab720aae6cc363cec",
+                "reference": "1ba5f41dd13353b238740a3ab720aae6cc363cec",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezpublish-kernel": "~6.3",
+                "ezsystems/ezpublish-kernel": "^6.3",
                 "symfony/form": "~2.7",
                 "symfony/validator": "~2.7"
             },
@@ -1229,7 +1229,7 @@
                 }
             ],
             "description": "Use Symfony forms with eZ Platform repository objects",
-            "time": "2016-04-26 09:57:54"
+            "time": "2016-05-19 12:55:34"
         },
         {
             "name": "friendsofsymfony/http-cache",
@@ -1958,16 +1958,16 @@
         },
         {
             "name": "liip/imagine-bundle",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipImagineBundle.git",
-                "reference": "3be0322e0007b54dbffd5a96faf1c11f6f91cf46"
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/3be0322e0007b54dbffd5a96faf1c11f6f91cf46",
-                "reference": "3be0322e0007b54dbffd5a96faf1c11f6f91cf46",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/b657b6601a24da525645fb5358ce77fdf57889f1",
+                "reference": "b657b6601a24da525645fb5358ce77fdf57889f1",
                 "shasum": ""
             },
             "require": {
@@ -2028,7 +2028,7 @@
                 "image",
                 "imagine"
             ],
-            "time": "2016-02-16 19:35:14"
+            "time": "2016-05-06 06:27:38"
         },
         {
             "name": "monolog/monolog",
@@ -2400,12 +2400,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "1.0.0"
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "1.0.0",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
                 "shasum": ""
             },
             "type": "library",
@@ -2672,16 +2672,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.1",
+            "version": "v5.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8",
                 "shasum": ""
             },
             "require": {
@@ -2721,7 +2721,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2015-06-06 14:19:39"
+            "time": "2016-05-01 08:45:47"
         },
         {
             "name": "symfony-cmf/routing",
@@ -2914,16 +2914,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214"
+                "reference": "6d58bceaeea2c2d3eb62503839b18646e161cd6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
-                "reference": "0c901e4e65a2f7ece68f0fd249b56d6ad3adc214",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/6d58bceaeea2c2d3eb62503839b18646e161cd6b",
+                "reference": "6d58bceaeea2c2d3eb62503839b18646e161cd6b",
                 "shasum": ""
             },
             "require": {
@@ -2932,7 +2932,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -2963,7 +2963,66 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-03-03 16:49:40"
+            "time": "2016-05-18 14:26:46"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-05-18 14:26:46"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -3024,16 +3083,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.7.10",
+            "version": "v2.7.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "9a3b6bf6ebee49370aaf15abc1bdeb4b1986a67d"
+                "reference": "7c23f76ba732de9b34075970b0d0a3ec9a5c38f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/9a3b6bf6ebee49370aaf15abc1bdeb4b1986a67d",
-                "reference": "9a3b6bf6ebee49370aaf15abc1bdeb4b1986a67d",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7c23f76ba732de9b34075970b0d0a3ec9a5c38f0",
+                "reference": "7c23f76ba732de9b34075970b0d0a3ec9a5c38f0",
                 "shasum": ""
             },
             "require": {
@@ -3042,6 +3101,7 @@
                 "php": ">=5.3.9",
                 "psr/log": "~1.0",
                 "symfony/polyfill-apcu": "~1.1",
+                "symfony/polyfill-mbstring": "~1.1",
                 "twig/twig": "~1.23|~2.0"
             },
             "replace": {
@@ -3146,7 +3206,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-02-28 20:37:19"
+            "time": "2016-05-09 20:35:47"
         },
         {
             "name": "tedivm/stash",
@@ -3317,16 +3377,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.0",
+            "version": "v1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8"
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
-                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512",
                 "shasum": ""
             },
             "require": {
@@ -3374,7 +3434,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-01-25 21:22:18"
+            "time": "2016-05-30 09:11:59"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -4478,16 +4538,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
-                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
                 "shasum": ""
             },
             "require": {
@@ -4525,7 +4585,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-03-08 01:15:46"
+            "time": "2016-05-18 16:56:05"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -4945,20 +5005,23 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b"
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
-                "reference": "3e82f4e9fc92665fafd9157568e4dcb01d014e5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4|~5"
             },
             "type": "library",
             "autoload": {
@@ -4982,7 +5045,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2015-06-21 08:01:12"
+            "time": "2016-05-12 18:03:57"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -5035,16 +5098,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.24",
+            "version": "4.8.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a1066c562c52900a142a0e2bbf0582994671385e"
+                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a1066c562c52900a142a0e2bbf0582994671385e",
-                "reference": "a1066c562c52900a142a0e2bbf0582994671385e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fc1d8cd5b5de11625979125c5639347896ac2c74",
+                "reference": "fc1d8cd5b5de11625979125c5639347896ac2c74",
                 "shasum": ""
             },
             "require": {
@@ -5058,7 +5121,7 @@
                 "phpunit/php-code-coverage": "~2.1",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
-                "phpunit/php-timer": ">=1.0.6",
+                "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "~2.3",
                 "sebastian/comparator": "~1.1",
                 "sebastian/diff": "~1.2",
@@ -5103,7 +5166,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-03-14 06:16:08"
+            "time": "2016-05-17 03:09:28"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5328,16 +5391,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.5",
+            "version": "1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf"
+                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
-                "reference": "dc7a29032cf72b54f36dac15a1ca5b3a1b6029bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4e8f0da10ac5802913afc151413bc8c53b6c2716",
+                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716",
                 "shasum": ""
             },
             "require": {
@@ -5374,7 +5437,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-02-26 18:40:46"
+            "time": "2016-05-17 03:18:57"
         },
         {
             "name": "sebastian/exporter",
