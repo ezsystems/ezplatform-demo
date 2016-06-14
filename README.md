@@ -22,7 +22,9 @@ Full requirements can be found on the [Requirements](https://doc.ez.no/display/T
 
 *TL;DR: supported PHP versions are 5.5, 5.6 and 7.0 (for dev use), using mod_php or php-fpm, and either MySQL 5.5/5.6 or MariaDB 5.5/10.0.*
 
-## Installation
+## Manual Installation
+
+*For simplified installation, alternatively see our Docker Tools Beta instructions in [doc/docker-compose/README.md](https://github.com/ezsystems/ezplatform/blob/master/doc/docker-compose/README.md)*.
 
 ### 1. Create a database
 
