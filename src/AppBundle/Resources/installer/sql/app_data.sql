@@ -3137,8 +3137,8 @@ UNLOCK TABLES;
 
 LOCK TABLES `ezuser` WRITE;
 /*!40000 ALTER TABLE `ezuser` DISABLE KEYS */;
-INSERT INTO `ezuser` VALUES (10,'nospam@ez.no','anonymous','anonymous','4e6f6184135228ccd45f8233d72a0363',2);
-INSERT INTO `ezuser` VALUES (14,'nospam@ez.no','admin','admin','c78e3b0f3d9244ed8c6d1c29464bdff9',2);
+INSERT INTO `ezuser` VALUES (10,'nospam@ez.no','anonymous','4e6f6184135228ccd45f8233d72a0363',2);
+INSERT INTO `ezuser` VALUES (14,'nospam@ez.no','admin','c78e3b0f3d9244ed8c6d1c29464bdff9',2);
 /*!40000 ALTER TABLE `ezuser` ENABLE KEYS */;
 UNLOCK TABLES;
 
