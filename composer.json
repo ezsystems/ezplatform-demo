@@ -46,7 +46,9 @@
         "components/bootstrap": "3.3.5",
         "components/normalize.css": "3.0.3",
         "components/font-awesome": "4.4.0",
-        "ezsystems/comments-bundle": "~6.0.0"
+        "ezsystems/comments-bundle": "~6.0.0",
+        "ezsystems/content-on-the-fly-prototype": "~0.1.0",
+        "ezsystems/platform-ui-search-prototype-bundle": "~0.1.0"
     },
     "require-dev": {
         "behat/behat": "~3.0",
