@@ -4,9 +4,187 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "668b8869e25662548fecb77b0b77e6d2",
-    "content-hash": "321ebe5391a06c46bcc9a6d28431bfa0",
+    "hash": "3e304213644ff4ce15b3bdb897765cab",
+    "content-hash": "5008d09384bb544b96646ca9c5efcbd3",
     "packages": [
+        {
+            "name": "components/bootstrap",
+            "version": "3.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/bootstrap.git",
+                "reference": "d71c2a234c61f53f1109a26ba8155902a51f8ca5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/bootstrap/zipball/d71c2a234c61f53f1109a26ba8155902a51f8ca5",
+                "reference": "d71c2a234c61f53f1109a26ba8155902a51f8ca5",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.9.1 <3.0"
+            },
+            "suggest": {
+                "components/bootstrap-default": "Provide a theme for Bootstrap as components/bootstrap only provides the CSS as file assets"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "js/bootstrap.js"
+                    ],
+                    "files": [
+                        "js/*.js",
+                        "css/*.css",
+                        "css/*.map",
+                        "fonts/*",
+                        "less/mixins/*.less",
+                        "less/*.less"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "css",
+                "framework",
+                "front-end",
+                "less",
+                "mobile-first",
+                "responsive",
+                "web"
+            ],
+            "time": "2015-06-17 06:08:09"
+        },
+        {
+            "name": "components/font-awesome",
+            "version": "4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/font-awesome.git",
+                "reference": "7dffacc72e566e5db6272244effc06f64fe9f185"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/7dffacc72e566e5db6272244effc06f64fe9f185",
+                "reference": "7dffacc72e566e5db6272244effc06f64fe9f185",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4.x-dev"
+                },
+                "component": {
+                    "styles": [
+                        "css/font-awesome.css"
+                    ],
+                    "files": [
+                        "css/font-awesome.min.css",
+                        "fonts/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "OFL-1.1"
+            ],
+            "description": "The iconic font designed for use with Twitter Bootstrap.",
+            "time": "2015-07-30 02:38:45"
+        },
+        {
+            "name": "components/jquery",
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "981036fcb56668433a7eb0d1e71190324b4574df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/981036fcb56668433a7eb0d1e71190324b4574df",
+                "reference": "981036fcb56668433a7eb0d1e71190324b4574df",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery-migrate.js",
+                        "jquery-migrate.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2016-05-25 06:43:59"
+        },
+        {
+            "name": "components/normalize.css",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/normalize.css.git",
+                "reference": "45dc73f97034936e7ab1838be4887a3be315824b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/normalize.css/zipball/45dc73f97034936e7ab1838be4887a3be315824b",
+                "reference": "45dc73f97034936e7ab1838be4887a3be315824b",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "name": "normalize-css",
+                    "styles": [
+                        "normalize.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
+            "homepage": "http://necolas.github.com/normalize.css/",
+            "time": "2015-05-21 16:25:32"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -689,6 +867,102 @@
             "time": "2015-02-22 15:40:31"
         },
         {
+            "name": "ezsystems/comments-bundle",
+            "version": "v6.0.0",
+            "target-dir": "EzSystems/CommentsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezsystems/CommentsBundle.git",
+                "reference": "32e192db34b20e152dc56991a392edb59ef9555f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezsystems/CommentsBundle/zipball/32e192db34b20e152dc56991a392edb59ef9555f",
+                "reference": "32e192db34b20e152dc56991a392edb59ef9555f",
+                "shasum": ""
+            },
+            "require": {
+                "ezsystems/ezpublish-kernel": "^6.0",
+                "symfony-cmf/routing": "~1.1"
+            },
+            "require-dev": {
+                "matthiasnoback/symfony-dependency-injection-test": "0.*",
+                "phpunit/phpunit": "~4.1.3"
+            },
+            "suggest": {
+                "ezsystems/ngsymfonytools-bundle": "Needed for use with legacy backend tab for administration of comments"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "EzSystems\\CommentsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jerome Vieilledent",
+                    "email": "jv@ez.no"
+                },
+                {
+                    "name": "Bertrand Dunogier",
+                    "email": "bd@ez.no"
+                }
+            ],
+            "description": "Commenting system for eZ Publish",
+            "time": "2015-12-02 18:54:18"
+        },
+        {
+            "name": "ezsystems/content-on-the-fly-prototype",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezsystems/content-on-the-fly-prototype-bundle.git",
+                "reference": "4fd1d55c8ad7f6c92de054af8e3018aa92828c5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezsystems/content-on-the-fly-prototype-bundle/zipball/4fd1d55c8ad7f6c92de054af8e3018aa92828c5e",
+                "reference": "4fd1d55c8ad7f6c92de054af8e3018aa92828c5e",
+                "shasum": ""
+            },
+            "require": {
+                "ezsystems/ezpublish-kernel": "^6.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EzSystems\\EzContentOnTheFly\\": "lib",
+                    "EzSystems\\EzContentOnTheFlyBundle\\": "bundle"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "eZ Systems",
+                    "email": "dev-team@ez.no"
+                }
+            ],
+            "description": " Platform UI Content on the Fly feature",
+            "time": "2016-06-16 16:18:08"
+        },
+        {
             "name": "ezsystems/ez-support-tools",
             "version": "v0.1.0.1",
             "source": {
@@ -945,6 +1219,47 @@
             ],
             "description": "eZ Platform UI Bundle",
             "time": "2016-06-16 15:27:18"
+        },
+        {
+            "name": "ezsystems/platform-ui-search-prototype-bundle",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezsystems/platform-ui-search-prototype-bundle.git",
+                "reference": "8ffb2ffc8388d1ea755d9a373d6f687b7a894155"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezsystems/platform-ui-search-prototype-bundle/zipball/8ffb2ffc8388d1ea755d9a373d6f687b7a894155",
+                "reference": "8ffb2ffc8388d1ea755d9a373d6f687b7a894155",
+                "shasum": ""
+            },
+            "require": {
+                "ezsystems/platform-ui-bundle": "^1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EzSystems\\PlatformUISearchPrototypeBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "eZ Systems dev team",
+                    "email": "dev-team@ez.no"
+                }
+            ],
+            "homepage": "https://github.com/ezsystems/platform-ui-search-prototype-bundle",
+            "time": "2016-06-17 07:26:25"
         },
         {
             "name": "ezsystems/repository-forms",
