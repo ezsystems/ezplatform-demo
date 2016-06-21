@@ -33,3 +33,7 @@ app.submitted:
         _controller: app.controller.contactform:submittedAction
         template: full/contact_form_submitted.html.twig
     methods: [GET]
+
+_contentOnTheFly:
+    resource: "@ContentOnTheFlyBundle/Resources/config/routing.yml"
+    prefix:   '%ezpublish_rest.path_prefix%'
