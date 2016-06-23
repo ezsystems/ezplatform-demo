@@ -42,3 +42,8 @@ parameters:
 
     # number of images displayed per page
     app.gallery.images_limit: 6
+    
+    # Settings for Cache pool, to create your own pool see cache/ folder.
+    cache_pool: "default"
+
+    cache_host: 127.0.0.1
