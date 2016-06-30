@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h1 class="header-title">{{ ez_render_field(content, 'description') }}</h1>
-                    <a href="{{ path('ez_urlalias', {locationId: contactLocationId}) }}" class="btn btn-primary btn-lg">{{ 'Contact us!'|trans }}</a>
+                    <a href="{{ path('ez_urlalias', {locationId: contact_location_id}) }}" class="btn btn-primary btn-lg">{{ 'Contact us!'|trans }}</a>
                 </div>
             </div>
         </div>
@@ -21,16 +21,12 @@
 
                 <div class="col-md-12 text-center">
                     <div class="row space-bottom-less">
-                        {% if galleryImages|length > 0 %}
-                            {% for image in galleryImages %}
-                                {{ render_esi(controller('ez_content:viewLocation', {
-                                    locationId: image.contentInfo.mainLocationId,
-                                    viewType: 'home'
-                                })) }}
-                            {% endfor %}
-                        {% endif %}
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            locationId: gallery_location_id,
+                            viewType: 'home'
+                        })) }}
                     </div>
-                    <a href="{{ path('ez_urlalias', {locationId: galleryLocationId}) }}" class="btn btn-primary btn-lg">{{ 'View all'|trans }}</a>
+                    <a href="{{ path('ez_urlalias', {locationId: gallery_location_id}) }}" class="btn btn-primary btn-lg">{{ 'View all'|trans }}</a>
                 </div>
             </div>
         </div>
@@ -46,14 +42,10 @@
 
             <div class="row space-bottom-less">
                 <div class="col-md-10 col-md-offset-1">
-                    {% if blogPosts|length > 0 %}
-                        {% for post in blogPosts %}
-                            {{ render_esi(controller('ez_content:viewLocation', {
-                                locationId: post.contentInfo.mainLocationId,
-                                viewType: 'home'
-                            })) }}
-                        {% endfor %}
-                    {% endif %}
+                    {{ render_esi(controller('ez_content:viewAction', {
+                        locationId: blog_location_id,
+                        viewType: 'home'
+                    })) }}
                 </div>
             </div>
         </div>

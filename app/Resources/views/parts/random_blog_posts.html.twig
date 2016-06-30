@@ -1,0 +1,34 @@
+{% if random_blog_posts.searchHits|length > 0 %}
+    {% set randomPosts = random_blog_posts.searchHits|shuffle() %}
+
+    {% for hit in randomPosts|slice(0, random_posts_limit) %}
+        {% set post = hit.valueObject %}
+
+        <div class="col-md-12 space-top">
+            <div class="col-md-8">
+                <h4 class="other-titles strong"><a href="{{ path('ez_urlalias', {contentId: post.id}) }}">{{ ez_content_name(post) }}</a></h4>
+                {{ ez_render_field(post, 'intro') }}
+                <div class="author">
+                    {% set randomFace = 'assets/images/faces/' ~ random('1234') ~ '.jpg' %}
+                    <img class="rounded circle aligned blog-author-face" src="{{ asset(randomFace) }}" />
+
+                    <div class="move-left">
+                        <p class="person-name">{{ ez_field_value(post, 'author') }}</p>
+                        <p class="person-date">{{ ez_field_value(post, 'publication_date')|localizeddate('full', 'none', app.request.locale) }}<p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <a href="{{ path('ez_urlalias', {contentId: post.id}) }}">
+                    {{ ez_render_field(post, 'image', {
+                        parameters: {
+                            class: 'img-responsive',
+                            alias: 'blog_post_full_random'
+                        }
+                    }) }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
