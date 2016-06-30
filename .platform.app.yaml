@@ -26,23 +26,6 @@ web:
             passthru: "/app.php"
             # The number of seconds whitelisted (static) content should be cache
             expires: 600
-            # Static content whitelist, everything else goes to passthru
-            rules:
-                # root files
-                - /robots\.txt$
-                - /favicon\.ico$
-                # binary files that can be served
-                - /var/([^/]+/)?storage/images(-versioned)?/(.*)
-                # assets
-                - /bundles/(.*)
-                - /css/(.*)\.css$
-                - /js/(.*)\.js$
-                # fonts
-                - /font/(.*)\.ttf$
-                - /font/(.*)\.woff$
-                - /font/(.*)\.otf$
-                - /font/(.*)\.eot$
-                - /font/(.*)\.svg$
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
