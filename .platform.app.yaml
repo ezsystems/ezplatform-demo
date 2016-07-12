@@ -42,6 +42,7 @@ hooks:
       rm web/app_dev.php
       app/console --env=prod assetic:dump
     deploy: |
+      php -d memory_limit=-1 app/console ezplatform:install --env prod demo
       app/console --env=prod cache:clear
 
 # The configuration of scheduled execution.
