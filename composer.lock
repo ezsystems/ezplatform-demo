@@ -922,16 +922,16 @@
         },
         {
             "name": "ezsystems/content-on-the-fly-prototype",
-            "version": "v0.1.3",
+            "version": "v0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/content-on-the-fly-prototype-bundle.git",
-                "reference": "d04846836bb447f79b8ddb6c99cce62f064e8e44"
+                "reference": "871902b17f938b78efbb0a82b00f671b75ce3773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/content-on-the-fly-prototype-bundle/zipball/d04846836bb447f79b8ddb6c99cce62f064e8e44",
-                "reference": "d04846836bb447f79b8ddb6c99cce62f064e8e44",
+                "url": "https://api.github.com/repos/ezsystems/content-on-the-fly-prototype-bundle/zipball/871902b17f938b78efbb0a82b00f671b75ce3773",
+                "reference": "871902b17f938b78efbb0a82b00f671b75ce3773",
                 "shasum": ""
             },
             "require": {
@@ -961,7 +961,7 @@
                 }
             ],
             "description": " Platform UI Content on the Fly feature",
-            "time": "2016-07-08 11:59:07"
+            "time": "2016-07-14 10:56:02"
         },
         {
             "name": "ezsystems/ez-support-tools",
