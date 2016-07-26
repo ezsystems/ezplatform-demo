@@ -39,10 +39,15 @@ mounts:
 # The hooks that will be performed when the package is deployed.
 hooks:
     build: |
-      rm web/app_dev.php
-      app/console --env=prod assetic:dump
+        rm web/app_dev.php
+        app/console --env=prod assetic:dump
     deploy: |
-      app/console --env=prod cache:clear
+        set -e
+        if [ $PLATFORM_ENVIRONMENT = "master" ] && [ ! -f web/var/.platform.installed ]; then
+            php -d memory_limit=-1 app/console ezplatform:install --env prod demo
+            touch web/var/.platform.installed
+        fi
+        app/console --env=prod cache:clear
 
 # The configuration of scheduled execution.
 # see http://symfony.com/doc/current/components/console/introduction.html
