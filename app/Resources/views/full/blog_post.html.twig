@@ -100,8 +100,8 @@
                                     <div class="col-xs-3"></div>
                                     <div class="col-xs-6 center">
                                         <ul class="list-inline-new">
-                                            <li><a href="//www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}{{ path(location) }}" target="_blank"><img src="{{ asset('assets/images/share_facebook.svg') }}" /></a></li>
-                                            <li><a href="//twitter.com/home?status={{ app.request.uri }}{{ path(location) }}" target="_blank"><img src="{{ asset('assets/images/share_twitter.svg') }}" /></a></li>
+                                            <li><a href="{% if location.isDraft %}#"{% else %}//www.facebook.com/sharer/sharer.php?u={{ app.request.uri }}{{ path(location) }}" target="_blank"{% endif %}><img src="{{ asset('assets/images/share_facebook.svg') }}" /></a></li>
+                                            <li><a href="{% if location.isDraft %}#"{% else %}//twitter.com/home?status={{ app.request.uri }}{{ path(location) }}" target="_blank"{% endif %}><img src="{{ asset('assets/images/share_twitter.svg') }}" /></a></li>
                                         </ul>
                                     </div>
                                     <div class="col-xs-3"></div>
