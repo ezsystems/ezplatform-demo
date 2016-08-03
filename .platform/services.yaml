@@ -1,4 +1,4 @@
-mysql:
+mysqldb:
     type: mysql:10.0
     disk: 2048
 

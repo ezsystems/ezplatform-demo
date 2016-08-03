@@ -3,12 +3,12 @@
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader;
 
-$relationships = getenv("PLATFORM_RELATIONSHIPS");
+$relationships = getenv('PLATFORM_RELATIONSHIPS');
 if (!$relationships) {
   return;
 }
 
-$relationships = json_decode(base64_decode($relationships), TRUE);
+$relationships = json_decode(base64_decode($relationships), true);
 
 foreach ($relationships['database'] as $endpoint) {
   if (empty($endpoint['query']['is_master'])) {
@@ -25,12 +25,17 @@ foreach ($relationships['database'] as $endpoint) {
 }
 
 if (!empty($relationships['redis'][0])) {
-    $container->setParameter('cache_pool', 'singleredis');
-    $container->setParameter('cache_host', $relationships['redis'][0]['host']);
-    //$container->setParameter('cache_port', $relationships['redis'][0]['port']);
+    // Setup custom redis cache pool to use for the install.
+    $container->setParameter('cache_pool', 'platformredis');
+    $host = $relationships['redis'][0]['host'];
+    $port =  $relationships['redis'][0]['port'];
+    file_put_contents(
+        __DIR__ . '/cache_pool/platformredis.yml'
+        "stash:{caches:{platformredis:{drivers: [Redis], Redis: {servers: [{server: '${host}', port: ${port}}]}}}}"
+    );
 
     $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/cache_pool'));
-    $loader->load('singleredis.yml');
+    $loader->load('platformredis.yml');
 }
 
 # Store session into /tmp.
