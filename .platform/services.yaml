@@ -1,3 +1,6 @@
-mysql:
-    type: mysql:5.5
+mysqldb:
+    type: mysql:10.0
     disk: 2048
+
+rediscache:
+    type: redis:3.0

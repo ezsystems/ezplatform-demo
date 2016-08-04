@@ -14,7 +14,8 @@ build:
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: "mysql:mysql"
+    database: "mysqldb:mysql"
+    redis: "rediscache:redis"
 
 # The configuration of app when it is exposed to the web.
 web:
@@ -60,3 +61,5 @@ runtime:
     extensions:
         - xsl
         - imagick
+        - redis
+        - readline
