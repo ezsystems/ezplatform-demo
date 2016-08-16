@@ -30,7 +30,7 @@ if (!empty($relationships['redis'][0])) {
     $host = $relationships['redis'][0]['host'];
     $port =  $relationships['redis'][0]['port'];
     file_put_contents(
-        __DIR__ . '/cache_pool/platformredis.yml'
+        __DIR__ . '/cache_pool/platformredis.yml',
         "stash:{caches:{platformredis:{drivers: [Redis], Redis: {servers: [{server: '${host}', port: ${port}}]}}}}"
     );
 
