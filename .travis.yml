@@ -16,8 +16,8 @@ env:
     - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker-compose/base-prod.yml:doc/docker-compose/redis.yml:doc/docker-compose/selenium.yml" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
     - TEST_CMD="bin/behat -vv --profile=rest --suite=fullXml --tags=~@broken"
     - TEST_CMD="bin/behat -vv --profile=core --tags=~@broken"
-    - TEST_CMD="bin/phpunit -v vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/Tests/Functional" REST_BASIC_AUTH=1
-    - TEST_CMD="bin/behat -vv --profile=platformui --tags='@common'"
+    - TEST_CMD="bin/phpunit -v vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/Tests/Functional" REST_BASIC_AUTH=1 INSTALL_EZ_INSTALL_TYPE=clean
+    - TEST_CMD="bin/behat -vv --profile=platformui --tags='@common'" INSTALL_EZ_INSTALL_TYPE=clean
 
 # test only master (+ Pull requests)
 branches:
