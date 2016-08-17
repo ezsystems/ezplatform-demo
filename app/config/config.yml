@@ -1,9 +1,9 @@
 imports:
     - { resource: default_parameters.yml }
     - { resource: parameters.yml }
-    - { resource: parameters_platform.php }
     - { resource: security.yml }
     - { resource: env/docker.php }
+    - { resource: env/platformsh.php }
 
 # Configuration for Database connection, can have several connections used by eZ Repositories in ezplatform.yml
 doctrine:
