@@ -25,17 +25,13 @@ foreach ($relationships['database'] as $endpoint) {
 }
 
 if (!empty($relationships['redis'][0])) {
-    // Setup custom redis cache pool to use for the install.
-    $container->setParameter('cache_pool', 'platformredis');
-    $host = $relationships['redis'][0]['host'];
-    $port =  $relationships['redis'][0]['port'];
-    file_put_contents(
-        __DIR__ . '/../cache_pool/platformredis.yml',
-        "stash:{caches:{platformredis:{drivers: [Redis], Redis: {servers: [{server: '${host}', port: ${port}}]}}}}"
-    );
+    // Configure redis cache pool to use for the install.
+    $container->setParameter('cache_pool', 'singleredis');
+    $container->setParameter('cache_host', $relationships['redis'][0]['host']);
+    $container->setParameter('cache_redis_port', $relationships['redis'][0]['port']);
 
     $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../cache_pool'));
-    $loader->load('platformredis.yml');
+    $loader->load('singleredis.yml');
 }
 
 # Store session into /tmp.
