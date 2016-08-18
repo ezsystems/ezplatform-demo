@@ -23,6 +23,13 @@ services:
         tags:
             - { name: ezpublish.query_type }
 
+    app.pre_content_view_listener:
+        class: AppBundle\EventListener\PreContentViewListener
+        arguments:
+            - contactLocationId: '%app.layout.contact_location_id%'
+        tags:
+            - { name: kernel.event_listener, event: ezpublish.pre_content_view, method: onPreContentView }
+
     app.criteria.menu:
         class: AppBundle\Criteria\Menu
 
