@@ -23,8 +23,10 @@ env:
 branches:
   only:
     - master
+    # Stable branches
     - /^\d.\d+$/
-    - /^v\d.\d.\d$/
+    # Stable tags (for after_success deployment)
+    - /^v\d.\d+.\d+(\+demo\.v\d+)?$/
 
 # Update Docker and Docker Compose
 before_install: ./bin/.travis/trusty/update_docker.sh
