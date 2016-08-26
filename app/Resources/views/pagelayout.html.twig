@@ -16,7 +16,7 @@
     </head>
     <body>
         {% block header %}
-            {{ render_esi(controller('app.controller.menu:getChildNodesAction', {
+            {{ render(controller('app.controller.menu:getChildNodesAction', {
                 template: 'pagelayout_header.html.twig'
             })) }}
         {% endblock %}

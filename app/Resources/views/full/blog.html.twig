@@ -45,7 +45,7 @@
                 <div class="container"><div class="row"><div class="col-md-10 col-md-offset-1 space-bottom"><div class="row">
             {% else %}
                 <div class="{% if loop.index % 2 == 1 %}col-md-offset-2 {% endif %}col-md-5 space-top">
-                    {{ render_esi(controller('ez_content:viewLocation', {
+                    {{ render(controller('ez_content:viewLocation', {
                         locationId: post.contentInfo.mainLocationId,
                         viewType: 'line'
                     })) }}
