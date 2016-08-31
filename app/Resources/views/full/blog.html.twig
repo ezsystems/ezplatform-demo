@@ -11,10 +11,11 @@
         </div>
     </header>
 
-    {% set postIndex = '' %}
-    {% if blogPosts|length() > 0 %}
-        {% for post in blogPosts %}
+    {% set postIndex = 0 %}
+    {% if blog_posts|length() > 0 %}
+        {% for post in blog_posts %}
             {% set postIndex = loop.index %}
+
             {% if loop.index == 1 %}
                 <div class="container space-top">
                     <div class="row">
@@ -37,7 +38,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr class="space-top" />
+                            <hr class="space-top">
                         </div>
                     </div>
                 </div>
@@ -45,8 +46,9 @@
                 <div class="container"><div class="row"><div class="col-md-10 col-md-offset-1 space-bottom"><div class="row">
             {% else %}
                 <div class="{% if loop.index % 2 == 1 %}col-md-offset-2 {% endif %}col-md-5 space-top">
-                    {{ render_esi(controller('ez_content:viewLocation', {
+                    {{ render_esi(controller('ez_content:viewAction', {
                         locationId: post.contentInfo.mainLocationId,
+                        contentId: post.contentInfo.id,
                         viewType: 'line'
                     })) }}
                 </div>
@@ -63,8 +65,8 @@
 
     <div class="container">
         <div class="col-lg-12 space-bottom text-center">
-            {% if blogPosts.haveToPaginate() %}
-                {{ pagerfanta(blogPosts, 'twitter_bootstrap3_translated', {
+            {% if blog_posts.haveToPaginate() %}
+                {{ pagerfanta(blog_posts, 'twitter_bootstrap3_translated', {
                     routeName: location
                 }) }}
             {% endif %}

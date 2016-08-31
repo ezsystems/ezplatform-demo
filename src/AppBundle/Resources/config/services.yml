@@ -1,9 +1,27 @@
 services:
+    twig.extension.array:
+        class: Twig_Extensions_Extension_Array
+        tags:
+            - { name: twig.extension }
+
+    app.paginated_query_controller:
+        class: AppBundle\Controller\PagerFantaQueryController
+        arguments:
+            - '@ezpublish.query_type_content_view_mapper'
+            - '@ezpublish.api.service.search'
+
     app.installer:
         parent: ezplatform.installer.db_based_installer
         class: AppBundle\Installer\AppInstaller
         tags:
             - { name: ezplatform.installer, type: demo }
+
+    app.query_type.latest_content:
+        class: AppBundle\QueryType\LatestContentQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
 
     app.criteria.menu:
         class: AppBundle\Criteria\Menu
@@ -20,30 +38,6 @@ services:
 
     app.criteria.children:
         class: AppBundle\Criteria\Children
-
-    app.controller.blog:
-        class: AppBundle\Controller\BlogController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.blog_post.random_posts_limit%'
-            - '%app.blog_post_list_limit%'
-
-    app.controller.home:
-        class: AppBundle\Controller\HomeController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.home.blog_post_limit%'
-            - '%app.home.blog_location_id%'
-            - '%app.home.gallery_image_limit%'
-            - '%app.home.gallery_location_id%'
 
     app.form.type.contact:
         class: AppBundle\Form\Type\ContactType

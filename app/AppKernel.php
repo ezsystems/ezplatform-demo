@@ -49,7 +49,7 @@ class AppKernel extends Kernel
             new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             new EzSystems\PlatformUISearchPrototypeBundle\EzSystemsPlatformUISearchPrototypeBundle(),
             new EzSystems\EzContentOnTheFlyBundle\EzSystemsEzContentOnTheFlyBundle(),
-            new AppBundle\AppBundle()
+            new AppBundle\AppBundle(),
         );
 
         switch ($this->getEnvironment()) {
