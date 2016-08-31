@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4e95ee2487dd40d272d5cb31ff4ccb7f",
-    "content-hash": "ce99384678d272eed5071fdb5c63b132",
+    "hash": "cb1b77839568af287091c6a5f3ca7f59",
+    "content-hash": "86f6273441aae1c06dff3b3fb2f1f668",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -1013,16 +1013,16 @@
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
-            "version": "v1.1.0-rc1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-solr-search-engine.git",
-                "reference": "ca7ff6329b4aa83b8ab1c517214519db44b6ef42"
+                "reference": "5261b1d7f44adb834f07baefe7b6f58e844fd59b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/ca7ff6329b4aa83b8ab1c517214519db44b6ef42",
-                "reference": "ca7ff6329b4aa83b8ab1c517214519db44b6ef42",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/5261b1d7f44adb834f07baefe7b6f58e844fd59b",
+                "reference": "5261b1d7f44adb834f07baefe7b6f58e844fd59b",
                 "shasum": ""
             },
             "require": {
@@ -1059,20 +1059,20 @@
             ],
             "description": "Solr search engine implementation for eZ Platform",
             "homepage": "https://github.com/ezsystems/ezplatform-solr-search-engine",
-            "time": "2016-08-23 12:00:33"
+            "time": "2016-08-30 15:09:32"
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.5.0-rc2",
+            "version": "v6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "5c2260b76acc11ce92db0c37a511ce35b1cdfe43"
+                "reference": "da8bd4ebc2c86585fd151c7af63a3b2b99d7616e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/5c2260b76acc11ce92db0c37a511ce35b1cdfe43",
-                "reference": "5c2260b76acc11ce92db0c37a511ce35b1cdfe43",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/da8bd4ebc2c86585fd151c7af63a3b2b99d7616e",
+                "reference": "da8bd4ebc2c86585fd151c7af63a3b2b99d7616e",
                 "shasum": ""
             },
             "require": {
@@ -1141,7 +1141,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "http://share.ez.no",
-            "time": "2016-08-25 10:41:58"
+            "time": "2016-08-30 14:03:47"
         },
         {
             "name": "ezsystems/platform-ui-assets-bundle",
@@ -1181,23 +1181,23 @@
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.5.0-rc1",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
-                "reference": "5885c9d484f724032026e3a78669808267e8ff16"
+                "reference": "4f1d907abc87276545e554fa21cd8ef98b4947e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/5885c9d484f724032026e3a78669808267e8ff16",
-                "reference": "5885c9d484f724032026e3a78669808267e8ff16",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/4f1d907abc87276545e554fa21cd8ef98b4947e6",
+                "reference": "4f1d907abc87276545e554fa21cd8ef98b4947e6",
                 "shasum": ""
             },
             "require": {
                 "ezsystems/ez-support-tools": "~0.1.0",
-                "ezsystems/ezpublish-kernel": "^6.4@rc",
-                "ezsystems/platform-ui-assets-bundle": "^3.0.0@rc",
-                "ezsystems/repository-forms": "^1.2@rc",
+                "ezsystems/ezpublish-kernel": "^6.4",
+                "ezsystems/platform-ui-assets-bundle": "^3.0.0",
+                "ezsystems/repository-forms": "^1.2",
                 "zetacomponents/system-information": "^1.1"
             },
             "require-dev": {
@@ -1223,7 +1223,7 @@
                 "GPL-2.0"
             ],
             "description": "eZ Platform UI Bundle",
-            "time": "2016-08-25 10:11:47"
+            "time": "2016-08-31 10:20:16"
         },
         {
             "name": "ezsystems/platform-ui-search-prototype-bundle",
@@ -1268,20 +1268,20 @@
         },
         {
             "name": "ezsystems/repository-forms",
-            "version": "v1.4.0-rc1",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/repository-forms.git",
-                "reference": "ee5aca930d044a84e55b0b673d8cf6030efc600c"
+                "reference": "7e73b491b07319a3e6e8059eceddbe9b74cc4987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/ee5aca930d044a84e55b0b673d8cf6030efc600c",
-                "reference": "ee5aca930d044a84e55b0b673d8cf6030efc600c",
+                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/7e73b491b07319a3e6e8059eceddbe9b74cc4987",
+                "reference": "7e73b491b07319a3e6e8059eceddbe9b74cc4987",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezpublish-kernel": "^6.4@rc",
+                "ezsystems/ezpublish-kernel": "^6.4",
                 "php": "~5.5|~7.0",
                 "symfony/form": "~2.8",
                 "symfony/validator": "~2.8"
@@ -1320,7 +1320,7 @@
                 }
             ],
             "description": "Use Symfony forms with eZ Platform repository objects",
-            "time": "2016-08-25 08:51:57"
+            "time": "2016-08-31 10:01:06"
         },
         {
             "name": "friendsofsymfony/http-cache",
@@ -6399,12 +6399,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ezsystems/ezpublish-kernel": 5,
-        "ezsystems/repository-forms": 5,
-        "ezsystems/ezplatform-solr-search-engine": 5,
-        "ezsystems/platform-ui-bundle": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
