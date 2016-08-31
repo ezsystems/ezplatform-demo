@@ -8,7 +8,7 @@
         }) }}
     </div>
     <div class="col-md-8">
-        <h3 class="header-text-one"><a href="{{ path(location) }}">{{ ez_content_name(content) }}</a></h3>
+        <h3 class="header-text-one"><a href="{% if location.isDraft %}#{% else %}{{ path(location) }}{% endif %}">{{ ez_content_name(content) }}</a></h3>
         <div class="small">{{ ez_render_field(content, 'intro') }}</div>
     </div>
 </div>
