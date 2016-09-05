@@ -1,0 +1,33 @@
+<div class="user-menu dropdown hidden-xs">
+    {% if app.user %}
+        {% set user = app.user.getAPIUser().content %}
+
+        <button type="button" data-toggle="dropdown">
+            {% if not ez_is_field_empty(user, 'image') %}
+                {% set imageAlias = ez_image_alias(user.getField('image'), user.versionInfo, 'platformui_profileview') %}
+
+                <img src="{{ imageAlias.uri }}" title="{{ ez_content_name(user) }}" class="img-circle avatar" />
+            {% else %}
+                <span class="icon-user avatar"></span>
+            {% endif %}
+
+            <br class="visible-xs" />
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="username">{{ ez_content_name(user) }}</li>
+            <li><a href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a></li>
+        </ul>
+    {% else %}
+        <button type="button" data-toggle="dropdown">
+            <span class="icon-user avatar"></span>
+            <br class="visible-xs">
+            <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+            <li><a href="{{ path('login') }}" title="{{ 'login'|trans }}">{{ 'login'|trans }}</a></li>
+            <li><a href="{{ path('ez_user_register') }}" title="{{ 'register'|trans }}">{{ 'register'|trans }}</a></li>
+        </ul>
+    {% endif %}
+</div>

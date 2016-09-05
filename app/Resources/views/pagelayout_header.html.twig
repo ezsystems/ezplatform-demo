@@ -11,6 +11,10 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
+            {% block user_menu %}
+                {% include 'pagelayout_user_menu.html.twig' %}
+            {% endblock %}
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden"><a href="#page-top"></a></li>
 

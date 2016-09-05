@@ -5,6 +5,11 @@ ezpublish:
             user:
                 layout: pagelayout.html.twig
 
+            user_registration:
+                templates:
+                    form: user\registration_form.html.twig
+                    confirmation: user\registration_confirmation.html.twig
+
             content_view:
                 full:
                     home_page:
