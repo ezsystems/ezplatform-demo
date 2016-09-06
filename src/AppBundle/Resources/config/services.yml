@@ -23,17 +23,19 @@ services:
         tags:
             - { name: ezpublish.query_type }
 
-    app.criteria.menu:
-        class: AppBundle\Criteria\Menu
+    app.query_type.menu:
+        class: AppBundle\QueryType\MenuQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
 
     app.controller.menu:
         class: AppBundle\Controller\MenuController
         arguments:
             - '@templating'
             - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.menu'
+            - '@app.query_type.menu'
             - '%app.top_menu.location_id%'
 
     app.criteria.children:
