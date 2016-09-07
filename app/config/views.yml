@@ -4,6 +4,7 @@ ezpublish:
             pagelayout: pagelayout.html.twig
             user:
                 layout: pagelayout.html.twig
+                login_template: user\login.html.twig
 
             user_registration:
                 templates:

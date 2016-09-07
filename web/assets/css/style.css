@@ -584,7 +584,8 @@ ul {
 
 /* registration and login forms */
 
-.user-form {
+.user-form,
+.user-form-login {
     background: #dedede;
     border-radius: 4px;
     margin-top: 120px;
@@ -592,7 +593,8 @@ ul {
     padding: 10px 30px;
 }
 
-.user-form input {
+.user-form input,
+.user-form-login input {
     width: 100%;
     border: 1px solid #ccc;
     margin-bottom: 10px;
@@ -601,7 +603,8 @@ ul {
     font-size: 17px;
 }
 
-.user-form h2 {
+.user-form h2,
+.user-form-login h2 {
     margin-bottom: 5px;
     font-size: 22px;
 }
@@ -612,7 +615,8 @@ ul {
     font-size: 14px;
 }
 
-.user-form label {
+.user-form label,
+.user-form-login label {
     color: #000;
     font-weight: normal;
     font-family: "Maven Pro", sans-serif;
@@ -655,6 +659,26 @@ ul {
     font-size: 17px;
 }
 
-.user-form-confirmation button {
+.user-form-confirmation button,
+.user-form-login button {
     margin-bottom: 30px;
+}
+
+.user-form-login button {
+    margin-top: 20px;
+}
+
+.user-form-login h2 {
+    margin-bottom: 30px;
+}
+
+.error-message {
+    color: #d03146;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user-form-login input[type=checkbox] {
+    width: 20px;
 }
