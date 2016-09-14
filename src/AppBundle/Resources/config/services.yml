@@ -36,9 +36,6 @@ services:
             - '@app.criteria.menu'
             - '%app.top_menu.location_id%'
 
-    app.criteria.children:
-        class: AppBundle\Criteria\Children
-
     app.form.type.contact:
         class: AppBundle\Form\Type\ContactType
         tags:
@@ -70,12 +67,3 @@ services:
         class: AppBundle\Mail\Sender
         arguments:
             - '@mailer'
-
-    app.controller.gallery:
-        class: AppBundle\Controller\GalleryController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.gallery.images_limit%'
