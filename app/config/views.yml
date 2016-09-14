@@ -47,7 +47,14 @@ ezpublish:
                             Identifier\ContentType: [contact_form]
 
                     gallery:
-                        controller: app.controller.gallery:displayGalleryAction
+                        controller: app.paginated_query_controller:contentQueryPaginationAction
+                        params:
+                            page_limit: '%app.gallery.images_limit%'
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    location_id: '%app.home.gallery_location_id%'
+                                assign_results_to: images
                         template: full\gallery.html.twig
                         match:
                             Identifier\ContentType: [gallery]
