@@ -22,7 +22,7 @@
                             <div class="field-name">
                                 <label class="required">{{ 'Login' }}:</label>
                             </div>
-                            <input type="text" name="_username" value="{{ last_username }}" />
+                            <input type="text" id="Username" name="_username" value="{{ last_username }}" />
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@
                             <div class="field-name">
                                 <label class="required">{{ 'Password' }}:</label>
                             </div>
-                            <input type="password" name="_password" />
+                            <input type="password" id="Password" name="_password" />
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
 
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
-                            <button type="submit" class="btn btn-block btn-primary">{{ 'Log in'|trans }}</button>
+                            <button type="submit" class="btn btn-block btn-primary">{{ 'Login'|trans }}</button>
                         </div>
                     </div>
                 {% endblock %}
