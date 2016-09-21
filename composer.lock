@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cb1b77839568af287091c6a5f3ca7f59",
-    "content-hash": "86f6273441aae1c06dff3b3fb2f1f668",
+    "hash": "48cb12444fcd03853e2be263a2f3a752",
+    "content-hash": "e752158c710cec909fa37291a9ec3349",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -464,16 +464,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.5.4",
+            "version": "v2.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "abbdfd1cff43a7b99d027af3be709bc8fc7d4769"
+                "reference": "9f8c05cd5225a320d56d4bfdb4772f10d045a0c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/abbdfd1cff43a7b99d027af3be709bc8fc7d4769",
-                "reference": "abbdfd1cff43a7b99d027af3be709bc8fc7d4769",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/9f8c05cd5225a320d56d4bfdb4772f10d045a0c9",
+                "reference": "9f8c05cd5225a320d56d4bfdb4772f10d045a0c9",
                 "shasum": ""
             },
             "require": {
@@ -482,7 +482,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*",
-                "symfony/console": "2.*"
+                "symfony/console": "2.*||^3.0"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -531,7 +531,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-01-05 22:11:12"
+            "time": "2016-09-09 19:13:33"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1013,16 +1013,16 @@
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-solr-search-engine.git",
-                "reference": "5261b1d7f44adb834f07baefe7b6f58e844fd59b"
+                "reference": "a85663125eaed4f0039be4fa2533cdfa15bdc9fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/5261b1d7f44adb834f07baefe7b6f58e844fd59b",
-                "reference": "5261b1d7f44adb834f07baefe7b6f58e844fd59b",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/a85663125eaed4f0039be4fa2533cdfa15bdc9fe",
+                "reference": "a85663125eaed4f0039be4fa2533cdfa15bdc9fe",
                 "shasum": ""
             },
             "require": {
@@ -1059,20 +1059,20 @@
             ],
             "description": "Solr search engine implementation for eZ Platform",
             "homepage": "https://github.com/ezsystems/ezplatform-solr-search-engine",
-            "time": "2016-08-30 15:09:32"
+            "time": "2016-09-15 12:58:35"
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.5.0",
+            "version": "v6.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "da8bd4ebc2c86585fd151c7af63a3b2b99d7616e"
+                "reference": "35984d52a235c5b75df8b838df51de6ca3eb6042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/da8bd4ebc2c86585fd151c7af63a3b2b99d7616e",
-                "reference": "da8bd4ebc2c86585fd151c7af63a3b2b99d7616e",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/35984d52a235c5b75df8b838df51de6ca3eb6042",
+                "reference": "35984d52a235c5b75df8b838df51de6ca3eb6042",
                 "shasum": ""
             },
             "require": {
@@ -1085,7 +1085,7 @@
                 "ext-pdo": "*",
                 "ext-spl": "*",
                 "ext-xsl": "*",
-                "friendsofsymfony/http-cache-bundle": ">=1.2, <=1.3.6",
+                "friendsofsymfony/http-cache-bundle": "~1.2|^1.3.8",
                 "hautelook/templated-uri-bundle": "~1.0 | ~2.0",
                 "kriswallsmith/buzz": ">=0.9",
                 "liip/imagine-bundle": "~1.0",
@@ -1141,7 +1141,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "http://share.ez.no",
-            "time": "2016-08-30 14:03:47"
+            "time": "2016-09-08 16:43:36"
         },
         {
             "name": "ezsystems/platform-ui-assets-bundle",
@@ -1181,16 +1181,16 @@
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
-                "reference": "4f1d907abc87276545e554fa21cd8ef98b4947e6"
+                "reference": "8a1c528b27ae51b2c35ae8926fcc6c2c1fcdf214"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/4f1d907abc87276545e554fa21cd8ef98b4947e6",
-                "reference": "4f1d907abc87276545e554fa21cd8ef98b4947e6",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/8a1c528b27ae51b2c35ae8926fcc6c2c1fcdf214",
+                "reference": "8a1c528b27ae51b2c35ae8926fcc6c2c1fcdf214",
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1223,7 @@
                 "GPL-2.0"
             ],
             "description": "eZ Platform UI Bundle",
-            "time": "2016-08-31 10:20:16"
+            "time": "2016-09-13 12:41:30"
         },
         {
             "name": "ezsystems/platform-ui-search-prototype-bundle",
@@ -1396,16 +1396,16 @@
         },
         {
             "name": "friendsofsymfony/http-cache-bundle",
-            "version": "1.3.6",
+            "version": "1.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSHttpCacheBundle.git",
-                "reference": "49e9fa198cdcb0d80e9da7b2c2eb1e43537bc622"
+                "reference": "04247810151f8721740069f2376bf933ed9a7971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSHttpCacheBundle/zipball/49e9fa198cdcb0d80e9da7b2c2eb1e43537bc622",
-                "reference": "49e9fa198cdcb0d80e9da7b2c2eb1e43537bc622",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSHttpCacheBundle/zipball/04247810151f8721740069f2376bf933ed9a7971",
+                "reference": "04247810151f8721740069f2376bf933ed9a7971",
                 "shasum": ""
             },
             "require": {
@@ -1425,7 +1425,7 @@
                 "symfony/expression-language": "^2.4||^3.0",
                 "symfony/monolog-bundle": "^2.3||^3.0",
                 "symfony/phpunit-bridge": "^2.7||^3.0",
-                "symfony/symfony": "^2.3||^3.0"
+                "symfony/symfony": "^2.3.4||^3.0"
             },
             "suggest": {
                 "sensio/framework-extra-bundle": "For Tagged Cache Invalidation",
@@ -1472,7 +1472,7 @@
                 "purge",
                 "varnish"
             ],
-            "time": "2015-12-11 17:44:26"
+            "time": "2016-09-06 11:30:45"
         },
         {
             "name": "guzzle/guzzle",
@@ -2594,22 +2594,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2623,12 +2631,13 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-09-19 16:02:08"
         },
         {
             "name": "qafoo/rmf",
@@ -2656,16 +2665,16 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v5.0.8",
+            "version": "v5.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "f8ace5c71ee309492b027ef71215577f5a52b4ea"
+                "reference": "b6dcd04595e4db95ead22ddea58c397864e00c32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/f8ace5c71ee309492b027ef71215577f5a52b4ea",
-                "reference": "f8ace5c71ee309492b027ef71215577f5a52b4ea",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/b6dcd04595e4db95ead22ddea58c397864e00c32",
+                "reference": "b6dcd04595e4db95ead22ddea58c397864e00c32",
                 "shasum": ""
             },
             "require": {
@@ -2704,7 +2713,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2016-08-17 18:16:49"
+            "time": "2016-09-14 20:25:12"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -3673,16 +3682,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.9",
+            "version": "v2.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "df02dd5d3f7decb3a05c6d0f31054b4263625dcb"
+                "reference": "f588c92c3e263b2eaa2f96a7b1359199eb209b3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/df02dd5d3f7decb3a05c6d0f31054b4263625dcb",
-                "reference": "df02dd5d3f7decb3a05c6d0f31054b4263625dcb",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/f588c92c3e263b2eaa2f96a7b1359199eb209b3d",
+                "reference": "f588c92c3e263b2eaa2f96a7b1359199eb209b3d",
                 "shasum": ""
             },
             "require": {
@@ -3803,7 +3812,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-07-30 08:48:52"
+            "time": "2016-09-07 02:04:25"
         },
         {
             "name": "tedivm/stash",
@@ -3980,16 +3989,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.1",
+            "version": "v1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512"
+                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3566d311a92aae4deec6e48682dc5a4528c4a512",
-                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
+                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
                 "shasum": ""
             },
             "require": {
@@ -4037,7 +4046,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-05-30 09:11:59"
+            "time": "2016-09-01 17:50:53"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -4405,34 +4414,35 @@
     "packages-dev": [
         {
             "name": "behat/behat",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "359d987b3064d78f2d3a6ba3a355277f3b09b47f"
+                "reference": "73b433326c87bbd8bc528ce57c29722405ffff5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/359d987b3064d78f2d3a6ba3a355277f3b09b47f",
-                "reference": "359d987b3064d78f2d3a6ba3a355277f3b09b47f",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/73b433326c87bbd8bc528ce57c29722405ffff5e",
+                "reference": "73b433326c87bbd8bc528ce57c29722405ffff5e",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": "~4.4",
+                "behat/gherkin": "^4.4.4",
                 "behat/transliterator": "~1.0",
                 "ext-mbstring": "*",
                 "php": ">=5.3.3",
-                "symfony/class-loader": "~2.1|~3.0",
-                "symfony/config": "~2.3|~3.0",
-                "symfony/console": "~2.1|~3.0",
-                "symfony/dependency-injection": "~2.1|~3.0",
-                "symfony/event-dispatcher": "~2.1|~3.0",
-                "symfony/translation": "~2.3|~3.0",
-                "symfony/yaml": "~2.1|~3.0"
+                "symfony/class-loader": "~2.1||~3.0",
+                "symfony/config": "~2.3||~3.0",
+                "symfony/console": "~2.5||~3.0",
+                "symfony/dependency-injection": "~2.1||~3.0",
+                "symfony/event-dispatcher": "~2.1||~3.0",
+                "symfony/translation": "~2.3||~3.0",
+                "symfony/yaml": "~2.1||~3.0"
             },
             "require-dev": {
+                "herrera-io/box": "~1.6.1",
                 "phpunit/phpunit": "~4.5",
-                "symfony/process": "~2.1|~3.0"
+                "symfony/process": "~2.5|~3.0"
             },
             "suggest": {
                 "behat/mink-extension": "for integration with Mink testing framework",
@@ -4445,7 +4455,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -4481,28 +4491,29 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2016-03-28 07:04:45"
+            "time": "2016-09-20 07:23:29"
         },
         {
             "name": "behat/gherkin",
-            "version": "v4.4.1",
+            "version": "v4.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "1576b485c0f92ef6d27da9c4bbfc57ee30cf6911"
+                "reference": "cf8cc94647101e02a33d690245896d83d880aea1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/1576b485c0f92ef6d27da9c4bbfc57ee30cf6911",
-                "reference": "1576b485c0f92ef6d27da9c4bbfc57ee30cf6911",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/cf8cc94647101e02a33d690245896d83d880aea1",
+                "reference": "cf8cc94647101e02a33d690245896d83d880aea1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "symfony/yaml": "~2.1"
+                "phpunit/phpunit": "~4.5|~5",
+                "symfony/phpunit-bridge": "~2.7|~3",
+                "symfony/yaml": "~2.3|~3"
             },
             "suggest": {
                 "symfony/yaml": "If you want to parse features, represented in YAML files"
@@ -4539,7 +4550,7 @@
                 "gherkin",
                 "parser"
             ],
-            "time": "2015-12-30 14:47:00"
+            "time": "2016-09-18 12:16:14"
         },
         {
             "name": "behat/mink",
