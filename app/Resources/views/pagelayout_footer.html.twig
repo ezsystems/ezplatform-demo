@@ -16,7 +16,7 @@
                     </p>
                 </div>
                 <div class="col-md-3 col-md-offset-1 space-top-half-bit space-bottom-less">
-                    <a class="btn btn-primary btn-lg small" href="{{ path('ez_urlalias', {locationId: contactLocationId}) }}">{{ 'Get in touch!'|trans }}</a>
+                    <a class="btn btn-primary btn-lg small" href="{% if contactLocationId is defined %}{{ path('ez_urlalias', {locationId: contactLocationId}) }}{% else %}#{% endif %}">{{ 'Get in touch!'|trans }}</a>
                 </div>
             </div>
         </div>
