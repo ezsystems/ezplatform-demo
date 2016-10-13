@@ -1,49 +1,42 @@
 services:
+    twig.extension.array:
+        class: Twig_Extensions_Extension_Array
+        tags:
+            - { name: twig.extension }
+
+    app.paginated_query_controller:
+        class: AppBundle\Controller\PagerFantaQueryController
+        arguments:
+            - '@ezpublish.query_type_content_view_mapper'
+            - '@ezpublish.api.service.search'
+
     app.installer:
         parent: ezplatform.installer.db_based_installer
         class: AppBundle\Installer\AppInstaller
         tags:
             - { name: ezplatform.installer, type: demo }
 
-    app.criteria.menu:
-        class: AppBundle\Criteria\Menu
+    app.query_type.latest_content:
+        class: AppBundle\QueryType\LatestContentQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
+
+    app.query_type.menu:
+        class: AppBundle\QueryType\MenuQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
 
     app.controller.menu:
         class: AppBundle\Controller\MenuController
         arguments:
             - '@templating'
             - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.menu'
+            - '@app.query_type.menu'
             - '%app.top_menu.location_id%'
-
-    app.criteria.children:
-        class: AppBundle\Criteria\Children
-
-    app.controller.blog:
-        class: AppBundle\Controller\BlogController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.blog_post.random_posts_limit%'
-            - '%app.blog_post_list_limit%'
-
-    app.controller.home:
-        class: AppBundle\Controller\HomeController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.api.service.location'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.home.blog_post_limit%'
-            - '%app.home.blog_location_id%'
-            - '%app.home.gallery_image_limit%'
-            - '%app.home.gallery_location_id%'
 
     app.form.type.contact:
         class: AppBundle\Form\Type\ContactType
@@ -76,12 +69,3 @@ services:
         class: AppBundle\Mail\Sender
         arguments:
             - '@mailer'
-
-    app.controller.gallery:
-        class: AppBundle\Controller\GalleryController
-        arguments:
-            - '@ezpublish.api.service.content'
-            - '@ezpublish.api.service.search'
-            - '@ezpublish.config.resolver'
-            - '@app.criteria.children'
-            - '%app.gallery.images_limit%'

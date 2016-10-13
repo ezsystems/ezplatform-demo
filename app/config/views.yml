@@ -4,23 +4,38 @@ ezpublish:
             pagelayout: pagelayout.html.twig
             user:
                 layout: pagelayout.html.twig
+                login_template: user\login.html.twig
 
-            location_view:
+            user_registration:
+                templates:
+                    form: user\registration_form.html.twig
+                    confirmation: user\registration_confirmation.html.twig
+
+            content_view:
                 full:
                     home_page:
-                        controller: app.controller.home:showAction
                         template: full\home_page.html.twig
+                        params:
+                            blog_location_id: '%app.home.blog_location_id%'
+                            gallery_location_id: '%app.home.gallery_location_id%'
+                            contact_location_id: '%app.layout.contact_location_id%'
                         match:
                             Identifier\ContentType: [home_page]
 
                     blog:
-                        controller: app.controller.blog:listBlogPostsAction
+                        controller: app.paginated_query_controller:contentQueryPaginationAction
+                        params:
+                            page_limit: '%app.blog_post_list_limit%'
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    location_id: '%app.home.blog_location_id%'
+                                assign_results_to: blog_posts
                         template: full\blog.html.twig
                         match:
                             Identifier\ContentType: [blog]
 
                     blog_post:
-                        controller: app.controller.blog:showBlogPostAction
                         template: full\blog_post.html.twig
                         match:
                             Identifier\ContentType: [blog_post]
@@ -32,7 +47,14 @@ ezpublish:
                             Identifier\ContentType: [contact_form]
 
                     gallery:
-                        controller: app.controller.gallery:displayGalleryAction
+                        controller: app.paginated_query_controller:contentQueryPaginationAction
+                        params:
+                            page_limit: '%app.gallery.images_limit%'
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    location_id: '%app.home.gallery_location_id%'
+                                assign_results_to: images
                         template: full\gallery.html.twig
                         match:
                             Identifier\ContentType: [gallery]
@@ -51,6 +73,61 @@ ezpublish:
 
                     blog_post:
                         template: home\blog_post.html.twig
+                        match:
+                            Identifier\ContentType: [blog_post]
+
+                    blog:
+                        controller: ez_query:ContentQueryAction
+                        params:
+                            view_type: home
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    limit: '%app.home.blog_post_limit%'
+                                    location_id: '%app.home.blog_location_id%'
+                                assign_results_to: content_items
+                        template: parts\content_list.html.twig
+                        match:
+                            Identifier\ContentType: [blog]
+
+                    gallery:
+                        controller: ez_query:ContentQueryAction
+                        params:
+                            view_type: home
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    limit: '%app.home.gallery_image_limit%'
+                                    location_id: '%app.home.gallery_location_id%'
+                                assign_results_to: content_items
+                        template: parts\content_list.html.twig
+                        match:
+                            Identifier\ContentType: [gallery]
+
+                blog:
+                    blog_posts_list:
+                        controller: ez_query:ContentQueryAction
+                        params:
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    location_id: '%app.home.blog_location_id%'
+                                assign_results_to: blog_posts
+                        template: parts\blog_posts_list.html.twig
+                        match:
+                            Identifier\ContentType: [blog]
+
+                blog_post:
+                    random_blog_posts:
+                        controller: ez_query:ContentQueryAction
+                        params:
+                            random_posts_limit: '%app.blog_post.random_posts_limit%'
+                            query:
+                                query_type: AppBundle:LatestContent
+                                parameters:
+                                    location_id: '%app.home.blog_location_id%'
+                                assign_results_to: random_blog_posts
+                        template: parts\random_blog_posts.html.twig
                         match:
                             Identifier\ContentType: [blog_post]
 

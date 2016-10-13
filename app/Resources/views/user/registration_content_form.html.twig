@@ -1,0 +1,47 @@
+{% macro display_form(form) %}
+    {{ form_start(form) }}
+
+    {% for fieldForm in form.fieldsData %}
+        {% set fieldIdentifier = fieldForm.vars.data.fieldDefinition.identifier %}
+
+        {% if fieldIdentifier == 'first_name' or fieldIdentifier == 'last_name' %}
+            {% if fieldIdentifier == 'first_name' %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-6">
+                <div class="field-name">
+                    <label class="required">{{ fieldForm.children.value.vars.label }}:</label>
+                </div>
+                {{ form_errors(fieldForm.value) }}
+                {{ form_widget(fieldForm.value, {
+                    'contentData': form.vars.data
+                }) }}
+            </div>
+            {% if fieldIdentifier == 'last_name' %}
+                </div>
+            {% endif %}
+        {% endif %}
+
+        {% if fieldIdentifier == 'user_account' %}
+            <div class="row">
+                <div class="col-md-6">
+                    {{ form_widget(fieldForm.value, {
+                        'contentData': form.vars.data
+                    }) }}
+                </div>
+            </div>
+        {% endif %}
+
+        {%- do fieldForm.setRendered() -%}
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            {{ form_widget(form.publish, {'attr': {
+                'class': 'btn btn-block btn-primary'
+            }}) }}
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+{% endmacro %}

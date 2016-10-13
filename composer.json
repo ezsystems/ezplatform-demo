@@ -32,10 +32,10 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "tedivm/stash-bundle": "~0.4",
-        "ezsystems/ezpublish-kernel": "^6.5",
+        "ezsystems/ezpublish-kernel": "~6.5@dev",
         "ezsystems/repository-forms": "^1.4",
-        "ezsystems/ezplatform-solr-search-engine": "^1.1",
-        "ezsystems/platform-ui-bundle": "^1.5",
+        "ezsystems/ezplatform-solr-search-engine": "^1.1@dev",
+        "ezsystems/platform-ui-bundle": "~1.5@dev",
         "ezsystems/ez-support-tools": "~0.1.0",
         "egulias/listeners-debug-command-bundle": "~1.9",
         "white-october/pagerfanta-bundle": "1.0.*",
@@ -47,8 +47,7 @@
         "components/normalize.css": "3.0.3",
         "components/font-awesome": "4.4.0",
         "ezsystems/comments-bundle": "~6.0.0",
-        "ezsystems/content-on-the-fly-prototype": "~0.1.0",
-        "ezsystems/platform-ui-search-prototype-bundle": "~0.1.0"
+        "ezsystems/content-on-the-fly-prototype": "~0.1.0"
     },
     "require-dev": {
         "behat/behat": "~3.0",

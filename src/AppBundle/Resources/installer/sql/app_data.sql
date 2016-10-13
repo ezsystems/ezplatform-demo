@@ -2517,6 +2517,7 @@ INSERT INTO `ezpolicy` VALUES ('pdf',329,'content',0,1);
 INSERT INTO `ezpolicy` VALUES ('*',330,'ezoe',0,3);
 INSERT INTO `ezpolicy` VALUES ('login',331,'user',0,1);
 INSERT INTO `ezpolicy` VALUES ('read',332,'content',0,4);
+INSERT INTO `ezpolicy` VALUES ('register',333,'user',0,1);
 /*!40000 ALTER TABLE `ezpolicy` ENABLE KEYS */;
 UNLOCK TABLES;
 

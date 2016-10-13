@@ -74,6 +74,10 @@ nav:hover {
     margin-top: -15px;
 }
 
+.navbar-nav {
+    margin-right: 50px;
+}
+
 .navbar-brand {
     margin-top: 8px;
 }
@@ -536,4 +540,145 @@ ul {
 
 .blog-post-body p {
     margin-bottom: 20px;
+}
+
+/* user menu */
+
+*:focus {
+    outline: none;
+}
+
+.user-menu {
+    float: right;
+}
+
+.user-menu .avatar,
+.user-menu .caret {
+    color: #777;
+}
+
+.user-menu button {
+    border: none;
+    background: #f8f8f8;
+    padding: 0;
+    height: 50px;
+}
+
+.user-menu .dropdown-menu {
+    margin: 0;
+    border-radius: 0;
+}
+
+.user-menu .username {
+    border-bottom: 1px solid #f2f2f2;
+    color: #999;
+    font-family: "Maven Pro", sans-serif;
+    font-style: italic;
+    padding: 3px 20px;
+}
+
+.navbar-brand-scroll .user-menu {
+    margin-top: 7px;
+    height: 50px;
+}
+
+/* registration and login forms */
+
+.user-form,
+.user-form-login {
+    background: #dedede;
+    border-radius: 4px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    padding: 10px 30px;
+}
+
+.user-form input,
+.user-form-login input {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 4px 8px;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 17px;
+}
+
+.user-form h2,
+.user-form-login h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.legend {
+    color: #a3a3a3;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.user-form label,
+.user-form-login label {
+    color: #000;
+    font-weight: normal;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.user-form label:after {
+    content: '*';
+}
+
+.user-form button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.user-form-confirmation {
+    background: #dedede;
+    border-radius: 4px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.user-form-confirmation h2 {
+    font-family: "Maven Pro", sans-serif;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 0;
+    background: #f05a22;
+    color: #fff;
+    font-size: 20px;
+}
+
+.user-form-confirmation .confirmation-label {
+    text-align: center;
+    margin: 30px 0;
+    font-family: "Maven Pro", sans-serif;
+    font-size: 17px;
+}
+
+.user-form-confirmation button,
+.user-form-login button {
+    margin-bottom: 30px;
+}
+
+.user-form-login button {
+    margin-top: 20px;
+}
+
+.user-form-login h2 {
+    margin-bottom: 30px;
+}
+
+.error-message {
+    color: #d03146;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user-form-login input[type=checkbox] {
+    width: 20px;
 }
