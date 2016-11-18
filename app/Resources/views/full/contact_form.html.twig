@@ -73,22 +73,24 @@
             </div>
         </div>
     </section>
+{% endblock %}
 
+{% block javascripts %}
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script>
         {% autoescape 'js' %}
-            function initialize() {
-                var mapProp = {
-                    center: new google.maps.LatLng({{ content.getField('location').value.latitude }}, {{ content.getField('location').value.longitude }}),
-                    zoom: 12,
-                    scrollwheel: false,
-                    mapTypeId:google.maps.MapTypeId.ROADMAP
-                };
-                var map = new google.maps.Map(document.getElementById('map-container'), mapProp);
-                var bikeLayer = new google.maps.BicyclingLayer();
-                bikeLayer.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
+        function initialize() {
+            var mapProp = {
+                center: new google.maps.LatLng({{ content.getField('location').value.latitude }}, {{ content.getField('location').value.longitude }}),
+                zoom: 12,
+                scrollwheel: false,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map-container'), mapProp);
+            var bikeLayer = new google.maps.BicyclingLayer();
+            bikeLayer.setMap(map);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
         {% endautoescape %}
     </script>
 {% endblock %}

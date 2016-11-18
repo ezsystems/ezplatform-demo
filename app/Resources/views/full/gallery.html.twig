@@ -42,12 +42,14 @@
             {% endif %}
         </div>
     </div>
+{% endblock %}
 
-    <script>
-        {% autoescape 'js' %}
-            $(document).ready(function() {
-                $('#lightgallery').lightGallery();
-            });
-        {% endautoescape %}
-    </script>
+{% block javascripts %}
+<script>
+    {% autoescape 'js' %}
+    $(document).ready(function() {
+        $('#lightgallery').lightGallery();
+    });
+    {% endautoescape %}
+</script>
 {% endblock %}
