@@ -17,8 +17,7 @@ class ContactType extends AbstractType
             ->setMethod('post')
             ->add('name', 'text')
             ->add('email', 'email')
-            ->add('body', 'textarea')
-            ->add('submit', 'submit');
+            ->add('message', 'textarea');
     }
 
     public function getName()
@@ -28,6 +27,6 @@ class ContactType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(['data_class' => 'AppBundle\Entity\Message']);
+        $resolver->setDefaults(['data_class' => 'AppBundle\Model\Contact']);
     }
 }

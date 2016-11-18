@@ -5,23 +5,20 @@
  */
 namespace AppBundle\Controller;
 
+use Symfony\Component\Form\FormFactory;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\TwigBundle\TwigEngine as Templating;
 use Symfony\Component\Routing\Router;
 use eZ\Publish\Core\MVC\Symfony\View\View;
-use AppBundle\Form\Contact\Form;
 use AppBundle\Form\Type\ContactType;
 use AppBundle\Mail\Sender;
 
 class ContactFormController
 {
-    /** @var \AppBundle\Form\Type\ContactType */
-    protected $contactType;
-
-    /** @var \AppBundle\Form\Contact\Form */
-    protected $form;
+    /** @var \Symfony\Component\Form\FormFactory */
+    protected $formFactory;
 
     /** @var \AppBundle\Mail\Sender */
     protected $sender;
@@ -32,43 +29,22 @@ class ContactFormController
     /** @var \Symfony\Component\Routing\Router */
     protected $router;
 
-    /** @var string */
-    protected $senderEmail;
-
-    /** @var string */
-    protected $recipientEmail;
-
-    /** @var string */
-    protected $emailTitle;
-
     /**
-     * @param \AppBundle\Form\Type\ContactType $contactType
-     * @param \AppBundle\Form\Contact\Form $form
+     * @param \Symfony\Component\Form\FormFactory $formFactory
      * @param \AppBundle\Mail\Sender $sender
      * @param \Symfony\Bundle\TwigBundle\TwigEngine $templating
      * @param \Symfony\Component\Routing\Router $router
-     * @param string $senderEmail
-     * @param string $recipientEmail
-     * @param string $emailTitle
      */
     public function __construct(
-        ContactType $contactType,
-        Form $form,
+        FormFactory $formFactory,
         Sender $sender,
         Templating $templating,
-        Router $router,
-        $senderEmail,
-        $recipientEmail,
-        $emailTitle
+        Router $router
     ) {
-        $this->contactType = $contactType;
-        $this->form = $form;
+        $this->formFactory = $formFactory;
         $this->sender = $sender;
         $this->templating = $templating;
         $this->router = $router;
-        $this->senderEmail = $senderEmail;
-        $this->recipientEmail = $recipientEmail;
-        $this->emailTitle = $emailTitle;
     }
 
     /**
@@ -77,29 +53,27 @@ class ContactFormController
      * @param \eZ\Publish\Core\MVC\Symfony\View\View $view
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
-     * @return \eZ\Publish\Core\MVC\Symfony\View\View|\Symfony\Component\HttpFoundation\Response
+     * @return \eZ\Publish\Core\MVC\Symfony\View\View|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function showContactFormAction(View $view, Request $request)
     {
-        $form = $this->form->getForm();
+        $form = $this->formFactory->create(ContactType::class);
 
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
 
             if ($form->isValid()) {
-                // sends e-mail using submitted data
-                $sendingStatus = $this->sender->send(
-                    $form->getData(),
-                    $this->emailTitle,
-                    $this->senderEmail,
-                    $this->recipientEmail
-                );
+                $contact = $form->getData();
 
-                if ($sendingStatus) {
+                try {
+                    $this->sender->send($contact);
+
                     // redirects user to confirmation page after successful sending of e-mail
                     return new RedirectResponse(
                         $this->router->generate('app.submitted')
                     );
+                } catch (\Exception $e) {
+                    //Todo add flash message to notify the user
                 }
             }
         }

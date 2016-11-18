@@ -3,14 +3,17 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace AppBundle\Entity;
+namespace AppBundle\Model;
 
-class Message
+use Symfony\Component\Validator\Constraints as Assert;
+
+class Contact
 {
     /**
      * Sender's name.
      *
      * @var string
+     * @Assert\NotBlank()
      */
     protected $name;
 
@@ -18,6 +21,7 @@ class Message
      * Sender's e-mail address.
      *
      * @var string
+     * @Assert\Email()
      */
     protected $email;
 
@@ -25,15 +29,16 @@ class Message
      * Sender's message.
      *
      * @var string
+     * @Assert\NotBlank()
      */
-    protected $body;
+    protected $message;
 
     /**
-     * @param string $value
+     * @param string $name
      */
-    public function setName($value)
+    public function setName($name)
     {
-        $this->name = $value;
+        $this->name = $name;
     }
 
     /**
@@ -45,11 +50,11 @@ class Message
     }
 
     /**
-     * @param string $value
+     * @param string $email
      */
-    public function setEmail($value)
+    public function setEmail($email)
     {
-        $this->email = $value;
+        $this->email = $email;
     }
 
     /**
@@ -61,18 +66,26 @@ class Message
     }
 
     /**
-     * @param string $value
+     * @return string
      */
-    public function setBody($value)
+    public function getMessage()
     {
-        $this->body = $value;
+        return $this->message;
+    }
+
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
     }
 
     /**
      * @return string
      */
-    public function getBody()
+    public function getFrom()
     {
-        return $this->body;
+        return sprintf('%s <%s>', $this->getName(), $this->getEmail());
     }
 }
