@@ -1,0 +1,26 @@
+services:
+    app.paginated_query_controller:
+        class: AppBundle\Controller\PagerFantaQueryController
+        arguments:
+            - '@ezpublish.query_type_content_view_mapper'
+            - '@ezpublish.api.service.search'
+
+    app.controller.menu:
+        class: AppBundle\Controller\MenuController
+        arguments:
+            - '@templating'
+            - '@ezpublish.api.service.search'
+            - '@app.query_type.menu'
+            - '%app.top_menu.location_id%'
+
+    app.controller.contactform:
+        class: AppBundle\Controller\ContactFormController
+        arguments:
+            - '@app.form.type.contact'
+            - '@app.form.contact.form'
+            - '@app.mail.sender'
+            - '@templating'
+            - '@hautelook.router.template'
+            - '%app.contact_form.sender_email%'
+            - '%app.contact_form.recipient_email%'
+            - '%app.contact_form.email_title%'
