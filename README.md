@@ -1,5 +1,8 @@
 # eZ Platform Demo
 
+[![Build Status](https://travis-ci.org/ezsystems/ezplatform-demo.svg?branch=master)](https://travis-ci.org/ezsystems/ezplatform-demo)
+
+
 ![Screenshot](https://cloud.githubusercontent.com/assets/3033038/11806375/e116d414-a312-11e5-8675-02a23e2a7788.jpg "Screenshot")
 
 ## What is eZ Platform ?
