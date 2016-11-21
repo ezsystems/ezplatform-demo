@@ -1,0 +1,5 @@
+services:
+    twig.extension.array:
+        class: Twig_Extensions_Extension_Array
+        tags:
+            - { name: twig.extension }

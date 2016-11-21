@@ -1,0 +1,6 @@
+services:
+    app.installer:
+        parent: ezplatform.installer.db_based_installer
+        class: AppBundle\Installer\AppInstaller
+        tags:
+            - { name: ezplatform.installer, type: demo }

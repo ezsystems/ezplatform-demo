@@ -1,0 +1,14 @@
+services:
+    app.query_type.latest_content:
+        class: AppBundle\QueryType\LatestContentQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
+
+    app.query_type.menu:
+        class: AppBundle\QueryType\MenuQueryType
+        calls:
+            - [setLanguages, [$languages$]]
+        tags:
+            - { name: ezpublish.query_type }
