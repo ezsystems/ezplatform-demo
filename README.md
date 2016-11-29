@@ -26,15 +26,7 @@ Full requirements can be found on the [Requirements](https://doc.ez.no/display/T
 
 *For simplified installation, alternatively see our Docker Tools Beta instructions in [doc/docker-compose/README.md](https://github.com/ezsystems/ezplatform/blob/master/doc/docker-compose/README.md)*.
 
-### 1. Create a database
-
-First, create a new database using the following command:
-
-```mysql
-CREATE DATABASE <database> CHARACTER SET utf8;
-```
-
-### 2. Install ezplatform-demo
+### 1. Install ezplatform-demo
 
 Run `composer create-project` to install the demo with required dependencies:
 
@@ -44,6 +36,14 @@ php -d memory_limit=-1 composer.phar create-project --no-dev ezsystems/ezplatfor
 ```
 
 *Installation will ask you for database credentials and secret token for Symfony, other settings can stay as default.*
+
+### 2. Create a database
+
+Then, create a new database using the following command:
+
+```bash
+php app/console doctrine:database:create
+```
 
 ### 3. Install content
 
