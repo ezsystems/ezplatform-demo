@@ -133,6 +133,7 @@ ez_comments:
             default_provider: no_comments
             disqus:
                 shortname: ezpublishplatformdemo
+                count: true
             content_comments:
                 blog_post:
                     enabled: true

@@ -14,20 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="Shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon" />
 
-        {% include 'pagelayout_styles.html.twig' %}
-        {% include 'pagelayout_scripts.html.twig' %}
+        {% include 'layout/styles.html.twig' %}
     </head>
     <body>
         {% block header %}
             {{ render_esi(controller('app.controller.menu:getChildNodesAction', {
-                template: 'pagelayout_header.html.twig'
+                template: 'layout/header.html.twig'
             })) }}
         {% endblock %}
 
         {% block content %}{% endblock %}
 
         {% block footer %}
-            {% include 'pagelayout_footer.html.twig' %}
+            {% include 'layout/footer.html.twig' %}
         {% endblock %}
+        {% include 'layout/scripts.html.twig' %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>
