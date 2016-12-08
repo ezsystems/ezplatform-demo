@@ -16,11 +16,7 @@ services:
     app.controller.contactform:
         class: AppBundle\Controller\ContactFormController
         arguments:
-            - '@app.form.type.contact'
-            - '@app.form.contact.form'
+            - '@form.factory'
             - '@app.mail.sender'
             - '@templating'
             - '@hautelook.router.template'
-            - '%app.contact_form.sender_email%'
-            - '%app.contact_form.recipient_email%'
-            - '%app.contact_form.email_title%'

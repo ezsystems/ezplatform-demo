@@ -51,9 +51,6 @@ parameters:
     # e-mail address used as a message recipient
     app.contact_form.recipient_email: no-reply@ez.no
 
-    # title of message used when sending e-mail
-    app.contact_form.email_title: You have a new message
-
     # number of images displayed per page
     app.gallery.images_limit: 6
     
