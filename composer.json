@@ -48,7 +48,7 @@
         "components/bootstrap": "3.3.5",
         "components/normalize.css": "3.0.3",
         "components/font-awesome": "4.4.0",
-        "ezsystems/comments-bundle": "~6.0@dev",
+        "ezsystems/comments-bundle": "~6.1@dev",
         "ezsystems/content-on-the-fly-prototype": "~0.1.7",
         "willdurand/js-translation-bundle": "^2.6.4"
     },
