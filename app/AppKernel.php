@@ -14,7 +14,7 @@ class AppKernel extends Kernel
     /**
      * Returns an array of bundles to registers.
      *
-     * @return array An array of bundle instances.
+     * @return array an array of bundle instances
      *
      * @api
      */
@@ -50,6 +50,7 @@ class AppKernel extends Kernel
             new EzSystems\EzContentOnTheFlyBundle\EzSystemsEzContentOnTheFlyBundle(),
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new EzSystems\MultiFileUploadBundle\EzSystemsMultiFileUploadBundle(),
             new AppBundle\AppBundle(),
         );
 
