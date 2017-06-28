@@ -14,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="Shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon" />
 
-        {% include 'layout/styles.html.twig' %}
+        {% include '@ezdesign/layout/styles.html.twig' %}
     </head>
     <body>
         {% block header %}
             {{ render_esi(controller('app.controller.menu:getChildNodesAction', {
-                template: 'layout/header.html.twig'
+                template: '@ezdesign/layout/header.html.twig'
             })) }}
         {% endblock %}
 
         {% block content %}{% endblock %}
 
         {% block footer %}
-            {% include 'layout/footer.html.twig' %}
+            {% include '@ezdesign/layout/footer.html.twig' %}
         {% endblock %}
-        {% include 'layout/scripts.html.twig' %}
+        {% include '@ezdesign/layout/scripts.html.twig' %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
