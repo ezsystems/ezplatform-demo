@@ -3,10 +3,11 @@
     '%kernel.root_dir%/../vendor/components/normalize.css/normalize.css'
     '%kernel.root_dir%/../vendor/components/font-awesome/css/font-awesome.min.css'
     'assets/css/lightgallery.min.css'
-    'assets/css/style.css'
     'assets/css/responsive.css'
 %}
 <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{{ asset("css/style.css", "ezdesign") }}" media="screen" />
+
 {% endstylesheets %}
 
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet" type="text/css" />

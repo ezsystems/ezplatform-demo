@@ -5,6 +5,7 @@ imports:
 ezdesign:
     design_list:
         demo: [demo, standard]
+        alternative_demo: [other_theme, demo, standard]
 
 ezpublish:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
@@ -24,9 +25,9 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site]
+        list: [site, alternative_site]
         groups:
-            site_group: [site]
+            site_group: [site, alternative_site]
         default_siteaccess: site
         match:
             URIElement: 1
@@ -53,3 +54,5 @@ ezpublish:
                 purge_servers: ["%purge_server%"]
         site:
             design: demo
+        alternative_site:
+            design: alternative_demo
