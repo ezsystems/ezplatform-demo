@@ -17,13 +17,11 @@ env:
     - SYMFONY_DEBUG=1
   # list of behat arguments to test
   matrix:
-    # Disabled until failures on BDD tests with redis is solved / figured out
-    # - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker-compose/base-prod.yml:doc/docker-compose/redis.yml:doc/docker-compose/selenium.yml" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
-    - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker-compose/base-prod.yml:doc/docker-compose/selenium.yml" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
+    - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker-compose/base-prod.yml:doc/docker-compose/varnish.yml:doc/docker-compose/selenium.yml" WEB_HOST="varnish" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
     - TEST_CMD="bin/behat -vv --profile=rest --suite=fullXml --tags=~@broken"
     - TEST_CMD="bin/behat -vv --profile=core --tags=~@broken"
     - TEST_CMD="bin/phpunit -v vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/Tests/Functional" INSTALL_EZ_INSTALL_TYPE=clean
-    - TEST_CMD="bin/behat -vv --profile=platformui --tags='@common'" INSTALL_EZ_INSTALL_TYPE=clean
+    - TEST_CMD="bin/behat -vv --profile=platformui --tags='@common'" COMPOSE_FILE="doc/docker-compose/base-dev.yml:doc/docker-compose/redis.yml:doc/docker-compose/selenium.yml" INSTALL_EZ_INSTALL_TYPE=clean
 
 # test only master (+ Pull requests)
 branches:
