@@ -25,11 +25,11 @@ Features:
 ## Requirements
 Full requirements can be found on the [Requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
 
-*TL;DR: supported PHP versions are 5.5, 5.6 and 7.0 (for dev use), using mod_php or php-fpm, and either MySQL 5.5/5.6 or MariaDB 5.5/10.0.*
+*TL;DR: supported PHP versions are 5.6, 7.0 and 7.1 (for dev use), using mod_php or php-fpm, and either MySQL 5.5/5.6 or MariaDB 10.0/10.1.*
 
 ## Manual Installation
 
-*For simplified installation, alternatively see our Docker Tools Beta instructions in [doc/docker-compose/README.md](https://github.com/ezsystems/ezplatform/blob/master/doc/docker-compose/README.md)*.
+For simplified installation, consider using [eZ Launchpad](https://ezsystems.github.io/launchpad/) which takes care about the whole setup for you.
 
 ### 1. Install ezplatform-demo
 
