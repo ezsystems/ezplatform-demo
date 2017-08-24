@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa7cb5caf36c7c53acc1a02768f64666",
+    "content-hash": "1d72806136d735581facc5c76284a9bd",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -7206,9 +7206,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ezsystems/ezpublish-kernel": 5,
-        "ezsystems/repository-forms": 5,
-        "ezsystems/platform-ui-bundle": 5,
         "ezsystems/ezplatform-i18n": 20
     },
     "prefer-stable": false,
