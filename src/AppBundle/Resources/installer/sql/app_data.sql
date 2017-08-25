@@ -5968,15 +5968,6 @@ INSERT INTO `ezsearch_object_word_link` VALUES (191,18,88,0,7968,'body',0,0,448,
 UNLOCK TABLES;
 
 --
--- Dumping data for table `ezsearch_return_count`
---
-
-LOCK TABLES `ezsearch_return_count` WRITE;
-/*!40000 ALTER TABLE `ezsearch_return_count` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ezsearch_return_count` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Dumping data for table `ezsearch_search_phrase`
 --
 
