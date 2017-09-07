@@ -1,0 +1,47 @@
+a {
+    color: #6dc17d;
+}
+
+a:hover,
+a:focus {
+    color: #6da17d;
+}
+
+.other-titles a:hover,
+.header-text-one a:hover,
+.header-text-two a:hover {
+    color: #6da17d;
+}
+
+.pagination > li span,
+.pagination > li > a {
+    color: #6dc17d;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background: #6dc17d;
+    border-color: #6da17d;
+}
+
+.btn-primary {
+    background: #6dc17d;
+    border-color: #6da17d;
+}
+
+footer .social i.fa:hover,
+footer .social i.fa:focus {
+    color: #6da17d;
+}
+
+.content-slider li {
+    background: #6dc17d;
+}
+
+.user-form-confirmation h2 {
+    background: #6dc17d;
+}
