@@ -19,7 +19,14 @@
         "ezsystems/ezpublish-community": "*"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": {
+            "AppBundle\\": "src/AppBundle/"
+        },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" },
+        "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
     "require": {
         "php": "~5.6|~7.0",
@@ -51,7 +58,8 @@
         "components/font-awesome": "4.4.0",
         "ezsystems/comments-bundle": "~6.1@dev",
         "ezsystems/content-on-the-fly-prototype": "~0.1.7",
-        "willdurand/js-translation-bundle": "^2.6.4"
+        "willdurand/js-translation-bundle": "^2.6.4",
+        "roave/security-advisories": "dev-master"
     },
     "require-dev": {
         "ezsystems/ezplatform-i18n": "^1.0@dev",
@@ -67,7 +75,7 @@
         "ezsystems/legacy-bridge": "Provides the full legacy backoffice and legacy features"
     },
     "scripts": {
-        "build": [
+        "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::clearCache",
@@ -76,10 +84,10 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-install-cmd": [
-            "@build"
+            "@symfony-scripts"
         ],
         "post-update-cmd": [
-            "@build"
+            "@symfony-scripts"
         ],
         "post-create-project-cmd": [
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"

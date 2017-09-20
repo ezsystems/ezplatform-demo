@@ -17,7 +17,7 @@ env:
     - SYMFONY_DEBUG=1
   # list of behat arguments to test
   matrix:
-    - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker/base-prod.yml:doc/docker/varnish.yml:doc/docker/selenium.yml" WEB_HOST="varnish" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
+    - TEST_CMD="bin/behat -vv --profile=rest --suite=fullJson --tags=~@broken" COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/varnish.yml:doc/docker/selenium.yml" WEB_HOST="varnish" REMOTE_IMAGE="ezsystems/ezplatform-demo" APP_PROD_IMAGE="ezplatform-demo"
     - TEST_CMD="bin/behat -vv --profile=rest --suite=fullXml --tags=~@broken"
     - TEST_CMD="bin/behat -vv --profile=core --tags=~@broken"
     - TEST_CMD="bin/phpunit -v vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/Tests/Functional" INSTALL_EZ_INSTALL_TYPE=clean
@@ -53,8 +53,10 @@ script: docker-compose exec --user www-data app sh -c "php /scripts/wait_for_db.
 after_success: if [ "$REMOTE_IMAGE" != "" ] && [ "$TRAVIS_TAG" != "" ]; then bin/.ci/docker_hub_push.sh ${APP_PROD_IMAGE} ${REMOTE_IMAGE}; fi
 
 after_failure:
-  # Will show us the full log of container's main processes (not counting shell process above running php and behat)
-  - docker-compose logs -t --tail="all"
+  # Will show us the last bit of the log of container's main processes
+  # (not counting shell process above running php and behat)
+  # NOTE: errors during docker setup of travis build won't show up here (can't output all as it is too much in debug/verbose mode)
+  - docker-compose logs -t --tail=15
   # Will show us what is up, and how long it's been up
   - docker ps -s
 
