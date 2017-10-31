@@ -46,7 +46,8 @@
         "ezsystems/ezplatform-http-cache": "^0.1@dev",
         "knplabs/knp-menu-bundle": "^2.1",
         "roave/security-advisories": "dev-master",
-        "oneup/flysystem-bundle": "^2.0"
+        "oneup/flysystem-bundle": "^2.0",
+        "ezsystems/ezplatform-design-engine": "^1.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.1",

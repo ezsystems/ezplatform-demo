@@ -1,0 +1,4 @@
+ezpublish:
+    system:
+        default:
+            pagelayout: "@ezdesign/pagelayout.html.twig"

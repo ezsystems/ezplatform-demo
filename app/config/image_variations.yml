@@ -1,0 +1,4 @@
+ezpublish:
+    system:
+        default:
+            image_variations:

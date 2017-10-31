@@ -1,3 +1,7 @@
+imports:
+    - { resource: image_variations.yml }
+    - { resource: views.yml }
+
 ezpublish:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
     http_cache:
@@ -13,9 +17,17 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site]
+        list:
+            - site
+            - fr
+            - de
+            - no
         groups:
-            site_group: [site]
+            site_group:
+                - site
+                - fr
+                - de
+                - no
         default_siteaccess: site
         match:
             URIElement: 1
@@ -29,10 +41,6 @@ ezpublish:
             # it is recommended to install clean, then change setting before you start adding binary content, otherwise you'll
             # need to manually modify your database data to reflect this to avoid exceptions.
             var_dir: var/site
-            # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
-            # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
-            # all eng-GB data to other locales first.
-            languages: [eng-GB]
             content:
               # As we by default enable EzSystemsPlatformHttpCacheBundle which is designed to expire all affected cache
               # on changes, and as error / redirects now have separate ttl, we easier allow ttl to be greatly increased
@@ -43,3 +51,33 @@ ezpublish:
             # Temporary hard coding session name during v2 development
             session:
                 name: eZSESSID
+            # ez-design-engine configuration
+            design: main
+        site:
+            languages:
+                - eng-GB
+                - fre-FR
+                - ger-DE
+                - nor-NO
+        fr:
+            languages:
+                - fre-FR
+                - eng-GB
+        de:
+            languages:
+                - ger-DE
+                - eng-GB
+        no:
+            languages:
+                - nor-NO
+                - eng-GB
+
+ezdesign:
+    design_list:
+        main: [tastefulplanet]
+
+assetic:
+    assets:
+        css_default:
+            inputs:
+                - 'assets/css/tastefulplanet.css'
