@@ -7,12 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="{{ asset('assets/images/meadow.png') }}" class="img-responsive meadow-logo-top" /></a>
+            <a class="navbar-brand" href="{{ path( ezpublish.rootLocation() ) }}"><img src="{{ asset('images/meadow.png', 'ezdesign') }}" class="img-responsive meadow-logo-top" /></a>
         </div>
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
             {% block user_menu %}
-                {% include 'layout/user_menu.html.twig' %}
+                {% include '@ezdesign/layout/user_menu.html.twig' %}
             {% endblock %}
 
             <ul class="nav navbar-nav navbar-right">

@@ -1,20 +1,20 @@
 ezpublish:
     system:
         default:
-            pagelayout: pagelayout.html.twig
+            pagelayout: '@ezdesign/pagelayout.html.twig'
             user:
-                layout: pagelayout.html.twig
-                login_template: user\login.html.twig
+                layout: '@ezdesign/pagelayout.html.twig'
+                login_template: '@ezdesign/user/login.html.twig'
 
             user_registration:
                 templates:
-                    form: user\registration_form.html.twig
-                    confirmation: user\registration_confirmation.html.twig
+                    form: '@ezdesign/user/registration_form.html.twig'
+                    confirmation: '@ezdesign/user/registration_confirmation.html.twig'
 
             content_view:
                 full:
                     home_page:
-                        template: full\home_page.html.twig
+                        template: '@ezdesign/full/home_page.html.twig'
                         params:
                             blog_location_id: '%app.home.blog_location_id%'
                             gallery_location_id: '%app.home.gallery_location_id%'
@@ -31,18 +31,18 @@ ezpublish:
                                 parameters:
                                     location_id: '%app.home.blog_location_id%'
                                 assign_results_to: blog_posts
-                        template: full\blog.html.twig
+                        template: '@ezdesign/full/blog.html.twig'
                         match:
                             Identifier\ContentType: [blog]
 
                     blog_post:
-                        template: full\blog_post.html.twig
+                        template: '@ezdesign/full/blog_post.html.twig'
                         match:
                             Identifier\ContentType: [blog_post]
 
                     contact_form:
                         controller: app.controller.contactform:showContactFormAction
-                        template: full\contact_form.html.twig
+                        template: '@ezdesign/full/contact_form.html.twig'
                         match:
                             Identifier\ContentType: [contact_form]
 
@@ -55,24 +55,24 @@ ezpublish:
                                 parameters:
                                     location_id: '%app.home.gallery_location_id%'
                                 assign_results_to: images
-                        template: full\gallery.html.twig
+                        template: '@ezdesign/full/gallery.html.twig'
                         match:
                             Identifier\ContentType: [gallery]
 
                 line:
                     blog_post:
-                        template: line\blog_post.html.twig
+                        template: '@ezdesign/line/blog_post.html.twig'
                         match:
                             Identifier\ContentType: [blog_post]
 
                 home:
                     image:
-                        template: home\image.html.twig
+                        template: '@ezdesign/home/image.html.twig'
                         match:
                             Identifier\ContentType: [image]
 
                     blog_post:
-                        template: home\blog_post.html.twig
+                        template: '@ezdesign/home/blog_post.html.twig'
                         match:
                             Identifier\ContentType: [blog_post]
 
@@ -86,7 +86,7 @@ ezpublish:
                                     limit: '%app.home.blog_post_limit%'
                                     location_id: '%app.home.blog_location_id%'
                                 assign_results_to: content_items
-                        template: parts\content_list.html.twig
+                        template: '@ezdesign/parts/content_list.html.twig'
                         match:
                             Identifier\ContentType: [blog]
 
@@ -100,7 +100,7 @@ ezpublish:
                                     limit: '%app.home.gallery_image_limit%'
                                     location_id: '%app.home.gallery_location_id%'
                                 assign_results_to: content_items
-                        template: parts\content_list.html.twig
+                        template: '@ezdesign/parts/content_list.html.twig'
                         match:
                             Identifier\ContentType: [gallery]
 
@@ -113,7 +113,7 @@ ezpublish:
                                 parameters:
                                     location_id: '%app.home.blog_location_id%'
                                 assign_results_to: blog_posts
-                        template: parts\blog_posts_list.html.twig
+                        template: '@ezdesign/parts/blog_posts_list.html.twig'
                         match:
                             Identifier\ContentType: [blog]
 
@@ -127,9 +127,9 @@ ezpublish:
                                 parameters:
                                     location_id: '%app.home.blog_location_id%'
                                 assign_results_to: random_blog_posts
-                        template: parts\random_blog_posts.html.twig
+                        template: '@ezdesign/parts/random_blog_posts.html.twig'
                         match:
                             Identifier\ContentType: [blog_post]
 
             field_templates:
-                - { template: content_fields.html.twig, priority: 100 }
+                - { template: '@ezdesign/content_fields.html.twig', priority: 100 }
