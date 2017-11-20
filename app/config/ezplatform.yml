@@ -53,6 +53,12 @@ ezpublish:
                 name: eZSESSID
             # ez-design-engine configuration
             design: main
+        admin_group:
+            languages:
+                - eng-GB
+                - fre-FR
+                - ger-DE
+                - nor-NO
         site:
             languages:
                 - eng-GB
@@ -81,3 +87,61 @@ assetic:
         css_default:
             inputs:
                 - 'assets/css/tastefulplanet.css'
+
+nova_ezseo:
+    system:
+        default:
+            #custom_fallback_service: ezstudiodemo.seo.fallback
+            default_links:
+                Index:
+                    href: { location_id: 2 }
+                    title: "Home"
+#                Search:
+#                    href: { route: "ezpublish_ezstudiodemo_search" }
+#                    title: "Search"
+#                "Shortcut icon":
+#                    href: { asset: "/bundles/ezstudiodemo/images/favicon.ico" }
+#                    type: "image/x-icon"
+            default_metas:
+                author: "eZ Systems"
+                copyright: "eZ Systems"
+                generator: "eZ Platform"
+                MSSmartTagsPreventParsing: ~
+            fieldtype_metas:
+                title:
+                    label: "Title"
+                    default_pattern: "<title|short_title|name>"
+                description:
+                    label: "Description"
+                    default_pattern: "<description|short_description|intro|title|name>"
+                keywords:
+                    label: "Keywords"
+                    default_pattern: "<tags>"
+                canonical:
+                    label: "External Canonical URL"
+                    default_pattern: ~
+                    icon: "link"
+                "og:title":
+                    label: "Facebook - Title"
+                    default_pattern: "<title|short_title|name>"
+                    icon: "facebook-official"
+                "og:description":
+                    label: "Facebook - Description"
+                    default_pattern: "<short_description|description|intro|title|name>"
+                    icon: "facebook-official"
+                "og:image":
+                    label: "Facebook - Image"
+                    default_pattern: "<image|picture>"
+                    icon: "facebook-official"
+                "twitter:title":
+                    label: "Twitter - Title"
+                    default_pattern: "<title|short_title|name>"
+                    icon: "twitter-square"
+                "twitter:description":
+                    label: "Twitter - Description"
+                    default_pattern: "<short_description|description|intro|title|name>"
+                    icon: "twitter-square"
+                "twitter:image":
+                    label: "Twitter - Image"
+                    default_pattern: "<image|picture>"
+                    icon: "twitter-square"
