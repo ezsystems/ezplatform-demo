@@ -48,7 +48,7 @@ parameters:
     env(MAILER_HOST):       127.0.0.1
     env(MAILER_USER):       ~
     env(MAILER_PASSWORD):   ~
-
+    
     env(SEARCH_ENGINE): legacy
 
     env(SOLR_DSN): http://localhost:8983/solr
@@ -77,3 +77,7 @@ parameters:
 
     # Purge type used by HttpCache system ("local", "varnish"/"http", and on ee also "fastly")
     purge_type: local
+
+    # Top menu parameters
+    app.top_menu.parent_location_id: 2
+    app.top_menu.includedContentTypeIdentifier: ["folder", "article"]
