@@ -30,3 +30,7 @@ parameters:
     ## By default cache ttl is set to 24h, when using Varnish you can set a much higher value. High values depends on
     ## using EzSystemsPlatformHttpCacheBundle (default as of v1.12) which by design expires affected cache on changes
     env(HTTPCACHE_TTL): 86400
+
+    # Top menu parameters
+    app.top_menu.parent_location_id: 2
+    app.top_menu.includedContentTypeIdentifier: ["folder", "article"]
