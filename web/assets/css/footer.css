@@ -1,0 +1,48 @@
+footer .footer-content {
+    background: #312e2b;
+    color: #fff;
+}
+
+footer .footer-content .row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+footer .footer-content h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+footer .footer-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-content li a {
+    color: #afafaf;
+}
+
+footer .footer-content li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-copyright {
+    background: #1f1e1c;
+    font-size: 15px;
+    min-height: 70px;
+}
+
+footer .footer-copyright .row {
+    min-height: 70px;
+}
+
+footer .footer-copyright p {
+    color: #afafaf;
+    margin-bottom: 0;
+}
+
+footer .footer-copyright p a {
+    color: #f15a22;
+}
