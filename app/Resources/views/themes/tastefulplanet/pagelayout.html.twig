@@ -37,6 +37,10 @@
         {% endblock %}
 
         {% block footer %}
+            {{ render_esi(controller('app.controller.menu:getChildNodesAction', {
+                template: '@ezdesign/layout/footer.html.twig',
+                pathString: location.pathString
+            })) }}
         {% endblock %}
     </body>
 </html>
