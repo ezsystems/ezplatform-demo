@@ -48,7 +48,7 @@ parameters:
     env(MAILER_HOST):       127.0.0.1
     env(MAILER_USER):       ~
     env(MAILER_PASSWORD):   ~
-    
+
     env(SEARCH_ENGINE): legacy
 
     env(SOLR_DSN): http://localhost:8983/solr
