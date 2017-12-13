@@ -12,13 +12,14 @@ ezpublish:
         default:
             storage: ~
             search:
-                engine: '%env(SEARCH_ENGINE)%'
+                engine: '%search_engine%'
                 connection: default
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
         list:
             - site
+            - admin
             - fr
             - de
             - no
@@ -28,6 +29,10 @@ ezpublish:
                 - fr
                 - de
                 - no
+            # WARNING: Do not remove or rename this group.
+            # It's used to distinguish common siteaccesses from admin ones.
+            # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
+            admin_group: [admin]
         default_siteaccess: site
         match:
             URIElement: 1
@@ -36,29 +41,42 @@ ezpublish:
     system:
         site_group:
             # Cache pool service, needs to be different per repository (database) on multi repository install.
-            cache_service_name: '%env(CACHE_POOL)%'
+            cache_service_name: '%cache_pool%'
             # These reflect the current installers, complete installation before you change them. For changing var_dir
             # it is recommended to install clean, then change setting before you start adding binary content, otherwise you'll
             # need to manually modify your database data to reflect this to avoid exceptions.
             var_dir: var/site
+            # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
+            # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
+            # all eng-GB data to other locales first.
+            languages: [eng-GB]
             content:
               # As we by default enable EzSystemsPlatformHttpCacheBundle which is designed to expire all affected cache
               # on changes, and as error / redirects now have separate ttl, we easier allow ttl to be greatly increased
-              default_ttl: '%env(HTTPCACHE_TTL)%'
+              default_ttl: '%httpcache_default_ttl%'
             # HttpCache purge server(s) setting, eg Varnish, for when ezpublish.http_cache.purge_type is set to 'http'.
             http_cache:
-                purge_servers: ['%env(PURGE_SERVERS)%']
+                purge_servers: ['%purge_server%']
             # Temporary hard coding session name during v2 development
             session:
                 name: eZSESSID
             # ez-design-engine configuration
             design: main
+        # WARNING: Do not remove or rename this group.
         admin_group:
+            cache_service_name: '%cache_pool%'
+            var_dir: var/site
             languages:
                 - eng-GB
                 - fre-FR
                 - ger-DE
                 - nor-NO
+            content:
+                default_ttl: '%httpcache_default_ttl%'
+            http_cache:
+                purge_servers: ['%purge_server%']
+            session:
+                name: eZSESSID
         site:
             languages:
                 - eng-GB
