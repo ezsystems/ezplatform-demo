@@ -1,4 +1,12 @@
 ezpublish:
     system:
-        default:
+        site:
             pagelayout: "@ezdesign/pagelayout.html.twig"
+
+            content_view:
+                full:
+                    article:
+                        template: "@ezdesign/full/article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+
