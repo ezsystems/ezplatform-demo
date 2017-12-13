@@ -1,0 +1,75 @@
+.content-type-article {
+    background: #fff;
+}
+
+.content-type-article .thumbnail {
+    position: relative;
+}
+
+.content-type-article .thumbnail img {
+    opacity: 0.3;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.content-type-article .banner-image {
+    background-color: #000;
+    max-height: 450px;
+}
+
+.content-type-article .title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.content-type-article h1.field-title {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 75px;
+}
+
+.content-type-article .meta {
+    line-height: 15px;
+    margin-bottom: 30px;
+}
+
+.content-type-article .meta .field-author {
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #63605D;
+}
+
+.content-type-article .meta .field-date time {
+    padding-left: 10px;
+}
+
+.content-type-article h2,
+.content-type-article h3,
+.content-type-article p {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    color: #63605D;
+}
+
+.content-type-article h2 {
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.content-type-article h3 {
+    font-size: 35px;
+    margin-top: 45px;
+    margin-bottom: 12px;
+}
+
+.content-type-article p {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.content-type-article .field-body {
+    margin-bottom: 100px;
+}
