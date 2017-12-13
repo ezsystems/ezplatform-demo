@@ -93,6 +93,7 @@ assetic:
                 - 'assets/css/tastefulplanet.css'
                 - 'assets/css/header.css'
                 - 'assets/css/footer.css'
+                - 'assets/css/article.css'
 
 nova_ezseo:
     system:
