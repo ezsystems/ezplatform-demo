@@ -1,0 +1,17 @@
+<div class="row content-view-featured content-type-article align-items-center">
+    <div class="col-md-6">
+        {{ ez_render_field(content, 'image', {
+            parameters: {
+                alias: 'original',
+                class: 'img-fluid'
+            }
+        }) }}
+    </div>
+    <div class="col-md-6">
+        <h2 class="field-title"><a href="{{ path( location ) }}">{{ ez_render_field (content, 'title') }}</a></h2>
+
+        {{ ez_render_field (content, 'intro') }}
+
+        <a href="{{ path( location ) }}" class="read-more">{{ "Read More"|trans }}</a>
+    </div>
+</div>
