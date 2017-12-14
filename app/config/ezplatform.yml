@@ -108,6 +108,7 @@ assetic:
                 - 'assets/css/header.css'
                 - 'assets/css/footer.css'
                 - 'assets/css/article.css'
+                - 'assets/css/folder.css'
 
 nova_ezseo:
     system:
