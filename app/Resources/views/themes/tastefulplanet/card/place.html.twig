@@ -1,0 +1,13 @@
+<div class="card content-type-place">
+    {{ ez_render_field(content, 'image', {
+        parameters: {
+            alias: 'original',
+            class: 'card-img img-fluid w-100'
+        }
+    }) }}
+    <a href="{{ path( location ) }}">
+        <div class="card-img-overlay">
+            <h2 class="card-title">{{ ez_content_name( content ) }}</h2>
+        </div>
+    </a>
+</div>
