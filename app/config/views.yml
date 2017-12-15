@@ -27,11 +27,28 @@ ezpublish:
                         match:
                             Identifier\ContentType: [place]
 
+                    place_list:
+                        controller: "ez_query:contentQueryAction"
+                        template: "@ezdesign/full/place_list.html.twig"
+                        match:
+                            Identifier\ContentType: [place_list]
+                        params:
+                            query:
+                                query_type: "AppBundle:Children"
+                                parameters:
+                                    parent_location_id: "@=location.id"
+                                assign_results_to: places
+
                 card:
                     article:
                         template: "@ezdesign/card/article.html.twig"
                         match:
                             Identifier\ContentType: [article]
+
+                    place:
+                        template: "@ezdesign/card/place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
 
                 featured:
                     article:
