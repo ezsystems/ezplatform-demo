@@ -22,6 +22,11 @@ ezpublish:
                                     parent_location_id: "@=location.id"
                                 assign_results_to: children
 
+                    place:
+                        template: "@ezdesign/full/place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+
                 card:
                     article:
                         template: "@ezdesign/card/article.html.twig"
