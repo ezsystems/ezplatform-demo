@@ -105,6 +105,11 @@ assetic:
         css_default:
             inputs:
                 - 'assets/css/tastefulplanet.css'
+                - 'assets/css/header.css'
+                - 'assets/css/footer.css'
+                - 'assets/css/article.css'
+                - 'assets/css/folder.css'
+                - 'assets/css/place.css'
 
 nova_ezseo:
     system:

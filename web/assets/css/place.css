@@ -1,0 +1,111 @@
+.content-type-place {
+    background: #fff;
+}
+
+.content-type-place .thumbnail {
+    position: relative;
+}
+
+.content-type-place .thumbnail img {
+    opacity: 0.3;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.content-type-place .banner-image {
+    background-color: #000;
+    max-height: 450px;
+}
+
+.content-type-place .title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.content-type-place h1.field-name {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 75px;
+}
+
+.content-type-place .field-intro p {
+    color: #fff;
+}
+
+.content-type-place .meta {
+    line-height: 15px;
+    margin-bottom: 30px;
+}
+
+.content-type-place .meta .field-author {
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #63605d;
+}
+
+.content-type-place .meta .field-date time {
+    padding-left: 10px;
+}
+
+.content-type-place h2,
+.content-type-place h3,
+.content-type-place p {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    color: #63605d;
+}
+
+.content-type-place h2 {
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.content-type-place h3 {
+    font-size: 35px;
+    margin-top: 45px;
+    margin-bottom: 12px;
+}
+
+.content-type-place p {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.content-type-place .field-description {
+    margin-bottom: 100px;
+}
+
+.card.content-type-place {
+    border: none;
+}
+
+.card.content-type-place figure.ezimage-field {
+    margin: 0;
+}
+
+.card.content-type-place figure.ezimage-field img {
+    max-height: 233px;
+    object-fit: cover;
+}
+
+.card.content-type-place h2.card-title {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background: #3c3330;
+    margin-bottom: 0;
+    padding: 15px 40px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.card.content-type-place .card-img-overlay {
+    padding-left: 0;
+}
+
+.card.content-type-place .card-img-overlay:hover h2.card-title  {
+    background: #0073ae;
+}
