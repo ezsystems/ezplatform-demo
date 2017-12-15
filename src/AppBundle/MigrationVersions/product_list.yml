@@ -1,0 +1,796 @@
+# references
+-
+    type: reference
+    mode: load
+    file: 'src/AppBundle/MigrationVersions/References/references_tags.yml'
+    overwrite: true
+
+# product_list content type
+-
+    type: content_type
+    mode: create
+    content_type_group: 1
+    identifier: product_list
+    name: Product List
+    name_pattern: <short_title|title>
+    is_container: true
+    attributes:
+        -
+            type: ezstring
+            name: Title
+            identifier: title
+            required: true
+            searchable: true
+            category: content
+        -
+            type: ezstring
+            name: Short Title
+            identifier: short_title
+            required: true
+            searchable: true
+            category: content
+        -
+            type: ezimage
+            name: Banner
+            identifier: banner
+            category: content
+        -
+            type: ezrichtext
+            name: Description
+            identifier: description
+            category: content
+        -
+            type: novaseometas
+            name: Metas
+            identifier: metas
+            description: Metas for Search Engine Optimizations
+            required: false
+            info-collector: false
+            searchable: false # CANNOT be searchable
+            disable-translation: false
+            category: metadata
+
+# product content type
+-
+    type: content_type
+    mode: create
+    content_type_group: 1
+    identifier: product
+    name: Product
+    name_pattern: <title>
+    is_container: false
+    attributes:
+        -
+            type: ezstring
+            name: Title
+            identifier: title
+            required: true
+            searchable: true
+            category: content
+        -
+            type: ezrichtext
+            name: Description
+            identifier: description
+            searchable: true
+            category: content
+        -
+            type: ezrichtext
+            name: Cooking Instructions
+            identifier: cooking_instructions
+            searchable: true
+            category: content
+        -
+            type: ezrichtext
+            name: Ingredients
+            identifier: ingredients
+            searchable: true
+            category: content
+        -
+            type: ezimage
+            name: Image
+            identifier: image
+            category: content
+        -
+            type: ezfloat
+            name: Price
+            identifier: price
+            searchable: false
+            category: content
+        -
+            type: ezinteger
+            name: Serving
+            identifier: serving
+            searchable: true
+            category: content
+        -
+            type: ezselection
+            name: Spicy level
+            identifier: spicy
+            searchable: true
+            category: content
+            field-settings:
+                options: [0, 1, 2, 3]
+        -
+            type: ezboolean
+            name: Dairy
+            identifier: dairy
+            searchable: true
+            category: content
+        -
+            type: ezboolean
+            name: Egg
+            identifier: egg
+            searchable: true
+            category: content
+        -
+            type: ezboolean
+            name: Nuts
+            identifier: nuts
+            searchable: true
+            category: content
+        -
+            type: ezboolean
+            name: Seafood
+            identifier: seafood
+            searchable: true
+            category: content
+        -
+            type: ezboolean
+            name: Gluten
+            identifier: gluten
+            searchable: true
+            category: content
+        -
+            type: eztags
+            name: tags
+            identifier: tags
+            category: content
+            field-settings:
+                hideRootTag: false
+        -
+            type: novaseometas
+            name: Metas
+            identifier: metas
+            description: Metas for Search Engine Optimizations
+            required: false
+            info-collector: false
+            searchable: false # CANNOT be searchable
+            disable-translation: false
+            category: metadata
+
+# product_list content
+-
+    type: content
+    mode: create
+    content_type: product_list
+    parent_location: 2
+    section: 1
+    owner: 14
+    attributes:
+        title: Products
+        short_title: Products
+        banner: 'vendor/ezsystems/ezplatform-demo-assets/images/products/banner.jpg'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Food experience</para><para>taken to the next level</para></section>'
+    references:
+        -
+            identifier: product_list
+            attribute: location_id
+
+# product content
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Cheesecake with figs and walnuts crumble with fig honey'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Fig cheesecake is a quick and easy no-bake cheesecake. A heavenly decadent cheesecake, that melts in your mouth. A perfect dessert to serve when entertaining as it can be made up to two days ahead and stored in the fridge.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Adjust oven rack to middle position and preheat oven to 325°. For crust, mix graham cracker crumbs and walnuts; stir in honey. Press into bottom of buttered 9-inch springform pan. Bake 8 to 10 minutes, till edges are golden.</para><para>For cheesecake, beat cream cheese with electric mixer on medium-low speed until smooth, scraping bowl as needed. Gradually beat in sugar, then sour cream, zest and vanilla. Beat in eggs, one at a time. Scrap filling into pan over figs. Bake on middle rack for 45 to 55 minutes, until almost set in center. Cool. Chill 4 hours or overnight.</para><para>For sauce, combine water, honey, lemon juice and figs in small saucepan. Stir over medium heat until mixture comes to a simmer. Add cornstarch solution and stir for a few seconds, until thickened. Remove from heat and stir in figs. Cool. Chill until serving time. To serve, run thin knife around edge of cheesecake and remove side of pan. Cut into wedges and top each with sauce.</para></section>'
+        ingredients: >- #xml
+            <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
+            xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
+            <para>Nuts crumble crust:</para>
+                <itemizedlist>
+                    <listitem><para>2 1/2 cup graham cracker crumbs</para></listitem>
+                    <listitem><para>2 tablespoons walnuts</para></listitem>
+                    <listitem><para>3 tablespoons fig honey</para></listitem>
+                </itemizedlist>
+                <para>Cheesecake:</para>
+                <itemizedlist>
+                    <listitem><para>1 1/2 pounds (three 8-ounce packages) cream cheese softened,</para></listitem>
+                    <listitem><para>3/4 cup granulated sugar</para></listitem>
+                    <listitem><para>1/4 cup sour cream</para></listitem>
+                    <listitem><para>2 teaspoons grated lemon zest</para></listitem>
+                    <listitem><para>1 1/2 teaspoons vanilla extract</para></listitem>
+                    <listitem><para>3 large eggs</para></listitem>
+                </itemizedlist>
+                <para>Fig, Lemon &amp; Honey Sauce:</para>
+                <itemizedlist>
+                    <listitem><para>1/2 cup water</para></listitem>
+                    <listitem><para>1/2 cup honey</para></listitem>
+                    <listitem><para>1/3 cup fresh lemon juice</para></listitem>
+                    <listitem><para>1 1/2 teaspoons cornstarch mixed with 1 tablespoon water</para></listitem>
+                    <listitem><para>3 cups stemmed, sliced figs</para></listitem>
+                </itemizedlist>
+            </section>
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/cheesecake_figs.jpg'
+        price: 45
+        serving: 12
+        spicy: [0]
+        dairy: true
+        egg: true
+        nuts: true
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Desserts' }
+            - { tag_keyword:'Cake' }
+            - { tag_keyword:'Vegetarian' }
+            - { tag_keyword:'Dairy' }
+            - { tag_keyword:'Eggs' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Grilled Thai spice chicken sliders'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Who doesn’t adore sliders?! These small burgers can be revisited and seasoned to perfection with all sorts of creative toppings. These Thai chicken sliders are a great way to get started in your next friends gathering, eating healthy without sacrificing flavor. Plus, Thai spices always make your recipes tastier!</para></section>'
+        cooking_instructions: >-
+            <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
+            xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
+                <para>Sliders:</para>
+                <para>Season a grill or grill pan with vegetable oil, turn to medium high heat.</para>
+                <para>Split the Kings Hawaiian Dinner Rolls. When grill is hot, heat both sides of the rolls until you have grill marks. Set them aside.</para>
+                <para>In a bowl season the meat with some garlic salt &amp; pepper. Mix in the chili paste, fish sauce, lime juice, cilantro &amp; green onion. Form 9 small slider patties.</para>
+                <para>Add some more oil to the grill pan if needed. Grill the burgers for a few minutes on each side until cooked through.</para><para>Sriracha Sauce:</para>
+                <para>Whisk together the Sriracha sauce, mayonnaise &amp; a pinch of black pepper.</para><para>Assembly:</para>
+                <para>Spread some Sriracha on each piece of bread (top &amp; bottom) Place a piece of cilantro &amp; bok choy on one side, place the slider on top of that and the other half of the bun.</para>
+            </section>
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Chicken Sliders:</para><itemizedlist><listitem><para>9 slider buns</para></listitem><listitem><para>1 pound Ground Chicken</para></listitem><listitem><para>1/4 cup chopped Green Onion</para></listitem><listitem><para>1 tablespoon chopped Fresh Cilantro</para></listitem><listitem><para>1 tablespoon Thai red chili paste</para></listitem><listitem><para>2 teaspoons fish sauce</para></listitem><listitem><para>1 Lime, juiced</para></listitem><listitem><para>Garlic Powder</para></listitem><listitem><para>Black Pepper</para></listitem><listitem><para>9 Bok Choy Leaves</para></listitem><listitem><para>Fresh Cilantro</para></listitem><listitem><para>Vegetable Oil</para></listitem><listitem><para>Pickled carrots, onions and cucumbers</para></listitem></itemizedlist><para>Sriracha Mayo Sauce:</para><itemizedlist><listitem><para>1/2 cup Mayonnaise</para></listitem><listitem><para>1 tablespoon Sriracha</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/thai_sliders.jpg'
+        price: 35
+        serving: 3
+        spicy: [2]
+        dairy: false
+        egg: true
+        nuts: true
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Thai' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Spicy' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Eggs' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Korean Bibimbap'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Along with kimchi, bibimbap takes its place among the favored foods in Korean cuisine. Literally meaning "mixed rice", it is a popular meal consisting of white rice topped with vegetables, beef, a whole egg, and gochujang (red chili pepper paste).</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Stir cucumber pieces with 1/4 cup gochujang paste in a bowl; set aside.</para><para>Bring about 2 cups of water to a boil in a large nonstick skillet and stir in spinach; cook until spinach is bright green and wilted, 2 to 3 minutes.</para><para>Drain spinach and squeeze out as much moisture as possible; set spinach aside in a bowl and stir soy sauce into spinach.</para><para>Heat 1 teaspoon olive oil in large nonstick skillet and cook and stir carrots until softened, about 3 minutes; stir in garlic and cook just until fragrant, about 1 more minute. Stir in cucumber pieces with gochujang paste; sprinkle with red pepper flakes, and set the mixture aside in a bowl.</para><para>Brown beef in a clean nonstick skillet over medium heat, about 5 minutes per side, and set aside. In a separate nonstick skillet, heat 1 more teaspoon olive oil over medium-low heat and fry the eggs just on one side until yolks are runny but whites are firm, 2 to 4 minutes each.</para><para>To assemble the dish, divide cooked rice into 4 large serving bowls; top with spinach mixture, a few pieces of beef, and cucumber mixture. Place 1 egg atop each serving. Drizzle each bowl with 1 teaspoon of sesame oil, a sprinkle of sesame seeds, and a small amount of gochujang paste if desired.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1 English cucumber, cut into matchsticks</para></listitem><listitem><para>1/4 cup gochujang (Korean hot pepper paste)</para></listitem><listitem><para>1 bunch fresh spinach, cut into thin strips</para></listitem><listitem><para>1 tablespoon soy sauce</para></listitem><listitem><para>1 teaspoon olive oil 2 carrots, cut into matchsticks</para></listitem><listitem><para>1 clove garlic, minced</para></listitem><listitem><para>1 pinch red pepper flakes</para></listitem><listitem><para>1 pound thinly-sliced beef top round steak</para></listitem><listitem><para>1 teaspoon olive oil</para></listitem><listitem><para>4 large eggs</para></listitem><listitem><para>4 cups cooked white rice</para></listitem><listitem><para>4 teaspoons toasted sesame oil, divided</para></listitem><listitem><para>1 teaspoon sesame seeds</para></listitem><listitem><para>2 teaspoons gochujang (Korean hot pepper paste), divided (optional)</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/korean_bibimbap.jpg'
+        price: 25
+        serving: 4
+        spicy: [2]
+        dairy: false
+        egg: true
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Korean' }
+            - { tag_keyword:'Rice' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Spicy' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Thai chicken with cashews'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Go further in discovering the flavored Thai cuisine. This mouthwatering recipe combines the soft and moist chicken and the warm crunch textures of cashews while taking you away. You can adjust the spiciness, or add veggies to it, to your personal preference. You can even substitute chicken for firm tofu.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Whisk all of the sauce ingredients together in a small bowl and set aside.</para><para>Heat the oil in a wok or large frying pan for 5 minutes over medium-high heat. Once the oil is hot enough to produce a sizzle when a drop of water hits it, add in all of the cashew nuts. Fry the cashews until they turn light brown, just a few minutes. Remove them from the oil with a slotted spoon and set them on a paper towel to rest.</para><para>Add the garlic, onion, and dried red chilies to the oil. Stir-fry for 3-5 minutes or until you can start to smell the spicy aroma of the chilies.</para><para>Add in the chicken and continue to stir-fry until the chicken turns opaque and is cooked through (about 4-5 minutes). Return the cashews to the pan and toss to distribute around the pan.</para><para>Add the sauce to the wok and toss all of the ingredients to coat them well. Turn off the heat and add in the chopped scallions. Serve immediately with a side of jasmine rice.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>For the Sauce:</para><itemizedlist><listitem><para>1 teaspoon soy sauce</para></listitem><listitem><para>1 tablespoon sweet dark soy sauce</para></listitem><listitem><para>1 tablespoon fish sauce</para></listitem><listitem><para>1 heaping tablespoon brown sugar</para></listitem><listitem><para>1 tablespoon water</para></listitem></itemizedlist><para>For the Stir-Fry:</para><itemizedlist><listitem><para>2 tablespoons vegetable or peanut oil</para></listitem><listitem><para>2 cloves garlic, peeled and minced</para></listitem><listitem><para>1/2 small yellow onion, quartered</para></listitem><listitem><para>4 finger-length dried red chilies (such as chile de arbol), seeded and cut into halves</para></listitem><listitem><para>1/2 cup roasted cashew nuts</para></listitem><listitem><para>8 ounces boneless, skinless chicken breast, cut into thin pieces (about one large chicken breast - hold your knife at an angle and slice against the grain to get the thinnest pieces possible)</para></listitem><listitem><para>1 green onion, cut into 1” lengths</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/thai_chicken_cashews.jpg'
+        price: 35
+        serving: 4
+        spicy: [3]
+        dairy: false
+        egg: false
+        nuts: true
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Thai' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Rice' }
+            - { tag_keyword:'Spicy' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Cherry lemon cheesecake'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>A no bake dessert that is easy to make and jolly good to eat. The inspiration is to make a non-dry cheesecake. There is just enough lemon juice to give it a little kick of flavor, without making it too over-the-top. This recipe is easy as pie!</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Heat oven to 350ºF.</para><para>Combine graham cracker crumbs, sugar and oil in 9-inch pie plate. Mix well with fork. Press firmly onto bottom and sides of pie plate.</para><para>Combine cream cheese and cottage cheese in bowl of food processor. Pulse until completely smooth. Add eggs, sugar, lemon juice, lemon peel and vanilla. Blend well. Pour into crust.</para><para>Bake 40 to 45 minutes or until center is set. Turn off oven. Leave cheesecake in oven for 5 minutes.</para><para>Remove from oven. Cool. Top with cherry pie filling and refrigerate 2 hours.</para><para>Add grated chocolate over the top for a final touch.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Crust:</para><itemizedlist><listitem><para>1 cup graham cracker crumbs</para></listitem><listitem><para>1/4 cup sugar</para></listitem><listitem><para>5 tablespoons butter</para></listitem></itemizedlist><para>Filling:</para><itemizedlist><listitem><para>1 (3 oz.) package cream cheese, softened</para></listitem><listitem><para>2 cups cottage cheese</para></listitem><listitem><para>2 large eggs, lightly beaten</para></listitem><listitem><para>1/2 cup sugar</para></listitem><listitem><para>3 tablespoons fresh lemon juice</para></listitem><listitem><para>1 teaspoon grated lemon peel</para></listitem><listitem><para>1 teaspoon vanilla extract</para></listitem><listitem><para>1 (20 oz.) can cherry pie filling</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/cheesecake_cherry.jpg'
+        price: 40
+        serving: 10
+        spicy: [0]
+        dairy: true
+        egg: true
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Cake' }
+            - { tag_keyword:'Dairy' }
+            - { tag_keyword:'Desserts' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Double chocolate macadamia nut cookies'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>The best cookies, always! These cookies are perfect for your upcoming family get together, holiday party, or for the love for chocolate! Dark chocolate cocoa filled cookies and macadamia nuts!</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Preheat oven to 350°F.</para><para>Line cookie sheets with parchment paper or silicone baking mats.</para><para>In a medium bowl, whisk together cocoa powder, baking soda, salt, and flour. Set aside.</para><para>In the bowl of an electric mixer fitted with the paddle attachment, cream butter and both sugars. Mix in egg and vanilla and mix until smooth. Add dry ingredients and mix until combined. Mix in both chocolate chips and macadamia nuts.</para><para>Scoop 2 tablespoon sized balls of dough onto the cookie sheets, 3 inches apart. Bake for 9-12 minutes until they just lose their glossy sheen. Err on the side of underdone for these cookies; they taste better that way.</para><para>Cool at least 5 minutes on cookie sheets before removing.</para><para>Store in an airtight container for up to 3 days or freeze for up to one month.</para><para>NOTES:</para><para>You can use regular unsweetened cocoa powder if you cannot find the dark.</para><para>Make them 1 tablespoon size for double the cookies, but they will have a shorter baking time.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1/3 cup dark unsweetened cocoa powder (you can use regular unsweetened but they won’t be as dark as shown)</para></listitem><listitem><para>1/2 teaspoon baking soda</para></listitem><listitem><para>1/4 teaspoon salt</para></listitem><listitem><para>1 1/4 cups all-purpose flour</para></listitem><listitem><para>1/2 cup butter, softened</para></listitem><listitem><para>2/3 cup brown sugar</para></listitem><listitem><para>1/4 cup granulated sugar</para></listitem><listitem><para>1 teaspoon vanilla</para></listitem><listitem><para>1 large egg</para></listitem><listitem><para>3/4 cup chocolate chips</para></listitem><listitem><para>3/4 cup white chocolate chips</para></listitem><listitem><para>1 cup chopped macadamia nuts</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/cookies_chocolate.jpg'
+        price: 20
+        serving: 21
+        spicy: [0]
+        dairy: true
+        egg: true
+        nuts: true
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Snack' }
+            - { tag_keyword:'Dairy' }
+            - { tag_keyword:'Desserts' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Moroccan vegetarian couscous'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>This is a terrific, relaxed party dish—easy to make, fun to eat and meant for a gathering. A time-honored stew, rich with vegetables and the flavors—saffron, cinnamon, turmeric—of North Africa.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Heat a large sauce pot over medium high heat. Add oil, garlic, onion, celery, zucchini and cabbage to the pot and season with salt and pepper. Add curry, cumin, coriander, saffron, red pepper and raisins. Saute, stirring frequently, 7 or 8 minutes.</para><para>In a separate pot, add broth and bring broth to boil. Add couscous to the broth, stir, cover and remove from heat. Let stand 5 minutes. Remove lid from the pot and fluff couscous with a fork.</para><para>Remove couscous from pot, toss again with fork to combine and transfer to a serving platter. Add the veggies on top of couscous. Serve with warm Mediterranean flat breads. You can also add some fennel on top for decoration.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1⁄2 teaspoon vegetable oil</para></listitem><listitem><para>2 green onions chopped</para></listitem><listitem><para>1 garlic cloves minced</para></listitem><listitem><para>1 zucchini diced</para></listitem><listitem><para>1 cup shredded cabbage</para></listitem><listitem><para>1/4 cup golden raisins</para></listitem><listitem><para>1 celery diced</para></listitem><listitem><para>1 1/2 cups chickpeas, cooked</para></listitem><listitem><para>1 teaspoon coriander seeds, 1 /3 palm full</para></listitem><listitem><para>4 cups vegetable broth</para></listitem><listitem><para>1⁄4 teaspoon salt</para></listitem><listitem><para>2 pinches saffron threads</para></listitem><listitem><para>1 pinch crushed red pepper</para></listitem><listitem><para>1/2 tsp. ground turmeric</para></listitem><listitem><para>1⁄2 teaspoon curry powder</para></listitem><listitem><para>1 teaspoon ground cumin</para></listitem><listitem><para>2 cups couscous</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/moroccan_couscous.jpg'
+        price: 25
+        serving: 6
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Moroccan' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Vegan' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Granola, yogurt, berry parfait'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Layered in between pillowy spoonfuls of Greek yogurt, you’ll be eating a rainbow of colorful superfoods, too. Don’t have the luxury of creating a fresh masterpiece each morning? No morning time for this, no worries. Make them em ahead of time in a portable bowl or jar for a perfect on-the-go breakfast.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Line up 4 parfait, white wine, or other tall glasses.</para><para>Spoon 2 tablespoons of granola into each glass and smooth surface.</para><para>Spoon 2 tablespoons of fruit overtop and smooth surface.</para><para>Spoon 2 tablespoons of greek yogurt mix into each glass and smooth surface.</para><para>Repeat the process, adding a bit of honey here and there, to taste, and fruit on top for decoration.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>One 17 1/2-ounce container plain Greek yogurt</para></listitem><listitem><para>1/2 cup heavy cream</para></listitem><listitem><para>1 teaspoon vanilla extract</para></listitem><listitem><para>2 cups of graham cracker crumbs or your favorite granola</para></listitem><listitem><para>Assorted berries (or other fruit of your choice)</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/yogurt_parfait.jpg'
+        price: 20
+        serving: 4
+        spicy: [0]
+        dairy: true
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Breakfast' }
+            - { tag_keyword:'Desserts' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Spanish tortilla'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>The Spanish tortilla is so much more than the sum of its humble parts. Potatoes are the star, but tortillas welcome variation and flavors with the same technique. The tortilla makes an excellent breakfast, lunch, dinner, snack, or crowd-pleasing tapa.</para></section>'
+        cooking_instructions: >-
+              <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+               xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom"
+               version="5.0-variant ezpublish-1.0">
+               <para>In a 10-1/2-inch nonstick skillet that is at least 1-1/2 inches deep, heat the oil on medium high. While the oil is heating, slice the potatoes thinly.</para>
+               <para>Fry the potatoes. When the potatoes are tender, after 10 to 12 minutes, transfer them with the skimmer to the sieve or lined plate.</para>
+               <para>In a large bowl, beat the eggs, and 1/4 tsp. salt, (if using) with a fork until blended. Add the drained potatoes, and mix gently to combine with the egg.</para>
+               <para>
+                  Heat the skillet on medium high. Add the 1 Tbs. reserved oil. Let the pan and oil get very hot (important so the eggs do not stick),
+                  and then pour in the potato and egg mixture, spreading it evenly. Cook for 1 minute and then lower the heat to medium low,
+                  cooking until the eggs are completely set at the edges, halfway set in the center,
+                  and the tortilla easily slips around in the pan when you give it a shake.
+               </para>
+               <para>
+                  Set a flat, rimless plate that is at least as wide as the skillet upside down over the pan. Lift the skillet off the burner and,
+                  with one hand against the plate and the other holding the skillet's handle, invert the skillet so the tortilla lands
+                  on the plate (it should fall right out). Set the pan back on the heat and slide the tortilla into it,
+                  using the skimmer to push any stray potatoes back in under the eggs as the tortilla slides off the plate.
+                  Once the tortilla is back in the pan, tuck the edges in and under itself (to neaten the sides).
+               </para>
+               <para>Transfer the tortilla to a serving platter and let cool at least 10 minutes. Serve warm, at room temperature, or slightly cool.
+               Cut into wedges or small squares, sticking a toothpick in each square if serving as an appetizer.</para>
+               </section>
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1-3/4 cups vegetable oil for frying (I use plain olive oil, but never a great extra-virgin)</para></listitem><listitem><para>1-3/4 lb. (about 5 medium) low- to medium-starch potatoes, such as Yukon Gold, peeled</para></listitem><listitem><para>2-1/4 tsp. coarse salt</para></listitem><listitem><para>12 to 14 oz. onions (2 to 3 medium), diced</para></listitem><listitem><para>6 large eggs</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/spanish_tortilla.jpg'
+        price: 15
+        serving: 4
+        spicy: [0]
+        dairy: false
+        egg: true
+        nuts: false
+        seafood: false
+        gluten: false
+        tags:
+            - { tag_keyword:'Spanish' }
+            - { tag_keyword:'Appetizer' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Spaghetti with clams and shrimps'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Seafood combined with a spicy savory tomato sauce over spaghetti, a classic that will tease your senses! </para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Bring the wine to a boil in a medium saucepan. Add the clams to the saucepan, cover and cook until they start to open. Transfer them to a bowl. Pour the cooking liquid into a small glass measure, leaving behind any grit. Shell the clams and return them to the bowl.</para><para>Heat the olive oil in a medium saucepan. Add the garlic and cook over low heat until golden, about 3 minutes. Add the red pepper and half of the cherry tomatoes and cook over moderate heat, crushing the tomatoes with a wooden spoon, until the juices thicken, about 4 minutes. Add the reserved shellfish cooking liquid and simmer over moderate heat until slightly reduced, about 3 minutes.</para><para>Cook the spaghetti in a large pot of boiling salted water, stirring occasionally, until al dente. Meanwhile, bring the sauce to a simmer over moderate heat. Add the shrimp and cook for 1 minute. Add the remaining cherry tomatoes and the reserved mussels and clams and simmer briefly to heat through.</para><para>Drain the spaghetti and return it to the pot. Add the seafood sauce and toss to coat. Season with salt and black pepper and transfer to a warmed bowl. Sprinkle with the parsley and serve at once.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1/4 cup dry white wine</para></listitem><listitem><para>2 dozen littleneck clams, scrubbed</para></listitem><listitem><para>3 tablespoons extra-virgin olive oil</para></listitem><listitem><para>8 garlic cloves, minced</para></listitem><listitem><para>1 tablespoon crushed red pepper flakes</para></listitem><listitem><para>1/2 teaspoon crushed red pepper</para></listitem><listitem><para>1 1/2 pints cherry tomatoes (1 1/2 pounds), halved</para></listitem><listitem><para>1 pound spaghetti</para></listitem><listitem><para>3/4 pound medium shrimp—shelled, deveined and halved crosswise</para></listitem><listitem><para>Salt and freshly ground black pepper</para></listitem><listitem><para>2 tablespoons chopped parsley</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/pasta_seafood.jpg'
+        price: 30
+        serving: 4
+        spicy: [1]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: true
+        gluten: true
+        tags:
+            - { tag_keyword:'Italian' }
+            - { tag_keyword:'Seafood' }
+            - { tag_keyword:'Noodles' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Spicy' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Pizza'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>This recipe is adapted from Roberta’s, the pizza and hipster haute-cuisine utopia in Bushwick, Brooklyn, that we loved to visit when our eZ US office was located really close to it.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>For this special recipe we love we are following the instructions offered by http://www.nytimes.com/2014/04/09/dining/a-little-pizza-homework.html</para><para>To make pizza dough:</para><para>In a large mixing bowl, combine flours and salt.</para><para>In a small mixing bowl, stir together 200 grams (a little less than 1 cup) lukewarm tap water, the yeast and the olive oil, then pour it into flour mixture. Knead with your hands until well combined, approximately 3 minutes, then let the mixture rest for 15 minutes.</para><para>Knead rested dough for 3 minutes. Cut into 2 equal pieces and shape each into a ball. Place on a heavily floured surface, cover with dampened cloth, and let rest and rise for 3 to 4 hours at room temperature or for 8 to 24 hours in the refrigerator. (If you refrigerate the dough, remove it 30 to 45 minutes before you begin to shape it for pizza.)</para><para>To make pizza:</para><para>Place each dough ball on a heavily floured surface and use your fingers to stretch it, then your hands to shape it into rounds or squares. Top and bake.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Roberta’s pizza dough:</para><itemizedlist><listitem><para>153 grams of flour (1 cup plus 1 tablespoon)</para></listitem><listitem><para>153 grams all-purpose flour (1 cup plus 1 tablespoon and 2 teaspoons)</para></listitem><listitem><para>8 grams fine sea salt (1 teaspoon)</para></listitem><listitem><para>2 grams active dry yeast (3/4 teaspoon)</para></listitem><listitem><para>4 grams extra-virgin olive oil (1 teaspoon)</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/pizza_robertas.jpg'
+        price: 20
+        serving: 1
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Italian' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Vegan' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Chicken, pomegranate and spinach salad'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Why not having a colorful, healthy and tasty salad. With marinated chicken to increase the flavor and scattered with ruby pomegranate nuggets, this dish is energetic in color and taste.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Combine the marinade ingredients and generously coat the chicken on both sides. Leave it in the fridge for a minimum of two hours, but longer if you can.</para><para>Place a ridged grill pan on medium-high heat and grill the chicken for about 5 minutes per side, turning once, until cooked through.</para><para>Whilst the chicken is cooking, combine the spinach, pomegranate arils, red onion and avocado in a big salad bowl.</para><para>Once the chicken is cooked, transfer to a chopping board, slice and mix in with the salad.</para><para>In a separate bowl, combine the balsamic vinegar, raw honey, extra virgin olive oil and salt and pepper and drizzle over the salad. Pour the dressing and mix the salad. Serve in a bowl.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>For the marinade:</para><itemizedlist><listitem><para>2 tbsp freshly squeezed lemon juice </para></listitem><listitem><para>1 tsp fresh oregano, chopped </para></listitem><listitem><para>1 tsp garlic, crushed </para></listitem><listitem><para>Pinch of salt and pepper to taste</para></listitem></itemizedlist><para>For the salad:</para><itemizedlist><listitem><para>6oz baby spinach 4 chicken breasts Handful of pomegranate arils </para></listitem><listitem><para>1/2 red onion, thinly sliced </para></listitem><listitem><para>1 avocado, chopped</para></listitem></itemizedlist><para>For the dressing</para><itemizedlist><listitem><para>1 tbsp balsamic vinegar </para></listitem><listitem><para>1 tsp raw honey </para></listitem><listitem><para>2 tbsp extra virgin olive oil</para></listitem><listitem><para>Salt and pepper, to taste</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/salad_spinach.jpg'
+        price: 25
+        serving: 4
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: false
+        tags:
+            - { tag_keyword:'Salad' }
+            - { tag_keyword:'Appetizer' }
+            - { tag_keyword:'Meat' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Salmon teriyaki'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Salmon recipes are always welcome and Teriyaki salmon is always a hit. If you add to this a homemade sauce everyone will love it. This recipe is so simple that you will add it to your weekly dinner menu.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Grease a large rimmed baking sheet (cover with foil and then grease for easier clean-up).</para><para>Preheat oven to 400˚F.</para><para>Combine sauce ingredients and stir until brown sugar is dissolved.</para><para>Place individual salmon slices in a mixing bowl. Pour the sauce over the salmon, cover with plastic wrap and let marinate 20 minutes (at room temp or refrigerated).</para><para>Transfer salmon to prepared baking sheet (keep the marinade). Bake at 400 for 13-16 min or until salmon is flaky and cooked through, bake times may vary by thickness of salmon.</para><para>While salmon is baking, transfer remaining marinade to a small sauce pan and bring to a boil then reduce heat to a simmer and cook, stirring occasionally until slightly thickened (3-4 min) then remove from heat.</para><para>Once salmon is out of the oven, brush with teriyaki syrup, then sprinkle with chopped green onion and sesame seeds as desired.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>2 – 3 lbs salmon filet sliced into 2″ wide slices</para><para>For the sauce:</para><itemizedlist><listitem><para>3 Tbsp teriyaki sauce </para></listitem><listitem><para>3 Tbsp hoisin sauce</para></listitem><listitem><para>3 Tbsp soy sauce </para></listitem><listitem><para>1 Tbsp white vinegar </para></listitem><listitem><para>1 Tbsp sesame oil </para></listitem><listitem><para>1/3 cup packed light brown sugar </para></listitem><listitem><para>2 large or 3 medium garlic cloves, minced </para></listitem><listitem><para>2 tsp freshly grated ginger, or 1/2 tsp ground ginger</para></listitem><listitem><para>Sesame seeds to garnish</para></listitem><listitem><para>Green onion, chopped</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/salmon_teriyaki.jpg'
+        price: 30
+        serving: 4
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Japanese' }
+            - { tag_keyword:'Fish' }
+            - { tag_keyword:'Entrée' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Japanese tonkotsu ramen soup'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>The bowl with the most soul is tonkotsu ramen. We are talking about the ultimate meal-in-a-bowl. The stock for this famous Japanese noodle soup is made from pork bones, which are boiled for hours. Traditionally, the eggs are boiled in the stock; add in step 3 of the recipe with the topings if cooking this way.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Broth:</para><para>Place the chicken, pork bones and marrow in a stock pot. Add enough water to fully cover them. Cover with a lid. Over high heat, bring the water to a boil. Once boiled, drain the bones and wash/scrub any dark marrow or coagulated blood off from the pork with cold water (this is important as it will determine if your broth will become cream colored or remain brown).</para><para>Rinse the pot, put the bones back in along with the rest of the ingredients for the broth. Add water to just barely cover the ingredients (things will shrink overtime so no worries there). Cover with a lid. Over high heat, bring the water to a boil. One boiled, uncover, remove and wipe off the scum that accumulates in the first 15-20 minutes.</para><para>Simmer covered on low for 6-12 hours on the stove or 12-18 hours in a slow cooker. Check the first 10-15 minutes after turning down the heat to make sure it is just barely simmering.</para><para>The last 2 hours before it is done, place the 5 oz pork fat on a sieve or strainer, put it in the broth, cover the pot and let the fat cook until soft and tender. Drain and finely mince the pork fat. Set aside.</para><para>Skim half, all or none of the fat from the broth (easiest when after refrigerated). It is your choice.</para><para>Pork Belly (Chashu):</para><para>Preheat the oven to 250 F. In a saucepan, place the pork belly. Add water to fully cover the pork and put the water to boil. Once boiled, drain and remove the scum.</para><para>In the same saucepan, place the pork back in along with the remaining ingredients for chashu. Cover with a lid. Over high heat, put the sauce to boil. Once boiled, transfer the pot to the oven and cook for 5 hours.</para><para>At the 2 hour mark, shake the pan to ensure sauce coats the entire pork evenly. Thereafter, shake every 1 hour until the 5 hour mark. Insert a skewer into the pork. If there is no resistance, it is ready. If you like it even softer (and have the time), cook the pork belly longer.</para><para>Let it cool. Once completely cool, chill the pork in the refrigerator (along with the eggs). This is to allow more flavor to be absorbed and makes it easier to slice as well.</para><para>When you want to consume, cut the strings, slice the pork and carefully place on a sieve or strainer. Briefly reheat the chashu in hot ramen soup.</para><para>Eggs:</para><para>In a saucepan, put enough water (to cover all the eggs) to boil. Once boiled, turn the heat to medium, gently place the eggs in the water and let it simmer on bare simmer for exactly 6 minutes.</para><para>Drain the water and carefully peel the eggs under cold water. The eggs are very soft and delicate.</para><para>Place the peeled eggs in the cooled chashu sauce. Soak paper towel with chashu sauce and put it over the eggs to cover them (this is to ensure the top of eggs are marinated too). Marinate for 4-12 hours in the refrigerator (along with the pork belly).</para><para>When you want to consume, carefully slice the eggs in half (yolk is very soft and may be slightly runny). Place eggs on a sieve or strainer and reheat in hot ramen soup (do not over heat as it will harden the eggs).</para><para>Assembling:</para><para>Bring the broth to boil and add your choice of seasoning. Start with a little and add as you go. You can always increase seasoning but you can not undo over seasoned broth.</para><para>Arrange the noodles in a bowl and place the chashu, egg, some minced pork fat, your favorite toppings and garnish. Serve immediately.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>2 1/2 lb ramen noodles, cooked according to package directions</para><para>5 oz pork fat </para><para>Broth:</para><itemizedlist><listitem><para>4 lb pig hocks and/or trotters, ask the butcher to cut into the smallest piece possible</para></listitem><listitem><para>2 lb chicken backs, cut into small pieces</para></listitem><listitem><para>1 lb chicken feet</para></listitem><listitem><para>1 large onion, peeled and slit around</para></listitem><listitem><para>1 whole garlic</para></listitem><listitem><para>2 inches ginger, sliced</para></listitem><listitem><para>1 leek, sliced</para></listitem><listitem><para>15 green onions, white parts only, cut them in half across</para></listitem><listitem><para>5 - 8 slices of white oyster mushrooms</para></listitem><listitem><para>1 (8-qt) heavy stock pot or an equivalent </para></listitem></itemizedlist><para>Pork belly (Chashu):</para><itemizedlist><listitem><para>1 1/2 lb slab boneless pork belly, rolled and secured with strings</para></listitem><listitem><para>1 cup water</para></listitem><listitem><para>1/2 cup soy sauce</para></listitem><listitem><para>1 cup white grape juice</para></listitem><listitem><para>1 tsp lemon juice</para></listitem><listitem><para>2 tbs sugar</para></listitem><listitem><para>5 green onions, halved</para></listitem><listitem><para>1 whole garlic, bruised</para></listitem><listitem><para>2 inches ginger, sliced</para></listitem><listitem><para>2 whole shallots, halved</para></listitem><listitem><para>1/2 tsp whole black peppercorn </para></listitem></itemizedlist><para>Eggs:</para><itemizedlist><listitem><para>Sauce from chashu</para></listitem><listitem><para>3 eggs</para></listitem></itemizedlist><para>Toppings and garnish:</para><itemizedlist><listitem><para>Enoki, blanched quickly in hot broth or hot water</para></listitem><listitem><para>Black fungus mushroom, blanched in hot broth or hot water for a couple minutes</para></listitem><listitem><para>15 green onions (green parts from broth), thinly sliced</para></listitem><listitem><para>Nori (Seaweed for sushi), squared 4 inches by 4 inches</para></listitem><listitem><para>Garlic, sliced and fried until crispy</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/soup_tonkotsu.jpg'
+        price: 25
+        serving: 6
+        spicy: [2]
+        dairy: false
+        egg: true
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Japanese' }
+            - { tag_keyword:'Soup' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Noodles' }
+            - { tag_keyword:'Spicy' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Spanish seafood paella'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>A real taste of Britain’s most acknowledged culinary export of a take-away food and early example of food fusion. A popular lunch meal that is conquering the world.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Make a seafood broth:</para><para>For the Canadian lobster - In a medium pot, bring 8 cups of water to boil. Add one bay leaf, chopped onion and salt and pepper according to the weight of the Canadian lobster. Boiling time will be based on weight.</para><para>Remove cooked Canadian lobster, strain broth and let sit off.</para><para>For the mussels - Warm the butter or olive oil over medium-high heat in the pot (if using butter, let it melt completely). Add the minced onion and garlic. Sauté until the onions are translucent and the garlic is fragrant, 1 to 2 minutes. Pour the water (2 cups) and half cup of white wine, bring it to boil. Pour all of the mussels into the pot. Remove the opened mussels and discard any mussels that haven’t opened. Strain the broth and let sit off.</para><para>Mix both broths and let them sit off.</para><para>Saute the seafood:</para><para>In a 16-inch paella pan, heat the oil just until it is hot. Sauté the shrimp, scallops, and calamari (if using) until just cooked through, about 2 minutes.</para><para>Make the sofrito:</para><para>Reduce the heat to medium and sauté the garlic. Add the tomato and pimenton and cook, stirring often, until the mixture has darkened to a deep burgundy and is thick like a compote, 5 to 10 min.</para><para>Add the rice and cook:</para><para>Bring the broth back to a simmer. Add the rice to the pan, and cook for 1 to 2 min. Raise the heat to medium-high. Pour in 7 cups of the seafood broth (reserve the rest) and stir or shake the pan to evenly distribute the rice. From this point on, do not stir the rice. Once broth is boiling, count 4 minutes.</para><para>After the 4 minutes, reduce the heat to medium-low and count 10 minutes.</para><para>Continue to simmer more gently, rotating the pan as necessary. Arrange the shrimp and Canadian lobster in the pan.</para><para>Create the socarrat:</para><para>Increase the heat to medium-high and, rotating the pan, cook for about 2 min., until the bottom layer of rice starts to caramelize, creating the socarrat. The rice will crackle, but if it starts to smell burned, remove the pan from the heat immediately.</para><para>Let the paella rest:</para><para>Remove the pan from the heat and let the paella rest for 5 min. to even the cooking and let the flavors meld.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>6 oz. large shrimp</para></listitem><listitem><para>1 Canadian lobster (around 1.7 pounds)</para></listitem><listitem><para>1 pound of mussels, scrubbed</para></listitem><listitem><para>Pinch saffron threads</para></listitem><listitem><para>Kosher salt</para></listitem><listitem><para>1/4 cup extra-virgin olive oil</para></listitem><listitem><para>6 oz. dry scallops, patted dry</para></listitem><listitem><para>4 oz. calamari, cut in rings (optional), patted dry</para></listitem><listitem><para>6 garlic cloves, peeled</para></listitem><listitem><para>1 tomato, halved and grated on a box grater (discard the skin)</para></listitem><listitem><para>1/2 teaspoon pimenton</para></listitem><listitem><para>3 1/2 cups of arborio rice</para></listitem><listitem><para>7 cups seafood broth (from the Canadian lobster and mussels)</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/cheesecake_figs.jpg'
+        price: 30
+        serving: 8
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: true
+        gluten: true
+        tags:
+            - { tag_keyword:'Spanish' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Rice' }
+            - { tag_keyword:'Seafood' }
+            - { tag_keyword:'Shrimp' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Beer batter English-style fish and chips'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>The real British fish and chips recipe consist of a high-quality cod fish deep-fried. Don’t forget to add a generous base layer of french fries, and add the smashed green peas as well as a homemade tartar sauce.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Heat oil in a deep fryer to 365 degrees F (185 degrees C). Rinse fish, pat dry, and season with salt and pepper. </para><para>Combine flour, 2 teaspoons salt, and 2 teaspoons pepper. Stir egg into dry ingredients. Gradually mix in beer until a thin batter is formed. You should be able to see the fish through the batter after it has been dipped. </para><para>Dip fish fillets into the batter, then drop one at a time into hot oil. Fry fish, turning once, until both sides are golden brown. Drain on paper towels, and serve warm.  </para><para>Make the fries:</para><para>Place potatoes in a medium-size bowl of cold water. Preheat the oil in a large pot or electric skillet to 350 degrees F (175 degrees C). Fry the potatoes in the hot oil until they are tender. Drain them on paper towels. Fry the potatoes again for 1 to 2 minutes for added crispness. </para><para>Make the mushy peas:</para><para>Bring a shallow pot of lightly salted water to the boil over medium high heat. Add frozen peas, and cook for 3 minutes, or until tender. Drain peas, and transfer to a blender or large food processor. Add cream, butter, salt and pepper to peas, and process until blended, but still thick with small pieces of peas.</para><para>Make Tartar sauce:</para><para>In a small bowl, mix together mayonnaise, sweet pickle relish, and minced onion. Stir in lemon juice. Season to taste with salt and pepper.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>4 large potatoes, peeled and cut into strips.</para></listitem><listitem><para>1 cup all-purpose flour</para></listitem><listitem><para>1 egg, beaten</para></listitem><listitem><para>1 quart vegetable oil for frying</para></listitem><listitem><para>1 1/2 pounds cod fillets</para></listitem><listitem><para>1 teaspoon baking powder</para></listitem><listitem><para>2 teaspoon salt</para></listitem><listitem><para>1 teaspoon ground black pepper</para></listitem><listitem><para>1 (12 fluid ounce) can or bottle beer</para></listitem></itemizedlist><para>Tartar sauce:</para><itemizedlist><listitem><para>1 cup of mayonnaise</para></listitem><listitem><para>1 tablespoon sweet pickle relish</para></listitem><listitem><para>1 tablespoon minced onion</para></listitem><listitem><para>2 tablespoons lemon juice</para></listitem><listitem><para>Salt and pepper to taste</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/fish_chips.jpg'
+        price: 20
+        serving: 8
+        spicy: [0]
+        dairy: false
+        egg: true
+        nuts: false
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'English' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Fish' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Roasted butternut squash, lime and coconut soup'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>The brightly colored and well-known vegan soup with a tropical flavor that will cheer you up. An autumn classic turned into a tropical hit.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Preheat oven to 400F (200C). Toss squash with 1 tbsp olive oil. Spread squash onto cookie sheet and roast in the oven for 20 minutes until slightly browned. Remove from oven and set aside.</para><para>Meanwhile, in a large saucepan over medium-heat, add 1 tbsp olive oil, cumin and coriander and stir frequently for about 3 minutes.</para><para>Add onion and cook 5 minutes, until clear, then add broth.</para><para>Remove peel from squash if not already done, then add to pot along with half the cilantro.</para><para>Simmer gently for 20 minutes or until squash is soft. Stir in 1 cup of the coconut milk, as well as the lime juice and half of chopped cayenne pepper.</para><para>Using an immersion blender, carefully puree until smooth. Season with salt &amp; pepper. Garnish with coconut milk or vegan sour cream, and remaining cilantro.</para><para>Roasting pumpkin or squash seeds:</para><para>Preheat oven to 325F (160C).</para><para>Before the pulp has dried on the seeds, rinse them under cool water and discard the pulp.</para><para>If desired, toss the seeds with a drizzle of oil and sprinkle of salt.</para><para>Spread the seeds out in a single layer on a baking sheet and roast in oven for 20 minutes, tossing them around at the 10-minute mark.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>8 C /2 L (850g) butternut squash, diced (one average-sized butternut squash)</para></listitem><listitem><para>2 tbsp olive oil, divided</para></listitem><listitem><para>1 tsp ground cumin</para></listitem><listitem><para>1 large onion, chopped</para></listitem><listitem><para>20 oz (600 ml) vegetable stock</para></listitem><listitem><para>1/4 C cilantro, chopped and divided</para></listitem><listitem><para>1 cayenne pepper chopped (optional)</para></listitem><listitem><para>10 oz (295 ml) coconut milk</para></listitem><listitem><para>1 lime, juiced</para></listitem><listitem><para>salt &amp; pepper, to taste</para></listitem></itemizedlist><para>Garnish:</para><itemizedlist><listitem><para>vegan sour cream, additional coconut milk, roasted squash seeds</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/soup_squash.jpg'
+        price: 20
+        serving: 4
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: false
+        tags:
+            - { tag_keyword:'Appetizer' }
+            - { tag_keyword:'Soup' }
+            - { tag_keyword:'Vegan' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Pad Thai'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Challenge yourself and dear to cook the traditional Thai recipe. Set aside your smart phone, forget about calling food delivery service and get ready for treating yourself with a first-class urban recipe.</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>To make Pad Thai sauce:</para><para>Heat a small pan on medium low and add fish sauce, palm sugar, tamarind concentrate, and garlic.</para><para>Cook sauce until palm sugar has completely dissolve. At this point, you will want to taste the sauce and tweak the sweetness or hotness (be careful, the sauce will be hot). To make it more spicy add a little Thai chili powder.</para><para>Remove from heat and allow to cool 10 minutes before storing it in a jar or plastic container.</para><para>To make Pad Thai noodles:</para><para>Boil noodles for 4-5 minutes and drain immediately rinsing with cold water for a few seconds. Noodles should be slightly firmer than Al dente. But don’t worry, they will continue to soften and cook later when stir frying.</para><para>Using kitchen shears, cut the noodle clump in half. This will make it easier to fry and eat.</para><para>To make Pad Thai:</para><para>Heat 3 tablespoons of oil in a wok or frying pan on high and cook raw chicken, pork, beef, tofu or shrimp for 3-4 minutes. Remove meat/tofu/seafood into a small bowl.</para><para>Heat the remaining oil and then add garlic and red onions to the hot pan and stir fry for 1 minute stirring the garlic mixture so it will not burn.</para><para>Add noodles and stir for 1 minute.</para><para>Add 3-4 tablespoons Pad Thai sauce continually stirring noodle mixture until well coated with sauce.</para><para>Add cooked meat/tofu/seafood back and fry for 2-3 minutes.</para><para>Move the noodle and meat mixture to one side of the pan and crack an egg on the other side. Scramble the egg with a wooden spoon and cook for 30 seconds.</para><para>Add carrots, green onions, and sprouts and cook for one more minute frying everything together.</para><para>Test the firmness of the noodle. If the noodle is too firm, fry for an additional minute. If your noodles need more flavor, add another tablespoon of sauce and fry another half minute.</para><para>Remove from heat and serve.</para><para>Garnish with remaining raw carrot match sticks, spouts, cilantro, toasted peanuts, and a wedge of lime.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1/3 cup fish sauce</para></listitem><listitem><para>1/2 cup palm sugar</para></listitem><listitem><para>1/2 cup tamarind juice concentrate</para></listitem><listitem><para>4 cloves garlic, minced</para></listitem><listitem><para>4 ounces dried rice stick noodles</para></listitem><listitem><para>6 tablespoons vegetable oil, divided</para></listitem><listitem><para>4 cloves garlic, minced</para></listitem><listitem><para>cup red onion, thinly sliced</para></listitem><listitem><para>1 1/2 cups thinly sliced chicken, beef, pork, shrimp, or tofu</para></listitem><listitem><para>1 egg</para></listitem><listitem><para>1 cup carrots, match sticks</para></listitem><listitem><para>cup green onion cut diagonal in 1/2 inch segments</para></listitem><listitem><para>1 cup mung bean sprouts</para></listitem><listitem><para>cup cilantro</para></listitem><listitem><para>cup toasted peanuts chopped</para></listitem><listitem><para>Lime wedge</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/thai_padthai.jpg'
+        price: 25
+        serving: 2
+        spicy: [2]
+        dairy: true
+        egg: true
+        nuts: true
+        seafood: false
+        gluten: true
+        tags:
+            - { tag_keyword:'Thai' }
+            - { tag_keyword:'Dairy' }
+            - { tag_keyword:'Eggs' }
+            - { tag_keyword:'Entrée' }
+            - { tag_keyword:'Meat' }
+            - { tag_keyword:'Noodles' }
+            - { tag_keyword:'Seafood' }
+            - { tag_keyword:'Spicy' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Tomato soup'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Discover a fast and easy tomato soup that will make you forget Andy Warhol’s obsession. Yes it is possible to take the most advantage from those big Italian tomato cans and we will explain you how!</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Place a medium saucepan over medium-low heat and add the oil.</para><para>Add the garlic, once golden add the onion and a big pinch of salt. Cook, stirring occasionally, until the onion is completely soft, 10 minutes. Add the optional red pepper flakes.</para><para>Increase the heat to medium and add the tomatoes and their juices to the pan. Add the sugar, to break acidity.</para><para>Roughly crush the tomatoes with the back of a wooden spoon and cook until they’re hot and beginning to soften, about 10 minutes.</para><para>Add the broth or water and bring to a simmer. Cook at a medium simmer until the tomatoes begin to fall apart, about 15 minutes.</para><para>Remove the soup from the heat and cool slightly, about 10 minutes.</para><para>Purée the soup directly in the saucepan using an immersion blender, or use a countertop blender, carefully puréeing the soup in a couple of batches until smooth.</para><para>Return the soup to the burner over low heat and stir in the cream.</para><para>Add black pepper, then taste and adjust the seasoning with additional salt or pepper as needed.</para><para>Garnish with fresh greens.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>2 tablespoon olive oil</para></listitem><listitem><para>1 medium yellow onion, medium dice</para></listitem><listitem><para>Kosher salt</para></listitem><listitem><para>2 coffee spoon sugar</para></listitem><listitem><para>2 medium garlic cloves, minced</para></listitem><listitem><para>Pinch of red pepper flakes (optional)</para></listitem><listitem><para>1 (28-ounce) can whole peeled tomatoes in their juices, preferably San Marzanos</para></listitem><listitem><para>1 1/2 cups low-sodium chicken broth or water</para></listitem><listitem><para>1/3 cup heavy cream</para></listitem><listitem><para>Freshly ground black pepper, to taste</para></listitem></itemizedlist><para>Garnishes (optional)</para><itemizedlist><listitem><para>Fresh watercress and mixed greens</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/soup_tomato.jpg'
+        price: 15
+        serving: 4
+        spicy: [1]
+        dairy: true
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: false
+        tags:
+            - { tag_keyword:'Appetizer' }
+            - { tag_keyword:'Dairy' }
+            - { tag_keyword:'Soup' }
+            - { tag_keyword:'Spicy' }
+            - { tag_keyword:'Vegetarian' }
+
+-
+    type: content
+    mode: create
+    content_type: product
+    parent_location: 'reference:product_list'
+    section: 1
+    owner: 14
+    attributes:
+        title: 'Greek salad with red cabbage'
+        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Greek cuisine has hidden values. You set a canvas with the vibrant purple of the cabbage and onion mixed with the light green of cucumber, and the zesty lemon flavor, but you are also preparing a meal with detox benefits. Throw this together for a friends gathering and you will knock them down with the fresh taste!</para></section>'
+        cooking_instructions: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Add the ingredients in a salad bowl.</para><para>Make the dressing. Whisk extra-virgin olive, red wine vinegar, lemon juice, garlic and spices. Pour the mixed dressing over the salad. Mix the salad well.</para></section>'
+        ingredients: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><itemizedlist><listitem><para>1/2 head red cabbage, shredded</para></listitem><listitem><para>1 cucumber, peeled and diced</para></listitem><listitem><para>1/2 large red onion, chopped</para></listitem><listitem><para>1/2 red bell pepper, chopped</para></listitem><listitem><para>2 plum tomatoes, chopped</para></listitem></itemizedlist><para>Dressing:</para><itemizedlist><listitem><para>1/2 cup extra-virgin olive oil</para></listitem><listitem><para>1/4 cup fresh lemon juice</para></listitem><listitem><para>1/4 cup red wine vinegar</para></listitem><listitem><para>2-3 garlic cloves, chopped</para></listitem><listitem><para>1/2 teaspoon salt</para></listitem><listitem><para>1/4 teaspoon pepper</para></listitem></itemizedlist></section>'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/products/greek_salad.jpg'
+        price: 15
+        serving: 2
+        spicy: [0]
+        dairy: false
+        egg: false
+        nuts: false
+        seafood: false
+        gluten: false
+        tags:
+            - { tag_keyword:'Greek' }
+            - { tag_keyword:'Appetizer' }
+            - { tag_keyword:'Salad' }
+            - { tag_keyword:'Vegan' }
+            - { tag_keyword:'Vegetarian' }
+

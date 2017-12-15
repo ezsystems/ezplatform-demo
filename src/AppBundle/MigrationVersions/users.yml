@@ -1,0 +1,569 @@
+# references
+-
+    type: reference
+    mode: load
+    file: 'src/AppBundle/MigrationVersions/References/references_tags.yml'
+    overwrite: true
+-
+    type: reference
+    mode: load
+    file: 'src/AppBundle/MigrationVersions/References/references_all.yml'
+    overwrite: true
+
+-
+    type: reference
+    mode: set
+    identifier: ref_user_group__members
+    value: 11 #contentId
+-
+    type: reference
+    mode: set
+    identifier: ref_user_group__editors
+    value: 13 #contentId
+-
+    type: reference
+    mode: set
+    identifier: ref_user_group__anonymous_users
+    value: 42 #contentId
+#-
+#    type: reference
+#    mode: set
+#    identifier: ref_section__standard
+#    value: 1
+#-
+#    type: reference
+#    mode: set
+#    identifier: ref_section__media
+#    value: 3
+
+# user content type
+-
+    type: content_type
+    mode: update
+    content_type_group: Users
+    identifier: user
+    name: User
+    description: 'Defines a structure for storing user accounts. Typically used by administrators for managing users.'
+    name_pattern: '<first_name> <last_name>'
+    #url_name_pattern: ''
+    is_container: false
+    attributes:
+        -
+            identifier: first_name
+            type: ezstring
+            name: 'First name'
+            description: 'First name here.'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: last_name
+            type: ezstring
+            name: 'Last name'
+            description: 'Last name here.'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: user_account
+            type: ezuser
+            name: 'User account'
+            description: 'Type here Account linked to the user.'
+            required: true
+            searchable: false
+            info-collector: false
+            disable-translation: true
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration: {  }
+        -
+            identifier: signature
+            type: eztext
+            name: Signature
+            description: 'Body of text.'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings:
+                textRows: 10
+        -
+            identifier: image
+            type: ezimage
+            name: Image
+            description: 'Image of User.'
+            required: false
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 5
+        -
+            identifier: interests
+            type: eztags
+            name: Interests
+            #description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 6
+            field-settings:
+                hideRootTag: false
+                editView: Default
+#                subTreeLimit: reference:ref_tag_user_segments
+            validator-configuration:
+                TagsValueValidator:
+                    # TODO: change to reference when merged https://github.com/kaliop-uk/ezmigrationbundle/pull/133
+                    subTreeLimit: 513
+                    #subTreeLimit: reference:ref_tag_user_segments
+                    #subTreeLimit: tag_keyword:'User Segments'
+    references:
+        -
+            identifier: ref_content_type_id__user
+            attribute: content_type_id
+
+# user_group content type
+-
+    type: content_type
+    mode: update
+    content_type_group: Users
+    identifier: user_group
+    name: 'User group'
+    description: 'Define here a structure for storing a user group.'
+    name_pattern: '<name>'
+    #url_name_pattern: ''
+    is_container: true
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name: Name
+            description: 'Name of group.'
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+        -
+            identifier: description
+            type: ezstring
+            name: Description
+            description: 'Body of text.'
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: 255, minStringLength: null }
+
+# user_group content
+# change 'Guest accounts' to 'Members'
+-
+    type: user_group
+    mode: update
+    match:
+        id: reference:ref_user_group__members
+    name: 'Members'
+
+-
+    type: user_group
+    mode: create
+    parent_group_id: 4
+    priority: 0
+    section: 2
+    name: 'App Contributors'
+    references:
+        -
+            identifier: ref_user_group__app_contributors
+            attribute: user_group_id
+
+# users
+# Yura
+-
+    type: user
+    mode: create
+    first_name: Yura
+    last_name: Rajzer
+    username: yura
+    email: yura.rajzer@example.com
+    password: publish
+    user_content_type: user
+    groups: [reference:ref_user_group__editors]
+    references:
+        -
+            identifier: ref_user_yura
+            attribute: user_id
+
+-
+    type: content
+    mode: update
+    match:
+        content_id: reference:ref_user_yura
+    attributes:
+        signature: Yura
+        image:
+            path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Yura_Rajzer.jpg'
+            filename: Yura_Rajzer.jpg
+            alternativeText: 'Yura Rajzer'
+
+# Jessica
+-
+     type: user
+     mode: create
+     first_name: Jessica
+     last_name: Andaya
+     username: jessica
+     email: jessica.andaya@example.com
+     password: publish
+     user_content_type: user
+     groups: [reference:ref_user_group__editors]
+     references:
+         -
+             identifier: ref_user_jessica
+             attribute: user_id
+
+-
+     type: content
+     mode: update
+     match:
+         content_id: reference:ref_user_jessica
+     attributes:
+         signature: Jessica
+         image:
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Jessica_Andaya.jpg'
+             filename: Jessica_Andaya.jpg
+             alternativeText: 'Jessica Andaya'
+
+# Anil
+-
+     type: user
+     mode: create
+     first_name: Anil
+     last_name: Rajasthani
+     username: anil
+     email: anil.rajasthani@example.com
+     password: publish
+     user_content_type: user
+     groups: [reference:ref_user_group__editors]
+     references:
+         -
+             identifier: ref_user_anil
+             attribute: user_id
+
+-
+     type: content
+     mode: update
+     match:
+         content_id: reference:ref_user_anil
+     attributes:
+         signature: Anil
+         image:
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Anil_Rajasthani.jpg'
+             filename: Anil_Rajasthani.jpg
+             alternativeText: 'Anil Rajasthani'
+
+# Christine
+-
+     type: user
+     mode: create
+     first_name: Christine
+     last_name: Clark
+     username: christine
+     email: christine.clark@example.com
+     password: publish
+     user_content_type: user
+     groups: [reference:ref_user_group__members]
+     references:
+         -
+             identifier: ref_user_christine
+             attribute: user_id
+
+-
+     type: content
+     mode: update
+     match:
+         content_id: reference:ref_user_christine
+     attributes:
+         signature: Christine
+         image:
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Christine_Clark.jpg'
+             filename: Christine_Clark.jpg
+             alternativeText: 'Christine Clark'
+         interests:
+            - { tag_id: reference:ref_tag_user_segments__foodie }
+            - { tag_id: reference:ref_tag_user_segments__chef }
+            - { tag_id: reference:ref_tag_user_segments__traveller }
+
+# James
+-
+     type: user
+     mode: create
+     first_name: James
+     last_name: Joyce
+     username: james
+     email: james.joyce@example.com
+     password: publish
+     user_content_type: user
+     groups: [reference:ref_user_group__members]
+     references:
+         -
+             identifier: ref_user_james
+             attribute: user_id
+
+-
+     type: content
+     mode: update
+     match:
+         content_id: reference:ref_user_james
+     attributes:
+         signature: James
+         interests:
+            - { tag_id: reference:ref_tag_user_segments__blogger }
+            - { tag_id: reference:ref_tag_user_segments__traveller }
+
+# George
+-
+     type: user
+     mode: create
+     first_name: George
+     last_name: Martin
+     username: george
+     email: george.martin@example.com
+     password: publish
+     user_content_type: user
+     groups: [reference:ref_user_group__members]
+     references:
+         -
+             identifier: ref_user_george
+             attribute: user_id
+
+-
+     type: content
+     mode: update
+     match:
+         content_id: reference:ref_user_george
+     attributes:
+         signature: George
+         interests:
+            - { tag_id: reference:ref_tag_user_segments__chef }
+
+## Roles and permissions
+-
+    type: role
+    mode: create
+    name: 'Contributors'
+    policies:
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Subtree
+                    values: [reference:ref_pathstring__media__app__demo]
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Owner
+                    values: [1]
+                -
+                    identifier: Subtree
+                    values: [reference:ref_pathstring__media__app__users]
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Class
+                    values: [reference:ref_content_type_id__image]
+                -
+                    identifier: Node
+                    values: [reference:ref_folder__media__app__users]
+        -
+            module: user
+            function: login
+        -
+            module: user
+            function: register
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__app_contributors]
+
+-
+    type: role
+    mode: update
+    match:
+        identifier: 'Editor'
+    policies:
+        -
+            module: user
+            function: login
+        -
+            module: content
+            function: '*'
+        -
+            module: ezoe
+            function: '*'
+        -
+            module: notification
+            function: use
+        -
+            module: ezodf
+            function: '*'
+        -
+            module: ezflow
+            function: '*'
+        -
+            module: ezajax
+            function: '*'
+        -
+            module: rss
+            function: feed
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__editors]
+        -
+            type: user
+            ids: [reference:ref_user_yura, reference:ref_user_jessica, reference:ref_user_anil]
+
+-
+    type: role
+    mode: update
+    match:
+        identifier: 'Anonymous'
+    policies:
+        # Argument '$role' is invalid: Role '1' already assigned without limitations
+        -
+            module: user
+            function: login
+        -
+            module: user
+            function: register
+        -
+            module: tags
+            function: read
+        -
+            module: tags
+            function: view
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Section
+                    values: [reference:ref_section__standard]
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Section
+                    values: [reference:ref_section__cuisines]
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Section
+                    values: [reference:ref_section__media]
+                -
+                    identifier: Class
+                    values: [reference:ref_content_type_id__file, reference:ref_content_type_id__image, reference:ref_content_type_id__video]
+
+# error: Argument 'policy' is invalid: The limitation 'Section' is not applicable on 'content/pdf'
+#        -
+#            module: content
+#            function: pdf
+#            limitations:
+#                -
+#                    identifier: Section
+#                    values: [reference:ref_section__standard]
+        -
+            module: content
+            function: view_embed
+            limitations:
+                -
+                    identifier: Section
+                    values: [reference:ref_section__standard]
+        -
+            module: content
+            function: view_embed
+            limitations:
+                -
+                    identifier: Section
+                    values: [reference:ref_section__media]
+                -
+                    identifier: Class
+                    values: [reference:ref_content_type_id__file, reference:ref_content_type_id__image, reference:ref_content_type_id__video]
+## Already assigned
+#    assign:
+#        -
+#            type: group
+#            ids: [reference:ref_user_group__members, reference:ref_user_group__anonymous_users, reference:ref_user_group__editors]
+
+-
+    type: role
+    mode: update
+    match:
+        identifier: 'Member'
+    policies:
+        -
+            module: user
+            function: selfedit
+        -
+            module: notification
+            function: use
+        -
+            module: content
+            function: read
+            limitations:
+                -
+                    identifier: Owner
+                    values: [1]
+                -
+                    identifier: Class
+                    values: [reference:ref_content_type_id__user]
+## content	create	Class( 31 ), Section( 6 ), ParentClass( 30 )
+#        -
+#            module: content
+#            function: create
+#            limitations:
+#                -
+#                    identifier: Owner
+#                    values: [1]
+#                -
+#                    identifier: Class
+#                    values: [reference:ref_content_type_id__user]
+    assign:
+## Already assigned
+#        -
+#            type: group
+#            ids: [reference:ref_user_group__editors]
+        -
+            type: user
+            ids: [reference:ref_user_christine]

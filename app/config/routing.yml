@@ -26,6 +26,9 @@ _ezplatformRepositoryFormsRoutes:
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
 
+_eztagsRoutes:
+    resource: "@NetgenTagsBundle/Resources/config/routing.yml"
+
 _novaezseoRoutes:
     resource: "@NovaeZSEOBundle/Controller/"
     type:     annotation

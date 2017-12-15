@@ -44,6 +44,7 @@
         "ezsystems/ezplatform-admin-ui-modules": "^1.0@dev",
         "ezsystems/ezplatform-admin-ui-assets": "^0.4",
         "ezsystems/ezplatform-design-engine": "^1.0",
+        "ezsystems/ezplatform-demo-assets": "^1.0@beta",
         "knplabs/knp-menu-bundle": "^2.1",
         "sensio/framework-extra-bundle": "^3.0.2",
         "willdurand/js-translation-bundle": "^2.6.4",
@@ -52,7 +53,9 @@
         "white-october/pagerfanta-bundle": "^1.1",
         "roave/security-advisories": "dev-master",
         "novactive/ezseobundle": "^2.1",
-        "leafo/scssphp": "^0.7"
+        "leafo/scssphp": "^0.7",
+        "kaliop/ezmigrationbundle": "^4.0",
+        "netgen/tagsbundle": "^3.1@dev"
     },
     "require-dev": {
         "behat/behat": "~3.2",

@@ -1,0 +1,8 @@
+services:
+    app.installer.demo_installer:
+        parent: ezplatform.installer.db_based_installer
+        class: AppBundle\Installer\PlatformDemoInstaller
+        calls:
+            - [setEnvironment, ["%kernel.environment%"]]
+        tags:
+            - { name: ezplatform.installer, type: platform-demo }
