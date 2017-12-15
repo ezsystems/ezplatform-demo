@@ -80,3 +80,7 @@ parameters:
 
     # Admin siteaccess group name
     admin_group_name: admin_group
+
+    # Top menu parameters
+    app.top_menu.parent_location_id: 2
+    app.top_menu.includedContentTypeIdentifier: ["folder", "article"]

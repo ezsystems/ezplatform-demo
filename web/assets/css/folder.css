@@ -1,0 +1,68 @@
+.content-type-folder {
+    background: #fff;
+}
+
+.content-type-folder .thumbnail {
+    position: relative;
+}
+
+.content-type-folder .thumbnail img {
+    opacity: 0.3;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.content-type-folder .banner-image {
+    background-color: #000;
+    max-height: 450px;
+}
+
+.content-type-folder .title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.content-type-folder h1.field-title {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 75px;
+}
+
+.content-type-folder h2 {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    color: #63605D;
+}
+
+.content-type-folder h2 {
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.content-type-folder h3 {
+    font-size: 35px;
+    margin-top: 45px;
+    margin-bottom: 12px;
+}
+
+.content-type-folder p {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.content-type-folder .more {
+    background: #f2f2f2;
+    padding: 100px 0;
+}
+
+.content-type-folder .more h2 {
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.content-type-folder .more .col-md-4 {
+    margin-bottom: 20px;
+}

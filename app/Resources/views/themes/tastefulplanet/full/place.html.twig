@@ -1,0 +1,50 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) ~ " - " ~ content.contentInfo.publishedDate|localizeddate('short', 'short', app.request.locale) %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="content-type-place full-view">
+        <div class="banner-image">
+            <div class="thumbnail text-center">
+                {{ ez_render_field(content, 'image', {
+                    'parameters': {'alias': 'original', 'class': 'img-fluid w-100'}
+                }) }}
+                <div class="title">
+                    <h1 class="field-name">{{ ez_render_field(content, 'name') }}</h1>
+
+                    <div class="field-intro">
+                        {{ ez_render_field(content, 'intro') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+
+                    <div class="meta">
+                        <span class="field-author">
+                            {{ ez_field_value(content, 'author') }}
+                        </span>
+                        <span class="field-date">
+                            <time pubdate datetime="{{ ez_field_value(content, 'publication_date')|date("Y-m-d") }}">{{ ez_field_value(content, 'publication_date')|date("d M Y") }}</time>
+                        </span>
+                    </div>
+
+                    <div class="field-description">
+                        {{ ez_render_field(content, 'description') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field-location">
+            {{ ez_render_field(content, 'location', { parameters:{ mapType:'TERRAIN', showInfo:false, zoom: 6, width:'false', height:'400px' } }) }}
+        </div>
+
+    </section>
+{% endblock %}
