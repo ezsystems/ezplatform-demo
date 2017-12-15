@@ -1,4 +1,35 @@
 ezpublish:
     system:
-        default:
+        site:
             pagelayout: "@ezdesign/pagelayout.html.twig"
+
+            content_view:
+                full:
+                    article:
+                        template: "@ezdesign/full/article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+
+                    folder:
+                        controller: "ez_query:contentQueryAction"
+                        template: "@ezdesign/full/folder.html.twig"
+                        match:
+                            Identifier\ContentType: [folder]
+                        params:
+                            query:
+                                query_type: "AppBundle:Children"
+                                parameters:
+                                    parent_location_id: "@=location.id"
+                                assign_results_to: children
+
+                card:
+                    article:
+                        template: "@ezdesign/card/article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+
+                featured:
+                    article:
+                        template: "@ezdesign/featured/article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
