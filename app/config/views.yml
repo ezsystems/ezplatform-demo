@@ -5,6 +5,15 @@ ezpublish:
 
             content_view:
                 full:
+                    home:
+                        template: "@ezdesign/full/home.html.twig"
+                        params:
+                            place_list_location_id: '%app.home.place_list_location_id%'
+                            tastes_location_id: '%app.home.tastes_location_id%'
+                        match:
+                            Id\Location: 2
+                            Identifier\ContentType: [folder]
+
                     article:
                         template: "@ezdesign/full/article.html.twig"
                         match:
@@ -38,6 +47,33 @@ ezpublish:
                                 parameters:
                                     parent_location_id: "@=location.id"
                                 assign_results_to: places
+
+                home:
+                    place_list:
+                        controller: 'ez_query:ContentQueryAction'
+                        template: '@ezdesign/home/place_list.html.twig'
+                        params:
+                            query:
+                                query_type: 'AppBundle:Children'
+                                parameters:
+                                    limit: 3
+                                    parent_location_id: '%app.home.place_list_location_id%'
+                                assign_results_to: places
+                        match:
+                            Identifier\ContentType: [place_list]
+
+                    tastes:
+                        controller: 'ez_query:ContentQueryAction'
+                        template: '@ezdesign/home/tastes.html.twig'
+                        params:
+                            query:
+                                query_type: 'AppBundle:Children'
+                                parameters:
+                                    limit: 3
+                                    parent_location_id: '%app.home.tastes_location_id%'
+                                assign_results_to: tastes
+                        match:
+                            Identifier\ContentType: [folder]
 
                 card:
                     article:
