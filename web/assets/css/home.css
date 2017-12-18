@@ -1,0 +1,29 @@
+.places h1.home-section,
+.tastes h1.home-section {
+    color: #3c3937;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 100px;
+}
+
+.places p.text-center,
+.tastes p.text-center {
+    color: #706b68;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.places .link,
+.tastes .link {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home .card.content-type-place figure.ezimage-field img {
+    height: 450px;
+    max-height: 450px;
+}
+
+.tastes {
+    margin-top: 150px;
+}

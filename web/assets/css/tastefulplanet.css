@@ -2,3 +2,45 @@ body {
     background: #eaeaea;
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
+
+.btn {
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background: #f15a22;
+    border: #f15a22;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c9400d;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #c9400d;
+    border-color: #bf3d0c;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #c9400d;
+}
