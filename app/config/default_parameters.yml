@@ -86,6 +86,6 @@ parameters:
     app.top_menu.includedContentTypeIdentifier: ["folder", "article"]
 
     # locationIds used for fetching items on home page
-    app.home.place_list_location_id: 62
-    app.home.tastes_location_id: 60
+    app.home.place_list_location_id: 219
+    app.home.tastes_location_id: 96
 

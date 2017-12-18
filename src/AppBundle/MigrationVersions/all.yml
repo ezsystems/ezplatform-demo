@@ -1418,32 +1418,32 @@
 
 # places and tastes container
 # TODO: change it for LP - temporary folder for 'Home / Places & Tastes'
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: 2
-    section: reference:ref_section__standard
-    owner: 14
-    priority: 50
-    attributes:
-        name: 'Places & Tastes'
-        short_name: 'Places & Tastes'
-        show_children: true
-    references:
-        -
-            identifier: ref_location_folder__home__places_and_tastes
-            attribute: location_id
-        -
-            identifier: ref_content_folder__home__places_and_tastes
-            attribute: content_id
+#-
+#    type: content
+#    mode: create
+#    content_type: folder
+#    parent_location: 2
+#    section: reference:ref_section__standard
+#    owner: 14
+#    priority: 50
+#    attributes:
+#        name: 'Places & Tastes'
+#        short_name: 'Places & Tastes'
+#        show_children: true
+#    references:
+#        -
+#            identifier: ref_location_folder__home__places_and_tastes
+#            attribute: location_id
+#        -
+#            identifier: ref_content_folder__home__places_and_tastes
+#            attribute: content_id
 
 # folder: / Home / Places & Tastes / Tastes (Section: cuisines)
 -
     type: content
     mode: create
     content_type: folder
-    parent_location: reference:ref_location_folder__home__places_and_tastes
+    parent_location: reference:ref_location_folder__home
     section: reference:ref_section__cuisines
     owner: 14
     attributes:
@@ -4160,7 +4160,7 @@
     type: content
     mode: create
     content_type: place_list
-    parent_location: reference:ref_location_folder__home__places_and_tastes
+    parent_location: reference:ref_location_folder__home
     priority: 99
     is_hidden: false
     sort_field: path

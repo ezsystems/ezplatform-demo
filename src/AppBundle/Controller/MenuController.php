@@ -70,7 +70,7 @@ class MenuController
             $menuItems[] = $hit->valueObject;
         }
 
-        $pathArray=explode("/", $pathString);
+        $pathArray = explode("/", $pathString);
 
         return $this->templating->renderResponse(
             $template, [
