@@ -1,6 +1,6 @@
 ezpublish:
     system:
-        site:
+        site_group:
             pagelayout: "@ezdesign/pagelayout.html.twig"
 
             content_view:
