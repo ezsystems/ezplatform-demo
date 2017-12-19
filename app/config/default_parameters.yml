@@ -83,7 +83,7 @@ parameters:
 
     # Top menu parameters
     app.top_menu.parent_location_id: 2
-    app.top_menu.includedContentTypeIdentifier: ["folder", "article"]
+    app.top_menu.includedContentTypeIdentifier: ["folder", "article", "place_list"]
 
     # locationIds used for fetching items on home page
     app.home.place_list_location_id: 219
