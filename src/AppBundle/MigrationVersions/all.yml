@@ -1042,18 +1042,16 @@
     section: reference:ref_section__standard
     owner: 14
     attributes:
-        name: Home
+        name: Explore Tastes and Places of the World
         short_name: Home
         short_description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>'
         description: >- #json
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
                      xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
                      xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
-                <title ezxhtml:level="2">Welcome to eZ Platform</title>
-                <para>Congratulations, you just installed eZ Platform. eZ Platform v2 Demo</para>
             </section>
         show_children: false
-        #image:
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/home/food-travel-camp-fire.jpg'
         #tags:
         #metas:
     references:
@@ -1449,7 +1447,7 @@
     attributes:
         name: 'Delicious Cuisines!'
         short_name: Tastes
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/places-tastes/tastes/Israeli_Hummus.jpg'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/places-tastes/tastes/Table-Brunch.jpg'
         short_description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Read all about our adventures exploring the world''s best cuisines.</para></section>'
         show_children: true
     references:
@@ -4172,7 +4170,7 @@
         name: Places
         short_name: Places
         #description:
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/places-tastes/places/Paris_sunset.jpg'
+        #image: 
     references:
         -
             identifier: ref_location_place_list__home__places_and_tastes__places
