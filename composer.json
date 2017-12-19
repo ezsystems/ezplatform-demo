@@ -52,7 +52,7 @@
         "friendsofsymfony/jsrouting-bundle": "^1.4",
         "white-october/pagerfanta-bundle": "^1.1",
         "roave/security-advisories": "dev-master",
-        "novactive/ezseobundle": "^2.1",
+        "novactive/ezseobundle": "^2.2.0-alpha2",
         "leafo/scssphp": "^0.7",
         "kaliop/ezmigrationbundle": "^4.0",
         "netgen/tagsbundle": "^3.1@dev"
