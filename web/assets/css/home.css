@@ -19,9 +19,32 @@
     margin-bottom: 50px;
 }
 
+.home.content-type-folder .banner-image {
+    max-height: 500px;
+    margin-bottom: 50px;
+}
+
+.home.content-type-folder .thumbnail img {
+    opacity: 0.5;
+    max-height: 500px;
+}
+
 .home .card.content-type-place figure.ezimage-field img {
     height: 450px;
     max-height: 450px;
+    border-radius: 10px;
+}
+
+.home .card.content-type-place h2.card-title {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    background: rgba(60, 51, 48, 0.3);
+}
+
+.home .card.content-type-place .card-img-overlay:hover h2.card-title {
+    background: rgba(0, 115, 174, 0.5);
 }
 
 .tastes {
