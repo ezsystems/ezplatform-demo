@@ -48,19 +48,23 @@ class AppKernel extends Kernel
             new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
             new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
             new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),
+            // Application
             new AppBundle\AppBundle(),
         ];
 
-        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-
-            if ('dev' === $this->getEnvironment()) {
-                $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-                $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+        switch ($this->getEnvironment()) {
+            case 'test':
+            case 'behat':
+                $bundles[] = new EzSystems\BehatBundle\EzSystemsBehatBundle();
+                $bundles[] = new EzSystems\PlatformBehatBundle\EzPlatformBehatBundle();
+            // No break, test also needs dev bundles
+            case 'dev':
                 $bundles[] = new eZ\Bundle\EzPublishDebugBundle\EzPublishDebugBundle();
-            }
+                $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
+                $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+                $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+                $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+                $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
         }
 
         return $bundles;
@@ -73,11 +77,19 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return dirname($_SERVER['SYMFONY_TMP_DIR']) . '/var/cache/' . $this->getEnvironment();
+        }
+
         return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
     }
 
     public function getLogDir()
     {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return dirname($_SERVER['SYMFONY_TMP_DIR']) . '/var/logs';
+        }
+
         return dirname(__DIR__) . '/var/logs';
     }
 
