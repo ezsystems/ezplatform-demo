@@ -48,6 +48,23 @@ ezpublish:
                                     parent_location_id: "@=location.id"
                                 assign_results_to: places
 
+                    blog:
+                        controller: "ez_query:contentQueryAction"
+                        template: "@ezdesign/full/blog.html.twig"
+                        match:
+                            Identifier\ContentType: [blog]
+                        params:
+                            query:
+                                query_type: "AppBundle:Children"
+                                parameters:
+                                    parent_location_id: "@=location.id"
+                                assign_results_to: children
+
+                    blog_post:
+                        template: "@ezdesign/full/blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+
                 home:
                     place_list:
                         controller: 'ez_query:ContentQueryAction'
@@ -74,6 +91,12 @@ ezpublish:
                                 assign_results_to: tastes
                         match:
                             Identifier\ContentType: [folder]
+
+                line:
+                    blog_post:
+                        template: "@ezdesign/line/blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
 
                 card:
                     article:

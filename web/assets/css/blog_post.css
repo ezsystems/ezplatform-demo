@@ -1,0 +1,94 @@
+.content-type-blog-post {
+    background: #fff;
+}
+
+.content-type-blog-post h1.field-title {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: bold;
+    color: #3c3937;
+    font-size: 70px;
+    margin-top: 125px;
+}
+
+.content-type-blog-post .meta {
+    line-height: 15px;
+    margin-top: 20px;
+}
+
+.content-type-blog-post .meta .field-author {
+    float: left;
+}
+
+.content-type-blog-post .meta .field-authors-position {
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #63605d;
+}
+
+.content-type-blog-post .meta .field-date time {
+    padding-left: 10px;
+}
+
+.content-type-blog-post .field-image {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.content-type-blog-post h2,
+.content-type-blog-post h3,
+.content-type-blog-post p {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    color: #63605d;
+}
+
+.content-type-blog-post h2 {
+    font-size: 50px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.content-type-blog-post h3 {
+    font-size: 35px;
+    margin-top: 45px;
+    margin-bottom: 12px;
+}
+
+.content-type-blog-post p {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.content-type-blog-post .field-body p:first-child:first-letter {
+    font-size: 70px;
+    float: left;
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    line-height: 60px;
+    padding-right: 8px;
+}
+
+.content-type-blog-post .field-body {
+    margin-bottom: 100px;
+}
+
+.row.content-view-line.content-type-blog-post.align-items-top {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.content-view-line.content-type-blog-post h2 {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.content-view-line.content-type-blog-post h2 a {
+    color: #3c3937;
+}
+
+.content-view-line.content-type-blog-post .field-intro p,
+.content-view-line.content-type-blog-post .field-author {
+    font-size: 17px;
+    color: #3c3937;
+}
+
