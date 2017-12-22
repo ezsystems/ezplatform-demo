@@ -102,6 +102,8 @@ assetic:
                 - 'assets/css/folder.css'
                 - 'assets/css/place.css'
                 - 'assets/css/place_list.css'
+                - 'assets/css/blog.css'
+                - 'assets/css/blog_post.css'
 
 nova_ezseo:
     system:
