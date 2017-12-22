@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# @deprecated since 2.0, use ./bin/.travis/trusty/setup_ezplatform.sh
+#
 # This script is meant to be reused from other repos that needs to run behat tests.
 #
 # It assumes you have already checked pout ezplatform (to get access to this script) and
@@ -20,6 +22,8 @@
 #  - ./bin/.travis/trusty/setup_from_external_repo.sh $BRANCH_BUILD_DIR "ezsystems/demobundle:dev-tmp_travis_branch"
 #
 # script: docker-compose run -u www-data --rm behatphpcli bin/behat --profile=rest --suite=fullJson --tags=~@broken
+
+echo 'The script setup_from_external_repo is deprecated. Use ./bin/.travis/trusty/setup_ezplatform.sh instead.' >&2
 
 REPO_DIR=$1
 COMPOSER_REQUIRE=${@:2}
@@ -61,9 +65,9 @@ if [ "$RUN_INSTALL" = "1" ] ; then
   composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
   mkdir -p web/var
   rm -Rf var/logs/* var/cache/*/*
-  sudo chown -R www-data:www-data var/cache var/logs web/var
-  find var/cache var/logs web/var -type d | xargs chmod -R 775
-  find var/cache var/logs web/var -type f | xargs chmod -R 664
+  sudo chown -R www-data:www-data var web/var
+  find var web/var -type d | xargs chmod -R 775
+  find var web/var -type f | xargs chmod -R 664
   # Do NOT use this for your prod setup, this is done like this for behat
   sudo chown -R www-data:www-data app/config src
   #docker-compose -f doc/docker/install.yml up --abort-on-container-exit
