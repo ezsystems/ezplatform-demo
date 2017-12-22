@@ -104,6 +104,7 @@ assetic:
                 - 'assets/css/place_list.css'
                 - 'assets/css/blog.css'
                 - 'assets/css/blog_post.css'
+                - 'assets/css/subscribe.css'
 
 nova_ezseo:
     system:

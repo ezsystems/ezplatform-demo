@@ -33,3 +33,10 @@ _novaezseoRoutes:
     resource: "@NovaeZSEOBundle/Controller/"
     type:     annotation
     prefix:   /
+
+app.submitted:
+    path: /contact/submitted
+    defaults:
+        _controller: app.controller.contactform:submittedAction
+        template: "@ezdesign/full/contact_form_submitted.html.twig"
+    methods: [GET]

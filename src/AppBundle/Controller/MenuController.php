@@ -56,7 +56,7 @@ class MenuController
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function getChildNodesAction($template, $pathString)
+    public function getChildNodesAction($template, $pathString = NULL)
     {
         $query = $this->menuQueryType->getQuery([
             'parent_location_id' => $this->topMenuParentLocationId,

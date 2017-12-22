@@ -1,0 +1,49 @@
+.content-type-subscribe {
+    background: #fff;
+}
+
+.content-type-subscribe .thumbnail {
+    position: relative;
+}
+
+.content-type-subscribe .thumbnail img {
+    opacity: 0.3;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.content-type-subscribe .banner-image {
+    background-color: #000;
+    max-height: 450px;
+}
+
+.content-type-subscribe .title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+}
+
+.content-type-subscribe h1.field-title {
+    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 75px;
+}
+
+.content-type-subscribe .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.content-type-subscribe h2 {
+    margin-top: 0;
+}
+
+.form-submitted {
+    min-height: 400px;
+}
+
+.form-submitted .row {
+    margin-top: 100px;
+}

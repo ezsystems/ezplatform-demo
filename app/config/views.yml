@@ -65,6 +65,12 @@ ezpublish:
                         match:
                             Identifier\ContentType: [blog_post]
 
+                    subscribe:
+                        controller: app.controller.contactform:showContactFormAction
+                        template: "@ezdesign/full/subscribe.html.twig"
+                        match:
+                            Identifier\ContentType: [subscribe]
+
                 home:
                     place_list:
                         controller: 'ez_query:ContentQueryAction'
