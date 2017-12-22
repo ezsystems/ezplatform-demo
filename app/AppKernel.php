@@ -27,10 +27,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new \Kaliop\eZMigrationBundle\EzMigrationBundle(),
-            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
             // eZ Systems
             new EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle(),
             new eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle(),
@@ -42,25 +39,26 @@ class AppKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
-            // Dependencies
-            new Netgen\TagsBundle\NetgenTagsBundle(),
-            // Application
             new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
             new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
             new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),
+            // Application
             new AppBundle\AppBundle(),
         ];
 
-        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
-            $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-
-            if ('dev' === $this->getEnvironment()) {
-                $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-                $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+        switch ($this->getEnvironment()) {
+            case 'test':
+            case 'behat':
+                $bundles[] = new EzSystems\BehatBundle\EzSystemsBehatBundle();
+                $bundles[] = new EzSystems\PlatformBehatBundle\EzPlatformBehatBundle();
+            // No break, test also needs dev bundles
+            case 'dev':
                 $bundles[] = new eZ\Bundle\EzPublishDebugBundle\EzPublishDebugBundle();
-            }
+                $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
+                $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+                $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+                $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+                $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
         }
 
         return $bundles;
@@ -73,11 +71,19 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return dirname($_SERVER['SYMFONY_TMP_DIR']) . '/var/cache/' . $this->getEnvironment();
+        }
+
         return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
     }
 
     public function getLogDir()
     {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return dirname($_SERVER['SYMFONY_TMP_DIR']) . '/var/logs';
+        }
+
         return dirname(__DIR__) . '/var/logs';
     }
 
