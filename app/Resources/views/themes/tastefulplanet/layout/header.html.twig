@@ -34,12 +34,20 @@
         </div>
         <div class="user-menu float-right">
             <ul class="mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/register">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
+                {% if app.user %}
+                    {% set user = app.user.getAPIUser().content %}
+                        <li class="nav-item username">{{ ez_content_name(user) }}</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
+                        </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>

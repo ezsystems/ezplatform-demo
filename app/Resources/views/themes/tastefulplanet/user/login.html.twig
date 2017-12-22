@@ -1,0 +1,55 @@
+{% extends layout %}
+
+{% block page_head %}
+    {% set title = 'Login'|trans %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form-login">
+        <div class="row form">
+            <div class="col-md-4 offset-md-4">
+                <h1>{{ 'Member login'|trans }}</h1>
+
+                {% if error %}
+                    <div class="error-message">{{ error.message }}</div>
+                {% endif %}
+
+                <form action="{{ path('login_check') }}" method="post">
+                    {% block login_fields %}
+                        <div class="form-group">
+                            <label for="formGroupLogin">{{ 'Login' }}:</label>
+                            <input type="text" name="_username" class="form-control" id="formGroupLogin" value="{{ last_username }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupPassword">{{ 'Password' }}:</label>
+                            <input type="password" name="_password" class="form-control" id="formGroupPassword">
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="remember_me" name="_remember_me" checked="checked">
+                            </label>
+                            <label for="remember_me">{{ 'Keep me logged in'|trans }}</label>
+                        </div>
+
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                        <div class="btn-submit text-center">
+                            <button type="submit" class="btn btn-primary">{{ 'Log in'|trans }}</button>
+                        </div>
+                    {% endblock %}
+
+                    <div class="col-md-12 text-center">
+                    <span class="legend">
+                        {% trans with {
+                        '%path%': path('ez_user_register')
+                        } %}Don't have an account? <a href="%path%">Register</a>{% endtrans %}
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
