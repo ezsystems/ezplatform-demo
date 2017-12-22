@@ -89,3 +89,9 @@ parameters:
     app.home.place_list_location_id: 219
     app.home.tastes_location_id: 96
 
+    # e-mail address used for form submission
+    app.contact_form.sender_email: no-reply@ez.no
+
+    # e-mail address used as a message recipient
+    app.contact_form.recipient_email: no-reply@ez.no
+
