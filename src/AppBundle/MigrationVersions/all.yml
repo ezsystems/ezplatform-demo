@@ -4159,7 +4159,7 @@
     mode: create
     content_type: place_list
     parent_location: reference:ref_location_folder__home
-    priority: 99
+    priority: 10
     is_hidden: false
     sort_field: path
     sort_order: ASC
