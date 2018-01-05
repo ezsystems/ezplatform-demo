@@ -405,6 +405,10 @@
         -
             module: user
             function: login
+            limitations:
+                -
+                    identifier: SiteAccess
+                    values: [site, fr, de, no]
         -
             module: user
             function: register
@@ -461,6 +465,10 @@
         -
             module: user
             function: login
+            limitations:
+                -
+                    identifier: SiteAccess
+                    values: [site, fr, de, no]
         -
             module: user
             function: register
