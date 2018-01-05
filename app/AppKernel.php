@@ -31,6 +31,7 @@ class AppKernel extends Kernel
             new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
             new \Kaliop\eZMigrationBundle\EzMigrationBundle(),
             new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
+            new Netgen\TagsBundle\NetgenTagsBundle(),
             // eZ Systems
             new EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle(),
             new eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle(),
@@ -42,8 +43,6 @@ class AppKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
-            // Dependencies
-            new Netgen\TagsBundle\NetgenTagsBundle(),
             new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
             new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
             new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),

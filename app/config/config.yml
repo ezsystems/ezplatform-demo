@@ -66,8 +66,7 @@ framework:
     session:
         # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
         handler_id: session.handler.native_file
-        #save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
-        save_path: '/tmp'
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
         # Note: eZ Publish also allows session name and session cookie configuration to be per SiteAccess, by
         #       default session name will be set to "eZSESSID{siteaccess_hash}" (unique session name per siteaccess)
         #       Further reading on sessions: http://doc.ezplatform.com/en/master/guide/sessions/
