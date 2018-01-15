@@ -447,6 +447,15 @@
         -
             module: rss
             function: feed
+        -
+            module: section
+            function: view
+        -
+            module: content
+            function: versionread
+        -
+            module: content
+            function: reverserelatedlist
     assign:
         -
             type: group
@@ -484,24 +493,7 @@
             limitations:
                 -
                     identifier: Section
-                    values: [reference:ref_section__standard]
-        -
-            module: content
-            function: read
-            limitations:
-                -
-                    identifier: Section
-                    values: [reference:ref_section__cuisines]
-        -
-            module: content
-            function: read
-            limitations:
-                -
-                    identifier: Section
-                    values: [reference:ref_section__media]
-                -
-                    identifier: Class
-                    values: [reference:ref_content_type_id__file, reference:ref_content_type_id__image, reference:ref_content_type_id__video]
+                    values: [reference:ref_section__standard, reference:ref_section__media, reference:ref_section__cuisines]
 
 # error: Argument 'policy' is invalid: The limitation 'Section' is not applicable on 'content/pdf'
 #        -
@@ -517,23 +509,11 @@
             limitations:
                 -
                     identifier: Section
-                    values: [reference:ref_section__standard]
+                    values: [reference:ref_section__standard, reference:ref_section__media]
+    assign:
         -
-            module: content
-            function: view_embed
-            limitations:
-                -
-                    identifier: Section
-                    values: [reference:ref_section__media]
-                -
-                    identifier: Class
-                    values: [reference:ref_content_type_id__file, reference:ref_content_type_id__image, reference:ref_content_type_id__video]
-## Already assigned
-#    assign:
-#        -
-#            type: group
-#            ids: [reference:ref_user_group__members, reference:ref_user_group__anonymous_users, reference:ref_user_group__editors]
-
+            type: group
+            ids: [reference:ref_user_group__editors]
 -
     type: role
     mode: update
