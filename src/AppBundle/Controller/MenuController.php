@@ -52,11 +52,11 @@ class MenuController
      * Renders top menu with child items.
      *
      * @param string $template
-     * @param string $pathString
+     * @param string|null $pathString
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function getChildNodesAction($template, $pathString = NULL)
+    public function getChildNodesAction($template, $pathString = null)
     {
         $query = $this->menuQueryType->getQuery([
             'parent_location_id' => $this->topMenuParentLocationId,
@@ -70,7 +70,7 @@ class MenuController
             $menuItems[] = $hit->valueObject;
         }
 
-        $pathArray = explode("/", $pathString);
+        $pathArray = $pathString ? explode("/", $pathString) : [];
 
         return $this->templating->renderResponse(
             $template, [
