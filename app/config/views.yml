@@ -129,3 +129,9 @@ ezpublish:
                         template: "@ezdesign/featured/article.html.twig"
                         match:
                             Identifier\ContentType: [article]
+
+                search_result_item:
+                    default:
+                        template: "@ezdesign/search_result_item/default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, blog, folder, place_list, video, article, place, product, blog_post]

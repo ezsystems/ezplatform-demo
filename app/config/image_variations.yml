@@ -2,3 +2,16 @@ ezpublish:
     system:
         default:
             image_variations:
+                article_full_width:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [970, 600] }
+                search_result_item:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [125, 125]}
+
+                search_result_item_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [505, 400]}

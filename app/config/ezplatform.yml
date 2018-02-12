@@ -67,6 +67,7 @@ ezpublish:
                 default_ttl: '%httpcache_default_ttl%'
             http_cache:
                 purge_servers: ['%purge_server%']
+            design: main
         site:
             languages:
                 - eng-GB

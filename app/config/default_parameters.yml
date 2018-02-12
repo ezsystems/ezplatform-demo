@@ -96,3 +96,5 @@ parameters:
     # e-mail address used as a message recipient
     app.contact_form.recipient_email: no-reply@ez.no
 
+    eztags.default.tag_view.pagelayout: '@@ezdesign/pagelayout.html.twig'
+    eztags.default.tag_view.template: '@@NetgenTags/tag/view.html.twig'
