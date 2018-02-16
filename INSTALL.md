@@ -86,10 +86,10 @@ https://doc.ez.no/display/DEVELOPER/Step+1%3A+Installation
        user if non standard:
 
        ```bash
-       $ rm -rf app/cache/* app/logs/*
-       $ HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
-       $ sudo chmod +a "$HTTPDUSER allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs  web
-       $ sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs web
+       $ rm -rf var/cache/* var/logs/* var/sessions/*
+       $ HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
+       $ sudo chmod +a "$HTTPDUSER allow delete,write,append,file_inherit,directory_inherit" var web/var
+       $ sudo chmod +a "$(whoami) allow delete,write,append,file_inherit,directory_inherit" var web/var
        ```
 
        B. **Using ACL on a *Linux/BSD* system that does not support chmod +a**
@@ -113,10 +113,10 @@ https://doc.ez.no/display/DEVELOPER/Step+1%3A+Installation
        web server user and set it as ``HTTPDUSER``, alternatively change to your actual web server user if non standard:
 
        ```bash
-       $ HTTPDUSER=`ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1`
-       $ sudo chown -R "$HTTPDUSER":"$HTTPDUSER" app/cache app/logs web
-       $ sudo find {app/{cache,logs},web} -type d | xargs sudo chmod -R 775
-       $ sudo find {app/{cache,logs},web} -type f | xargs sudo chmod -R 664
+       $ HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
+       $ sudo chown -R "$HTTPDUSER":"$HTTPDUSER" var web/var
+       $ sudo find web/var var -type d | xargs sudo chmod -R 775
+       $ sudo find web/var var -type f | xargs sudo chmod -R 664
        ```
 
        D. **Using chmod on a *Linux/BSD/OS X* system where you can't change owner**
@@ -125,8 +125,8 @@ https://doc.ez.no/display/DEVELOPER/Step+1%3A+Installation
        Note that this method really isn't recommended as it allows any user to do anything.
 
        ```bash
-       $ sudo find {app/{cache,logs},web} -type d | xargs sudo chmod -R 777
-       $ sudo find {app/{cache,logs},web} -type f | xargs sudo chmod -R 666
+       $ sudo find web/var var -type d | xargs sudo chmod -R 777
+       $ sudo find web/var var -type f | xargs sudo chmod -R 666
        ```
 
        When using chmod, note that newly created files (such as cache) owned by the web server's user may have different/restrictive permissions.
@@ -134,7 +134,7 @@ https://doc.ez.no/display/DEVELOPER/Step+1%3A+Installation
 
        It may also possible to add the group ownership inheritance flag so new files inherit the current group, and use `775`/`664` in the command lines above instead of world-writable:
        ```bash
-       $ sudo chmod g+s {app/{cache,logs},web}
+       $ sudo chmod g+s web/var var
        ```
        Note: due to a limitation in the Flysystem version required by eZ
        Platform, image variations directories and files are created with a
