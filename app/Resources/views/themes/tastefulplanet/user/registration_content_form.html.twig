@@ -1,0 +1,38 @@
+{% macro display_form(form) %}
+    {{ form_start(form) }}
+
+    {% for fieldForm in form.fieldsData %}
+        {% set fieldIdentifier = fieldForm.vars.data.fieldDefinition.identifier %}
+
+        {% if fieldIdentifier == 'first_name' or fieldIdentifier == 'last_name' %}
+            <div class="form-group">
+                <label>{{ fieldForm.children.value.vars.label }}:</label>
+                {{ form_errors(fieldForm.value) }}
+                {{ form_widget(fieldForm.value, {
+                    'contentData': form.vars.data,
+                    'attr': {
+                        'class': 'form-control'
+                    }
+                }) }}
+            </div>
+        {% endif %}
+
+        {% if fieldIdentifier == 'user_account' %}
+            <div class="field-user-account">
+                {{ form_widget(fieldForm.value, {
+                    'contentData': form.vars.data,
+                }) }}
+            </div>
+        {% endif %}
+
+        {%- do fieldForm.setRendered() -%}
+    {% endfor %}
+
+    <div class="btn-submit text-center">
+        {{ form_widget(form.register, {'attr': {
+            'class': 'btn btn-primary'
+        }}) }}
+    </div>
+
+    {{ form_end(form) }}
+{% endmacro %}

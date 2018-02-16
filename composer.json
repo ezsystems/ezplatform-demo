@@ -55,7 +55,7 @@
         "novactive/ezseobundle": "^2.2.0-alpha2",
         "ezsystems/ezplatform-demo-assets": "^1.0@dev",
         "kaliop/ezmigrationbundle": "^4.0",
-        "netgen/tagsbundle": "^3.1@dev"
+        "netgen/tagsbundle": "^3.0"
     },
     "require-dev": {
         "behat/behat": "~3.2",

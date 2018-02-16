@@ -3,6 +3,15 @@ ezpublish:
         site_group:
             pagelayout: "@ezdesign/pagelayout.html.twig"
 
+            user:
+                layout: "@ezdesign/pagelayout.html.twig"
+                login_template: "@ezdesign/user/login.html.twig"
+
+            user_registration:
+                templates:
+                    form: "@ezdesign/user/registration_form.html.twig"
+                    confirmation: "@ezdesign/user/registration_confirmation.html.twig"
+
             content_view:
                 full:
                     home:

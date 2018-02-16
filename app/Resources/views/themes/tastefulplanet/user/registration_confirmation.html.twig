@@ -1,0 +1,27 @@
+{% extends pagelayout %}
+
+{% block page_head %}
+    {% set title = 'Registration completed'|trans %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+<section class="user-form-registration">
+    <div class="row form">
+        <div class="col-md-4 offset-md-4">
+
+            <h1>{{ 'Registration completed'|trans }}</h1>
+
+            <div class="confirmation-label">
+                {{ 'You are all set up and ready to go'|trans }}
+            </div>
+
+            <div class="btn-submit text-center">
+                <button type="button" class="btn btn-primary" onclick="window.location='{{ path('login') }}';">{{ 'Log in'|trans }}</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
