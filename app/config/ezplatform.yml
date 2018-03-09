@@ -103,6 +103,7 @@ assetic:
                 - 'assets/css/folder.css'
                 - 'assets/css/place.css'
                 - 'assets/css/place_list.css'
+                - 'assets/css/product.css'
                 - 'assets/css/blog.css'
                 - 'assets/css/blog_post.css'
                 - 'assets/css/subscribe.css'

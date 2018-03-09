@@ -80,6 +80,11 @@ ezpublish:
                         match:
                             Identifier\ContentType: [subscribe]
 
+                    product:
+                        template: "@ezdesign/full/product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+
                 home:
                     place_list:
                         controller: 'ez_query:ContentQueryAction'
