@@ -87,14 +87,19 @@ parameters:
     app.top_menu.includedContentTypeIdentifier: ["folder", "article", "place_list", "blog", "about"]
 
     # locationIds used for fetching items on home page
-    app.home.place_list_location_id: 219
-    app.home.tastes_location_id: 96
+    env(ref_location_place_list__home__places_and_tastes__places): 219
+    app.home.place_list_location_id: '%env(migration:ref_location_place_list__home__places_and_tastes__places)%'
+
+    env(ref_location_folder__home__places_and_tastes__tastes): 96
+    app.home.tastes_location_id: '%env(migration:ref_location_folder__home__places_and_tastes__tastes)%'
 
     # e-mail address used for form submission
     app.contact_form.sender_email: no-reply@ez.no
 
     # e-mail address used as a message recipient
     app.contact_form.recipient_email: no-reply@ez.no
+
+    app.migration_reference_file: '/src/AppBundle/MigrationVersions/References/references_all.yml'
 
     eztags.default.tag_view.pagelayout: '@@ezdesign/pagelayout.html.twig'
     eztags.default.tag_view.template: '@@NetgenTags/tag/view.html.twig'
