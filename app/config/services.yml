@@ -49,3 +49,8 @@ services:
             - '@templating'
             - '%app.contact_form.sender_email%'
             - '%app.contact_form.recipient_email%'
+
+    app.twig.content_info_by_location_id_extension:
+        class: AppBundle\Twig\ContentInfoByLocationIdExtension
+        arguments:
+            - '@ezpublish.api.service.location'

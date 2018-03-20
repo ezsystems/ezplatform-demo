@@ -11,8 +11,8 @@
     <section class="content-type-product full-view">
         <div class="breadcrumb">
             <div class="container">
-                <a href="{{ path( ezpublish.rootLocation() ) }}">Home</a> &gt;
-                <a href="{{ path('ez_urlalias', {locationId: location.parentLocationId}) }}">{{ 'Products'|trans }}</a> &gt;
+                <a href="{{ path( ezpublish.rootLocation() ) }}">{{ ez_content_name(ezpublish.rootLocation().contentInfo) }}</a> &gt;
+                <a href="{{ path('ez_urlalias', {locationId: location.parentLocationId}) }}">{{ ez_content_name(app_content_info_by_location_id(location.parentLocationId)) }}</a> &gt;
                 <a class="product" href="{{ path('ez_urlalias', {locationId: location.id}) }}">{{ ez_content_name(content) }}</a>
             </div>
         </div>
@@ -122,9 +122,11 @@
                 <div class="col-md-6 content-share">
                     <span class="share-buttons-label">Share</span>
                     <div class="share-buttons-list">
-                        <a href="http://twitter.com">Twitter</a>
-                        <a href="http://facebook.com">Facebook</a>
-                        <a href="http://linkedin.com">LinkedIn</a>
+                        {% set url = url(location) %}
+                        {% set title = ez_content_name(content)|url_encode %}
+                        <a href="https://twitter.com/intent/tweet?original_referer={{ url }}&amp;atext={{ title }}&amp;url={{ url }}&amp;via=ezsystems" target="_blank">Twitter</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={{ url }}&amp;p[title]={{ title }}" target="_blank">Facebook</a>
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ url }}&amp;title={{ title }}" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>

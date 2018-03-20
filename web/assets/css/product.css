@@ -3,13 +3,13 @@
 }
 
 .content-type-product .breadcrumb {
-    color: #8D8D8D;
+    color: #8d8d8d;
     line-height: 12px;
     font-size: 14px;
 }
 
 .content-type-product .breadcrumb a {
-    color: #8D8D8D;
+    color: #8d8d8d;
 }
 
 .content-type-product .breadcrumb a:nth-child(1) {
@@ -26,17 +26,18 @@
 
 .product-main {
     padding-top: 44px;
+    padding-bottom: 44px;
 }
 
 .product-main .btn {
     margin-bottom: 20px;
     border-radius: 0;
     text-transform: uppercase;
-    font-size: 10pt;
+    font-size: 15px;
 }
 
 .product-main-title h2 {
-    color: #63605D;
+    color: #63605d;
     font-size: 32px;
     font-weight: bold;
 }
@@ -47,7 +48,7 @@
 }
 
 .product-dietary-list h3 {
-    font-size: 12pt;
+    font-size: 17px;
 }
 
 .product-main-dietary {
@@ -119,7 +120,7 @@
     font-size: 35px;
     font-weight: bold;
     line-height: 48px;
-    color: #0073AE;
+    color: #0073ae;
     padding-left: 13px;
 }
 
@@ -134,7 +135,7 @@
 
 .product-main-spicy {
     display: flex;
-    color: #63605D;
+    color: #63605d;
     font-size: 15px;
     font-weight: 600;
 }
@@ -157,7 +158,7 @@
 
 .product-main-info .product-main-ingredients,
 .product-main-info .product-main-instruction {
-    padding: 10px;
+    padding: 35px 10px 10px 10px;
 }
 
 .content-type-product .content-tags,
@@ -181,5 +182,11 @@
 
 .share-buttons-list a,
 .content-tags a {
-    padding: 0 10px;
+    color: #63605d;
+    text-decoration: underline;
+}
+
+.share-buttons-list a:not(:nth-child(1)),
+.content-tags a:not(:nth-child(1)) {
+    padding-left: 10px;
 }
