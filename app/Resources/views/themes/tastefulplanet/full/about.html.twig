@@ -1,0 +1,32 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="content-type-article full-view">
+        <div class="banner-image">
+            <div class="thumbnail text-center">
+                {{ ez_render_field(content, 'image', {
+                    'parameters': {'alias': 'original', 'class': 'img-fluid w-100'}
+                }) }}
+                <div class="title">
+                    <h1 class="field-title">{{ ez_render_field(content, 'title') }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-5">
+                    {{ ez_render_field(content, 'left_column') }}
+                </div>
+                <div class="col-md-5">
+                    {{ ez_render_field(content, 'right_column') }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
