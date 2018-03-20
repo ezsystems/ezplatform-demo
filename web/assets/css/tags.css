@@ -1,0 +1,82 @@
+.tags-content {
+    margin-bottom: 80px;
+}
+
+.tags-content .attribute-header h1 {
+    font-size: 25px;
+    border-bottom: 1px solid #979797;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.search-result-item .item {
+    background: #fff;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 0;
+    min-height: initial;
+    margin-left: 0;
+}
+
+.search-result-item .item .item-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.search-result-item .item .item-name h2,
+.search-result-item .item .item-title h2 {
+    margin-bottom: 20px;
+}
+
+.search-result-item .item .item-intro,
+.search-result-item .item .item-description {
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+}
+
+.search-result-item .item .item-intro div,
+.search-result-item .item .item-description div {
+    align-self: center;
+}
+
+.search-result-item .item .item-intro p,
+.search-result-item .item .item-description p {
+    margin: 0;
+}
+
+.search-result-item .item .item-image {
+    padding: 20px;
+}
+
+.search-result-item .item .item-image .ezimage-field {
+    margin: 0;
+}
+
+.search-result-item .item .item-image img {
+    position: relative;
+    float: right;
+}
+
+.content-type-article .field-tags,
+.content-type-blog-post .field-tags,
+.content-type-place .field-tags {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.field-tags .badge-light {
+    border: 2px solid #ccc;
+    background: #fff;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.field-tags .badge-light:hover,
+.field-tags .badge-light:focus {
+    background: #ccc;
+}

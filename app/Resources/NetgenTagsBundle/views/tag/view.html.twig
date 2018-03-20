@@ -9,32 +9,34 @@
 
 {% block content %}
     <section class="tags-content content-view-full">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-12">
-                <div class="attribute-header">
-                    <h1>{{ 'Tags'|trans }} / <a href="{{ app.request.requestUri }}">{{ tag_keyword }}</a></h1>
-                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 col-sm-12">
+                    <div class="attribute-header">
+                        <h1>{{ 'Tags'|trans }} / <a href="{{ app.request.requestUri }}">{{ tag_keyword }}</a></h1>
+                    </div>
 
-                {% if related_content|length > 0 %}
-                    <section class="content-view-children search-result-item">
-                        {% for related_content_item in related_content %}
-                            {{ render(controller(
+                    {% if related_content|length > 0 %}
+                        <section class="content-view-children search-result-item">
+                            {% for related_content_item in related_content %}
+                                {{ render(controller(
                                 "ez_content:viewAction", {
                                     "contentId": related_content_item.id,
                                     "locationId": related_content_item.mainLocationId,
                                     "viewType": "search_result_item",
                                     "layout": false
                                 }
-                            )) }}
-                        {% endfor %}
-                    </section>
+                                )) }}
+                            {% endfor %}
+                        </section>
 
-                    {% if related_content.haveToPaginate() %}
-                        <div class="pagination-centered">
-                            {{ pagerfanta( related_content, 'twitter_bootstrap3_translated' ) }}
-                        </div>
+                        {% if related_content.haveToPaginate() %}
+                            <div class="pagination-centered">
+                                {{ pagerfanta( related_content, 'twitter_bootstrap3_translated' ) }}
+                            </div>
+                        {% endif %}
                     {% endif %}
-                {% endif %}
+                </div>
             </div>
         </div>
     </section>
