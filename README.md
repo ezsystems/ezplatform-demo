@@ -47,7 +47,7 @@ php -d memory_limit=-1 composer.phar create-project --no-dev ezsystems/ezplatfor
 Then, create a new database using the following command:
 
 ```bash
-php bin/console doctrine:database:create
+php app/console doctrine:database:create
 ```
 
 ### 3. Install content
@@ -55,8 +55,8 @@ php bin/console doctrine:database:create
 Next, run the following commands to install the demo and dump the assets:
 
 ```bash
-php bin/console ezplatform:install platform-demo
-php bin/console assetic:dump --env=prod web
+php app/console ezplatform:install demo
+php app/console assetic:dump --env=prod web
 ```
 
 ### 4. Configure virtual host
@@ -77,7 +77,7 @@ Check and adapt the generated vhost config, and then restart Apache or Nginx.
 For just local testing without installing a full web-server, while slow you can also run PHP's built-in
 web server using the following command:
 ```bash
-$ php bin/console server:run
+$ php app/console server:run
 ```
 
 *Note: While far from meant for production use, you can run the command above with `--env=prod` to disable debug.*
