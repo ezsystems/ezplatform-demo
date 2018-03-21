@@ -59,6 +59,7 @@ mounts:
     "/web/var": "shared:files/files"
     # Might want to not mount this one, it will slow down sessions, if you need cluster use memcached/redis!
     "/var/sessions": "shared:files/sessions"
+    "/src/AppBundle/MigrationVersions/References": "shared:files/src/AppBundle/MigrationVersions/References"
     # Uncomment if you want to use DFS clustering:
     #"/dfsdata": "shared:files/dfsdata"
 
