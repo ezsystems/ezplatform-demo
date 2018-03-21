@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
             new \Kaliop\eZMigrationBundle\EzMigrationBundle(),
             new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
             // eZ Systems
