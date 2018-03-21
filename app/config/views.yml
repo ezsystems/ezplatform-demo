@@ -83,6 +83,11 @@ ezpublish:
                         match:
                             Identifier\ContentType: [subscribe]
 
+                    about:
+                        template: "@ezdesign/full/about.html.twig"
+                        match:
+                            Identifier\ContentType: [about]
+
                     product:
                         template: "@ezdesign/full/product.html.twig"
                         match:
