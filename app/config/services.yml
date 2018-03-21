@@ -54,11 +54,3 @@ services:
         class: AppBundle\Twig\ContentInfoByLocationIdExtension
         arguments:
             - '@ezpublish.api.service.location'
-
-    app.env.migration.processor:
-        class: AppBundle\DependencyInjection\MigrationEnvVarProcessor
-        public: true
-        arguments:
-            - '%kernel.project_dir%%app.migration_reference_file%'
-        tags:
-            - { name: container.env_var_processor }
