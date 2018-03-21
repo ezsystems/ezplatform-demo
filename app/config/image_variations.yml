@@ -15,3 +15,7 @@ ezpublish:
                     reference: null
                     filters:
                         - {name: geometry/scaleexact, params: [505, 400]}
+                product_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [633, 500]}
