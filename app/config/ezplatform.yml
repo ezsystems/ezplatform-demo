@@ -67,7 +67,7 @@ ezpublish:
                 default_ttl: '%httpcache_default_ttl%'
             http_cache:
                 purge_servers: ['%purge_server%']
-            design: main
+            design: admin
         site:
             languages:
                 - eng-GB
@@ -90,6 +90,7 @@ ezpublish:
 ezdesign:
     design_list:
         main: [tastefulplanet]
+        admin: [admin, tastefulplanet]
 
 assetic:
     assets:
@@ -107,3 +108,4 @@ assetic:
                 - 'assets/css/blog.css'
                 - 'assets/css/blog_post.css'
                 - 'assets/css/subscribe.css'
+                - 'assets/css/tags.css'

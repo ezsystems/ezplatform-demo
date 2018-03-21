@@ -38,12 +38,16 @@
                     <div class="field-description">
                         {{ ez_render_field(content, 'description') }}
                     </div>
+
+                    <div class="field-tags">
+                        {{ ez_render_field(content, 'tags') }}
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="field-location">
-            {{ ez_render_field(content, 'location', { parameters:{ mapType:'TERRAIN', showInfo:false, zoom: 6, width:'false', height:'400px' } }) }}
+            {{ ez_render_field(content, 'location', { parameters:{ mapType:'TERRAIN', showInfo:false, zoom: 6, width:'false', height:'400px', scrollWheel:false } }) }}
         </div>
 
     </section>
