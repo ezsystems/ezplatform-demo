@@ -125,13 +125,9 @@
             field-settings:
                 hideRootTag: false
                 editView: Default
-#                subTreeLimit: reference:ref_tag_user_segments
             validator-configuration:
                 TagsValueValidator:
-                    # TODO: change to reference when merged https://github.com/kaliop-uk/ezmigrationbundle/pull/133
-                    subTreeLimit: 513
-                    #subTreeLimit: reference:ref_tag_user_segments
-                    #subTreeLimit: tag_keyword:'User Segments'
+                    subTreeLimit: reference:ref_tag_user_segments
     references:
         -
             identifier: ref_content_type_id__user
