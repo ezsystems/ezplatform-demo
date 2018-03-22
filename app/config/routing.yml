@@ -29,10 +29,10 @@ fos.js_routing:
 _eztagsRoutes:
     resource: "@NetgenTagsBundle/Resources/config/routing.yml"
 
-#_novaezseoRoutes:
-#    resource: "@NovaeZSEOBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
+_novaezseoRoutes:
+    resource: "@NovaeZSEOBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 app.submitted:
     path: /contact/submitted

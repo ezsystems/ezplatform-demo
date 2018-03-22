@@ -39,16 +39,16 @@
             name: Description
             identifier: description
             category: content
-#        -
-#            type: novaseometas
-#            name: Metas
-#            identifier: metas
-#            description: Metas for Search Engine Optimizations
-#            required: false
-#            info-collector: false
-#            searchable: false # CANNOT be searchable
-#            disable-translation: false
-#            category: metadata
+        -
+            type: novaseometas
+            name: Metas
+            identifier: metas
+            description: Metas for Search Engine Optimizations
+            required: false
+            info-collector: false
+            searchable: false # CANNOT be searchable
+            disable-translation: false
+            category: metadata
 
 # product content type
 -
@@ -147,16 +147,16 @@
             category: content
             field-settings:
                 hideRootTag: false
-#        -
-#            type: novaseometas
-#            name: Metas
-#            identifier: metas
-#            description: Metas for Search Engine Optimizations
-#            required: false
-#            info-collector: false
-#            searchable: false # CANNOT be searchable
-#            disable-translation: false
-#            category: metadata
+        -
+            type: novaseometas
+            name: Metas
+            identifier: metas
+            description: Metas for Search Engine Optimizations
+            required: false
+            info-collector: false
+            searchable: false # CANNOT be searchable
+            disable-translation: false
+            category: metadata
 
 # product_list content
 -

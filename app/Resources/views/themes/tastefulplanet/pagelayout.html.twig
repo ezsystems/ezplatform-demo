@@ -2,9 +2,9 @@
 <html class="no-js" lang="{{ app.request.locale }}">
     <head>
         {% block seo_metas %}
-            {#{% if location is defined and not location.isDraft %}#}
-                {#{% include "NovaeZSEOBundle::seometas_head.html.twig" %}#}
-            {#{% endif %}#}
+            {% if location is defined and not location.isDraft %}
+                {% include "NovaeZSEOBundle::seometas_head.html.twig" %}
+            {% endif %}
         {% endblock %}
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
