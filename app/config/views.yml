@@ -93,6 +93,20 @@ ezpublish:
                         match:
                             Identifier\ContentType: [product]
 
+                    product_list:
+                        controller: "app.controller.product_list_controller:contentQueryPaginationAction"
+                        params:
+                            page_limit: 12
+                            view_type: card
+                            query:
+                                query_type: "AppBundle:Children"
+                                parameters:
+                                    parent_location_id: '@=location.id'
+                                assign_results_to: children
+                        template: "@ezdesign/full/product_list.html.twig"
+                        match:
+                            Identifier\ContentType: [product_list]
+
                 home:
                     place_list:
                         controller: 'ez_query:ContentQueryAction'
@@ -136,6 +150,11 @@ ezpublish:
                         template: "@ezdesign/card/place.html.twig"
                         match:
                             Identifier\ContentType: [place]
+
+                    product:
+                        template: "@ezdesign/card/product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
 
                 featured:
                     article:

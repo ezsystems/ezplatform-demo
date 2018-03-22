@@ -40,6 +40,14 @@ services:
             - '@templating'
             - '@hautelook.router.template'
 
+    app.controller.product_list_controller:
+        class: AppBundle\Controller\ProductListController
+        public: true
+        arguments:
+            - '@ezpublish.query_type_content_view_mapper'
+            - '@ezpublish.api.service.search'
+            - '@form.factory'
+
     app.mail.sender:
         class: AppBundle\Mail\Sender
         public: true

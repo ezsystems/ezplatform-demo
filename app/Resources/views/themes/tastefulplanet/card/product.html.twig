@@ -1,0 +1,27 @@
+<div class="product-list-item">
+    {% set url = path(location) %}
+    <a href="{{ url }}">
+        {{ ez_render_field(content, 'image', {
+            parameters: {
+                alias: 'product_card',
+                class: 'img-fluid'
+            }
+        }) }}
+    </a>
+
+    <div class="product-list-item-info">
+        <div class="product-list-item-title">
+            <a href="{{ url }}">
+                {{ ez_render_field(content, 'title') }}
+            </a>
+        </div>
+        <div class="product-list-item-elements">
+            <div class="product-list-item-price">$ {{ ez_field_value(content, 'price').value|number_format(2, '.') }}</div>
+            <div class="product-list-item-add-button">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
+                    <i class="fa fa-shopping-basket fa-lg"></i> {{ 'Add to cart'|trans }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

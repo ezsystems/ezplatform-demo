@@ -6,6 +6,7 @@ ezpublish:
                     reference: null
                     filters:
                         - { name: geometry/scaledownonly, params: [970, 600] }
+
                 search_result_item:
                     reference: null
                     filters:
@@ -15,7 +16,14 @@ ezpublish:
                     reference: null
                     filters:
                         - {name: geometry/scaleexact, params: [505, 400]}
+
                 product_large:
                     reference: null
                     filters:
                         - {name: geometry/scaleexact, params: [633, 500]}
+
+                product_card:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [281]}
+                        - {name: geometry/crop, params: [281, 181, 0, 0]}
