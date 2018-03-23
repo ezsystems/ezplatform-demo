@@ -1,0 +1,162 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) %}
+    {{ parent() }}
+{% endblock %}
+
+{% form_theme form _self %}
+
+{%- block choice_widget_expanded -%}
+    <div {{ block('widget_container_attributes') }}>
+        {%- for child in form %}
+            <div class="element">
+                {{- form_widget(child) -}}
+                {{- form_label(child, null, {translation_domain: choice_translation_domain}) -}}
+            </div>
+        {% endfor -%}
+    </div>
+{%- endblock choice_widget_expanded -%}
+
+{% block content %}
+    {% include '@ezdesign/parts/product_modal_dialog.html.twig' %}
+
+    <section class="content-type-product-list full-view">
+        <div class="banner-image">
+            <div class="thumbnail text-center">
+                {{ ez_render_field(content, 'banner', {
+                    'parameters': {'alias': 'original', 'class': 'img-fluid w-100'}
+                }) }}
+                <div class="title">
+                    <h1 class="field-title">{{ ez_render_field(content, 'description') }}</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container product-container">
+            <div class="col-md-12 section-spacer">
+                <span>{{ 'What is on our menu'|trans }}</span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    {{ form_start(form, { 'action': path(location) }) }}
+
+                    <div class="col-md-12 section-search">
+                        <div class="input-group">
+                            {{ form_widget(form.searchText, {'attr': {'class': 'search', 'placeholder': 'Search Recipes...'}}) }}
+                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-search'}}) }}
+                            <div class="filter-button">
+                                <button class="btn btn-filters">{{ 'Filters'|trans }} <span class="fa fa-filter"></span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 section-filter">
+                        <div class="filters">
+                            <div class="filter-container">
+                                <div class="column">
+                                    <b>{{ 'Allergies'|trans }}:</b>
+                                    {{ form_row(form.dairy) }}
+                                    {{ form_row(form.egg) }}
+                                    {{ form_row(form.nuts) }}
+                                    {{ form_row(form.seafood) }}
+                                    {{ form_row(form.gluten) }}
+                                </div>
+                                <div class="column">
+                                    <b>{{ 'Spicyness'|trans }}: </b>
+                                    {{ form_widget(form.spicy) }}
+                                </div>
+                                <div class="column">
+                                    <b>{{ 'Servings'|trans }}: </b>
+                                    {{ form_widget(form.serving) }}
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="btn btn-apply" type="submit">{{ 'Apply filters'|trans }}</button>
+                                <span class="btn btn-clear">{{ 'Clear all'|trans }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <div class="col-md-10 offset-md-1 product-items">
+                {% if children|length > 0 %}
+                    {% for content in children %}
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            'locationId': content.contentInfo.mainLocationId,
+                            'viewType': view_type
+                        })) }}
+                    {% endfor %}
+
+                    {% if children.currentPageResults|length < children.maxPerPage %}
+                        {% set missingItems = children.maxPerPage - children.currentPageResults|length %}
+                        {% for item in 1..missingItems %}
+                            <div class="product-list-item"></div>
+                        {% endfor %}
+                    {% endif %}
+                {% else %}
+                    <div class="warning">
+                        <h2>{{ 'No results were found.'|trans }}</h2>
+                        <div class="well">
+                            <p>Search tips</p>
+                            <ul>
+                                <li>{{ 'Check spelling of keywords.'|trans }}</li>
+                                <li>{{ 'Try changing some keywords (eg, "car" instead of "cars").'|trans }}</li>
+                                <li>{{ 'Try searching with less specific keywords.'|trans }}</li>
+                                <li>{{ 'Reduce number of keywords to get more results.'|trans }}</li>
+                                <li>{{ 'Change the filters.'|trans }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="container">
+                <div class="col-md-12 space-bottom text-center">
+                    {% if children.haveToPaginate() %}
+                        {{ pagerfanta(children, 'twitter_bootstrap4_translated', {
+                            routeName: location,
+                            routeParams: ezpublish.requestStack.masterRequest.query.all
+                        }) }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $(function () {
+            var checkedCheckboxes,
+                countCheckedCheckboxes = function () {
+                    checkedCheckboxes = $('.filters input:checkbox:checked').length;
+                    $('.section-search .btn-filters .badge').html(checkedCheckboxes > 0 ? checkedCheckboxes : '');
+                    return checkedCheckboxes;
+                };
+
+            $('.filter-container input[type="checkbox"]').click(function () {
+                countCheckedCheckboxes();
+            });
+
+            $('.btn-filters').click(function () {
+                $('.filters, .filter-button > .arrow').toggle();
+                $('.section-header').toggleClass('section-filter');
+                return false;
+            });
+
+            $('.filters .btn-clear').click(function () {
+                $('.filter-container input[type="checkbox"]').attr('checked', false);
+                countCheckedCheckboxes();
+                return false;
+            });
+
+            if (countCheckedCheckboxes()) {
+                $('.btn-filters').trigger('click');
+            }
+        })
+    </script>
+{% endblock %}
