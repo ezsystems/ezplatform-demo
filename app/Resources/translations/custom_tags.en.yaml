@@ -1,0 +1,26 @@
+# ezyoutube
+ezrichtext.custom_tags.ezyoutube.label: YouTube
+ezrichtext.custom_tags.ezyoutube.description: ''
+ezrichtext.custom_tags.ezyoutube.attributes.autoplay.label: Autoplay
+ezrichtext.custom_tags.ezyoutube.attributes.height.label: Height
+ezrichtext.custom_tags.ezyoutube.attributes.title.label: Title
+ezrichtext.custom_tags.ezyoutube.attributes.video_url.label: 'Video url'
+ezrichtext.custom_tags.ezyoutube.attributes.width.label: Width
+
+# eztwitter
+ezrichtext.custom_tags.eztwitter.label: Twitter
+ezrichtext.custom_tags.eztwitter.description: ''
+ezrichtext.custom_tags.eztwitter.attributes.cards.label: Cards
+ezrichtext.custom_tags.eztwitter.attributes.conversation.label: Conversation
+ezrichtext.custom_tags.eztwitter.attributes.dnt.label: DNT
+ezrichtext.custom_tags.eztwitter.attributes.lang.label: Lang
+ezrichtext.custom_tags.eztwitter.attributes.link_color.label: 'Link color'
+ezrichtext.custom_tags.eztwitter.attributes.theme.label: Theme
+ezrichtext.custom_tags.eztwitter.attributes.tweet_url.label: 'Tweet url'
+ezrichtext.custom_tags.eztwitter.attributes.width.label: Width
+
+# ezfacebook
+ezrichtext.custom_tags.ezfacebook.label: Facebook
+ezrichtext.custom_tags.ezfacebook.description: ''
+ezrichtext.custom_tags.ezfacebook.attributes.post_url.label: 'Post URL'
+ezrichtext.custom_tags.ezfacebook.attributes.width.label: Width

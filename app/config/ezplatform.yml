@@ -1,6 +1,7 @@
 imports:
     - { resource: image_variations.yml }
     - { resource: views.yml }
+    - { resource: fields/ezrichtext/custom_tags.yml }
 
 ezpublish:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
