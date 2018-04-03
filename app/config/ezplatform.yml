@@ -70,20 +70,24 @@ ezpublish:
                 purge_servers: ['%purge_server%']
             design: admin
         site:
+            cache_service_name: '%cache_pool%'
             languages:
                 - eng-GB
                 - fre-FR
                 - ger-DE
                 - nor-NO
         fr:
+            cache_service_name: '%cache_pool%'
             languages:
                 - fre-FR
                 - eng-GB
         de:
+            cache_service_name: '%cache_pool%'
             languages:
                 - ger-DE
                 - eng-GB
         no:
+            cache_service_name: '%cache_pool%'
             languages:
                 - nor-NO
                 - eng-GB
