@@ -141,3 +141,10 @@ jms_translation:
             output_dir: '%kernel.root_dir%/../vendor/ezsystems/ezplatform-admin-ui/src/bundle/Resources/translations/'
             excluded_dirs: [Behat, Tests]
             output_format: "xliff"
+
+ez_platform_automated_translation:
+    system:
+        default:
+            configurations:
+                google:
+                    apiKey: '%env(GOOGLE_TRANSLATE_API_KEY)%'

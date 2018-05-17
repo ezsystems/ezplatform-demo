@@ -104,3 +104,6 @@ parameters:
 
     eztags.default.tag_view.pagelayout: '@@ezdesign/pagelayout.html.twig'
     eztags.default.tag_view.template: '@@NetgenTags/tag/view.html.twig'
+
+    # EzPlatformAutomatedTranslation Google Api key
+    env(GOOGLE_TRANSLATE_API_KEY):   ~
