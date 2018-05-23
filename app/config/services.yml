@@ -62,3 +62,7 @@ services:
         class: AppBundle\Twig\ContentInfoByLocationIdExtension
         arguments:
             - '@ezpublish.api.service.location'
+
+    AppBundle\Twig\YoutubeIdExtractorExtension:
+        tags:
+            - { name: twig.extension }
