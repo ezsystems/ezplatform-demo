@@ -3,7 +3,7 @@
         type="text/html"
         width="{{ params.width }}"
         height="{{ params.height }}"
-        src="{{ params.video_url|replace({'https://youtu.be/' : 'https://www.youtube.com/embed/'}) }}?autoplay={{ params.autoplay == 'true' ? 1 : 0 }}"
+        src="//www.youtube.com/embed/{{ app_youtube_extract_id(params.video_url) }}?autoplay={{ params.autoplay == 'true' ? 1 : 0 }}"
         frameborder="0">
     </iframe>
 </div>
