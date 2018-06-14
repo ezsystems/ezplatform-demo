@@ -1004,11 +1004,11 @@
             position: 2
         -
             identifier: file
-            type: ezbinaryfile
+            type: ezmedia
             name: File
             #description: ''
             required: false
-            searchable: true
+            searchable: false
             info-collector: false
             disable-translation: false
             category: content
