@@ -42,11 +42,13 @@ class AppKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
-            // Dependencies
-            new Netgen\TagsBundle\NetgenTagsBundle(),
+            new EzSystems\EzPlatformStandardDesignBundle\EzPlatformStandardDesignBundle(),
             new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
             new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
             new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),
+            new EzSystems\EzPlatformCronBundle\EzPlatformCronBundle(),
+            // Dependencies
+            new Netgen\TagsBundle\NetgenTagsBundle(),
             // Application
             new AppBundle\AppBundle(),
         ];
