@@ -43,7 +43,7 @@ These instructions assume you have already installed:
 For further information [on requirements see online doc](https://doc.ezplatform.com/en/latest/getting_started/requirements_and_system_configuration/).
 
 
-#### Install eZ Platform _(clean distribution)_
+#### Install eZ Platform _(demo distribution)_
 
 Assuming you have prerequisites sorted out, you can get eZ Platform up and running with the following commands in your terminal:
 
