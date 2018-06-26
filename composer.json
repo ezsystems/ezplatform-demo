@@ -72,7 +72,7 @@
         "symfony/phpunit-bridge": "^3.4.11"
     },
     "conflict": {
-        "symfony/symfony": "3.4.9",
+        "symfony/symfony": "3.4.9||3.4.12",
         "doctrine/dbal": "2.7.0"
     },
     "scripts": {
@@ -91,6 +91,9 @@
         ],
         "post-create-project-cmd": [
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
+        ],
+        "ezplatform-install": [
+            "@php bin/console ezplatform:install clean"
         ]
     },
     "config": {
