@@ -25,7 +25,7 @@
 }
 
 .content-type-article h1.field-title {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-weight: bold;
     color: #fff;
     font-size: 75px;
@@ -94,7 +94,7 @@
 }
 
 .content-view-featured.content-type-article .read-more {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-size: 20px;
     text-decoration: underline;
     margin-top: 40px;
@@ -129,6 +129,16 @@
     padding-left: 0;
 }
 
-.card.content-type-article .card-img-overlay:hover h2.card-title  {
+.card.content-type-article .card-img-overlay:hover h2.card-title {
     background: #0073ae;
+}
+
+@media (max-width: 575.98px) {
+    .content-type-article h1.field-title {
+        font-size: 25px;
+    }
+
+    .content-type-article .title {
+        top: 25%;
+    }
 }

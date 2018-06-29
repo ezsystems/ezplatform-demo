@@ -5,19 +5,6 @@
     {{ parent() }}
 {% endblock %}
 
-{% form_theme form _self %}
-
-{%- block choice_widget_expanded -%}
-    <div {{ block('widget_container_attributes') }}>
-        {%- for child in form %}
-            <div class="element">
-                {{- form_widget(child) -}}
-                {{- form_label(child, null, {translation_domain: choice_translation_domain}) -}}
-            </div>
-        {% endfor -%}
-    </div>
-{%- endblock choice_widget_expanded -%}
-
 {% block content %}
     {% include '@ezdesign/parts/product_modal_dialog.html.twig' %}
 
@@ -28,7 +15,7 @@
                     'parameters': {'alias': 'original', 'class': 'img-fluid w-100'}
                 }) }}
                 <div class="title">
-                    <h1 class="field-title">{{ ez_render_field(content, 'description') }}</h1>
+                    {{ ez_render_field(content, 'description') }}
                 </div>
             </div>
         </div>
@@ -44,10 +31,12 @@
 
                     <div class="col-md-12 section-search">
                         <div class="input-group">
-                            {{ form_widget(form.searchText, {'attr': {'class': 'search', 'placeholder': 'Search Recipes...'}}) }}
-                            {{ form_widget(form.save, {'attr': {'class': 'btn btn-search'}}) }}
+                            {{ form_widget(form.searchText, {'attr': {'class': 'search form-control', 'placeholder': 'Search Recipes...'}}) }}
+                            <div class="input-group-append">
+                                {{ form_widget(form.save, {'attr': {'class': 'btn btn-search'}}) }}
+                            </div>
                             <div class="filter-button">
-                                <button class="btn btn-filters">{{ 'Filters'|trans }} <span class="fa fa-filter"></span></button>
+                                <span class="btn btn-filters">{{ 'Filters'|trans }} <span class="badge badge-secondary badge-pill"></span> <span class="fa fa-filter"></span></span>
                             </div>
                         </div>
                     </div>
@@ -57,19 +46,51 @@
                             <div class="filter-container">
                                 <div class="column">
                                     <b>{{ 'Allergies'|trans }}:</b>
-                                    {{ form_row(form.dairy) }}
-                                    {{ form_row(form.egg) }}
-                                    {{ form_row(form.nuts) }}
-                                    {{ form_row(form.seafood) }}
-                                    {{ form_row(form.gluten) }}
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            {{ form_widget(form.dairy) }}
+                                            {{ form_label(form.dairy) }}
+                                        </li>
+                                        <li>
+                                            {{ form_widget(form.egg) }}
+                                            {{ form_label(form.egg) }}
+                                        </li>
+                                        <li>
+                                            {{ form_widget(form.nuts) }}
+                                            {{ form_label(form.nuts) }}
+                                        </li>
+                                        <li>
+                                            {{ form_widget(form.seafood) }}
+                                            {{ form_label(form.seafood) }}
+                                        </li>
+                                        <li>
+                                            {{ form_widget(form.gluten) }}
+                                            {{ form_label(form.gluten) }}
+                                        </li>
+                                    </ul>
+
                                 </div>
                                 <div class="column">
                                     <b>{{ 'Spicyness'|trans }}: </b>
-                                    {{ form_widget(form.spicy) }}
+                                    <ul class="list-unstyled">
+                                        {% for choice in form.spicy.vars.choices %}
+                                            <li>
+                                                <input type="checkbox" id="{{ form.spicy.vars.id }}_{{ loop.index0 }}" name="product_search[spicy][]" value="{{ choice.value }}" {% if choice.value in form.spicy.vars.value %}checked="checked"{% endif %} >
+                                                <label for="{{ form.spicy.vars.id }}_{{ loop.index0 }}">{{ choice.label }}</label>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
                                 <div class="column">
                                     <b>{{ 'Servings'|trans }}: </b>
-                                    {{ form_widget(form.serving) }}
+                                    <ul class="list-unstyled">
+                                        {% for choice in form.serving.vars.choices %}
+                                            <li>
+                                                <input type="checkbox" id="{{ form.serving.vars.id }}_{{ loop.index0 }}" name="product_search[serving][]" value="{{ choice.value }}" {% if choice.value in form.spicy.vars.value %}checked="checked"{% endif %} >
+                                                <label for="{{ form.serving.vars.id }}_{{ loop.index0 }}">{{ choice.label }}</label>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
                             </div>
                             <div class="buttons">
@@ -79,6 +100,8 @@
                         </div>
                     </div>
 
+                    {% do form.spicy.setRendered() %}
+                    {% do form.serving.setRendered() %}
                     {{ form_end(form) }}
                 </div>
             </div>
@@ -127,11 +150,16 @@
             </div>
         </div>
     </section>
+{% endblock %}
 
 
-    <script>
-        $(function () {
-            var checkedCheckboxes,
+{%  block javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+        jQuery(function () {
+            let $ = jQuery,
+                checkedCheckboxes,
                 countCheckedCheckboxes = function () {
                     checkedCheckboxes = $('.filters input:checkbox:checked').length;
                     $('.section-search .btn-filters .badge').html(checkedCheckboxes > 0 ? checkedCheckboxes : '');
@@ -149,7 +177,7 @@
             });
 
             $('.filters .btn-clear').click(function () {
-                $('.filter-container input[type="checkbox"]').attr('checked', false);
+                $('.filter-container input[type="checkbox"]').prop('checked', false);
                 countCheckedCheckboxes();
                 return false;
             });

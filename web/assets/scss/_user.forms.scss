@@ -1,0 +1,54 @@
+.user-form-login,
+.user-form-registration {
+    min-height: 650px;
+    background: url('/assets/images/travel-plan.jpg') no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-form-login h1,
+.user-form-registration h1 {
+    color: #f15a22;
+}
+
+.user-form-login .row.form,
+.user-form-registration .row.form {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.user-form-login .row.form .col-md-4,
+.user-form-registration .row.form .col-md-4 {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.user-form-login .btn,
+.user-form-registration .btn {
+    padding: 15px 50px;
+    text-align: center;
+}
+
+.user-form-login .btn-submit,
+.user-form-registration .btn-submit {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.user-form-registration .field-user-account input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}

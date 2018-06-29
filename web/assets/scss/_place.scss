@@ -25,7 +25,7 @@
 }
 
 .content-type-place h1.field-name {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-weight: bold;
     color: #fff;
     font-size: 75px;
@@ -106,6 +106,6 @@
     padding-left: 0;
 }
 
-.card.content-type-place .card-img-overlay:hover h2.card-title  {
+.card.content-type-place .card-img-overlay:hover h2.card-title {
     background: #0073ae;
 }

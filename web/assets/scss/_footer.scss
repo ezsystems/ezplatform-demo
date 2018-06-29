@@ -46,3 +46,10 @@ footer .footer-copyright p {
 footer .footer-copyright p a {
     color: #f15a22;
 }
+
+@media (max-width: 575.98px) {
+    footer .footer-content .links,
+    footer .footer-content .social-links {
+        margin-top: 25px;
+    }
+}

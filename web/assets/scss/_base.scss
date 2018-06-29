@@ -1,0 +1,84 @@
+$base-font-size: 17;
+$font-serif: 'Playfair Display', 'Times New Roman', Georgia, serif !default;
+$font-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
+
+html {
+    font-size: #{$base-font-size}px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: $font-sans-serif;
+    background: $main-background-color;
+}
+
+.btn {
+    border-radius: 25px;
+}
+
+.btn-primary {
+    background: $orange-dark;
+    border: $orange-dark;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: $orange-dark-hover;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+    background-color: $orange-dark-hover;
+    border-color: $orange-dark-hover;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: $orange-dark-hover;
+}
+
+blockquote {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    font-style: italic;
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    clear: both;
+}
+
+.align-left {
+    float: left;
+    padding-right: 20px;
+}
+
+.align-right {
+    float: right;
+    padding-left: 20px;
+}
+
+.align-center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.user-menu li.username {
+    padding: .5em 1em;
+}

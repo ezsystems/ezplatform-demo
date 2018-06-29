@@ -21,19 +21,20 @@
     position: absolute;
     top: 40%;
     left: 0;
+    right: 0;
     width: 100%;
 }
 
 .content-type-folder h1.field-title {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-weight: bold;
     color: #fff;
     font-size: 75px;
 }
 
 .content-type-folder h2 {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
-    color: #63605D;
+    font-family: $font-serif;
+    color: #63605d;
 }
 
 .content-type-folder h2 {

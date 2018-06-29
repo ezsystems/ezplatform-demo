@@ -14,8 +14,13 @@ class ChildrenQueryType implements QueryType
 
         $criteria = [
             new Query\Criterion\Visibility(Query\Criterion\Visibility::VISIBLE),
-            new Query\Criterion\ParentLocationId($parameters['parent_location_id']),
         ];
+
+        if (!empty($parameters['parent_location_id'])) {
+            $criteria[] = new Query\Criterion\ParentLocationId($parameters['parent_location_id']);
+        } else {
+            $criteria[] = new Query\Criterion\MatchNone();
+        }
 
         $options['filter'] = new Query\Criterion\LogicalAnd($criteria);
 

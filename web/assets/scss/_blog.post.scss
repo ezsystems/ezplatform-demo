@@ -3,7 +3,7 @@
 }
 
 .content-type-blog-post h1.field-title {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-weight: bold;
     color: #3c3937;
     font-size: 70px;
@@ -61,7 +61,7 @@
 .content-type-blog-post .field-body p:first-child:first-letter {
     font-size: 70px;
     float: left;
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     line-height: 60px;
     padding-right: 8px;
 }
@@ -77,7 +77,7 @@
 }
 
 .content-view-line.content-type-blog-post h2 {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-size: 35px;
     margin-top: 0;
 }
@@ -91,4 +91,3 @@
     font-size: 17px;
     color: #3c3937;
 }
-

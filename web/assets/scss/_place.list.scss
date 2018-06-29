@@ -29,7 +29,7 @@
 }
 
 .content-type-place-list h1.field-title {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     font-weight: bold;
     color: #fff;
     font-size: 75px;
@@ -40,7 +40,7 @@
 }
 
 .content-type-place-list h2 {
-    font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+    font-family: $font-serif;
     color: #3c3937;
     font-size: 50px;
     margin-top: 60px;

@@ -14,18 +14,15 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
         {% block page_head %}
             <title>{{ title|default('Home') }}</title>
         {% endblock %}
 
         {% block head_styles %}
-            {% stylesheets filter='cssrewrite' '@css_default' %}
-                <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+            {% stylesheets filter='scssphp'
+                'assets/scss/demo.scss'
+            %}
+                <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
         {% endblock %}
 
@@ -47,5 +44,15 @@
                 pathString: location is defined ? location.pathString
             })) }}
         {% endblock %}
+
+        {% javascripts
+            'bundles/ezplatformadminuiassets/vendors/jquery/dist/jquery.min.js'
+            'bundles/ezplatformadminuiassets/vendors/popper.js/dist/umd/popper.min.js'
+            'bundles/ezplatformadminuiassets/vendors/bootstrap/dist/js/bootstrap.min.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -20,7 +20,7 @@ ezpublish:
                 product_large:
                     reference: null
                     filters:
-                        - {name: geometry/scaleexact, params: [633, 500]}
+                        - {name: geometry/scalewidth, params: [665]}
 
                 product_card:
                     reference: null

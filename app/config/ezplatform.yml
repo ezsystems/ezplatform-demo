@@ -103,26 +103,7 @@ ezdesign:
 
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
-    override_kernel_templates: true
-
-assetic:
-    assets:
-        css_default:
-            inputs:
-                - 'assets/css/tastefulplanet.css'
-                - 'assets/css/header.css'
-                - 'assets/css/footer.css'
-                - 'assets/css/home.css'
-                - 'assets/css/article.css'
-                - 'assets/css/folder.css'
-                - 'assets/css/place.css'
-                - 'assets/css/place_list.css'
-                - 'assets/css/product.css'
-                - 'assets/css/product_list.css'
-                - 'assets/css/blog.css'
-                - 'assets/css/blog_post.css'
-                - 'assets/css/subscribe.css'
-                - 'assets/css/tags.css'
+    override_kernel_templates: false
 
 nova_ezseo:
     system:

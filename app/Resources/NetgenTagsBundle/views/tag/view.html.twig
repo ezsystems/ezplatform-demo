@@ -21,7 +21,6 @@
                             {% for related_content_item in related_content %}
                                 {{ render(controller(
                                 "ez_content:viewAction", {
-                                    "contentId": related_content_item.id,
                                     "locationId": related_content_item.mainLocationId,
                                     "viewType": "search_result_item",
                                     "layout": false
