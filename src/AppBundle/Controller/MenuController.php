@@ -72,11 +72,14 @@ class MenuController
 
         $pathArray = $pathString ? explode("/", $pathString) : [];
 
+        $response = new Response();
+        $response->setVary('X-User-Hash');
+
         return $this->templating->renderResponse(
             $template, [
-            'menuItems' => $menuItems,
-            'pathArray' => $pathArray,
-        ], new Response()
+                'menuItems' => $menuItems,
+                'pathArray' => $pathArray,
+            ], $response
         );
     }
 }
