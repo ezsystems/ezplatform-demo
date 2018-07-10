@@ -51,7 +51,7 @@
         "ezplatform-i18n/ezplatform-i18n-pl_pl": "^2.0",
         "ezplatform-i18n/ezplatform-i18n-de_de": "^2.0",
         "ezplatform-i18n/ezplatform-i18n-ru_ru": "^2.0",
-        "ezplatform-i18n/ezplatform-i18n-no_no": "^2.0",
+        "ezplatform-i18n/ezplatform-i18n-nb_no": "^2.0",
         "knplabs/knp-menu-bundle": "^2.2.1",
         "willdurand/js-translation-bundle": "^2.6.6",
         "friendsofsymfony/jsrouting-bundle": "^1.6.3",
