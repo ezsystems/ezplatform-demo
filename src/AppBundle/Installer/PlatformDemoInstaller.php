@@ -28,11 +28,15 @@ class PlatformDemoInstaller extends CleanInstaller
         }
 
         $migrationCommands = [
+            'cache:clear',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/schema_mysql.sql -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/tags.yml -n',
-            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/product_list.yml -n',
-            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/all.yml -n',
-            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/users.yml -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/languages.yml -v -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/product_list.yml -v -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/all.yml -v -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/images.yml -v -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/content.yml -v -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/users.yml -v -n',
         ];
 
         foreach ($migrationCommands as $cmd) {

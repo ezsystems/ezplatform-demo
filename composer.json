@@ -104,6 +104,7 @@
         ]
     },
     "config": {
+        "process-timeout":0,
         "bin-dir": "bin",
         "preferred-install": {
             "ezsystems/*": "dist"
