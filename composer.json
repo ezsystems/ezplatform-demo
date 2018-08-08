@@ -51,7 +51,7 @@
         "roave/security-advisories": "dev-master",
         "leafo/scssphp": "^0.7.6",
         "novactive/ezseobundle": "^3.0.0@rc",
-        "symfony/thanks": "^1.0.7"
+        "symfony/thanks": "^1.0.7",
         "sensio/framework-extra-bundle": "^5.1",
         "oneup/flysystem-bundle": "^3.0",
         "ezsystems/ezplatform-demo-assets": "^1.0@dev",
