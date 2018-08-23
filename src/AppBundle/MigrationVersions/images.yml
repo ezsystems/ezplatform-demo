@@ -1,0 +1,1929 @@
+-
+    type: reference
+    mode: load
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
+    overwrite: true
+
+### images
+## media / app / demo
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Appetizer canapés with cheese and salmon
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/appetizer-canape-cheese-salmon.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__appetizer_canapes
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__appetizer_canapes
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Ramen with pork and spring onion
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/bowl-with-pork-cutlet-and-spring-onion.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__ramen_with_pork
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__ramen_with_pork
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Esterhazyschnitten
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/eszterhazyschnitte-cream-slice-dessert.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__esterhazyschnitten
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__esterhazyschnitten
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Greek salad
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/greek-salad.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__greek_salad
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__greek_salad
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Hamburger with red onion
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/hamburger-with-red-onion.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__hamburger_with_red_onion
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__hamburger_with_red_onion
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Macaroons and coffee
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/macaroon.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__macaroons_and_coffee
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__macaroons_and_coffee
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Morning cereals
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/muesli.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__morning_cereals
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__morning_cereals
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Antipasti
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/olives-chorizo.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__antipasti
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__antipasti
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Penne, tomato and rucola
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pasta-penne-with-tomato-and-rucola.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__penne_tomato_and_rucola
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__penne_tomato_and_rucola
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Spaghetti bolognese
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pasta-spaghetti.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__spaghetti_bolognese
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__spaghetti_bolognese
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Pizza
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pizza.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__pizza
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__pizza
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Just raspberries
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/raspberries-dessert.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__just_raspberries
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__just_raspberries
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Chocolate and raspberries
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/red-raspberry-on-white-plate.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__chocolate_and_raspberries
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__chocolate_and_raspberries
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Spinach salad with chicken and pomegranate
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/salad-pomegranate-chicken-spinach.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__spinach_salad_with_chicken_and_pomegranate
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__spinach_salad_with_chicken_and_pomegranate
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Summer eat
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/skewer-meat-mushrooms.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__summer_eat
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__summer_eat
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Salmon teriyaki
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/salmon-teriyaki.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__salmon_teriyaki
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__salmon_teriyaki
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Pad thai
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pad-thai.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__pad_thai
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__pad_thai
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Maguro sushi
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/sushi-tuna.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__maguro_sushi
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__maguro_sushi
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Tofu soup
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/tofu-soup.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__tofu_soup
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__tofu_soup
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__app__demo
+    attributes:
+        name: Heathly breakfast
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/waffle-topped-with-blueberries-and-strawberries.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__app__demo__heathly_breakfast
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__app__demo__heathly_breakfast
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Bottom right banner
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Bottom-right-banner.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__bottom_right_banner
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__bottom_right_banner
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Contact Us
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Contact-Us.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__contact_us
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__contact_us
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Our Picks
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Our-Picks.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__our_picks
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__our_picks
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Paris banner
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Paris-banner.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__paris_banner
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__paris_banner
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Places to visit
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Places-to-visit.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places_to_visit
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places_to_visit
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images
+    attributes:
+        name: Visual travels
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Visual-travels.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__visual_travels
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__visual_travels
+            attribute: content_id
+
+## images for media / gallery
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_location_gallery__media__gallery
+    attributes:
+        name: Image Gallery A
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-A.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__image_gallery_a
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__image_gallery_a
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_location_gallery__media__gallery
+    attributes:
+        name: Image Gallery B
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-B.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__image_gallery_b
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__image_gallery_b
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_location_gallery__media__gallery
+    attributes:
+        name: Image Gallery C
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-C.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__image_gallery_c
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__image_gallery_c
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_location_gallery__media__gallery
+    attributes:
+        name: Image Gallery D
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-D.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__image_gallery_d
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__image_gallery_d
+            attribute: content_id
+
+
+## images for / Media / Images / Places / Amsterdam
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Amsterdam 1544
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/amsterdam_1544.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__amsterdam_1544
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__amsterdam_1544
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Amsterdam Cityscape
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/amsterdam_cityscape.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__amsterdam_cityscape
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__amsterdam_cityscape
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Emanuel de Witte de Binnenplaats van de Beurs te Amsterdam
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Oude Kerk
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/oude_kerk.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__oude_kerk
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__oude_kerk
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Rijksmuseum Atrium Large
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/rijksmuseum_atrium_large.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__rijksmuseum_atrium_large
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__rijksmuseum_atrium_large
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Rijksmuseum Large
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/rijksmuseum_large.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__rijksmuseum_large
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__rijksmuseum_large
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Royal Palace
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/royal_palace.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__royal_palace
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__royal_palace
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: The Church of St Nicholas
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/the_church_of_st_nicholas.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__the_church_of_st_nicholas
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__the_church_of_st_nicholas
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Van Gogh Sunflowers
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/van_gogh_sunflowers.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__van_gogh_sunflowers
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__van_gogh_sunflowers
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Vondel Park Amsterdam Large
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/vondel_park_amsterdam_large.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__vondel_park_amsterdam_large
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__vondel_park_amsterdam_large
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__amsterdam
+    attributes:
+        name: Westertoren Amsterdam
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/westertoren_amsterdam.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__amsterdam__westertoren_amsterdam
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__amsterdam__westertoren_amsterdam
+            attribute: content_id
+
+## images for / Media / Images / Places / Anchorage
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Alaskan Moose
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/alaskan_moose.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__alaskan_moose
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__alaskan_moose
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Alaskan Wildlife Refuge
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/alaskan_wildlife_refuge.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__alaskan_wildlife_refuge
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__alaskan_wildlife_refuge
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Anchorage Eagle River
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/anchorage_eagle_river.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__anchorage_eagle_river
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__anchorage_eagle_river
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Anchorage on an April Evening
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/anchorage_on_an_april_evening.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__anchorage_on_an_april_evening
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__anchorage_on_an_april_evening
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Ski Resort
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/ski_resort.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__ski_resort
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__ski_resort
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__anchorage
+    attributes:
+        name: Wildlife Refuge
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/wildlife_refuge.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__anchorage__wildlife_refuge
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__anchorage__wildlife_refuge
+            attribute: content_id
+
+## images for / Media / Images / Places / Brooklyn
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Brooklyn 1879
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/brooklyn_1879.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__brooklyn_1879
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__brooklyn_1879
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Brooklyn Botanical Garden
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/brooklyn_botanical_garden.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__brooklyn_botanical_garden
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__brooklyn_botanical_garden
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Greenwoodcemetary
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/greenwoodcemetary.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__greenwoodcemetary
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__greenwoodcemetary
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: JFK Memorial in Grand Army Plaza
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/jfk_memorial_in_grand_army_plaza.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__jfk_memorial_in_grand_army_plaza
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__jfk_memorial_in_grand_army_plaza
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Nathans Coney Island
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/nathans_coney_island.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__nathans_coney_island
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__nathans_coney_island
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Coney Island Parachute Jump
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/nathans_coney_island_parachute_jump.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__nathans_coney_island_parachute_jump
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__nathans_coney_island_parachute_jump
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Prospect Park Boathouse
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/prospect_park_boathouse.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__prospect_park_boathouse
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__prospect_park_boathouse
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__brooklyn
+    attributes:
+        name: Prospect Park
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/prospect_park.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__brooklyn__prospect_park
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__brooklyn__prospect_park
+            attribute: content_id
+
+## images for / Media / Images / Places / Kochin
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Bolgatty Palace
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/bolgatty_palace.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__bolgatty_palace
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__bolgatty_palace
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: City of Cochin
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/city_of_cochin.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__city_of_cochin
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__city_of_cochin
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: House Bost View
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/house_bost_view.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__house_bost_view
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__house_bost_view
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Kathakali
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kathakali.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__kathakali
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__kathakali
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Kochin1
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin1.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__kochin1
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__kochin1
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Kochin2
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin2.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__kochin2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__kochin2
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Kochin3
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin3.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__kochin3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__kochin3
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__kochin
+    attributes:
+        name: Panoramic Kochi Port
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/panoramic_kochi_port.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__kochin__panoramic_kochi_port
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__kochin__panoramic_kochi_port
+            attribute: content_id
+
+## images for / Media / Images / Places / Oslo
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Akershus Festning 1
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/akershus_festning1.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__akershus_festning_1
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__akershus_festning_1
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Akershus Festning 2
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/akershus_festning2.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__akershus_festning_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__akershus_festning_2
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Frogner Park
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/frogner_park.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__frogner_park
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__frogner_park
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Oslo at Night
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/oslo_at_night.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__oslo_at_night
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__oslo_at_night
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Royal Palace Oslo Large
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/royal_palace_oslo_large.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__royal_palace_oslo_large
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__royal_palace_oslo_large
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Stortinget Oslo
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/stortinget_oslo.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__stortinget_oslo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__stortinget_oslo
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Universitetet i Oslo
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/universitetet_i_oslo.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__universitetet_i_oslo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__universitetet_i_oslo
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Viking Museum Oslo
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Viking Museum Oslo 2
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo2.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo_2
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__oslo
+    attributes:
+        name: Viking Museum Oslo 3
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo3.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo_3
+            attribute: content_id
+
+## images for / Media / Images / Places / Santo Domingo
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__santo_domingo
+    attributes:
+        name: Catedral Santa Maria La Menor
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/catedral_santa_maria_la_menor.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__santo_domingo__catedral_santa_maria_la_menor
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__santo_domingo__catedral_santa_maria_la_menor
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__santo_domingo
+    attributes:
+        name: Columbus Park Dominican Republic
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/columbus_park_dominican_republic.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__santo_domingo__columbus_park_dominican_republic
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__santo_domingo__columbus_park_dominican_republic
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__santo_domingo
+    attributes:
+        name: Landing of Columbus
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/landing_of_columbus.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__santo_domingo__landing_of_columbus
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__santo_domingo__landing_of_columbus
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__santo_domingo
+    attributes:
+        name: Santo Domingo National Palace
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/santo_domingo_national_palace.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__santo_domingo__santo_domingo_national_palace
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__santo_domingo__santo_domingo_national_palace
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__santo_domingo
+    attributes:
+        name: Santo Domingo Panorama
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/santo_domingo_panorama.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__santo_domingo__santo_domingo_panorama
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__santo_domingo__santo_domingo_panorama
+            attribute: content_id
+
+## images for / Media / Images / Places / Valencia
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: A Falles of Valencia
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/a_falles_of_valencia.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__a_falles_of_valencia
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__a_falles_of_valencia
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Embarco Moriscos en el Grao de Valencia
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/embarco_moriscos_en_el_grao_de_valencia.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__embarco_moriscos_en_el_grao_de_valencia
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__embarco_moriscos_en_el_grao_de_valencia
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Falla Nou Campanar
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/falla_nou_campanar.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__falla_nou_campanar
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__falla_nou_campanar
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Les Falles
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/les_falles.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__les_falles
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__les_falles
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Mercat
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/mercat.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__mercat
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__mercat
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Puerta de los Serranos
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/puerta_de_los_serranos.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__puerta_de_los_serranos
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__puerta_de_los_serranos
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Traditional Hairstyle of Valencian Female
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/traditional_hairstyle_of_valencian_female.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__traditional_hairstyle_of_valencian_female
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__traditional_hairstyle_of_valencian_female
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Valencia Cathedral
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia_cathedral.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__valencia_cathedral
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__valencia_cathedral
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Valencia City Hall
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia_city_hall.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__valencia_city_hall
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__valencia_city_hall
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__places__valencia
+    attributes:
+        name: Valencia Loceanografic
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia-loceanografic.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__places__valencia__valencia_loceanografic
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__places__valencia__valencia_loceanografic
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Ethiopian Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__ethiopian_cuisine
+    attributes:
+        name: Coffee Ceremony
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/ethiopian_cuisine/coffee_ceremony.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__ethiopian_cuisine__coffee_ceremony
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__ethiopian_cuisine__coffee_ceremony
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__ethiopian_cuisine
+    attributes:
+        name: Ethiopian Kitfo
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/ethiopian_cuisine/ethiopian_kitfo.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__ethiopian_cuisine__ethiopian_kitfo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__ethiopian_cuisine__ethiopian_kitfo
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Israeli Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
+    attributes:
+        name: Couscous Salad
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/couscous_salad.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__israeli_cuisine__couscous_salad
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__israeli_cuisine__couscous_salad
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
+    attributes:
+        name: Shakshuka
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/shakshuka.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__israeli_cuisine__shakshuka
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__israeli_cuisine__shakshuka
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
+    attributes:
+        name: Shawarma
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/shawarma.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__israeli_cuisine__shawarma
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__israeli_cuisine__shawarma
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Jamaican Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
+    attributes:
+        name: Ackee and Saltfish
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/ackee_and_saltfish.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__ackee_and_saltfish
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__ackee_and_saltfish
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
+    attributes:
+        name: Jamaican Jerk Chicken
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/jamaican_jerk_chicken.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__jamaican_jerk_chicken
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__jamaican_jerk_chicken
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
+    attributes:
+        name: Jamaican Patties
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/jamaican_patties.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__jamaican_patties
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__jamaican_patties
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Mexican Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
+    attributes:
+        name: Enchilada Mole
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/enchilada_mole.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__mexican_cuisine__enchilada_mole
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__mexican_cuisine__enchilada_mole
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
+    attributes:
+        name: Guacomole
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/guacomole.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__mexican_cuisine__guacomole
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__mexican_cuisine__guacomole
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
+    attributes:
+        name: Mexican Street Food
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/mexican_street_food.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__mexican_cuisine__mexican_street_food
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__mexican_cuisine__mexican_street_food
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Norwegian Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
+    attributes:
+        name: Beef Stew
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/beef_stew.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__beef_stew
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__beef_stew
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
+    attributes:
+        name: Kromkaker Og Sandkaker
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/kromkaker_og_sandkaker.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__kromkaker_og_sandkaker
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__kromkaker_og_sandkaker
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
+    attributes:
+        name: Norwegian Torrfesk
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/norwegian_torrfesk.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__norwegian_torrfesk
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__norwegian_torrfesk
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Polish Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
+    attributes:
+        name: Bigos
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/bigos.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__polish_cuisine__bigos
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__polish_cuisine__bigos
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
+    attributes:
+        name: City Harvest in Poznan
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/city_harvest_in_poznan.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__polish_cuisine__city_harvest_in_poznan
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__polish_cuisine__city_harvest_in_poznan
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
+    attributes:
+        name: Pierogi
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/pierogi.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__polish_cuisine__pierogi
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__polish_cuisine__pierogi
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
+    attributes:
+        name: Smażenie Pączków
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/smazenie_paczkow.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__polish_cuisine__smazenie_paczkow
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__polish_cuisine__smazenie_paczkow
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
+    attributes:
+        name: Wigilijne Śniadanie
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/wigilijne_sniadanie.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__polish_cuisine__wigilijne_sniadanie
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__polish_cuisine__wigilijne_sniadanie
+            attribute: content_id
+
+## images for / Media / Images / Tastes / Thai Cuisine
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
+    attributes:
+        name: Phat Thai Kung Chang Khien
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/phat_thai_kung_chang_khien.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__thai_cuisine__phat_thai_kung_chang_khien
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__thai_cuisine__phat_thai_kung_chang_khien
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
+    attributes:
+        name: Red Roast Duck Curry
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/red_roast_duck_curry.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__thai_cuisine__red_roast_duck_curry
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__thai_cuisine__red_roast_duck_curry
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
+    attributes:
+        name: Thai Vegetable Carving
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/thai_vegetable_carving.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__thai_cuisine__thai_vegetable_carving
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__thai_cuisine__thai_vegetable_carving
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
+    attributes:
+        name: Yam Wun Sen
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/yam_wun_sen.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__tastes__thai_cuisine__yam_wun_sen
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__tastes__thai_cuisine__yam_wun_sen
+            attribute: content_id
+
+-
+    type: reference
+    mode: save
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
+    overwrite: true

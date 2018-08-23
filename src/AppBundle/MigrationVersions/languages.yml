@@ -1,0 +1,30 @@
+-
+    type: reference
+    mode: load
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
+    overwrite: true
+
+# languages French 4, German 8, Norwegian 16
+-
+    type: language
+    mode: create
+    lang: fre-FR
+    name: French
+
+-
+    type: language
+    mode: create
+    lang: ger-DE
+    name: German
+
+-
+    type: language
+    mode: create
+    lang: nor-NO
+    name: Norwegian
+
+-
+    type: reference
+    mode: save
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
+    overwrite: true

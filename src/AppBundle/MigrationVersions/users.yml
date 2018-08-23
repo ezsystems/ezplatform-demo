@@ -2,12 +2,7 @@
 -
     type: reference
     mode: load
-    file: 'src/AppBundle/MigrationVersions/References/references_tags.yml'
-    overwrite: true
--
-    type: reference
-    mode: load
-    file: 'src/AppBundle/MigrationVersions/References/references_all.yml'
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
     overwrite: true
 
 -
@@ -551,3 +546,9 @@
         -
             type: user
             ids: [reference:ref_user_christine]
+
+-
+    type: reference
+    mode: save
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
+    overwrite: true

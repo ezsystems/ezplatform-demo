@@ -108,9 +108,9 @@ parameters:
 
     # locationIds used for fetching items on home page
     app.home.place_list_location_id: 219
-    app.home.tastes_location_id: 96
+    app.home.tastes_location_id: 207
 
-    app.migration_reference_file: '/src/AppBundle/MigrationVersions/References/references_all.yml'
+    app.migration_reference_file: '/src/AppBundle/MigrationVersions/References/references.yml'
     
     app.migration.values_mapping:
         app.home.place_list_location_id: 'ref_location_place_list__home__places_and_tastes__places'

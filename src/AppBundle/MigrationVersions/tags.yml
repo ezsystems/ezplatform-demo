@@ -6209,5 +6209,5 @@
 -
     type: reference
     mode: save
-    file: 'src/AppBundle/MigrationVersions/References/references_tags.yml'
+    file: 'src/AppBundle/MigrationVersions/References/references.yml'
     overwrite: true
