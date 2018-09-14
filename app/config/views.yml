@@ -102,6 +102,7 @@ ezpublish:
                                 query_type: "AppBundle:Children"
                                 parameters:
                                     parent_location_id: '@=location.id'
+                                    included_content_type_identifier: 'product'
                                 assign_results_to: children
                         template: "@ezdesign/full/product_list.html.twig"
                         match:
