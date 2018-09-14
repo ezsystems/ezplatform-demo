@@ -22,6 +22,10 @@ class ChildrenQueryType implements QueryType
             $criteria[] = new Query\Criterion\MatchNone();
         }
 
+        if (!empty($parameters['included_content_type_identifier'])) {
+            $criteria[] = new Query\Criterion\ContentTypeIdentifier($parameters['included_content_type_identifier']);
+        }
+
         $options['filter'] = new Query\Criterion\LogicalAnd($criteria);
 
         if (isset($parameters['limit'])) {
