@@ -84,10 +84,11 @@
 
 .card.content-type-place figure.ezimage-field {
     margin: 0;
+    height: 233px;
 }
 
 .card.content-type-place figure.ezimage-field img {
-    max-height: 233px;
+    height: 100%;
     object-fit: cover;
 }
 
