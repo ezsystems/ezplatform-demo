@@ -1,8 +1,8 @@
 <div class="top-menu clearfix bg-faded">
     <div class="container">
-        <div class="hub float-left">
-            <div class="languages nav-link dropdown">
-                <button class="btn btn-sm dropdown-toggle"
+        <div class="d-flex float-left">
+            <div class="top-menu-item languages dropdown">
+                <button class="btn btn-sm dropdown-toggle nav-link"
                         type="button" id="dropdownMenu1" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                     {{ 'Languages'|trans }}
@@ -14,10 +14,10 @@
                     <a class="dropdown-item" href="/no">{{ "Norwegian"|trans}}</a>
                 </div>
             </div>
-            <div class="newsletter">
+            <div class="top-menu-item">
                 <a class="nav-link" href="{{ path( "ez_urlalias", {"locationId": 227} ) }}">Subscribe</a>
             </div>
-            <div class="social">
+            <div class="top-menu-item social">
                 <a href="//www.facebook.com/eZPublishEnterprise">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -32,19 +32,19 @@
                 </a>
             </div>
         </div>
-        <div class="user-menu float-right">
-            <ul class="mr-auto">
+        <div class="d-flex user-menu float-right">
+            <ul class="mr-auto list-unstyled">
                 {% if app.user %}
                     {% set user = app.user.getAPIUser().content %}
-                    <li class="nav-item username">{{ ez_content_name(user) }}</li>
-                    <li class="nav-item">
+                    <li class="top-menu-item nav-item username">{{ ez_content_name(user) }}</li>
+                    <li class="top-menu-item nav-item">
                         <a class="nav-link" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
                     </li>
                 {% else %}
-                    <li class="nav-item">
+                    <li class="top-menu-item nav-item">
                         <a class="nav-link" href="/register">{{ 'Register'|trans }}</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="top-menu-item nav-item">
                         <a class="nav-link" href="/login">{{ 'Login'|trans }}</a>
                     </li>
                 {% endif %}
