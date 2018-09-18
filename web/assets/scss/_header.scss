@@ -45,12 +45,17 @@ a.navbar-brand {
 }
 
 .top-menu .social {
-    padding: 5px;
+    padding: 0.5rem 1rem;
 }
 
 .top-menu .social a {
+    float: left;
     padding: 0 6px;
     text-decoration: none;
+}
+
+.social a:first-child {
+    padding-left: 0;
 }
 
 .top-menu .social i.fa-facebook-f {
@@ -58,7 +63,7 @@ a.navbar-brand {
 }
 
 .top-menu .social i.fa-twitter {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .top-menu .social i.fa-google-plus-g {
@@ -66,7 +71,7 @@ a.navbar-brand {
 }
 
 .top-menu .social i.fa-rss {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .top-menu .social svg {
