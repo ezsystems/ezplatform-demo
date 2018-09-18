@@ -1,6 +1,6 @@
 .top-menu.bg-faded,
 .navbar.bg-faded {
-    background-color: #fff;
+    background-color: $white;
 }
 
 a.navbar-brand {
@@ -14,14 +14,14 @@ a.navbar-brand {
     text-transform: uppercase;
 }
 
-.top-menu .languages {
-    padding: 0 10px;
+.dropdown-toggle:after {
+    border-top: 0.4em solid;
+    vertical-align: 0.15em;
 }
 
 .top-menu .languages .btn {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     border: none;
-    padding: 8px 0;
     color: #63605d;
     line-height: 18px;
     background: initial;
@@ -32,9 +32,12 @@ a.navbar-brand {
     box-shadow: none;
 }
 
-.top-menu .newsletter {
+.top-menu-item {
     border-right: 1px solid #e5e5e5;
-    border-left: 1px solid #e5e5e5;
+}
+
+.top-menu-item:last-child {
+    border-right: none;
 }
 
 .top-menu a {
@@ -70,23 +73,10 @@ a.navbar-brand {
     fill: #a1a09e;
 }
 
-.hub,
-.user-menu {
-    display: flex;
-}
-
 .user-menu ul {
     display: flex;
     flex-direction: row;
     margin-bottom: 0px;
-}
-
-.user-menu ul li {
-    list-style: none;
-}
-
-.user-menu ul li:first-of-type {
-    border-right: 1px solid #e5e5e5;
 }
 
 .main-menu {
