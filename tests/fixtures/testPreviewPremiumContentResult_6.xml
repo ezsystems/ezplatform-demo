@@ -1,0 +1,25 @@
+<div class="ezrichtext-field">
+    <p>Element 1 - Paragraph 1</p>
+    <h2>Element 2 - header 1</h2>
+    <p>Element 3 - Paragraph 2</p>
+
+    <!-- START embed/content.html.twig -->
+    <div class="align-right ez-embed-type-image">
+
+        <!-- START embed_image.html.twig -->
+        <figure class="ezimage-field"><img src="#" width="300" height="225" alt=""/></figure>
+        <!-- STOP embed_image.html.twig -->
+
+    </div>
+    <!-- STOP embed/content.html.twig -->
+
+    <p>Paragraph 3</p>
+
+    <!-- START embed/content.html.twig -->
+    <div class="align-left ez-embed-type-image">
+
+        <!-- START embed_image.html.twig -->
+        <figure class="ezimage-field"><img src="#" width="300" height="200" alt=""/></figure>
+        <!-- STOP embed_image.html.twig -->
+
+    </div></div>

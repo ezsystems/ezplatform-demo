@@ -67,3 +67,11 @@ services:
     AppBundle\Twig\YoutubeIdExtractorExtension:
         tags:
             - { name: twig.extension }
+
+    AppBundle\Twig\PremiumContentExtension:
+        arguments:
+            - '@ezpublish.api.repository'
+            - '@security.token_storage'
+            - '%app.premium_content.allowed_user_groups.location_ids%'
+        tags:
+            - { name: twig.extension }
