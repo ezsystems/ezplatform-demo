@@ -3,7 +3,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace AppBundle\PremiumContent;
+namespace AppBundle\User;
 
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use eZ\Publish\API\Repository\Repository as RepositoryInterface;
@@ -30,11 +30,23 @@ class UserGroups
     }
 
     /**
-     * Checks if user has access to premium content.
+     * Checks if current user's groups exists in one of passed user groups location Ids.
+     *
+     * @param array $userGroupsLocationIds
+     *
+     * @return bool
+     */
+    public function isCurrentUserInOneOfTheGroups(array $userGroupsLocationIds): bool
+    {
+        return 0 !== \count(array_intersect($this->getCurrentUserGroupsIds(), $userGroupsLocationIds));
+    }
+
+    /**
+     * Returns User Groups Location Ids based on current user..
      *
      * @return int[]
      */
-    public function getCurrentUserGroupsIds(): array
+    private function getCurrentUserGroupsIds(): array
     {
         $token = $this->tokenStorage->getToken();
 

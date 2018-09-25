@@ -69,13 +69,13 @@ services:
             - { name: twig.extension }
 
 
-    AppBundle\PremiumContent\:
-        resource: '../../src/AppBundle/PremiumContent/*'
+    AppBundle\PremiumContent\HtmlRenderer: ~
+    AppBundle\User\UserGroups: ~
 
     AppBundle\Twig\PremiumContentExtension:
         arguments:
             - '@AppBundle\PremiumContent\HtmlRenderer'
-            - '@AppBundle\PremiumContent\PermissionChecker'
+            - '@AppBundle\User\UserGroups'
             - '%app.premium_content.allowed_user_groups.location_ids%'
         tags:
             - { name: twig.extension }

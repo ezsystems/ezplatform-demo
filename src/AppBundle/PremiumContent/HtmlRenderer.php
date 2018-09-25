@@ -49,7 +49,12 @@ class HtmlRenderer
         return $this->removeXmlHeader($doc->saveXML());
     }
 
-    private function removeXmlHeader(string $html)
+    /**
+     * @param string $html
+     *
+     * @return string
+     */
+    private function removeXmlHeader(string $html): string
     {
         return str_replace('<?xml version="1.0" standalone="yes"?>' . "\n", null, $html);
     }

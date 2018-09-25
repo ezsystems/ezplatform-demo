@@ -6,7 +6,7 @@
 namespace AppBundle\Twig;
 
 use AppBundle\PremiumContent\HtmlRenderer;
-use AppBundle\PremiumContent\PermissionChecker;
+use AppBundle\User\UserGroups;
 use Twig_Extension;
 use Twig_SimpleFilter;
 use Twig_SimpleFunction;
@@ -19,24 +19,27 @@ class PremiumContentExtension extends Twig_Extension
     /** @var \AppBundle\PremiumContent\HtmlRenderer */
     private $htmlRenderer;
 
-    /** @var \AppBundle\PremiumContent\PermissionChecker */
-    private $permissionChecker;
+    /** @var \AppBundle\User\UserGroups */
+    private $userGroups;
 
     /** @var int[] */
     private $allowedUserGroupsLocationIds;
 
+    /** @var bool */
+    private $hasAccess;
+
     /**
      * @param \AppBundle\PremiumContent\HtmlRenderer $htmlRenderer
-     * @param \AppBundle\PremiumContent\PermissionChecker $permissionChecker
+     * @param \AppBundle\User\UserGroups $userGroups
      * @param array $allowedUserGroupsLocationIds
      */
     public function __construct(
         HtmlRenderer $htmlRenderer,
-        PermissionChecker $permissionChecker,
+        UserGroups $userGroups,
         array $allowedUserGroupsLocationIds
     ) {
         $this->htmlRenderer = $htmlRenderer;
-        $this->permissionChecker = $permissionChecker;
+        $this->userGroups = $userGroups;
         $this->allowedUserGroupsLocationIds = $allowedUserGroupsLocationIds;
     }
 
@@ -82,7 +85,7 @@ class PremiumContentExtension extends Twig_Extension
      *
      * @return string
      */
-    public function previewPremiumContent($document, $numberOfDisplayedElements = 2): string
+    public function previewPremiumContent(string $document, int $numberOfDisplayedElements = 2): string
     {
         return $this->htmlRenderer->renderElements($document, $numberOfDisplayedElements);
     }
@@ -94,12 +97,10 @@ class PremiumContentExtension extends Twig_Extension
      */
     public function hasAccessToPremiumContent(): bool
     {
-        static $hasAccess;
-
-        if (null !== $hasAccess) {
-            return $hasAccess;
+        if (null !== $this->hasAccess) {
+            return $this->hasAccess;
         }
 
-        return $hasAccess = $this->permissionChecker->isCurrentUserInOneOfTheGroups($this->allowedUserGroupsLocationIds);
+        return $this->hasAccess = $this->userGroups->isCurrentUserInOneOfTheGroups($this->allowedUserGroupsLocationIds);
     }
 }
