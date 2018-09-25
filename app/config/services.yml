@@ -68,10 +68,14 @@ services:
         tags:
             - { name: twig.extension }
 
+
+    AppBundle\PremiumContent\:
+        resource: '../../src/AppBundle/PremiumContent/*'
+
     AppBundle\Twig\PremiumContentExtension:
         arguments:
-            - '@ezpublish.api.repository'
-            - '@security.token_storage'
+            - '@AppBundle\PremiumContent\HtmlRenderer'
+            - '@AppBundle\PremiumContent\PermissionChecker'
             - '%app.premium_content.allowed_user_groups.location_ids%'
         tags:
             - { name: twig.extension }
