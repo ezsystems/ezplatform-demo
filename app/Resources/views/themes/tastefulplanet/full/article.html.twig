@@ -32,8 +32,29 @@
                     </div>
 
                     <div class="field-body">
-                        {{ ez_render_field(content, 'body') }}
+                        {% set displayPremiumContentInfo = false %}
+
+                        {% if not ez_is_field_empty(content, 'premium_content') %}
+                            {% if ez_has_access_to_premium_content() %}
+                                {{ ez_render_field(content, 'body') }}
+                            {% else %}
+                                {% set displayPremiumContentInfo = true %}
+                                <div class="premium-article__preview">
+                                    {{ ez_render_field(content, 'body')|previewPremiumContent(3) }}
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            {{ ez_render_field(content, 'body') }}
+                        {% endif %}
                     </div>
+
+                    {% if displayPremiumContentInfo %}
+                        <div class="premium-article__info">
+                            <span class="premium-article__image"><img src="{{ asset('assets/images/article/premium_content.png') }}" /></span>
+                            <span class="premium-article__text">{{ 'To continue reading, without interruption, register and get unlimited access'|trans }}</span>
+                            <span class="premium-article__register"><a href="{{ path('ez_user_register') }}" class="btn btn-primary">{{ 'Register Now'|trans }}</a></span>
+                        </div>
+                    {% endif %}
 
                     <div class="field-tags">
                         {{ ez_render_field(content, 'tags') }}

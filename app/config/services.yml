@@ -67,3 +67,15 @@ services:
     AppBundle\Twig\YoutubeIdExtractorExtension:
         tags:
             - { name: twig.extension }
+
+
+    AppBundle\PremiumContent\HtmlRenderer: ~
+    AppBundle\User\UserGroups: ~
+
+    AppBundle\Twig\PremiumContentExtension:
+        arguments:
+            - '@AppBundle\PremiumContent\HtmlRenderer'
+            - '@AppBundle\User\UserGroups'
+            - '%app.premium_content.allowed_user_groups.location_ids%'
+        tags:
+            - { name: twig.extension }
