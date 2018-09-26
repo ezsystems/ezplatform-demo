@@ -25,6 +25,7 @@ env:
     - TEST_CMD="bin/behat -vv --profile=adminui --suite=adminui" COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/selenium.yml"
     - TEST_CMD="bin/behat -vv --profile=adminui --suite=adminui --tags=~@EZP-29291-excluded" COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/varnish.yml:doc/docker/redis.yml:doc/docker/selenium.yml" WEB_HOST="varnish"
     - TEST_CMD="bin/behat -vv --profile=repository-forms" COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/selenium.yml"
+    - TEST_CMD="bin/phpunit -v tests/"
 
 
 # test only master (+ Pull requests)
