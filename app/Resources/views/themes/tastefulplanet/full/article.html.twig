@@ -39,7 +39,7 @@
                                 {{ ez_render_field(content, 'body') }}
                             {% else %}
                                 {% set displayPremiumContentInfo = true %}
-                                <div class="premium-content-preview">
+                                <div class="premium-article__preview">
                                     {{ ez_render_field(content, 'body')|previewPremiumContent(3) }}
                                 </div>
                             {% endif %}
@@ -49,10 +49,10 @@
                     </div>
 
                     {% if displayPremiumContentInfo %}
-                        <div class="premium-content-info">
-                            <span class="premium-content-image"><img src="{{ asset('assets/images/article/premium_content.png') }}" /></span>
-                            <span class="premium-content-text">{{ 'To continue reading, without interruption, register and get unlimited access'|trans }}</span>
-                            <span class="premium-content-register"><a href="{{ path('ez_user_register') }}" class="btn btn-primary">{{ 'Register Now'|trans }}</a></span>
+                        <div class="premium-article__info">
+                            <span class="premium-article__image"><img src="{{ asset('assets/images/article/premium_content.png') }}" /></span>
+                            <span class="premium-article__text">{{ 'To continue reading, without interruption, register and get unlimited access'|trans }}</span>
+                            <span class="premium-article__register"><a href="{{ path('ez_user_register') }}" class="btn btn-primary">{{ 'Register Now'|trans }}</a></span>
                         </div>
                     {% endif %}
 
