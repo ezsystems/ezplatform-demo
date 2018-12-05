@@ -1,3 +1,4 @@
+
 sudo: required
 dist: trusty
 language: generic
@@ -14,7 +15,7 @@ env:
     - COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/selenium.yml"
     - SYMFONY_ENV=behat
     - SYMFONY_DEBUG=1
-    - COMPOSER_MEMORY_LIMIT=5g
+    - COMPOSER_MEMORY_LIMIT=3g
 
   # list of behat arguments to test
   matrix:
