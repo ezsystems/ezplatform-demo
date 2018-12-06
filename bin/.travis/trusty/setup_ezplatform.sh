@@ -101,6 +101,7 @@ echo '> Change ownership of files inside docker container'
 docker-compose exec app sh -c 'chown -R www-data:www-data /var/www'
 
 echo '> Install data'
-docker-compose exec --user www-data app sh -c "php -d memory_limit=${COMPOSER_MEMORY_LIMIT} /scripts/wait_for_db.php; php bin/console ezplatform:install ${INSTALL_TYPE}"
+docker-compose exec --user www-data app sh -c "php /scripts/wait_for_db.php; php -d memory_limit=${COMPOSER_MEMORY_LIMIT} bin/console ezplatform:install ${INSTALL_TYPE}"
 
 echo '> Done, ready to run tests'
+
