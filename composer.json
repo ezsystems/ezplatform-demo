@@ -53,7 +53,6 @@
         "netgen/tagsbundle": "^3.0",
         "novactive/ezseobundle": "^3.0.0@rc",
         "oneup/flysystem-bundle": "^3.0",
-        "roave/security-advisories": "dev-master",
         "sensio/distribution-bundle": "^5.0.23",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/assetic-bundle": "^2.8.2",
