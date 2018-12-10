@@ -70,13 +70,6 @@
     default_sort_order: ASC
     attributes:
         -
-            type: ezimage
-            name: Image
-            identifier: image
-            category: content
-            description: 'Image for header.'
-            position: 1
-        -
             type: ezstring
             name: Name
             identifier: name
@@ -85,7 +78,7 @@
             category: content
             description: 'Title shown on website.'
             default-value: Folder
-            position: 2
+            position: 1
             validator-configuration:
                 StringLengthValidator: { maxStringLength: 255, minStringLength: false }
         -
@@ -96,7 +89,7 @@
             searchable: true
             category: content
             description: 'Descriptive title, non displayed.'
-            position: 3
+            position: 2
             validator-configuration:
                 StringLengthValidator: { maxStringLength: 100, minStringLength: false }
         -
@@ -106,7 +99,7 @@
             category: content
             description: 'Displayed as a separate paragraph at top.'
             searchable: true
-            position: 4
+            position: 3
         -
             type: ezrichtext
             name: Description
@@ -114,6 +107,13 @@
             category: content
             description: 'Body of text.'
             searchable: true
+            position: 4
+        -
+            type: ezimage
+            name: Image
+            identifier: image
+            category: content
+            description: 'Image for header.'
             position: 5
         -
             type: ezboolean
