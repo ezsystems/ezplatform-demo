@@ -1,0 +1,31 @@
+<div class="places_map_data" id="{{ map_container_id }}_map_data" hidden>
+    {% if contentArray|length > 0 %}
+        {% for content in contentArray %}
+            <span class="map_place"
+                  data-lat="{{ ez_field_value( content, 'location' ).latitude }}"
+                  data-lng="{{ ez_field_value( content, 'location' ).longitude }}"
+                  data-name="{{ ez_render_field(content, "name")|striptags }}">
+            </span>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+        (function (global, doc) {
+            // if the page is not using iframe - load map
+            if (global === global.parent) {
+                global.mapLoader('#{{ map_container_id }}');
+                return;
+            }
+
+            // wait for DOM to be ready
+            let stateCheck = setInterval(() => {
+                if (doc.readyState === 'complete') {
+                    clearInterval(stateCheck);
+                    global.mapLoader('#{{ map_container_id }}');
+                }
+            }, 100);
+        })(window, document);
+    });
+</script>
