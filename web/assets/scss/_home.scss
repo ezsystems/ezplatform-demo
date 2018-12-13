@@ -1,3 +1,7 @@
+.home .places {
+    padding: 50px 0 0 0;
+}
+
 .places h1.home-section,
 .tastes h1.home-section {
     color: #3c3937;
@@ -21,7 +25,10 @@
 
 .home.content-type-folder .banner-image {
     max-height: 500px;
-    margin-bottom: 50px;
+
+    .ezimage-field {
+        margin-bottom: 0;
+    }
 }
 
 .home.content-type-folder .thumbnail img {
@@ -30,7 +37,6 @@
 }
 
 .home .card.content-type-place figure.ezimage-field img {
-    height: 450px;
     max-height: 450px;
     border-radius: 10px;
 }
@@ -40,13 +46,21 @@
     font-size: 25px;
     text-align: center;
     width: 100%;
-    background: rgba(60, 51, 48, 0.3);
+    background: rgba(60, 51, 48, 0.6);
 }
 
 .home .card.content-type-place .card-img-overlay:hover h2.card-title {
     background: rgba(0, 115, 174, 0.5);
 }
 
-.tastes {
-    margin-top: 150px;
+@media (max-width: 767px) {
+    .home .card.content-type-place figure.ezimage-field img {
+        height: 233px;
+    }
+}
+
+@media (min-width: 768px) {
+    .home .card.content-type-place figure.ezimage-field img {
+        height: 450px;
+    }
 }

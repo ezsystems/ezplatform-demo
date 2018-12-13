@@ -33,22 +33,25 @@
             </div>
         </div>
 
-        <section class="container places">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">{{ 'Find Out Most'|trans }}</p>
-                    <h1 class="text-center home-section">{{ 'Beautiful Destinations'|trans }}</h1>
+        <div class="container-fluid places">
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">{{ 'Find Out Most'|trans }}</p>
+                        <h1 class="text-center home-section">{{ 'Beautiful Destinations'|trans }}</h1>
+                    </div>
                 </div>
                 {{ render_esi(controller('ez_content:viewAction', {
                     locationId: place_list_location_id,
                     viewType: 'home'
                 })) }}
-                <div class="col-md-12 link text-center">
-                    <a href="{{ path('ez_urlalias', {locationId: place_list_location_id}) }}" class="btn btn-primary btn-lg">{{ 'View all destinations'|trans }}</a>
+                <div class="row">
+                    <div class="col-md-12 link text-center">
+                        <a href="{{ path('ez_urlalias', {locationId: place_list_location_id}) }}" class="btn btn-primary btn-lg">{{ 'View all destinations'|trans }}</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </div>
         <section class="container tastes">
             <div class="row">
                 <div class="col-md-12">

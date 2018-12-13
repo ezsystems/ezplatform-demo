@@ -64,6 +64,43 @@
     margin-bottom: 100px;
 }
 
-.content-type-folder .more .col-md-4 {
-    margin-bottom: 20px;
+
+@media (max-width: 991.98px) {
+    .content-type-folder h1.field-title {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 850px) {
+    .content-type-folder h1.field-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 730px) {
+    .content-type-folder h1.field-title {
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 620px) {
+    .content-type-folder h1.field-title {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .link {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .link {
+        margin-top: 50px;
+    }
 }
