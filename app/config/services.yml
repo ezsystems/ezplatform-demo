@@ -68,6 +68,9 @@ services:
         tags:
             - { name: twig.extension }
 
+    AppBundle\Twig\SearchResultExtractorExtension:
+        tags:
+            - { name: twig.extension }
 
     AppBundle\PremiumContent\HtmlRenderer: ~
     AppBundle\User\UserGroups: ~
