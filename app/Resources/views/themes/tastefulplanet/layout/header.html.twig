@@ -52,7 +52,6 @@
         </div>
     </div>
 </div>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-faded main-menu">
     <div class="container">
         <a class="navbar-brand" href="{{ path( ezpublish.rootLocation() ) }}">
@@ -64,11 +63,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 {% if menuItems is defined and menuItems is not empty %}
-                    {% for item in menuItems %}
-                        <li class="nav-item{% if item.id in pathArray %} active{% endif %}">
-                            <a class="nav-link" href="{{ path(item) }}">{{ ez_content_name(item.contentInfo) }}</a>
+                    {% set menuItemsLength = menuItems|length %}
+                    {% if menuItemsLength > 6 %}
+                        {% set menuItemsToShow = 5 %}
+                        {% for item in menuItems|slice(0, menuItemsToShow) %}
+                            <li class="nav-item{% if item.id in pathArray %} active{% endif %}">
+                                <a class="nav-link" href="{{ path(item) }}">{{ ez_content_name(item.contentInfo) }}</a>
+                            </li>
+                        {% endfor %}
+                        <li role="presentation" class="dropdown open">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="true">
+                                more <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                {% for item in menuItems|slice(menuItemsToShow, menuItemsLength) %}
+                                    <li class="nav-item{% if item.id in pathArray %} active{% endif %}">
+                                        <a class="nav-link" href="{{ path(item) }}">{{ ez_content_name(item.contentInfo) }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
                         </li>
-                    {% endfor %}
+                    {% else %}
+                        {% for item in menuItems %}
+                            <li class="nav-item{% if item.id in pathArray %} active{% endif %}">
+                                <a class="nav-link" href="{{ path(item) }}">{{ ez_content_name(item.contentInfo) }}</a>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
                 {% endif %}
             </ul>
         </div>
