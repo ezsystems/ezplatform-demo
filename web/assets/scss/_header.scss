@@ -89,7 +89,12 @@ a.navbar-brand {
     border-bottom: 1px solid #e5e5e5;
 }
 
-.main-menu ul.navbar-nav li.nav-item a {
+.main-menu .dropdown-toggle {
+    display: block;
+    padding: 0.5rem;
+}
+
+.main-menu ul.navbar-nav li.nav-item a, .main-menu .dropdown-toggle {
     color: #3c3937;
     font-size: 16px;
     text-transform: uppercase;
@@ -100,7 +105,6 @@ a.navbar-brand {
     color: #f15a22;
 }
 
-
 @media (min-width: 992px) {
     .navbar-toggleable-md .navbar-nav .nav-link {
         padding-right: 1.2rem;
@@ -109,8 +113,17 @@ a.navbar-brand {
 }
 
 @media (max-width: 991.98px) {
-    ul.navbar-nav li.nav-item a {
+    ul.navbar-nav li.nav-item a, .main-menu .dropdown-toggle {
         text-align: right;
+    }
+
+    .main-menu .dropdown-toggle {
+        padding: .5rem 0;
+    }
+
+    .main-menu .dropdown-menu {
+        border: none;
+        padding-right: 20px;
     }
 }
 
