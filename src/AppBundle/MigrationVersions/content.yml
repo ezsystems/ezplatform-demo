@@ -3434,7 +3434,79 @@
         name: Blogg
         image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Blog.jpg'
 
-# blog_post
+## image assets for blog_post
+# folder: / Media / Images / Blog post
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: 51  #  / Media / Images
+    section: reference:ref_section__media
+    owner: 14
+    attributes:
+        name: Blog post
+        show_children: true
+    references:
+        -
+            identifier: ref_folder__media__images__blog_post
+            attribute: location_id
+
+## images for / Media / Images / Blog post
+# image for Where we get our best writing done - blog_post
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__blog_post
+    attributes:
+        name: 'Where we get our best writing done'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Where-we-get-our-best-writing-done.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__blog_post__where_we_get_our_best_writing_done
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__blog_post__where_we_get_our_best_writing_done
+            attribute: content_id
+
+# image for Travel literature - blog_post
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__blog_post
+    attributes:
+        name: 'Travel literature How to get started'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Travel-literature-How-to-get-started.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__blog_post__travel_literature_how_to_get_started
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__blog_post__travel_literature_how_to_get_started
+            attribute: content_id
+
+# image for why we love NYC - blog_post
+-
+    type: content
+    mode: create
+    content_type: image
+    section: reference:ref_section__media
+    parent_location: reference:ref_folder__media__images__blog_post
+    attributes:
+        name: 'Why we love NYC'
+        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Why-we-love-NYC.jpg'
+    references:
+        -
+            identifier: ref_location_image__media__images__blog_post__why_we_love_nyc
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__blog_post__why_we_love_nyc
+            attribute: content_id
+
+# blog_post - Where we get our best writing done
 -
     type: content
     mode: create
@@ -3463,7 +3535,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para>The number of possible work places in New York is truly astounding. There are a lot of places within walking distance of the Tasteful Planet on Bedford Avenue, in Williamsburg Brooklyn.</para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Where-we-get-our-best-writing-done.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__where_we_get_our_best_writing_done
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3472,6 +3546,13 @@
         tags:
             - { tag_keyword:'New York (city, US)' }
             - { tag_keyword:'Writing Tips' }
+    references:
+        -
+            identifier: ref_location_blog_post__home__blog__where_we_get_our_best_writing_done
+            attribute: location_id
+        -
+            identifier: ref_content_blog_post__home__blog__where_we_get_our_best_writing_done
+            attribute: content_id
 
 # blog post - Travel literature
 -
@@ -3509,7 +3590,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para>There are multiple options when blasting off a journalistic adventure like ours. We think you’d like to know what are the options when publishing about travels and cuisines. Here are the options we most liked:</para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Travel-literature-How-to-get-started.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__travel_literature_how_to_get_started
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3518,6 +3601,9 @@
         tags:
             - { tag_keyword:'Travel Journal' }
     references:
+        -
+            identifier: ref_location_blog_post__home__blog__travel_literature
+            attribute: location_id
         -
             identifier: ref_content_blog_post__home__blog__travel_literature
             attribute: content_id
@@ -3552,7 +3638,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> Il y a plusieurs options pour lancer une aventure journalistique comme la nôtre. Nous pensons que vous aimeriez savoir quelles sont les options lors de la publication sur les voyages et les cuisines. Voici les options que nous avons le plus aimé: </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Travel-literature-How-to-get-started.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__travel_literature_how_to_get_started
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3591,7 +3679,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> Es gibt viele Möglichkeiten, ein journalistisches Abenteuer wie das unsere zu starten. Wir denken, dass Sie gerne wissen möchten, welche Möglichkeiten es gibt, wenn Sie über Reisen und Küchen berichten. Hier sind die Optionen, die wir am meisten mochten: </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Travel-literature-How-to-get-started.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__travel_literature_how_to_get_started
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3630,7 +3720,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> Det er flere alternativer når sprengning av et journalistisk eventyr som vår. Vi tror du vil vite hva som er alternativene når du publiserer om reiser og kjøkken. Her er alternativene vi likte mest: </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Travel-literature-How-to-get-started.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__travel_literature_how_to_get_started
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3671,7 +3763,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para>New York – often called New York City or the City of New York to distinguish it from the State of New York.</para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Why-we-love-NYC.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__why_we_love_nyc
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3713,7 +3807,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> New York - souvent appelé New York City ou la ville de New York pour le distinguer de l'État de New York. </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Why-we-love-NYC.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__why_we_love_nyc
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3748,7 +3844,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> New York - oft New York City oder die Stadt New York genannt, um es vom Bundesstaat New York zu unterscheiden. </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Why-we-love-NYC.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__why_we_love_nyc
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
@@ -3783,7 +3881,9 @@
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
               <para> New York - ofte kalt New York City eller New York City for å skille den fra staten New York. </para>
             </section>
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/blog/Why-we-love-NYC.jpg'
+        image:
+            destinationContentId: reference:ref_content_image__media__images__blog_post__why_we_love_nyc
+            alternativeText: ''
         author:
             -
                 name: 'Yura Rajzer'
