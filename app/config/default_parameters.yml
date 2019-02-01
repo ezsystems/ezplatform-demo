@@ -116,7 +116,7 @@ parameters:
     ezsettings.default.app_subscribe_location_id: 227
 
     # locationIds used for fetching items on home page
-    app.home.place_list_location_id: 219
+    app.home.place_list_location_id: 223
     app.home.tastes_location_id: 207
 
     # Location Ids of allowed user groups for viewing Articles with premium content

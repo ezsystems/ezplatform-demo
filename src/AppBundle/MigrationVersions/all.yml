@@ -469,7 +469,7 @@
             position: 3
         -
             identifier: image
-            type: ezimage
+            type: ezimageasset
             name: Image
             description: ''
             required: false
