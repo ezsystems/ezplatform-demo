@@ -117,7 +117,8 @@ ezpublish:
                                 query_type: 'AppBundle:Children'
                                 parameters:
                                     limit: 3
-                                    parent_location_id: '%app.home.place_list_location_id%'
+                                    parent_location_id: '@=location.id'
+                                    included_content_type_identifier: 'place'
                                 assign_results_to: places
                         match:
                             Identifier\ContentType: [place_list]
@@ -130,7 +131,8 @@ ezpublish:
                                 query_type: 'AppBundle:Children'
                                 parameters:
                                     limit: 3
-                                    parent_location_id: '%app.home.tastes_location_id%'
+                                    parent_location_id: '@=location.id'
+                                    included_content_type_identifier: 'article'
                                 assign_results_to: tastes
                         match:
                             Identifier\ContentType: [folder]
