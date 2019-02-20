@@ -37,6 +37,7 @@
         "ezsystems/ezplatform-admin-ui-assets": "^3.1@dev",
         "ezsystems/ezplatform-admin-ui-modules": "^1.5@dev",
         "ezsystems/ezplatform-automated-translation": "^2.0@rc",
+        "ezsystems/ezplatform-core": "^1.0@dev",
         "ezsystems/ezplatform-cron": "^2.0@dev",
         "ezsystems/ezplatform-demo-assets": "^1.0@dev",
         "ezsystems/ezplatform-design-engine": "^2.0@dev",
@@ -63,6 +64,7 @@
         "symfony/swiftmailer-bundle": "^3.2.4",
         "symfony/symfony": "^3.4.18",
         "symfony/thanks": "^1.1.0",
+        "symfony/webpack-encore-bundle": "^1.0.0",
         "twig/extensions": "^1.5.3",
         "twig/twig": "^2.5",
         "white-october/pagerfanta-bundle": "^1.2.2",
@@ -76,7 +78,7 @@
         "behat/symfony2-extension": "^2.1.5",
         "bex/behat-screenshot": "^1.2.7",
         "ezsystems/behat-screenshot-image-driver-cloudinary": "^1.1.0@dev",
-        "ezsystems/behatbundle": "~6.5.4@dev",
+        "ezsystems/behatbundle": "^6.5.4@dev",
         "phpunit/phpunit": "^6.5.13",
         "sensio/generator-bundle": "^3.1.7",
         "symfony/phpunit-bridge": "^3.4.18"
@@ -92,9 +94,11 @@
             "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "@php bin/console bazinga:js-translation:dump --merge-domains",
+            "@php bin/console bazinga:js-translation:dump 'web/assets' --merge-domains",
             "@php bin/console assetic:dump",
-            "@php bin/security-checker security:check"
+            "@php bin/security-checker security:check",
+            "yarn install",
+            "yarn encore dev"
         ],
         "post-install-cmd": [
             "@symfony-scripts"
