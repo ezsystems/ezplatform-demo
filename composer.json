@@ -32,7 +32,7 @@
         "ezplatform-i18n/ezplatform-i18n-nb_no": "^2.3",
         "ezplatform-i18n/ezplatform-i18n-pl_pl": "^2.3",
         "ezplatform-i18n/ezplatform-i18n-ru_ru": "^2.3",
-        "ezsystems/ez-support-tools": "^0.2@dev",
+        "ezsystems/ez-support-tools": "^1.0@dev",
         "ezsystems/ezplatform-admin-ui": "^1.5@dev",
         "ezsystems/ezplatform-admin-ui-assets": "^4.0",
         "ezsystems/ezplatform-admin-ui-modules": "^1.5@dev",
@@ -42,10 +42,10 @@
         "ezsystems/ezplatform-demo-assets": "^1.0@dev",
         "ezsystems/ezplatform-design-engine": "^2.0@dev",
         "ezsystems/ezplatform-graphql": "^1.0@dev",
-        "ezsystems/ezplatform-http-cache": "~0.8@dev",
+        "ezsystems/ezplatform-http-cache": "^0.9@dev",
         "ezsystems/ezplatform-matrix-fieldtype": "^1.0@dev",
         "ezsystems/ezplatform-richtext": "^1.1@dev",
-        "ezsystems/ezplatform-solr-search-engine": "^1.5.4@dev",
+        "ezsystems/ezplatform-solr-search-engine": "^1.6@dev",
         "ezsystems/ezplatform-standard-design": "^0.1@dev",
         "ezsystems/ezpublish-kernel": "^7.5@dev",
         "ezsystems/repository-forms": "^2.5@dev",
@@ -107,8 +107,7 @@
             "yarn encore dev"
         ],
         "post-install-cmd": [
-            "@symfony-scripts",
-            "@php bin/console ezplatform:graphql:generate-schema"
+            "@symfony-scripts"
         ],
         "post-update-cmd": [
             "@symfony-scripts"
