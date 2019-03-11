@@ -31,6 +31,7 @@ services:
      - RECOMMENDATIONS_CUSTOMER_ID
      - RECOMMENDATIONS_LICENSE_KEY
      - PUBLIC_SERVER_URI
+     - GOOGLE_TRANSLATE_API_KEY
     networks:
      - backend
     volumes:
