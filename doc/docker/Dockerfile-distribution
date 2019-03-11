@@ -3,6 +3,8 @@
 ARG DISTRIBUTION_IMAGE=docker_app
 FROM ${DISTRIBUTION_IMAGE} as builder
 
+ENV GOOGLE_TRANSLATE_API_KEY=MustBeSetInOrderToDumpAssetsOfEzPlatformAutomatedTranslationBundle
+
 RUN composer config extra.symfony-assets-install hard
 RUN composer run-script post-install-cmd --no-interaction
 

@@ -28,6 +28,7 @@ services:
      - DATABASE_PASSWORD
      - DATABASE_NAME
      - DATABASE_HOST=install_db
+     - GOOGLE_TRANSLATE_API_KEY
     # Dumping autoload using --optimize-autoloader to keep performenace on a usable level, not needed on linux host.
     # Second chown line:  For dev and behat tests we give a bit extra rights, never do this for prod.
     command: >
