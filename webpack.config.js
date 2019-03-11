@@ -11,11 +11,10 @@ Encore.setOutputPath('web/assets/build')
     .enableReactPreset()
     .enableSingleRuntimeChunk();
 
-// Put your config here.
+Encore.addEntry('demo', [
+    path.resolve(__dirname, './web/assets/scss/demo.scss'),
+    path.resolve(__dirname, './web/assets/js/placesMapLoader.js'),
+]);
 
-// uncomment the two lines below, if you have your own Encore configuration for your project
-// const projectConfig = Encore.getWebpackConfig();
-// module.exports = [ eZConfig, projectConfig ];
-
-// comment-out this line if you've uncommented the above lines
-module.exports = eZConfig;
+const projectConfig = Encore.getWebpackConfig();
+module.exports = [ eZConfig, projectConfig ];
