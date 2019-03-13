@@ -35,6 +35,9 @@ _ezplatformRepositoryFormsRoutes:
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
 
+ezplatform.httpcache:
+  resource: '@EzSystemsPlatformHttpCacheBundle/Resources/config/routing.yml'
+
 _eztagsRoutes:
     resource: "@NetgenTagsBundle/Resources/config/routing.yml"
 
