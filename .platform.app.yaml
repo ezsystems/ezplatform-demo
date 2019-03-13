@@ -76,7 +76,7 @@ mounts:
     'src/AppBundle/MigrationVersions/References':
         source: local
         source_path: MigrationVersionsReferences
-    # To persists sessions on deploys (and be prepared to move to cluster), please rather use e.g. persisted Redis instance.
+    # To be prepared to move to cluster, please rather use e.g. persisted Redis instance.
     'web/sessions':
         source: local
         source_path: sessions
