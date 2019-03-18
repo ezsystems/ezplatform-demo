@@ -73,17 +73,14 @@ mounts:
     'web/var':
         source: local
         source_path: var
-    'src/AppBundle/MigrationVersions/References':
-        source: local
-        source_path: MigrationVersionsReferences
     # To be prepared to move to cluster, please rather use e.g. persisted Redis instance.
     'web/sessions':
         source: local
         source_path: sessions
-# Uncomment if you need to use Kaliop Migrations on your setup and not able to get it to write to "var" dir.
-#    'src/AppBundle/MigrationVersions/References':
-#        source: local
-#        source_path: MigrationVersionsReferences
+# For Kaliop Migrations on your setup and not able to get it to write to "var" dir.
+    'src/AppBundle/MigrationVersions/References':
+        source: local
+        source_path: MigrationVersionsReferences
 # Uncomment if you want to use DFS clustering, WARNING: Needs to be shared, contact Platform.sh support to set this up
 #    'dfsdata':
 #        source: shared
@@ -94,6 +91,12 @@ hooks:
     # Build hook, done before connected to services, disk is still writable here
     build: |
         set -e
+
+        # Configure GITHUB token if set. For use if you have own private repos, or to avoid API rate limits.
+        if [ -n "$GITHUB_TOKEN" ]; then
+            composer config github-oauth.github.com $GITHUB_TOKEN
+        fi
+
         rm web/app_dev.php
         composer install --no-dev --prefer-dist --no-progress --no-interaction --optimize-autoloader
 
