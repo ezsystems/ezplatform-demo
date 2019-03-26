@@ -13,8 +13,10 @@
             {{ ez_render_field (content, 'intro') }}
         </div>
         <div class="field-author">
-            {{ ez_field_value(content, 'author') }}
-            {% if not ez_is_field_empty( content, 'authors_position' ) %}
+            {% if not ez_is_field_empty(content, 'author') %}
+                {{ ez_field_value(content, 'author') }}
+            {% endif %}
+            {% if not ez_is_field_empty(content, 'authors_position' ) %}
                 - {{ ez_field_value(content, 'authors_position') }}
             {% endif %}
         </div>
