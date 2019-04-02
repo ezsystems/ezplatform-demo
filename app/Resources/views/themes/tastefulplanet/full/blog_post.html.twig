@@ -15,9 +15,11 @@
                     </div>
 
                     <div class="meta">
-                        <span class="field-author">
-                            {{ ez_field_value(content, 'author') }}&nbsp;
-                        </span>
+                        {% if not ez_is_field_empty(content, 'author') %}
+                            <span class="field-author">
+                                {{ ez_field_value(content, 'author') }}
+                            </span>
+                        {% endif %}
                         {% if not ez_is_field_empty( content, 'authors_position' ) %}
                         <span class="field-authors-position">
                             - {{ ez_field_value(content, 'authors_position') }}
