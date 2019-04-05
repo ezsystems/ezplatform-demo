@@ -3,6 +3,7 @@ const path = require('path');
 const getEzConfig = require('./ez.webpack.config.js');
 const eZConfigManager = require('./ez.webpack.config.manager.js');
 const eZConfig = getEzConfig(Encore);
+const customConfigs = require('./ez.webpack.custom.configs.js');
 
 Encore.reset();
 Encore.setOutputPath('web/assets/build')
@@ -17,4 +18,4 @@ Encore.addEntry('demo', [
 ]);
 
 const projectConfig = Encore.getWebpackConfig();
-module.exports = [ eZConfig, projectConfig ];
+module.exports = [ eZConfig, ...customConfigs, projectConfig ];
