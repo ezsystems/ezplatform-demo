@@ -1,0 +1,43 @@
+{% extends pagelayout %}
+
+{% block page_head %}
+    {% set title = 'Change password'|trans %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form">
+        <div class="row user-form__row">
+            <div class="col-md-4 offset-md-4 user-form__col">
+                <h2 class="user-form__header">{{ 'Change password'|trans }}</h2>
+                {{ form_start(form_change_user_password) }}
+                    <div class="form-group">
+                        {{ form_label(form_change_user_password.oldPassword) }}
+                        {{ form_widget(form_change_user_password.oldPassword) }}
+                        <div class="user-form__errors">
+                            {{ form_errors(form_change_user_password.oldPassword) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form_change_user_password.newPassword.first) }}
+                        {{ form_widget(form_change_user_password.newPassword.first) }}
+                        <div class="user-form__errors">
+                            {{ form_errors(form_change_user_password.newPassword.first) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form_change_user_password.newPassword.second) }}
+                        {{ form_widget(form_change_user_password.newPassword.second) }}
+                        <div class="user-form__errors">
+                            {{ form_errors(form_change_user_password.newPassword.second) }}
+                        </div>
+                    </div>
+                    <div class="form-group user-form__btn-group">
+                        {{ form_row(form_change_user_password.change, {'attr': {'class': 'user-form__btn btn btn-primary' }}) }}
+                    </div>
+                {{ form_end(form_change_user_password) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

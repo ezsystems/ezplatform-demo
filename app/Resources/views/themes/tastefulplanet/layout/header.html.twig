@@ -36,10 +36,15 @@
             <ul class="mr-auto list-unstyled">
                 {% if app.user %}
                     {% set user = app.user.getAPIUser().content %}
-                    <li class="top-menu-item nav-item username">{{ ez_content_name(user) }}</li>
-                    <li class="top-menu-item nav-item">
-                        <a class="nav-link" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
-                    </li>
+                    <button class="btn btn-sm dropdown-toggle nav-link"
+                            type="button" id="dropdownMenu2" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        {{ ez_content_name(user) }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <a class="dropdown-item" href="{{ path('ezplatform.user_profile.change_password') }}">{{ "Change password"|trans}}</a>
+                        <a class="dropdown-item" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
+                    </div>
                 {% else %}
                     <li class="top-menu-item nav-item">
                         <a class="nav-link" href="/register">{{ 'Register'|trans }}</a>
