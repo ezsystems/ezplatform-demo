@@ -1,0 +1,23 @@
+{% extends pagelayout %}
+
+{% trans_default_domain 'forgot_password' %}
+
+{% block page_head %}
+    {% set title = 'ezplatform.forgot_password.reset_your_password'|trans|desc('Reset your password')  %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form">
+        <div class="row user-form__row">
+            <div class="col-md-4 offset-md-4 user-form__col">
+                {{ 'ezplatform.forgot_password.success'|trans|raw
+                |desc('<p><strong>We have sent an email to the email address of your account. You should receive the email shortly.</strong></p>
+                <p>If the email is slow to arrive, check your spam folders.</p>
+                <p>If you receive no email, it’s that your username or email is unknown to us, so please double check.</p>
+                <p>If you reset your password multiple times, only the most recent email link will be valid</p>') }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

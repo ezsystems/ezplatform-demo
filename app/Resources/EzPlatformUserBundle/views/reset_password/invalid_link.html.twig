@@ -1,0 +1,25 @@
+{% extends pagelayout %}
+
+{% trans_default_domain 'reset_password' %}
+
+{% block page_head %}
+    {% set title = 'ezplatform.reset_password.change_password'|trans|desc('Change password') %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form">
+        <div class="row user-form__row">
+            <div class="col-md-4 offset-md-4 user-form__col">
+                <h2 class="user-form__header">
+                    {{ 'ezplatform.reset_password.change_password'|trans|desc('Change password') }}
+                </h2>
+                <p>
+                    {{ 'ezplatform.reset_user_password.link_is_not_valid'|trans({ '%forgot_user_password%': path('ezplatform.user.forgot_password')})|raw
+                    |desc('This link is not valid anymore, you can <a href="%forgot_user_password%">generate a new link</a> to reset your password.') }}
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
