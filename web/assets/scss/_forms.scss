@@ -1,0 +1,56 @@
+.user-form {
+    min-height: 650px;
+    background: url('/assets/images/travel-plan.jpg') no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-size: cover;
+
+    &__header {
+        color: #f15a22;
+        margin-bottom: 40px;
+    }
+
+    &__row {
+        padding: 200px 15px;
+    }
+
+    &__col {
+        background-color: #fff;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__btn-group {
+        text-align: center;
+    }
+
+    &__btn {
+        padding: 15px 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    &__errors {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            color: #d0021b;
+        }
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        color: #464a4c;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+    }
+}

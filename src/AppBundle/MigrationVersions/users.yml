@@ -515,6 +515,9 @@
             module: user
             function: selfedit
         -
+            module: user
+            function: password
+        -
             module: notification
             function: use
         -
@@ -539,13 +542,9 @@
 #                    identifier: Class
 #                    values: [reference:ref_content_type_id__user]
     assign:
-## Already assigned
-#        -
-#            type: group
-#            ids: [reference:ref_user_group__editors]
         -
-            type: user
-            ids: [reference:ref_user_christine]
+            type: group
+            ids: [reference:ref_user_group__members]
 
 -
     type: reference

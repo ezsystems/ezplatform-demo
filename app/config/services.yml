@@ -1,5 +1,9 @@
 # Learn more about services, parameters and containers at
 # https://symfony.com/doc/current/service_container.html
+
+imports:
+    - { resource: services/controllers.yml }
+
 parameters:
     #parameter_name: value
 
@@ -14,39 +18,12 @@ services:
         # if you need to do this, you can override this setting on individual services
         public: false
 
-    app.controller.menu:
-        class: AppBundle\Controller\MenuController
-        public: true
-        arguments:
-            - '@templating'
-            - '@ezpublish.api.service.search'
-            - '@app.query_type.menu'
-            - '%app.top_menu.parent_location_id%'
-            - '%app.top_menu.includedContentTypeIdentifier%'
-
     app.query_type.menu:
         class: AppBundle\QueryType\MenuQueryType
         calls:
             - [setLanguages, [$languages$]]
         tags:
             - { name: ezpublish.query_type }
-
-    app.controller.contactform:
-        class: AppBundle\Controller\ContactFormController
-        public: true
-        arguments:
-            - '@form.factory'
-            - '@app.mail.sender'
-            - '@templating'
-            - '@hautelook.router.template'
-
-    app.controller.product_list_controller:
-        class: AppBundle\Controller\ProductListController
-        public: true
-        arguments:
-            - '@ezpublish.query_type_content_view_mapper'
-            - '@ezpublish.api.service.search'
-            - '@form.factory'
 
     app.mail.sender:
         class: AppBundle\Mail\Sender
