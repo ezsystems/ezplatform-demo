@@ -40,13 +40,17 @@
                             <button type="submit" class="btn btn-primary">{{ 'Log in'|trans }}</button>
                         </div>
                     {% endblock %}
-
                     <div class="col-md-12 text-center">
-                    <span class="legend">
-                        {% trans with {
-                        '%path%': path('ez_user_register')
-                        } %}Don't have an account? <a href="%path%">Register</a>{% endtrans %}
-                    </span>
+                        <div class="legend">
+                            {% trans with {
+                                '%path%': path('ezplatform.user.forgot_password')
+                                } %}Forgot password? <a href="%path%">Restore</a>{% endtrans %}
+                        </div>
+                        <div class="legend">
+                            {% trans with {
+                            '%path%': path('ez_user_register')
+                            } %}Don't have an account? <a href="%path%">Register</a>{% endtrans %}
+                        </div>
                     </div>
                 </form>
             </div>

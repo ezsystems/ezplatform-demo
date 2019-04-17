@@ -1,0 +1,25 @@
+{% extends pagelayout %}
+
+{% trans_default_domain 'reset_password' %}
+
+{% block page_head %}
+    {% set title = 'ezplatform.reset_password.change_password'|trans|desc('Change password') %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form">
+        <div class="row user-form__row">
+            <div class="col-md-4 offset-md-4 user-form__col">
+                <h2 class="user-form__header">
+                    {{ 'ezplatform.reset_password.change_password'|trans|desc('Change password') }}
+                </h2>
+                <p>
+                    {{ 'ezplatform.reset_password.success'|trans({ '%login%': path('login') })
+                    |desc('Congrats, your password has been changed, you can now <a href="%login%">login</a> to eZ Platform.')|raw }}
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

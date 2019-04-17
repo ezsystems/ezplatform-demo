@@ -1,0 +1,39 @@
+{% extends pagelayout %}
+
+{% trans_default_domain 'forgot_password' %}
+
+{% block page_head %}
+    {% set title = 'ezplatform.forgot_password.reset_your_password'|trans|desc('Reset your password')  %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="user-form">
+        <div class="row user-form__row">
+            <div class="col-md-4 offset-md-4 user-form__col">
+                <h2 class="user-form__header">
+                    {{ 'ezplatform.forgot_password.reset_your_password'|trans|desc('Reset your password') }}
+                </h2>
+                <p>
+                    {{ 'ezplatform.forgot_password.login'|trans|desc('This email is connected with several accounts. Please enter your login.') }}
+                </p>
+                {{ form_start(form_forgot_user_password_with_login) }}
+                <div class="form-group">
+                    {{ form_label(form_forgot_user_password_with_login.login) }}
+                    {{ form_widget(form_forgot_user_password_with_login.login) }}
+                    <div class="user-form__errors">
+                        {{ form_errors(form_forgot_user_password_with_login.login) }}
+                    </div>
+                </div>
+                <div class="form-group user-form__btn-group">
+                    {{ form_row(form_forgot_user_password_with_login.reset, {'attr': {'class': 'user-form__btn btn btn-primary' }}) }}
+                </div>
+                <p>
+                    {{ 'ezplatform.forgot_password.contact_administrator'|trans|desc('If you do not remember your login, please contact the site administrator.') }}
+                </p>
+                {{ form_end(form_forgot_user_password_with_login) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}
