@@ -24,7 +24,7 @@
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
     "require": {
-        "php": "^7.1",
+        "php": "^7.1.3",
         "doctrine/doctrine-bundle": "^1.9.1",
         "doctrine/orm": "^2.6.3",
         "ezplatform-i18n/ezplatform-i18n-de_de": "^2.5@dev",
@@ -106,7 +106,7 @@
             "@php bin/console bazinga:js-translation:dump web/assets --merge-domains",
             "@php bin/console assetic:dump",
             "yarn install",
-            "bin/compile_assets.sh",
+            "EzSystems\\EzPlatformEncoreBundle\\Composer\\ScriptHandler::compileAssets",
             "@php bin/security-checker security:check"
         ],
         "post-install-cmd": [
