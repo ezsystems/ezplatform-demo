@@ -1,0 +1,11 @@
+tables:
+    # Nova eZ SEO Bundle
+    novaseo_meta:
+        indexes:
+            novaseo_idx_content: { fields: [objectattribute_id, objectattribute_version] }
+        id:
+            objectattribute_id: { type: bigint, nullable: false }
+            meta_name: { type: string, nullable: false, length: 255 }
+            objectattribute_version: { type: integer, nullable: false }
+        fields:
+            meta_content: { type: string, nullable: false, length: 255 }
