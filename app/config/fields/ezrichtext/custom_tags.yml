@@ -15,14 +15,6 @@ ezpublish:
                     video_url:
                         type: 'string'
                         required: true
-                    width:
-                        type: 'number'
-                        required: true
-                        default_value: 640
-                    height:
-                        type: 'number'
-                        required: true
-                        default_value: 360
                     autoplay:
                         type: 'boolean'
                         default_value: false
