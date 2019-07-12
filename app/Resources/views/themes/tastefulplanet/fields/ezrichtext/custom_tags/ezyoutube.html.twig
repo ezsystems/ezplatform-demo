@@ -1,8 +1,6 @@
-<div{% if align is defined %} style="text-align: {{ align }};"{% endif %}>
+<div class="embed-container" {% if align is defined %} style="text-align: {{ align }};"{% endif %}>
     <iframe
         type="text/html"
-        width="{{ params.width }}"
-        height="{{ params.height }}"
         src="//www.youtube.com/embed/{{ app_youtube_extract_id(params.video_url) }}?autoplay={{ params.autoplay == 'true' ? 1 : 0 }}"
         frameborder="0">
     </iframe>

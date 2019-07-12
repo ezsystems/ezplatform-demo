@@ -5,31 +5,30 @@
  */
 namespace AppBundle\Installer;
 
-use EzSystems\PlatformInstallerBundle\Installer\CleanInstaller;
+use EzSystems\PlatformInstallerBundle\Installer\CoreInstaller;
 use Symfony\Component\Filesystem\Filesystem;
 
-class PlatformDemoInstaller extends CleanInstaller
+class PlatformDemoInstaller extends CoreInstaller
 {
     use InstallerCommandExecuteTrait;
-
-    public function importSchema()
-    {
-        parent::importSchema();
-    }
 
     public function importData()
     {
         parent::importData();
 
-        try {
-            $this->db->exec('TRUNCATE TABLE kaliop_migrations;');
-            $this->db->exec('TRUNCATE TABLE kaliop_migrations_contexts;');
-        } catch(\Exception $e) {
+        $liveSchema = $this->db->getSchemaManager()->createSchema();
+
+        $dbPlatform = $this->db->getDatabasePlatform();
+        foreach (['kaliop_migrations', 'kaliop_migrations_contexts'] as $tableName) {
+            if (!$liveSchema->hasTable($tableName)) {
+                continue;
+            }
+
+            $this->db->exec($dbPlatform->getTruncateTableSQL($tableName));
         }
 
         $migrationCommands = [
             'cache:clear',
-            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/schema_mysql.sql -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/tags.yml -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/languages.yml -v -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/product_list.yml -v -n',
