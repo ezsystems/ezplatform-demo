@@ -1,9 +1,0 @@
-{% extends "EzPublishCoreBundle::content_fields.html.twig" %}
-
-{% block eztags_field %}
-    {% for tag in field.value.tags %}
-        <a href="{{ path( tag ) }}" class="badge badge-light">
-            {{ netgen_tags_tag_keyword(tag) }}
-        </a>
-    {% endfor %}
-{% endblock %}

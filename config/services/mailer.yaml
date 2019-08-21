@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Mail\Sender:
+        arguments:
+            - '@mailer'
+            - '@translator'
+            - '@twig'
+            - '%app.contact_form.sender_email%'
+            - '%app.contact_form.recipient_email%'

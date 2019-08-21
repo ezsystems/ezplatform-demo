@@ -1,0 +1,28 @@
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        # automatically injects dependencies in your services
+        autowire: true
+        # automatically registers your services as commands, event subscribers, etc.
+        autoconfigure: true
+        # this means you cannot fetch services directly from the container via $container->get()
+        # if you need to do this, you can override this setting on individual services
+
+    App\Controller\:
+        resource: '../../src/Controller/*'
+        tags:
+            - controller.service_arguments
+
+    App\Controller\MenuController:
+        public: true
+        arguments:
+            $topMenuParentLocationId: '%app.top_menu.parent_location_id%'
+            $topMenuContentTypeIdentifier: '%app.top_menu.included_content_type_identifier%'
+
+    App\Controller\ProductListController:
+        public: true
+        arguments:
+            $contentViewQueryTypeMapper: '@ezpublish.query_type_content_view_mapper'
+
+    App\Controller\ContactFormController:
+        public: true

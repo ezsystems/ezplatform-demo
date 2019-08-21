@@ -1,0 +1,11 @@
+services:
+    App\Migration\FieldHandler\EzImageAsset:
+        parent: ez_migration_bundle.complex_field
+        arguments:
+            - '@ez_migration_bundle.reference_resolver.customreference'
+        tags:
+            - { name: ez_migration_bundle.complex_field, fieldtype: ezimageasset, priority: 0 }
+
+    # hack for migration bundle
+    ezpublish.fieldType.ezpage.pageService:
+        synthetic: true

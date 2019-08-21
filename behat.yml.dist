@@ -5,26 +5,33 @@ default:
         Behat\MinkExtension:
             base_url: 'http://localhost'
             goutte: ~
-            javascript_session: selenium2
-            selenium2:
-                browser: chrome
-                wd_host: 'http://localhost:4444/wd/hub'
-                capabilities:
-                    extra_capabilities:
-                        chromeOptions:
-                            args:
-                                - "--window-size=1440,1080"
-                                - "--no-sandbox"
+            javascript_session: selenium
+            sessions:
+                selenium:
+                    selenium2:
+                        browser: chrome
+                        wd_host: 'http://localhost:4444/wd/hub'
+                        capabilities:
+                            extra_capabilities:
+                                chromeOptions:
+                                    args:
+                                        - "--window-size=1440,1080"
+                                        - "--no-sandbox"
+                chrome:
+                    chrome:
+                        api_url: "http://localhost:9222"
+
+        DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
 
         Behat\Symfony2Extension:
             kernel:
-                bootstrap: vendor/autoload.php
-                path: app/AppKernel.php
-                class: AppKernel
+                bootstrap: config/bootstrap.php
+                path: src/Kernel.php
+                class: App\Kernel
                 env: behat
                 debug: false
 
-        EzSystems\PlatformBehatBundle\ServiceContainer\EzBehatExtension: ~
+        EzSystems\BehatBundle\BehatExtension: ~
 
         Liuggio\Fastest\Behat\ListFeaturesExtension\Extension: ~
 
@@ -42,7 +49,7 @@ default:
 
 imports:
     - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/behat_suites.yml
-    - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/behat_suites.yml
     - vendor/ezsystems/repository-forms/behat_suites.yml
     - vendor/ezsystems/ezplatform-admin-ui/behat_suites.yml
-    - vendor/ezsystems/behatbundle/EzSystems/BehatBundle/behat_suites.yml
+    - vendor/ezsystems/behatbundle/behat_suites.yml
+    - vendor/ezsystems/ezplatform-http-cache/behat_suites.yml

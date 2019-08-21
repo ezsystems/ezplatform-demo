@@ -6,15 +6,15 @@ const eZConfig = getEzConfig(Encore);
 const customConfigs = require('./ez.webpack.custom.configs.js');
 
 Encore.reset();
-Encore.setOutputPath('web/assets/build')
+Encore.setOutputPath('public/assets/build')
     .setPublicPath('/assets/build')
     .enableSassLoader()
     .enableReactPreset()
     .enableSingleRuntimeChunk();
 
 Encore.addEntry('demo', [
-    path.resolve(__dirname, './web/assets/scss/demo.scss'),
-    path.resolve(__dirname, './web/assets/js/placesMapLoader.js'),
+    path.resolve(__dirname, './assets/scss/demo.scss'),
+    path.resolve(__dirname, './assets/js/placesMapLoader.js'),
 ]);
 
 const projectConfig = Encore.getWebpackConfig();

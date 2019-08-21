@@ -1,0 +1,63 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) ~ " - " ~ content.contentInfo.publishedDate|localizeddate('short', 'short', app.request.locale) %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <section class="content-type-place-list full-view">
+        {% if not ez_field_is_empty( content, 'image' ) %}
+            <div class="banner-image">
+                <div class="thumbnail text-center">
+                    {{ ez_render_field(content, 'image', {
+                        'parameters': {'alias': 'original', 'class': 'img-fluid w-100'}
+                    }) }}
+                    <div class="title">
+                        <h1 class="field-title">{{ ez_render_field(content, 'name') }}</h1>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="container-fluid">
+                {% set map_container_id = 'map_container_id_' ~ random() %}
+                <div class="row map-container" id="{{ map_container_id }}"></div>
+
+                {% include '@ezdesign/parts/map.html.twig' with {
+                    'map_container_id': map_container_id,
+                    'contentArray': app_search_result_extract(places)
+                } only %}
+            </div>
+        {% endif %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="field-description">
+                        {{ ez_render_field(content, 'description') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="places">
+            <div class="more">
+                <div class="container">
+                    <h2 class="text-center">{{ 'All Cities'|trans }}</h2>
+                    <div class="row">
+                        {% if places.searchHits|length > 0 %}
+                            {% for place in places.searchHits %}
+                                <div class="col-md-4">
+                                    {{ render_esi(controller('ez_content:viewAction', {
+                                        locationId: place.valueObject.contentInfo.mainLocationId,
+                                        viewType: 'card'
+                                    })) }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

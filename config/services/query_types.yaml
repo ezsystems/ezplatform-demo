@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\QueryType\:
+        resource: '../../src/QueryType/*'
+
+    eZ\Publish\Core\QueryType\QueryType: '@App\QueryType\BlockQueryType'
+
+    App\QueryType\MenuQueryType:
+        arguments:
+            $languages: '%languages%'
+
+    App\QueryType\BlockQueryType: ~
+
+    App\QueryType\ChildrenQueryType:
+        tags:
+            - {name: ezpublish.query_type}
