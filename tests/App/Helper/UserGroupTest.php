@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\App\User;
+namespace Tests\App\Helper;
 
 use App\Helper\UserGroupHelper;
 use PHPUnit\Framework\TestCase;
@@ -13,7 +13,7 @@ use eZ\Publish\Core\Repository\Values\Content\Content;
 use eZ\Publish\Core\Repository\Values\Content\VersionInfo;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
-class UserGroupsTest extends TestCase
+class UserGroupTest extends TestCase
 {
     public function testIsCurrentUserInOneOfTheGroupsWithoutLoggedUser()
     {

@@ -17,24 +17,19 @@
                 </div>
             </div>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-
                     <h2 class="field-short-name text-center">{{ ez_render_field(content, 'short_name') }}</h2>
-
                     <div class="field-description text-center">
                         {{ ez_render_field(content, 'short_description') }}
                     </div>
-
                     <div class="field-description">
                         {{ ez_render_field(content, 'description') }}
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="children">
             {% if children.searchHits|length > 0 %}
                 {% for child in children.searchHits %}
@@ -47,25 +42,22 @@
                         </div>
                     {% else %}
                         {% if loop.index == 2 %}
-                        <div class="more">
+                            <div class="more">
                             <div class="container">
-                                <h2 class="text-center">More {{ ez_render_field(content, 'name') }} </h2>
-                                <div class="row">
+                            <h2 class="text-center">More {{ ez_render_field(content, 'name') }} </h2>
+                            <div class="row">
                         {% endif %}
-
-                                <div class="col-md-4">
-                                    {{ render_esi(controller('ez_content:viewAction', {
-                                        locationId: child.valueObject.contentInfo.mainLocationId,
-                                        viewType: 'card'
-                                    })) }}
-                                </div>
-
-                        {% if loop.last %}
-                                </div>
-                            </div>
+                        <div class="col-md-4">
+                            {{ render_esi(controller('ez_content:viewAction', {
+                                locationId: child.valueObject.contentInfo.mainLocationId,
+                                viewType: 'card'
+                            })) }}
                         </div>
+                        {% if loop.last %}
+                            </div>
+                            </div>
+                            </div>
                         {% endif %}
-
                     {% endif %}
                 {% endfor %}
             {% endif %}
