@@ -37,12 +37,12 @@ class PlatformDemoInstaller extends CoreInstaller
         $migrationCommands = [
             'cache:clear',
 //            'kaliop:migration:migrate --path=src/App/MigrationVersions/tags.yml -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/languages.yml -v -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/product_list.yml -v -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/all.yml -v -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/images.yml -v -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/content.yml -v -n',
-//            'kaliop:migration:migrate --path=src/MigrationVersions/users.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/languages.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/product_list.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/all.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/images.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/content.yml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/users.yml -v -n',
         ];
 
         foreach ($migrationCommands as $cmd) {
