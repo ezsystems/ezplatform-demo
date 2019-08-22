@@ -17,7 +17,10 @@ trait InstallerCommandExecuteTrait
     /** @var string */
     private $environment;
 
-    public function setEnvironment($environment)
+    /**
+     * @param string $environment
+     */
+    public function setEnvironment(string $environment)
     {
         $this->environment = $environment;
     }
