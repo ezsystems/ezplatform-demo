@@ -51,5 +51,5 @@ return [
     EzSystems\EzPlatformGraphQL\EzSystemsEzPlatformGraphQLBundle::class => ['all' => true],
     Overblog\GraphQLBundle\OverblogGraphQLBundle::class => ['all' => true],
     Overblog\GraphiQLBundle\OverblogGraphiQLBundle::class => ['dev' => true],
-    Kaliop\eZMigrationBundle\EzMigrationBundle::class => ['all' => true],
+    Kaliop\eZMigrationBundle\eZMigrationBundle::class => ['all' => true],
 ];
