@@ -6,7 +6,7 @@ services:
 
     App\Installer\PlatformDemoInstaller:
         autowire: true
-        parent: ezplatform.installer.db_based_installer
+        parent: EzSystems\PlatformInstallerBundle\Installer\CoreInstaller
         class: App\Installer\PlatformDemoInstaller
         calls:
             - [setEnvironment, ["%kernel.environment%"]]
