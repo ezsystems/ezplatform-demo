@@ -9,14 +9,14 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Templating\EngineInterface;
 use eZ\Publish\API\Repository\SearchService;
 use App\QueryType\MenuQueryType;
+use Twig\Environment as TwigEnvironment;
 
 final class MenuController
 {
-    /** @var \Symfony\Bundle\TwigBundle\TwigEngine */
-    protected $templating;
+    /** @var \Twig\Environment */
+    protected $twig;
 
     /** @var \eZ\Publish\API\Repository\SearchService */
     protected $searchService;
@@ -31,20 +31,20 @@ final class MenuController
     protected $topMenuContentTypeIdentifier;
 
     /**
-     * @param \Symfony\Component\Templating\EngineInterface $templating
+     * @param \Twig\Environment $twig
      * @param \eZ\Publish\API\Repository\SearchService $searchService
      * @param \App\QueryType\MenuQueryType $menuQueryType
      * @param int $topMenuParentLocationId
      * @param array $topMenuContentTypeIdentifier
      */
     public function __construct(
-        EngineInterface $templating,
+        TwigEnvironment $twig,
         SearchService $searchService,
         MenuQueryType $menuQueryType,
         int $topMenuParentLocationId,
         array $topMenuContentTypeIdentifier
     ) {
-        $this->templating = $templating;
+        $this->twig = $twig;
         $this->searchService = $searchService;
         $this->menuQueryType = $menuQueryType;
         $this->topMenuParentLocationId = $topMenuParentLocationId;
@@ -81,11 +81,16 @@ final class MenuController
         $response = new Response();
         $response->setVary('X-User-Hash');
 
-        return $this->templating->renderResponse(
-            $template, [
-                'menuItems' => $menuItems,
-                'pathArray' => $pathArray,
-            ], $response
+        $response->setContent(
+            $this->twig->render(
+                $template,
+                [
+                    'menuItems' => $menuItems,
+                    'pathArray' => $pathArray,
+                ]
+            )
         );
+
+        return $response;
     }
 }
