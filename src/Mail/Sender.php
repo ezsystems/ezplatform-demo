@@ -12,7 +12,7 @@ use App\Model\Contact;
 use Swift_Mailer;
 use Swift_Message;
 use Symfony\Contracts\Translation\TranslatorInterface;
-use Twig\Environment as Templating;
+use Twig\Environment as TwigEnvironment;
 
 final class Sender
 {
@@ -22,8 +22,8 @@ final class Sender
     /** @var \Symfony\Component\Translation\TranslatorInterface */
     private $translator;
 
-    /** @var \Symfony\Bundle\TwigBundle\TwigEngine */
-    private $templating;
+    /** @var \Twig\Environment */
+    private $twig;
 
     /** @var string */
     private $senderEmail;
@@ -34,20 +34,20 @@ final class Sender
     /**
      * @param \Swift_Mailer $mailer
      * @param \Symfony\Contracts\Translation\TranslatorInterface $translator
-     * @param \Twig\Environment $templating
+     * @param \Twig\Environment $twig
      * @param string $senderEmail
      * @param string $recipientEmail
      */
     public function __construct(
         Swift_Mailer $mailer,
         TranslatorInterface $translator,
-        Templating $templating,
+        TwigEnvironment $twig,
         string $senderEmail,
         string $recipientEmail
     ) {
         $this->mailer = $mailer;
         $this->translator = $translator;
-        $this->templating = $templating;
+        $this->twig = $twig;
         $this->senderEmail = $senderEmail;
         $this->recipientEmail = $recipientEmail;
     }
@@ -69,7 +69,7 @@ final class Sender
             ->setTo($this->recipientEmail)
             ->setReplyTo($this->recipientEmail)
             ->setBody(
-                $this->templating->render('/themes/tastefulplanet/mail/contact.html.twig', [
+                $this->twig->render('/themes/tastefulplanet/mail/contact.html.twig', [
                     'contact' => $contact
                 ])
             );
