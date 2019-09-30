@@ -89,9 +89,9 @@ mounts:
         source: local
         source_path: sessions
 # Uncomment if you need to use Kaliop Migrations on your setup and not able to get it to write to "var" dir.
-#    'src/AppBundle/MigrationVersions/References':
-#        source: local
-#        source_path: MigrationVersionsReferences
+    'src/AppBundle/MigrationVersions/References':
+        source: local
+        source_path: MigrationVersionsReferences
 # Uncomment if you want to use DFS clustering, required if using Legacy Bridge on PE dedicated cluster setup.
 #    'dfsdata':
 #        # Platform.sh Staff: This MUST be shared on cluster, all others SHOULD be local for performance reasons
