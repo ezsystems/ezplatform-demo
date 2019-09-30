@@ -42,17 +42,6 @@
         -
             identifier: ref_section__cuisines
             attribute: id
-# TODO: Error in execution of step 8: Argument 'section' has a bad state: section is still assigned to content
-#-
-#    type: section
-#    mode: delete
-#    match:
-#        identifier: setup
-#
-#-
-#    type: section
-#    mode: delete
-#        identifier: design
 
 ## Content types
 
