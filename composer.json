@@ -126,8 +126,7 @@
         ],
         "ezplatform-install": [
             "@php bin/console ezplatform:install ezplatform-demo",
-            "@php bin/console ezplatform:graphql:generate-schema",
-            "@auto-scripts"
+            "@php bin/console ezplatform:graphql:generate-schema"
         ]
     },
     "config": {
