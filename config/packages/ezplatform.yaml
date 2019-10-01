@@ -61,7 +61,7 @@ parameters:
     eztags.default.tag_view.pagelayout: '@@ezdesign/pagelayout.html.twig'
     eztags.default.tag_view.template: '@@NetgenTags/tag/view.html.twig'
 
-ezpublish:
+ezplatform:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
     http_cache:
         purge_type: '%purge_type%'
