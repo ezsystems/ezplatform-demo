@@ -14,7 +14,7 @@ Encore.setOutputPath('public/assets/build')
 
 Encore.addEntry('demo', [
     path.resolve(__dirname, './assets/scss/demo.scss'),
-    path.resolve(__dirname, './assets/js/placesMapLoader.js'),
+    path.resolve(__dirname, './assets/js/carouselMenu.js'),
 ]);
 
 const projectConfig = Encore.getWebpackConfig();

@@ -1,37 +1,70 @@
 .header {
     background-color: $white;
-}
 
-.navbar {
     &__top {
-        .nav-link {
-            color: $grey-light;
-        }
-    }
-    .nav-signin {
-        font-size: 16px;
-        line-height: 26px;
-        color: $grey-light;
-    }
+        min-height: 56px;
 
-    .main-menu {
-        .nav-item {
-            &.active {
+        .navbar {
+            &-nav {
+                .nav-item {
+                    &::before {
+                        content: " | ";
+                        font-size: 12px;
+                    }
+                    &:first-child::before {
+                        content: none;
+                    }
+                }
                 .nav-link {
-                    color: $blue-light;
+                    color: $grey-light;
+                    font-size: 14px;
+                    line-height: 21px;
+                    padding: 0 1.5em;
+                    display: inline;
+
+                    &:hover {
+                        color: $blue-light;
+                    }
+                    .item-store-locators-pin {
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+                .nav-signin {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $grey-light;
+                }
+            }
+            &__user-quick-nav {
+                .nav-item {
+                    &::before {
+                        content: none;
+                    }
+                }
+                .nav-cart {
+                    position: relative;
+                    padding-right: 5px;
+
+                    .badge {
+                        background-color: $orange;
+                        color: $white;
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 100;
+                        border-radius: 1rem;
+                        padding: 0.15em 0.3em;
+                        position: absolute;
+                        top: -4px;
+                        right: 5px;
+                    }
                 }
             }
         }
-
-        .nav-link {
-            font-size: 17px;
-            line-height: 28px;
-            color: $grey-dark;
-            font-weight: 500;
-
-            &:hover {
-                color: $blue-light;
-            }
-        }
+    }
+    &__bottom {
+        min-height: 72px;
+        border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
     }
 }
