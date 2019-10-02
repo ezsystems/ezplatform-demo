@@ -21,21 +21,21 @@ final class MigrationParameterPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container): void
     {
-        $referenceFile = $container->getParameter('kernel.project_dir') . $container->getParameter('app.migration_reference_file');
-        $migrationValuesMapping = $container->getParameter('app.migration.values_mapping');
-
-        if (!is_readable($referenceFile)) {
-            return;
-        }
-
-        $references = Yaml::parseFile($referenceFile);
-
-        foreach ($migrationValuesMapping as $parameterName => $migrationParameterName) {
-            if (!array_key_exists($migrationParameterName, $references)) {
-                continue;
-            }
-
-            $container->setParameter($parameterName, $references[$migrationParameterName]);
-        }
+//        $referenceFile = $container->getParameter('kernel.project_dir') . $container->getParameter('app.migration_reference_file');
+//        $migrationValuesMapping = $container->getParameter('app.migration.values_mapping');
+//
+//        if (!is_readable($referenceFile)) {
+//            return;
+//        }
+//
+//        $references = Yaml::parseFile($referenceFile);
+//
+//        foreach ($migrationValuesMapping as $parameterName => $migrationParameterName) {
+//            if (!array_key_exists($migrationParameterName, $references)) {
+//                continue;
+//            }
+//
+//            $container->setParameter($parameterName, $references[$migrationParameterName]);
+//        }
     }
 }
