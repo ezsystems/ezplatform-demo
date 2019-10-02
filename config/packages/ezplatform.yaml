@@ -32,14 +32,7 @@ parameters:
 
     # Top menu parameters
     app.top_menu.parent_location_id: 2
-    app.top_menu.included_content_type_identifier: ["folder", "article", "place_list", "product_list", "blog", "about"]
-
-    # Subscribe location id: 227 - demo, 228 - ee demo
-    ezsettings.default.app_subscribe_location_id: 227
-
-    # locationIds used for fetching items on home page
-    app.home.place_list_location_id: 223
-    app.home.tastes_location_id: 207
+    app.top_menu.included_content_type_identifier: ["folder", "inspiration_list"]
 
     # Location Ids of allowed user groups for viewing Articles with premium content
     # 12 - members, 13 administrator_users, 14 - editors
