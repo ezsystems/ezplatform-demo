@@ -10,10 +10,3 @@ logout:
 
 ezplatform_kernel_internal:
     resource: '@EzPublishCoreBundle/Resources/config/routing/internal.yml'
-
-app.submitted:
-    path: /contact/submitted
-    defaults:
-        _controller: App\Controller\ContactFormController::submittedAction
-        template: "@ezdesign/full/contact_form_submitted.html.twig"
-    methods: [GET]
