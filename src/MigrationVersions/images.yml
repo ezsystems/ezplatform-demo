@@ -4,1923 +4,1460 @@
     file: 'src/MigrationVersions/References/references.yml'
     overwrite: true
 
-### images
-## media / app / demo
 -
     type: content
     mode: create
     content_type: image
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Appetizer canapés with cheese and salmon
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/appetizer-canape-cheese-salmon.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__appetizer_canapes
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__appetizer_canapes
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Ramen with pork and spring onion
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/bowl-with-pork-cutlet-and-spring-onion.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__ramen_with_pork
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__ramen_with_pork
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Esterhazyschnitten
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/eszterhazyschnitte-cream-slice-dessert.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__esterhazyschnitten
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__esterhazyschnitten
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Greek salad
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/greek-salad.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__greek_salad
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__greek_salad
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Hamburger with red onion
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/hamburger-with-red-onion.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__hamburger_with_red_onion
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__hamburger_with_red_onion
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Macaroons and coffee
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/macaroon.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__macaroons_and_coffee
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__macaroons_and_coffee
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Morning cereals
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/muesli.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__morning_cereals
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__morning_cereals
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Antipasti
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/olives-chorizo.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__antipasti
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__antipasti
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Penne, tomato and rucola
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pasta-penne-with-tomato-and-rucola.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__penne_tomato_and_rucola
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__penne_tomato_and_rucola
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Spaghetti bolognese
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pasta-spaghetti.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__spaghetti_bolognese
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__spaghetti_bolognese
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Pizza
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pizza.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__pizza
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__pizza
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Just raspberries
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/raspberries-dessert.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__just_raspberries
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__just_raspberries
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Chocolate and raspberries
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/red-raspberry-on-white-plate.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__chocolate_and_raspberries
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__chocolate_and_raspberries
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Spinach salad with chicken and pomegranate
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/salad-pomegranate-chicken-spinach.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__spinach_salad_with_chicken_and_pomegranate
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__spinach_salad_with_chicken_and_pomegranate
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Summer eat
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/skewer-meat-mushrooms.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__summer_eat
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__summer_eat
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Salmon teriyaki
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/salmon-teriyaki.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__salmon_teriyaki
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__salmon_teriyaki
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Pad thai
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/pad-thai.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__pad_thai
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__pad_thai
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Maguro sushi
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/sushi-tuna.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__maguro_sushi
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__maguro_sushi
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Tofu soup
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/tofu-soup.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__tofu_soup
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__tofu_soup
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__app__demo
-    attributes:
-        name: Heathly breakfast
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/app/demo/waffle-topped-with-blueberries-and-strawberries.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__app__demo__heathly_breakfast
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__app__demo__heathly_breakfast
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
     parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: be0116fe387b6a1b429faf7bb3f22afd
+    location_remote_id: 6e7a0d390006b9b018228dbea82381e0
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
     attributes:
-        name: Bottom right banner
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Bottom-right-banner.jpg'
+        name: kitchen-remodeling.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen-remodeling.jpg
+            filename: kitchen-remodeling.jpg
+            alternativeText: ''
     references:
         -
-            identifier: ref_location_image__media__images__bottom_right_banner
+            identifier: ref_location_image__media__images__inspirations__kitchen_remodeling
             attribute: location_id
         -
-            identifier: ref_content_image__media__images__bottom_right_banner
+            identifier: ref_content_image__media__images__inspirations__kitchen_remodeling
             attribute: content_id
+    #        tags: {  }
 
 -
     type: content
     mode: create
     content_type: image
-    section: reference:ref_section__media
     parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 2dd4331eff8d7a67060314727c6d5dd1
+    location_remote_id: 820f2af4160f5c3f8cf62adf9062134a
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
     attributes:
-        name: Contact Us
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Contact-Us.jpg'
+        name: kitchen-remodeling2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen-remodeling2.jpg
+            filename: kitchen-remodeling2.jpg
+            alternativeText: ''
     references:
         -
-            identifier: ref_location_image__media__images__contact_us
+            identifier: ref_location_image__media__images__inspirations__kitchen_remodeling_2
             attribute: location_id
         -
-            identifier: ref_content_image__media__images__contact_us
+            identifier: ref_content_image__media__images__inspirations__kitchen_remodeling_2
             attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: f0309d3bcf04cd15116e432c5f69a91b
+    location_remote_id: ff497d73b032e146dda5d22cb19b5d53
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bathroom.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bathroom.jpg
+            filename: bathroom.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bathroom
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bathroom
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: b71a61527a541b1dff442a2f804c3646
+    location_remote_id: f665f5afca407d9ad244305acb5de4f1
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bathroom2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bathroom2.jpg
+            filename: bathroom2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bathroom_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bathroom_2
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 70c707ed3000eb3c19ebc71bbbc24275
+    location_remote_id: 1528d7491d825ef9e1e90cfaf1965e54
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bathroom3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bathroom3.jpg
+            filename: bathroom3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bathroom_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bathroom_3
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: b20bce79622fa0e107d941c9e77b3da7
+    location_remote_id: 51deda464c35102e27f0216765c59bf1
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bathroom5.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bathroom5.jpg
+            filename: bathroom5.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bathroom_5
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bathroom_5
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: df8ff2240a972fcb6053993c76be0eb9
+    location_remote_id: d9c98c7f9a04b661cf8b018101000193
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bathroom6.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bathroom6.jpg
+            filename: bathroom6.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bathroom_6
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bathroom_6
+            attribute: content_id
+#        tags: {  }
 
 -
     type: content
     mode: create
     content_type: image
-    section: reference:ref_section__media
     parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 11e38bb799187cc323a96d1e58b3a94c
+    location_remote_id: eaaa189ff03916bff448c7dcf8eb55e2
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
     attributes:
-        name: Our Picks
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Our-Picks.jpg'
+        name: bedroom.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom.jpg
+            filename: bedroom.jpg
+            alternativeText: ''
     references:
         -
-            identifier: ref_location_image__media__images__our_picks
+            identifier: ref_location_image__media__images__inspirations__bedroom
             attribute: location_id
         -
-            identifier: ref_content_image__media__images__our_picks
+            identifier: ref_content_image__media__images__inspirations__bedroom
             attribute: content_id
+#        tags: {  }
 
 -
     type: content
     mode: create
     content_type: image
-    section: reference:ref_section__media
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: b47b99ec815575983f50c7fe5f10bfa6
+    location_remote_id: da0b5f969c338cb22e5b99d220c14760
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom2.jpg
+            filename: bedroom2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_2
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 9408c81ed4fb94867a0f7b26a651f260
+    location_remote_id: 2733ae089352f8185a06550457b09986
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom3.jpg
+            filename: bedroom3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_3
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 03dbba3d756d28e95753edb2d67ec50a
+    location_remote_id: ec1ca13589aca230202486d179fe6cca
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom4.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom4.jpg
+            filename: bedroom4.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_4
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_4
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e579c6b30f10fe3f8551bf6009bf80ba
+    location_remote_id: 0e8456f36c92912161bee9c7e740c9d2
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom5.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom5.jpg
+            filename: bedroom5.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_5
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_5
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2121930b2d6c4d0798fd79785aba76c3
+    location_remote_id: 004b171361bce42eb477f3baeeb73226
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom6.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom6.jpg
+            filename: bedroom6.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_6
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_6
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 9660bfa6d499cb19679cddb2b88dbe95
+    location_remote_id: c32ae18a57d20c59d67ff0937ba6bb18
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom7.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom7.jpg
+            filename: bedroom7.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_7
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_7
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 698ab025ce09e13c8b4c82560a8e16a5
+    location_remote_id: ce38e195b6b55f43c121193394d05ab8
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom8.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom8.jpg
+            filename: bedroom8.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_8
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_8
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2f0c5b93011b1b3c9f615eb75a4ae28c
+    location_remote_id: c36c339efc30b0414c26b51fbde3e581
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: bedroom9.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/bedroom9.jpg
+            filename: bedroom9.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__bedroom_9
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__bedroom_9
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 3c8d8e955126601c4c0e9b3eafd6e83a
+    location_remote_id: 404cd1e48ac1eb144b15726865d79560
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen.jpg
+            filename: kitchen.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: ff957cb3f604ca64a03e8fcee85f5569
+    location_remote_id: 162105daf795e6250c2a3a114ba56718
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen2.jpg
+            filename: kitchen2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_2
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 4ab090277a2113d94853dd57256452d5
+    location_remote_id: 1ca351cad28b50696a8fd04a761798dd
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen3.jpg
+            filename: kitchen3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_3
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 9019ca53098e1cdf190ac5f81827800e
+    location_remote_id: 0fdc4367d0702f37fc0fd3541c9f80cb
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen4.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen4.jpg
+            filename: kitchen4.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_4
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_4
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 05ab261554b3081fc6943ab9eff0429b
+    location_remote_id: ff769e7f97ff0d53b4eb46c6d2f54e85
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen5.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen5.jpg
+            filename: kitchen5.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_5
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_5
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 3b07f989191009b66c77ecb1727c3dc9
+    location_remote_id: a5afe56e52d47408683a1c1a7c70b0f8
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen6.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen6.jpg
+            filename: kitchen6.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_6
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_6
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2ce9d0ccde0261151a3d1e721667fff2
+    location_remote_id: 0c3605e022cf573f17bb3e9c67d69058
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen7.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen7.jpg
+            filename: kitchen7.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_7
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_7
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 6a157fdd7530a969ad28b5c020c6946d
+    location_remote_id: 138ce626d640b94180458450e66825cc
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: kitchen8.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/kitchen8.jpg
+            filename: kitchen8.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__kitchen_8
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__kitchen_8
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 95d1af1227a31b6354cc7100e5108388
+    location_remote_id: 67e103c8e869812cb5b170085e7f5de8
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room.jpg
+            filename: living-room.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: b872353dfad5f3fb5f6aa634dbf1da9c
+    location_remote_id: 1d0cd31f1b5e6e4f11d07d783419a2d1
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room2.jpg
+            filename: living-room2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_2
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e81c52d89c06b4fe2fc7f36db2f96de9
+    location_remote_id: 0b20a17167b80e228aea3b04230b6058
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room3.jpg
+            filename: living-room3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_3
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e36f468634d32e65750a34c4a999496b
+    location_remote_id: 0aa3489308fe16dd2000a2b740cb0dc6
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room4.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room4.jpg
+            filename: living-room4.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_4
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_4
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 09e08170536db80a5f337eb1d65ff979
+    location_remote_id: 535940947ae9cafa50ecdf7efa52bf41
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room5.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room5.jpg
+            filename: living-room5.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_5
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_5
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 431f4af1c06403980c328c3896c9bb5c
+    location_remote_id: 91b304495c4ec5c6f94ae20ac31906db
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room7.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room7.jpg
+            filename: living-room7.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_7
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_7
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 622ec5aa9778f4c15b3a5694deba43d4
+    location_remote_id: 5f01e520aad7a822e94217b577da08b2
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room8.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room8.jpg
+            filename: living-room8.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_8
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_8
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: cb27cfa98d8d40dda4af5b33176cefb3
+    location_remote_id: 40c1d2c7c508f8b56aebd51157558c16
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room9.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room9.jpg
+            filename: living-room9.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_9
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_9
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 4d37e716c036234413254a48b86db8e7
+    location_remote_id: dc29a2a876df2f874e7b2ee409429a93
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room10.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room10.jpg
+            filename: living-room10.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_10
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_10
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 0f85e3eeab2bdcd77d4758f80de0e8bf
+    location_remote_id: 142fffa29275a68cf92be16a2bf76a38
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: living-room11.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/living-room11.jpg
+            filename: living-room11.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__living_room_11
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__living_room_11
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 6919d583c196cffda041faf2e57cef75
+    location_remote_id: 8fc4c46b7a7a41aed5e272f59d4d9681
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: office.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/office.jpg
+            filename: office.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__office
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__office
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 136f55903be6dad19b8c2808d6436dcd
+    location_remote_id: 321449766d3b7f6966dc10965740f8d8
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: office2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/office2.jpg
+            filename: office2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__office_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__office_2
+            attribute: content_id
+#        tags: {  }
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 339ce3fb0121084a4ce8e0913bb6d017
+    location_remote_id: f1a3e14ce81feb98b5fd9483b3aa7b13
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: office3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/office3.jpg
+            filename: office3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__office_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__office_3
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 205a933c94ecf10dff1eb47fc2c6ea27
+    location_remote_id: 42267b84a2deea0144c8f3d008fc7964
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: office4.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/office4.jpg
+            filename: office4.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__office_4
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__office_4
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: da82de6566a44d0c3c6fdb16f1cd7845
+    location_remote_id: d4acb15b3687fc1590a9c85b65536234
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: office5.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/office5.jpg
+            filename: office5.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__office_5
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__office_5
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: deb1ebeb4cf97fc911d6842fa6627528
+    location_remote_id: 4dd6cfcf6b35c50faac4b65929940a6c
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: outside.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/outside.jpg
+            filename: outside.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__outside
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__outside
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 06f7c79d07214602acf88e08fd792eb7
+    location_remote_id: 7e23158c009b785c506332481db57fcf
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: outside2.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/outside2.jpg
+            filename: outside2.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__outside_2
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__outside_2
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2f6b3081d21b9e65463c77c3472abd73
+    location_remote_id: 5b547bf7859f6458ea08edf66a938216
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: outside3.jpg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/outside3.jpg
+            filename: outside3.jpg
+            alternativeText: ''
+    references:
+        -
+            identifier: ref_location_image__media__images__inspirations__outside_3
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__inspirations__outside_3
+            attribute: content_id
+#        tags: {  }
+
+-
+    type: content
+    mode: create
+    content_type: image
     parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: bd840a24d5d053e935ae0f262d04fcef
+    location_remote_id: b3f87d005457cf4b27ed8ade51f98dc6
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
     attributes:
-        name: Paris banner
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Paris-banner.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__paris_banner
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__paris_banner
-            attribute: content_id
-
+        name: professional-3.jpeg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/professional-3.jpeg
+            filename: professional-3.jpeg
+            alternativeText: ''
+#        tags: {  }
 -
     type: content
     mode: create
     content_type: image
-    section: reference:ref_section__media
     parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: c810da29dca31d0bacfe4a78dd8e6380
+    location_remote_id: 245dcd54a39ef955e45a0548f992db9c
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
     attributes:
-        name: Places to visit
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Places-to-visit.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places_to_visit
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places_to_visit
-            attribute: content_id
-
+        name: professional-1.jpeg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/professional-1.jpeg
+            filename: professional-1.jpeg
+            alternativeText: ''
+#        tags: {  }
 -
     type: content
     mode: create
     content_type: image
-    section: reference:ref_section__media
     parent_location: reference:ref_folder__media__images
-    attributes:
-        name: Visual travels
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/Visual-travels.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__visual_travels
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__visual_travels
-            attribute: content_id
-
-## images for media / gallery
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_location_gallery__media__gallery
-    attributes:
-        name: Image Gallery A
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-A.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__image_gallery_a
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__image_gallery_a
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_location_gallery__media__gallery
-    attributes:
-        name: Image Gallery B
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-B.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__image_gallery_b
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__image_gallery_b
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_location_gallery__media__gallery
-    attributes:
-        name: Image Gallery C
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-C.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__image_gallery_c
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__image_gallery_c
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_location_gallery__media__gallery
-    attributes:
-        name: Image Gallery D
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/gallery/Image-Gallery-D.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__image_gallery_d
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__image_gallery_d
-            attribute: content_id
-
-
-## images for / Media / Images / Places / Amsterdam
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Amsterdam 1544
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/amsterdam_1544.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__amsterdam_1544
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__amsterdam_1544
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Amsterdam Cityscape
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/amsterdam_cityscape.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__amsterdam_cityscape
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__amsterdam_cityscape
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Emanuel de Witte de Binnenplaats van de Beurs te Amsterdam
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__emanuel_de_witte_de_binnenplaats_van_de_beurs_te_amsterdam
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Oude Kerk
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/oude_kerk.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__oude_kerk
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__oude_kerk
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Rijksmuseum Atrium Large
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/rijksmuseum_atrium_large.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__rijksmuseum_atrium_large
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__rijksmuseum_atrium_large
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Rijksmuseum Large
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/rijksmuseum_large.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__rijksmuseum_large
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__rijksmuseum_large
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Royal Palace
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/royal_palace.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__royal_palace
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__royal_palace
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: The Church of St Nicholas
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/the_church_of_st_nicholas.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__the_church_of_st_nicholas
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__the_church_of_st_nicholas
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Van Gogh Sunflowers
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/van_gogh_sunflowers.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__van_gogh_sunflowers
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__van_gogh_sunflowers
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Vondel Park Amsterdam Large
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/vondel_park_amsterdam_large.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__vondel_park_amsterdam_large
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__vondel_park_amsterdam_large
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__amsterdam
-    attributes:
-        name: Westertoren Amsterdam
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/amsterdam/westertoren_amsterdam.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__amsterdam__westertoren_amsterdam
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__amsterdam__westertoren_amsterdam
-            attribute: content_id
-
-## images for / Media / Images / Places / Anchorage
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Alaskan Moose
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/alaskan_moose.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__alaskan_moose
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__alaskan_moose
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Alaskan Wildlife Refuge
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/alaskan_wildlife_refuge.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__alaskan_wildlife_refuge
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__alaskan_wildlife_refuge
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Anchorage Eagle River
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/anchorage_eagle_river.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__anchorage_eagle_river
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__anchorage_eagle_river
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Anchorage on an April Evening
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/anchorage_on_an_april_evening.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__anchorage_on_an_april_evening
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__anchorage_on_an_april_evening
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Ski Resort
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/ski_resort.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__ski_resort
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__ski_resort
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__anchorage
-    attributes:
-        name: Wildlife Refuge
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/anchorage/wildlife_refuge.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__anchorage__wildlife_refuge
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__anchorage__wildlife_refuge
-            attribute: content_id
-
-## images for / Media / Images / Places / Brooklyn
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Brooklyn 1879
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/brooklyn_1879.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__brooklyn_1879
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__brooklyn_1879
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Brooklyn Botanical Garden
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/brooklyn_botanical_garden.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__brooklyn_botanical_garden
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__brooklyn_botanical_garden
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Greenwoodcemetary
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/greenwoodcemetary.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__greenwoodcemetary
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__greenwoodcemetary
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: JFK Memorial in Grand Army Plaza
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/jfk_memorial_in_grand_army_plaza.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__jfk_memorial_in_grand_army_plaza
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__jfk_memorial_in_grand_army_plaza
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Nathans Coney Island
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/nathans_coney_island.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__nathans_coney_island
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__nathans_coney_island
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Coney Island Parachute Jump
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/nathans_coney_island_parachute_jump.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__nathans_coney_island_parachute_jump
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__nathans_coney_island_parachute_jump
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Prospect Park Boathouse
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/prospect_park_boathouse.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__prospect_park_boathouse
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__prospect_park_boathouse
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__brooklyn
-    attributes:
-        name: Prospect Park
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/brooklyn/prospect_park.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__brooklyn__prospect_park
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__brooklyn__prospect_park
-            attribute: content_id
-
-## images for / Media / Images / Places / Kochin
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Bolgatty Palace
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/bolgatty_palace.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__bolgatty_palace
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__bolgatty_palace
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: City of Cochin
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/city_of_cochin.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__city_of_cochin
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__city_of_cochin
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: House Bost View
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/house_bost_view.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__house_bost_view
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__house_bost_view
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Kathakali
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kathakali.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__kathakali
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__kathakali
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Kochin1
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin1.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__kochin1
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__kochin1
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Kochin2
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin2.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__kochin2
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__kochin2
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Kochin3
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/kochin3.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__kochin3
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__kochin3
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__kochin
-    attributes:
-        name: Panoramic Kochi Port
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/kochin/panoramic_kochi_port.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__kochin__panoramic_kochi_port
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__kochin__panoramic_kochi_port
-            attribute: content_id
-
-## images for / Media / Images / Places / Oslo
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Akershus Festning 1
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/akershus_festning1.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__akershus_festning_1
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__akershus_festning_1
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Akershus Festning 2
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/akershus_festning2.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__akershus_festning_2
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__akershus_festning_2
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Frogner Park
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/frogner_park.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__frogner_park
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__frogner_park
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Oslo at Night
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/oslo_at_night.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__oslo_at_night
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__oslo_at_night
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Royal Palace Oslo Large
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/royal_palace_oslo_large.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__royal_palace_oslo_large
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__royal_palace_oslo_large
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Stortinget Oslo
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/stortinget_oslo.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__stortinget_oslo
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__stortinget_oslo
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Universitetet i Oslo
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/universitetet_i_oslo.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__universitetet_i_oslo
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__universitetet_i_oslo
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Viking Museum Oslo
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Viking Museum Oslo 2
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo2.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo_2
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo_2
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__oslo
-    attributes:
-        name: Viking Museum Oslo 3
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/oslo/viking_museum_oslo3.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__oslo__viking_museum_oslo_3
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__oslo__viking_museum_oslo_3
-            attribute: content_id
-
-## images for / Media / Images / Places / Santo Domingo
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__santo_domingo
-    attributes:
-        name: Catedral Santa Maria La Menor
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/catedral_santa_maria_la_menor.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__santo_domingo__catedral_santa_maria_la_menor
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__santo_domingo__catedral_santa_maria_la_menor
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__santo_domingo
-    attributes:
-        name: Columbus Park Dominican Republic
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/columbus_park_dominican_republic.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__santo_domingo__columbus_park_dominican_republic
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__santo_domingo__columbus_park_dominican_republic
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__santo_domingo
-    attributes:
-        name: Landing of Columbus
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/landing_of_columbus.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__santo_domingo__landing_of_columbus
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__santo_domingo__landing_of_columbus
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__santo_domingo
-    attributes:
-        name: Santo Domingo National Palace
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/santo_domingo_national_palace.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__santo_domingo__santo_domingo_national_palace
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__santo_domingo__santo_domingo_national_palace
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__santo_domingo
-    attributes:
-        name: Santo Domingo Panorama
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/santo_domingo/santo_domingo_panorama.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__santo_domingo__santo_domingo_panorama
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__santo_domingo__santo_domingo_panorama
-            attribute: content_id
-
-## images for / Media / Images / Places / Valencia
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: A Falles of Valencia
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/a_falles_of_valencia.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__a_falles_of_valencia
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__a_falles_of_valencia
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Embarco Moriscos en el Grao de Valencia
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/embarco_moriscos_en_el_grao_de_valencia.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__embarco_moriscos_en_el_grao_de_valencia
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__embarco_moriscos_en_el_grao_de_valencia
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Falla Nou Campanar
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/falla_nou_campanar.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__falla_nou_campanar
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__falla_nou_campanar
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Les Falles
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/les_falles.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__les_falles
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__les_falles
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Mercat
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/mercat.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__mercat
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__mercat
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Puerta de los Serranos
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/puerta_de_los_serranos.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__puerta_de_los_serranos
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__puerta_de_los_serranos
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Traditional Hairstyle of Valencian Female
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/traditional_hairstyle_of_valencian_female.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__traditional_hairstyle_of_valencian_female
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__traditional_hairstyle_of_valencian_female
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Valencia Cathedral
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia_cathedral.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__valencia_cathedral
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__valencia_cathedral
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Valencia City Hall
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia_city_hall.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__valencia_city_hall
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__valencia_city_hall
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__places__valencia
-    attributes:
-        name: Valencia Loceanografic
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/places/valencia/valencia-loceanografic.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__places__valencia__valencia_loceanografic
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__places__valencia__valencia_loceanografic
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Ethiopian Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__ethiopian_cuisine
-    attributes:
-        name: Coffee Ceremony
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/ethiopian_cuisine/coffee_ceremony.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__ethiopian_cuisine__coffee_ceremony
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__ethiopian_cuisine__coffee_ceremony
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__ethiopian_cuisine
-    attributes:
-        name: Ethiopian Kitfo
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/ethiopian_cuisine/ethiopian_kitfo.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__ethiopian_cuisine__ethiopian_kitfo
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__ethiopian_cuisine__ethiopian_kitfo
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Israeli Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
-    attributes:
-        name: Couscous Salad
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/couscous_salad.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__israeli_cuisine__couscous_salad
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__israeli_cuisine__couscous_salad
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
-    attributes:
-        name: Shakshuka
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/shakshuka.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__israeli_cuisine__shakshuka
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__israeli_cuisine__shakshuka
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__israeli_cuisine
-    attributes:
-        name: Shawarma
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/israeli_cuisine/shawarma.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__israeli_cuisine__shawarma
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__israeli_cuisine__shawarma
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Jamaican Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
-    attributes:
-        name: Ackee and Saltfish
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/ackee_and_saltfish.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__ackee_and_saltfish
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__ackee_and_saltfish
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
-    attributes:
-        name: Jamaican Jerk Chicken
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/jamaican_jerk_chicken.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__jamaican_jerk_chicken
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__jamaican_jerk_chicken
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__jamaican_cuisine
-    attributes:
-        name: Jamaican Patties
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/jamaican_cuisine/jamaican_patties.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__jamaican_cuisine__jamaican_patties
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__jamaican_cuisine__jamaican_patties
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Mexican Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
-    attributes:
-        name: Enchilada Mole
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/enchilada_mole.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__mexican_cuisine__enchilada_mole
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__mexican_cuisine__enchilada_mole
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
-    attributes:
-        name: Guacomole
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/guacomole.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__mexican_cuisine__guacomole
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__mexican_cuisine__guacomole
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__mexican_cuisine
-    attributes:
-        name: Mexican Street Food
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/mexican_cuisine/mexican_street_food.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__mexican_cuisine__mexican_street_food
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__mexican_cuisine__mexican_street_food
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Norwegian Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
-    attributes:
-        name: Beef Stew
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/beef_stew.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__beef_stew
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__beef_stew
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
-    attributes:
-        name: Kromkaker Og Sandkaker
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/kromkaker_og_sandkaker.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__kromkaker_og_sandkaker
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__kromkaker_og_sandkaker
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__norwegian_cuisine
-    attributes:
-        name: Norwegian Torrfesk
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/norwegian_cuisine/norwegian_torrfesk.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__norwegian_cuisine__norwegian_torrfesk
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__norwegian_cuisine__norwegian_torrfesk
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Polish Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
-    attributes:
-        name: Bigos
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/bigos.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__polish_cuisine__bigos
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__polish_cuisine__bigos
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
-    attributes:
-        name: City Harvest in Poznan
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/city_harvest_in_poznan.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__polish_cuisine__city_harvest_in_poznan
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__polish_cuisine__city_harvest_in_poznan
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
-    attributes:
-        name: Pierogi
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/pierogi.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__polish_cuisine__pierogi
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__polish_cuisine__pierogi
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
-    attributes:
-        name: Smażenie Pączków
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/smazenie_paczkow.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__polish_cuisine__smazenie_paczkow
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__polish_cuisine__smazenie_paczkow
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__polish_cuisine
-    attributes:
-        name: Wigilijne Śniadanie
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/polish_cuisine/wigilijne_sniadanie.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__polish_cuisine__wigilijne_sniadanie
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__polish_cuisine__wigilijne_sniadanie
-            attribute: content_id
-
-## images for / Media / Images / Tastes / Thai Cuisine
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
-    attributes:
-        name: Phat Thai Kung Chang Khien
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/phat_thai_kung_chang_khien.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__thai_cuisine__phat_thai_kung_chang_khien
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__thai_cuisine__phat_thai_kung_chang_khien
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
-    attributes:
-        name: Red Roast Duck Curry
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/red_roast_duck_curry.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__thai_cuisine__red_roast_duck_curry
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__thai_cuisine__red_roast_duck_curry
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
-    attributes:
-        name: Thai Vegetable Carving
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/thai_vegetable_carving.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__thai_cuisine__thai_vegetable_carving
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__thai_cuisine__thai_vegetable_carving
-            attribute: content_id
-
--
-    type: content
-    mode: create
-    content_type: image
-    section: reference:ref_section__media
-    parent_location: reference:ref_folder__media__images__tastes__thai_cuisine
-    attributes:
-        name: Yam Wun Sen
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/media/images/tastes/thai_cuisine/yam_wun_sen.jpg'
-    references:
-        -
-            identifier: ref_location_image__media__images__tastes__thai_cuisine__yam_wun_sen
-            attribute: location_id
-        -
-            identifier: ref_content_image__media__images__tastes__thai_cuisine__yam_wun_sen
-            attribute: content_id
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: e9e766bd0c52336e630cc038358dac03
+    location_remote_id: 4670ba52dbf44d6940f35313a9d37661
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: professional-2.jpeg
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/var/site/storage/images/inspirations/professional-2.jpeg
+            filename: professional-2.jpeg
+            alternativeText: ''
+#        tags: {  }
 
 -
     type: reference
