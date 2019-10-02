@@ -33,8 +33,10 @@
             })) }}
         {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
 
         {% block footer %}
             {{ render_esi(controller('App\\Controller\\MenuController::getChildNodesAction', {

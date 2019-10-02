@@ -1,9 +1,9 @@
 <header class="header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar__top">
-            <ul class="navbar-nav mr-auto navbar__">
+    <nav class="navbar navbar-expand-lg header__top">
+        <div class="container">
+            <ul class="navbar-nav mr-md-auto">
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="languageSwitcherDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="nav-link dropdown-toggle pl-md-0" id="languageSwitcherDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         EN
                     </a>
                     <div class="dropdown-menu" aria-labelledby="languageSwitcherDropdown">
@@ -12,32 +12,42 @@
                         <a class="dropdown-item" href="#">NO</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-sm-block">
                     <a href="#" class="nav-link">Customer Services</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-sm-block">
                     <a href="#" class="nav-link">Join our email list</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item d-none d-sm-block">
                     <a href="#" class="nav-link">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Store Locators</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav-signin">Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav-cart">
-                        <span class="badge badge-warning badge-pill">93</span>
+                <li class="nav-item d-none d-sm-block">
+                    <a href="#" class="nav-link">
+                        <img src="{{ asset('assets/images/icons-pin.png') }}" class="item-store-locators-pin">
+                        Store Locators
                     </a>
                 </li>
             </ul>
-            <a href="" class="nav-link"></a>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar__bottom">
+            <ul class="navbar-nav navbar__user-quick-nav flex-row">
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-signin">
+                        <span class="user-icon">
+                            <img src="{{ asset('/assets/images/user-icon.png') }}">
+                        </span>
+                        Sign in
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link nav-cart">
+                        <img src="{{ asset('/assets/images/cart-icon.png') }}">
+                        <span class="badge">93</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg header__bottom px-0">
+        <div class="container">
             <a href="{{ path(ezplatform.rootLocation()) }}" class="navbar-brand">
                 <img src="{{ asset('assets/images/maison-logo.png') }}">
             </a>
@@ -45,12 +55,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainMenuNavbar">
-                <div class="form ml-auto">
-                    <form class="form__search">
+                <form class="form form--search ml-auto form-inline w-100">
+                    <div class="input-group w-100">
+                        <i class="fas fa-search"></i>
                         <input type="search" class="form-control rounded-pill" placeholder="Search...">
-                    </form>
-                </div>
-                <div class="main-menu ml-auto" id="mainMenuNavbar">
+                    </div>
+                </form>
+                <div class="navbar--main-menu ml-auto" id="mainMenuNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="#" class="nav-link">Products</a>
@@ -64,6 +75,6 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </header>
