@@ -19,10 +19,10 @@ services:
             $topMenuParentLocationId: '%app.top_menu.parent_location_id%'
             $topMenuContentTypeIdentifier: '%app.top_menu.included_content_type_identifier%'
 
-    App\Controller\ProductListController:
+    App\Controller\ContactFormController:
+        public: true
+
+    App\Controller\PaginationQueryController:
         public: true
         arguments:
             $contentViewQueryTypeMapper: '@ezpublish.query_type_content_view_mapper'
-
-    App\Controller\ContactFormController:
-        public: true

@@ -32,14 +32,7 @@ parameters:
 
     # Top menu parameters
     app.top_menu.parent_location_id: 2
-    app.top_menu.included_content_type_identifier: ["folder", "article", "place_list", "product_list", "blog", "about"]
-
-    # Subscribe location id: 227 - demo, 228 - ee demo
-    ezsettings.default.app_subscribe_location_id: 227
-
-    # locationIds used for fetching items on home page
-    app.home.place_list_location_id: 223
-    app.home.tastes_location_id: 207
+    app.top_menu.included_content_type_identifier: ["folder", "inspiration_list"]
 
     # Location Ids of allowed user groups for viewing Articles with premium content
     # 12 - members, 13 administrator_users, 14 - editors
@@ -47,10 +40,10 @@ parameters:
 
     app.migration_reference_file: '/src/MigrationVersions/References/references.yml'
 
-    app.migration.values_mapping:
-        app.home.place_list_location_id: 'ref_location_place_list__home__places_and_tastes__places'
-        app.home.tastes_location_id: 'ref_location_folder__home__places_and_tastes__tastes'
-        ezsettings.default.app_subscribe_location_id: 'ref_location_subscribe__home__subscribe'
+#    app.migration.values_mapping:
+#        app.home.place_list_location_id: 'ref_location_place_list__home__places_and_tastes__places'
+#        app.home.tastes_location_id: 'ref_location_folder__home__places_and_tastes__tastes'
+#        ezsettings.default.app_subscribe_location_id: 'ref_location_subscribe__home__subscribe'
 
     # e-mail address used for form submission
     app.contact_form.sender_email: no-reply@ez.no
@@ -82,6 +75,7 @@ ezplatform:
             - fr
             - de
             - no
+            - professionals
         groups:
             site_group:
                 - site
@@ -118,6 +112,9 @@ ezplatform:
 
         site_group:
             design: main
+            content:
+                tree_root:
+                    location_id: 70
 
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
@@ -148,13 +145,18 @@ ezplatform:
         no:
             languages: [nor-NO, eng-GB]
 
+        professionals:
+            languages: [eng-GB]
+            subtree_paths:
+                content: /1/2/56/
+
     url_alias:
         slug_converter:
             transformation: 'urlalias_lowercase'
 ezdesign:
     design_list:
-        main: [tastefulplanet]
-        admin: [admin, tastefulplanet]
+        main: [maison]
+        admin: [admin, maison]
 
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design

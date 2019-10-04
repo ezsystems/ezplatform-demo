@@ -1,0 +1,441 @@
+# references
+-
+    type: reference
+    mode: load
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true
+
+#
+## ROOT Content update
+#-
+#    type: content
+#    mode: update
+#    content_type: folder
+#    match:
+#        location_id: 2
+#    section: reference:ref_section__standard
+#    owner: 14
+#    attributes:
+#        name: Sites
+#        short_name: Sites
+#        description: >- #json
+#            <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+#                     xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
+#                     xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
+#            </section>
+#        image: null
+#    references:
+#        -
+#            identifier: ref_location_folder__sites
+#            attribute: location_id
+#        -
+#            identifier: ref_content_folder__sites
+#            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2c0a1f483415e49f9024e99f63a10c29
+    location_remote_id: ec425dfbee72878581c021228996b409
+    section: reference:ref_section__media
+    owner: 14
+    always_available: true
+    attributes:
+        name: Inspirations
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__media__images__inspirations
+            attribute: location_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: b920c1cf86877d76046360dc169fc66e
+    location_remote_id: ba01b43ae8a5a565c6f9965f54398ef4
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Professionals
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 79f7c28211f91fcf49903d5f275c8983
+    location_remote_id: cfc1b041df769ae115a83d2bd1fd890a
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Design and remodeling'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals__design_and_remodeling
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals__design_and_remodeling
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Architects & Building Designers'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: ff4ffd4a819f34310f487a5e05b2f6a4
+    location_remote_id: 413c60ae79053af368a155aaf53f3845
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Custom Home'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers__custom_home
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals__design_and_remodeling__architects_and_building_designers__custom_home
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2dcfc37fb8ee7d53f8f38309fb4e896c
+    location_remote_id: 3d132df3fb52e3186839fc328ccee09b
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Building Design'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers__building_design
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals__design_and_remodeling__architects_and_building_designers__building_design
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 39df42deda8760cf43ae17c225514113
+    location_remote_id: 6cb8dcccd873cd7369589623a117e597
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'New Home Construction'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__architects_and_building_designers
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 1e5b9375933eff0f756adb9d80d3ccae
+    location_remote_id: 169815db9c518941efaee1f0082d1d89
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Architectural Design'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: c967cf50278f5947cf5a45258521b9ad
+    location_remote_id: c1f7c2d75a580c0e93ec6eca4d253702
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Design-Build Firms'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__professionals__design_and_remodeling__design_build_forms
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__professionals__design_and_remodeling__design_build_forms
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__design_build_forms
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: c45e93fee56cb96939ba625df4c01165
+    location_remote_id: 6a8f1c60ce80b130759333fa4a54753d
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Custom Home'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__design_build_forms
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 0eb1781f773c65df570b8650ba68419a
+    location_remote_id: 034b2e08f40ff95c699a60d006276ddc
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Building Design'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling__design_build_forms
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: ea2247923599d0fbf0c5f0d09322cc42
+    location_remote_id: e5c46980dc3b4f8cf03c492c770295d5
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'New Home Construction'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 985105008af821b6d79ccaff31846d43
+    location_remote_id: 4c78d354bb941a9133e3146a57c6f294
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'General Contractors'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 7c9e26a9c962525bb329d6d7f68ef7a7
+    location_remote_id: cafce57368d94c84b8c6afd2cf848317
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Home Builders'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__professionals__design_and_remodeling
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: e5480c0a88c34ba34540b983017bbacb
+    location_remote_id: 6b4abdde48a4359eb4488b87c3d697ef
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Interior Designers'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+
+## Maison folder
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 942e488291bbe59e95b30a63a0fbe72e
+    location_remote_id: 0fd37ac12ed149d6f7f00b010e4a3872
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__maison
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 04e29a5c432ee256425f30e5c9d98d1d
+    location_remote_id: 9c62875c6625fcf0637f06331ed0d656
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Stores
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+
+-
+    type: reference
+    mode: save
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true

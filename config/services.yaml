@@ -12,6 +12,7 @@ imports:
     - { resource: services/installer.yaml }
     - { resource: services/mailer.yaml }
     - { resource: services/migration.yaml }
+    - { resource: services/pagerfanta.yaml }
     - { resource: services/query_types.yaml }
     - { resource: services/twig.yaml }
 

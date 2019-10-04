@@ -33,15 +33,6 @@
         -
             identifier: ref_section__form
             attribute: id
--
-    type: section
-    mode: create
-    name: Cuisines
-    identifier: cuisines
-    references:
-        -
-            identifier: ref_section__cuisines
-            attribute: id
 
 ## Content types
 
@@ -115,25 +106,30 @@
             disable-translation: true
             default-value: true
             position: 6
-#        -
-#            type: eztags
-#            name: tags
-#            identifier: tags
-#            category: content
-#            position: 7
-#            field-settings:
-#                hideRootTag: false
-#        -
-#            type: novaseometas
-#            name: Metas
-#            identifier: metas
-#            description: 'Metas for Search Engine Optimizations'
-#            required: false
-#            info-collector: false
-#            searchable: false # CANNOT be searchable
-#            disable-translation: false
-#            position: 100
-#            category: metadata
+    #        -
+    #            type: eztags
+    #            name: tags
+    #            identifier: tags
+    #            category: content
+    #            position: 7
+    #            field-settings:
+    #                hideRootTag: false
+    #        -
+    #            type: novaseometas
+    #            name: Metas
+    #            identifier: metas
+    #            description: 'Metas for Search Engine Optimizations'
+    #            required: false
+    #            info-collector: false
+    #            searchable: false # CANNOT be searchable
+    #            disable-translation: false
+    #            position: 100
+    #            category: metadata
+    references:
+        -
+            identifier: ref_content_type_id__folder
+            attribute: content_type_id
+
 
 # Gallery content type
 -
@@ -161,6 +157,10 @@
             required: false
             searchable: true
             category: content
+    references:
+        -
+            identifier: ref_content_type_id__gallery
+            attribute: content_type_id
 
 # Image content type
 -
@@ -198,13 +198,13 @@
             identifier: image
             category: content
 
-#        -
-#            type: eztags
-#            name: Tags
-#            identifier: tags
-#            category: content
-#            field-settings:
-#                hideRootTag: false
+    #        -
+    #            type: eztags
+    #            name: Tags
+    #            identifier: tags
+    #            category: content
+    #            field-settings:
+    #                hideRootTag: false
     references:
         -
             identifier: ref_content_type_id__image
@@ -519,8 +519,8 @@
 #            field-settings:
 #                hideRootTag: false
 #                editView: Default
-#            validator-configuration:
-#                TagsValueValidator: { subTreeLimit: 0, maxTags: 0 }
+##            validator-configuration:
+##                TagsValueValidator: { subTreeLimit: 0, maxTags: 0 }
 #        -
 #            identifier: metas
 #            type: novaseometas
@@ -533,339 +533,6 @@
 #            category: metadata
 #            position: 100
 
-# place content type
--
-    type: content_type
-    mode: create
-    content_type_group: Content
-    identifier: place
-    name: Place
-    description: 'Defines a structure for storing a Place object (includes Geolocation attribute).'
-    name_pattern: '<name>'
-    #url_name_pattern: ''
-    is_container: false
-    attributes:
-        -
-            identifier: name
-            type: ezstring
-            name: Name
-            description: 'Name of place.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 1
-        -
-            identifier: intro
-            type: ezrichtext
-            name: Intro
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 2
-        -
-            identifier: description
-            type: ezrichtext
-            name: Description
-            description: 'Body of text.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 3
-        -
-            identifier: image
-            type: ezimage
-            name: Image
-            description: 'Image representing the gallery on frontpages and other listing pages.'
-            required: false
-            searchable: false
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 4
-        -
-            identifier: caption
-            type: ezrichtext
-            name: 'Caption (Image)'
-            description: 'Text you want to display beneath the image.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 5
-        -
-            identifier: location
-            type: ezgmaplocation
-            name: Location
-            description: 'Geolocation associated to the Place, for instance, where the story happened.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 6
-        -
-            identifier: author
-            type: ezauthor
-            name: Author
-            description: 'Place author'
-            required: true
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 7
-        -
-            identifier: authors_position
-            type: ezstring
-            name: 'Author''s position'
-            description: 'Position of author'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 8
-#        -
-#            identifier: tags
-#            type: eztags
-#            name: tags
-#            #description: ''
-#            required: false
-#            searchable: true
-#            info-collector: false
-#            disable-translation: false
-#            category: content
-#            position: 9
-#            field-settings:
-#                hideRootTag: false
-#                editView: Default
-        -
-            identifier: publication_date
-            type: ezdatetime
-            name: 'Publication Date'
-            description: 'Date of publication'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 10
-            field-settings:
-                defaultType: 1
-                useSeconds: false
-                dateInterval: null
-#        -
-#            identifier: metas
-#            type: novaseometas
-#            name: Metas
-#            description: 'Metas for Search Engine Optimizations'
-#            required: false
-#            searchable: false
-#            info-collector: false
-#            disable-translation: false
-#            category: metadata
-#            position: 100
-
-# Place list content type
--
-    type: content_type
-    mode: create
-    content_type_group: Content
-    identifier: place_list
-    name: 'Place list'
-    description: 'Here you set up a structure for storing Place objects in it.'
-    name_pattern: '<name>'
-    #url_name_pattern: ''
-    is_container: true
-    attributes:
-        -
-            identifier: short_name
-            type: ezstring
-            name: 'Short name'
-            description: 'Short description.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 2
-        -
-            identifier: description
-            type: ezrichtext
-            name: Description
-            description: 'Body of text.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 3
-        -
-            identifier: image
-            type: ezimage
-            name: Image
-            description: 'Image for header'
-            required: false
-            searchable: false
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 4
-        -
-            identifier: name
-            type: ezstring
-            name: Name
-            description: 'Name of place.'
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 9
-#        -
-#            identifier: metas
-#            type: novaseometas
-#            name: Metas
-#            description: 'Metas for Search Engine Optimizations'
-#            required: false
-#            searchable: false
-#            info-collector: false
-#            disable-translation: false
-#            category: metadata
-#            position: 100
-
-# about content type
--
-    type: content_type
-    mode: create
-    content_type_group: Content
-    identifier: about
-    name: About
-    #description: ''
-    name_pattern: '<title>'
-    #url_name_pattern: ''
-    is_container: false
-    attributes:
-        -
-            identifier: title
-            type: ezstring
-            name: Title
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 1
-        -
-            identifier: image
-            type: ezimage
-            name: 'Header image'
-            #description: ''
-            required: false
-            searchable: false
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 2
-        -
-            identifier: left_column
-            type: ezrichtext
-            name: 'Left column'
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 3
-        -
-            identifier: right_column
-            type: ezrichtext
-            name: 'Right column'
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 4
-#        -
-#            identifier: metas
-#            type: novaseometas
-#            name: Metas
-#            description: 'Metas for Search Engine Optimizations'
-#            required: false
-#            searchable: false
-#            info-collector: false
-#            disable-translation: false
-#            category: metadata
-#            position: 100
-
-# subscribe content type
--
-    type: content_type
-    mode: create
-    content_type_group: Content
-    identifier: subscribe
-    name: Subscribe
-    #description: ''
-    name_pattern: '<title>'
-    #url_name_pattern: ''
-    is_container: false
-    attributes:
-        -
-            identifier: image
-            type: ezimage
-            name: 'Header image'
-            #description: ''
-            required: false
-            searchable: false
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 1
-        -
-            identifier: title
-            type: ezstring
-            name: Title
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 2
-        -
-            identifier: description
-            type: ezrichtext
-            name: Description
-            #description: ''
-            required: false
-            searchable: true
-            info-collector: false
-            disable-translation: false
-            category: content
-            position: 3
-#        -
-#            identifier: metas
-#            type: novaseometas
-#            name: Metas
-#            description: 'Metas for Search Engine Optimizations'
-#            required: false
-#            searchable: false
-#            info-collector: false
-#            disable-translation: false
-#            category: metadata
-#            position: 100
 
 # delete previous file content type
 -
@@ -919,24 +586,25 @@
             disable-translation: false
             category: content
             position: 3
-#        -
-#            identifier: tags
-#            type: eztags
-#            name: tags
-#            description: {  }
-#            required: false
-#            searchable: true
-#            info-collector: false
-#            disable-translation: false
-#            category: content
-#            position: 5
-#            field-settings:
-#                hideRootTag: false
-#                editView: Default
+    #        -
+    #            identifier: tags
+    #            type: eztags
+    #            name: tags
+    #            description: {  }
+    #            required: false
+    #            searchable: true
+    #            info-collector: false
+    #            disable-translation: false
+    #            category: content
+    #            position: 5
+    #            field-settings:
+    #                hideRootTag: false
+    #                editView: Default
     references:
         -
             identifier: ref_content_type_id__file
             attribute: content_type_id
+
 
 # video content type
 -
@@ -1006,52 +674,27 @@
     type: content
     mode: update
     content_type: folder
-    #parent_location: 1
     match:
         location_id: 2
     section: reference:ref_section__standard
     owner: 14
     attributes:
-        name: Explore Tastes and Places of the World
-        short_name: Home
-        short_description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0-variant ezpublish-1.0"/>'
+        name: Sites
+        short_name: Sites
         description: >- #json
             <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
                      xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
                      xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
             </section>
-        show_children: false
-        image: 'vendor/ezsystems/ezplatform-demo-assets/images/home/food-travel-camp-fire.jpg'
-        #tags:
-        #metas:
+        image: null
     references:
         -
-            identifier: ref_location_folder__home
+            identifier: ref_location_folder__sites
             attribute: location_id
         -
-            identifier: ref_content_folder__home
+            identifier: ref_content_folder__sites
             attribute: content_id
 
-## Gallery content
-
-# / Media / Gallery
--
-    type: content
-    mode: create
-    content_type: gallery
-    parent_location: 43 #  / Media
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Gallery
-        description: Simple Gallery
-    references:
-        -
-            identifier: ref_location_gallery__media__gallery
-            attribute: location_id
-        -
-            identifier: ref_content_gallery__media__gallery
-            attribute: content_id
 
 ## Folder
 
@@ -1070,318 +713,6 @@
     references:
         -
             identifier: ref_folder__media__files__form_uploads
-            attribute: location_id
-
-# folder: / Media / App
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: 43 #  / Media /
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: App
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__app
-            attribute: location_id
-
-# folder: / Media / App / Demo
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__app  #  / Media / App
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Demo
-        show_children: true
-        description: '<section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para>Images used for the application</para></section>'
-    references:
-        -
-            identifier: ref_folder__media__app__demo
-            attribute: location_id
-        -
-            identifier: ref_pathstring__media__app__demo
-            attribute: path
-
-# folder: / Media / App / Users
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__app  #  / Media / App
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Users
-        show_children: false
-    references:
-        -
-            identifier: ref_folder__media__app__users
-            attribute: location_id
-        -
-            identifier: ref_pathstring__media__app__users
-            attribute: path
-
-# folder: / Media / Images / Places
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: 51  #  / Media / Images
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Places
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places
-            attribute: location_id
-
-
-# folder: / Media / Images / Places / Amsterdam
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Amsterdam
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__amsterdam
-            attribute: location_id
-
-# folder: / Media / Images / Places / Anchorage
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Anchorage
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__anchorage
-            attribute: location_id
-
-# folder: / Media / Images / Places / Brooklyn
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Brooklyn
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__brooklyn
-            attribute: location_id
-
-# folder: / Media / Images / Places / Kochin
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Kochin
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__kochin
-            attribute: location_id
-
-# folder: / Media / Images / Places / Oslo
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Oslo
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__oslo
-            attribute: location_id
-
-# folder: / Media / Images / Places / Santo Domingo
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Santo Domingo
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__santo_domingo
-            attribute: location_id
-
-# folder: / Media / Images / Places / Valencia
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__places
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Valencia
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__places__valencia
-            attribute: location_id
-
-# folder: / Media / Images / Tastes
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: 51  #  / Media / Images
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Tastes
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Ethiopian Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Ethiopian Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__ethiopian_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Israeli Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Israeli Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__israeli_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Jamaican Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Jamaican Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__jamaican_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Mexican Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Mexican Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__mexican_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Norwegian Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Norwegian Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__norwegian_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Polish Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Polish Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__polish_cuisine
-            attribute: location_id
-
-# folder: / Media / Images / Tastes / Thai Cuisine
--
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_folder__media__images__tastes
-    section: reference:ref_section__media
-    owner: 14
-    attributes:
-        name: Thai Cuisine
-        show_children: true
-    references:
-        -
-            identifier: ref_folder__media__images__tastes__thai_cuisine
             attribute: location_id
 
 -

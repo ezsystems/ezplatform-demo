@@ -1,0 +1,113 @@
+-
+    type: reference
+    mode: load
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true
+
+#inspiration_list content type
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: inspiration_list
+    name: 'Inspirations List'
+    description: ''
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: true
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+
+#inspiration content type
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: inspiration
+    name:
+        eng-GB: Inspiration
+    description: {  }
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: false
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: intro
+            type: eztext
+            name:
+                eng-GB: Intro
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: description
+            type: eztext
+            name:
+                eng-GB: Description
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings:
+                textRows: 10
+            validator-configuration: {  }
+        -
+            identifier: Image
+            type: ezimageasset
+            name:
+                eng-GB: Image
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 4
+            field-settings: {  }
+            validator-configuration: {  }
+
+-
+    type: reference
+    mode: save
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true

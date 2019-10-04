@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\Pagerfanta\MaisonTemplate: ~
+
+    Pagerfanta\View\DefaultView:
+        public: false
+        arguments:
+            - '@App\Pagerfanta\MaisonTemplate'
+        tags:
+            - { name: 'pagerfanta.view', alias: 'maison_template' }

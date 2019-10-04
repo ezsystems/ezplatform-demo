@@ -1,0 +1,49 @@
+.card {
+    border: none;
+
+    &:hover img {
+        transform: scale(1.2);
+    }
+    &__image {
+        height: 320px;
+        overflow: hidden;
+        border-radius: 8px;
+
+        img {
+            width: 555px;
+            transform-origin: 50% 65%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &.img-fluid-container {
+            img {
+                height: 320px;
+            }
+        }
+    }
+    &__text {
+        width: 95%;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        color: $grey-light;
+        padding: 24px 28px;
+        position: relative;
+        bottom: 75px;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 31px;
+        margin-bottom: 5px;
+    }
+    &__desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__link {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

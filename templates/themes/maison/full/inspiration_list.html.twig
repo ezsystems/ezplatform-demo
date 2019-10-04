@@ -1,0 +1,46 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) ~ " - " ~ content.contentInfo.publishedDate|localizeddate('short', 'short', app.request.locale) %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+<section class="page">
+    <div class="banner banner--full-width">
+        <div class="banner__image">
+            <figure class="ezimage-field">
+                <img src="{{ asset('assets/images/inspiration-banner.jpg') }}">
+            </figure>
+        </div>
+        <div class="banner__title container text-center">
+            <h1 class="banner__heading">
+                {{ ez_render_field(content, 'name') }}
+            </h1>
+        </div>
+    </div>
+    <div class="container">
+        {% include '@ezdesign/parts/inspirations-menu.html.twig' %}
+        <div class="row">
+            {% if inspirations is defined and inspirations|length > 0  %}
+                {% for inspiration in inspirations %}
+                    <div class="col-md-6">
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            locationId: inspiration.contentInfo.mainLocationId,
+                            viewType: 'card'
+                        })) }}
+                    </div>
+                {% endfor %}
+                {% if inspirations.haveToPaginate() %}
+                    <div class="col-12">
+                        {{ pagerfanta(inspirations, 'maison_template', {
+                            routeName: location,
+                            routeParams: ezplatform.requestStack.masterRequest.query.all
+                        }) }}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

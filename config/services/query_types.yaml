@@ -7,13 +7,9 @@ services:
     App\QueryType\:
         resource: '../../src/QueryType/*'
 
-    eZ\Publish\Core\QueryType\QueryType: '@App\QueryType\BlockQueryType'
-
     App\QueryType\MenuQueryType:
         arguments:
             $languages: '%languages%'
-
-    App\QueryType\BlockQueryType: ~
 
     App\QueryType\ChildrenQueryType:
         tags:

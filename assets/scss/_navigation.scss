@@ -1,0 +1,52 @@
+.navbar {
+    &--main-menu {
+        .nav-item {
+            &.active {
+                .nav-link {
+                    color: $blue-light;
+                }
+            }
+            &:last-child .nav-link {
+                padding-right: 0.5em;
+            }
+        }
+        .nav-link {
+            font-size: 17px;
+            line-height: 28px;
+            color: $grey-dark;
+            font-weight: 500;
+            padding-left: 1em;
+            padding-right: 1em;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+    }
+    &--carousel-nav {
+        max-width: 1072px;
+        height: 224px;
+        margin: -130px auto 80px;
+        padding: 0 48px;
+        position: relative;
+        z-index: 2;
+        background-color: $white;
+        border-radius: 8px;
+    }
+    &--footer-nav {
+        .navbar-nav {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .nav-link {
+            color: $grey-light;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+    }
+}

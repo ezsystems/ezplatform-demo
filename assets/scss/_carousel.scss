@@ -1,0 +1,113 @@
+$carousel: '.carousel';
+
+#{($carousel)}__menu-item {
+    max-width: 128px;
+    height: 128px;
+    border-radius: 8px;
+    border: 1px solid #e9e9e9;
+    margin: 0 8px;
+    overflow: hidden;
+
+    &:hover {
+        border-color: $blue-light;
+        color: $blue-light;
+    }
+}
+
+@media (max-width: 768px) {
+    #{($carousel)}--menu {
+        #{($carousel)}-inner {
+            #{($carousel)}-item {
+                & > div {
+                    display: none;
+                }
+
+                & > div:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+#{($carousel)}--menu {
+    #{($carousel)} {
+        &-inner {
+            padding-left: 55px;
+        }
+        &-item {
+            &.active,
+            &-next,
+            &-prev {
+                display: flex;
+            }
+        }
+        &-control {
+            &-next,
+            &-prev {
+                border: 1px solid #e9e9e9;
+                border-radius: 8px;
+                width: 48px;
+                background-color: $white;
+                opacity: 1;
+                color:  #e9e9e9;
+
+                &:hover {
+                    border-color: $blue-light;
+                    color: $blue-light;
+                }
+            }
+        }
+    }
+}
+
+/* medium - display 4  */
+@media (min-width: 768px) {
+    #{($carousel)}--menu {
+        #{($carousel)}-inner {
+            #{($carousel)}-item {
+                &-right.active,
+                &-next {
+                    transform: translateX(25%);
+                }
+                &-left.active,
+                &-prev {
+                    transform: translateX(-25%);
+                }
+            }
+        }
+    }
+}
+
+/* large - display 6 */
+@media (min-width: 992px) {
+    #{($carousel)}--menu {
+        #{($carousel)}-inner {
+            #{($carousel)} {
+                &-item {
+                    &-right.active,
+                    &-next {
+                        transform: translateX(15.580%);
+                        overflow: hidden;
+                    }
+                    &-left.active,
+                    &-prev {
+                        transform: translateX(-15.580%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#{($carousel)}--menu {
+    #{($carousel)}-inner {
+        #{($carousel)} {
+            &-item {
+                &-right, &-left {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
