@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Exception;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -75,7 +76,7 @@ final class ContactFormController
                     return new RedirectResponse(
                         $this->router->generate('app.submitted')
                     );
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                     //Todo add flash message to notify the user
                 }
             }

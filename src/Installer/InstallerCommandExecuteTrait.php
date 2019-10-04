@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace App\Installer;
 
+use RuntimeException;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -41,7 +42,7 @@ trait InstallerCommandExecuteTrait
     {
         $phpFinder = new PhpExecutableFinder();
         if (!$phpPath = $phpFinder->find(false)) {
-            throw new \RuntimeException('The php executable could not be found, add it to your PATH environment variable and try again');
+            throw new RuntimeException('The php executable could not be found, add it to your PATH environment variable and try again');
         }
 
         // We don't know which php arguments where used so we gather some to be on the safe side
@@ -73,7 +74,7 @@ trait InstallerCommandExecuteTrait
         $process = new Process($php . ' ' . $console . ' ' . $cmd, null, null, null, $timeout);
         $process->run(function ($type, $buffer) use ($output) { $output->write($buffer, false); });
         if (!$process->isSuccessful()) {
-            throw new \RuntimeException(sprintf('An error occurred when executing the "%s" command.', escapeshellarg($cmd)));
+            throw new RuntimeException(sprintf('An error occurred when executing the "%s" command.', escapeshellarg($cmd)));
         }
     }
 }

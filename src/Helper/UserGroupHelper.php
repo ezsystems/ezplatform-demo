@@ -11,6 +11,8 @@ namespace App\Helper;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use eZ\Publish\API\Repository\Repository as RepositoryInterface;
 use eZ\Publish\API\Repository\Values\User\User as ApiUser;
+use function count;
+use function is_object;
 
 final class UserGroupHelper
 {
@@ -43,7 +45,7 @@ final class UserGroupHelper
      */
     public function isCurrentUserInOneOfTheGroups(array $userGroupsLocationIds): bool
     {
-        return 0 !== \count(array_intersect($this->getCurrentUserGroupsIds(), $userGroupsLocationIds));
+        return 0 !== count(array_intersect($this->getCurrentUserGroupsIds(), $userGroupsLocationIds));
     }
 
     /**
@@ -57,7 +59,7 @@ final class UserGroupHelper
     {
         $token = $this->tokenStorage->getToken();
 
-        if (!$token || !\is_object($token->getUser())) {
+        if (!$token || !is_object($token->getUser())) {
             return [];
         }
 

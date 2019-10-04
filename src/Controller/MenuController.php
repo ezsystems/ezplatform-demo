@@ -62,7 +62,7 @@ final class MenuController
      * @throws \Twig\Error\Error
      * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
      */
-    public function getChildNodesAction($template, $pathString = null): Response
+    public function getChildNodesAction(string $template, ?string $pathString = null): Response
     {
         $query = $this->menuQueryType->getQuery([
             'parent_location_id' => $this->topMenuParentLocationId,
