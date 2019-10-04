@@ -215,7 +215,7 @@
     attributes:
         signature: Yura
         image:
-            path: 'vendor/ezsystems/ezplatform-demo-assets/public/var/site/storage/images/users/Yura_Rajzer.jpg'
+            path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Yura_Rajzer.jpg'
             filename: Yura_Rajzer.jpg
             alternativeText: 'Yura Rajzer'
 
@@ -243,7 +243,7 @@
      attributes:
          signature: Jessica
          image:
-             path: 'vendor/ezsystems/ezplatform-demo-assets/public/var/site/storage/images/users/Jessica_Andaya.jpg'
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Jessica_Andaya.jpg'
              filename: Jessica_Andaya.jpg
              alternativeText: 'Jessica Andaya'
 
@@ -271,7 +271,7 @@
      attributes:
          signature: Anil
          image:
-             path: 'vendor/ezsystems/ezplatform-demo-assets/public/var/site/storage/images/users/Anil_Rajasthani.jpg'
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Anil_Rajasthani.jpg'
              filename: Anil_Rajasthani.jpg
              alternativeText: 'Anil Rajasthani'
 
@@ -299,7 +299,7 @@
      attributes:
          signature: Christine
          image:
-             path: 'vendor/ezsystems/ezplatform-demo-assets/public/var/site/storage/images/users/Christine_Clark.jpg'
+             path: 'vendor/ezsystems/ezplatform-demo-assets/images/users/Christine_Clark.jpg'
              filename: Christine_Clark.jpg
              alternativeText: 'Christine Clark'
 #         interests:
