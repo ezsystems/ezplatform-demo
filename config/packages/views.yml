@@ -1,4 +1,4 @@
-ezpublish:
+ezplatform:
     system:
         site_group:
             pagelayout: "@ezdesign/pagelayout.html.twig"
@@ -6,7 +6,25 @@ ezpublish:
             content_view:
                 full:
                     inspiration_list:
+                        controller: "App\\Controller\\PaginationQueryController:contentQueryAction"
                         template: "@ezdesign/full/inspiration_list.html.twig"
                         match:
-                            Id\Location: 2
-                            Identifier\ContentType: [folder]
+                            Identifier\ContentType: inspiration_list
+                        params:
+                            limit: 10
+                            query:
+                                query_type: "App:Children"
+                                parameters:
+                                    parent_location_id: "@=location.id"
+                                    included_content_type_identifier: 'inspiration'
+                                assign_results_to: inspirations
+                    inspiration:
+                        template: "@ezdesign/full/inspiration.html.twig"
+                        match:
+                            Identifier\ContentType: inspiration
+
+                card:
+                    inspiration:
+                        template: "@ezdesign/card/inspiration.html.twig"
+                        match:
+                            Identifier\ContentType: inspiration
