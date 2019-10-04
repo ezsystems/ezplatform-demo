@@ -19,7 +19,7 @@
                     color: $grey-light;
                     font-size: 14px;
                     line-height: 21px;
-                    padding: 0 1.5em;
+                    padding: 0 1.3em;
                     display: inline;
 
                     &:hover {
@@ -27,13 +27,21 @@
                     }
                     .item-store-locators-pin {
                         position: relative;
-                        top: -2px;
+                        top: 3px;
+                        font-size: 17px;
                     }
                 }
                 .nav-signin {
                     font-size: 16px;
                     line-height: 26px;
                     color: $grey-light;
+                    position: relative;
+
+                    .material-icons-outlined {
+                        font-size: 26px;
+                        position: absolute;
+                        left: -10px;
+                    }
                 }
             }
             &__user-quick-nav {
@@ -55,8 +63,8 @@
                         border-radius: 1rem;
                         padding: 0.15em 0.3em;
                         position: absolute;
-                        top: -4px;
-                        right: 5px;
+                        top: -15px;
+                        right: -3px;
                     }
                 }
             }

@@ -7,15 +7,18 @@
     &__image {
         height: 320px;
         overflow: hidden;
+        border-radius: 8px;
 
         img {
             width: 555px;
-            max-width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 8px;
             transform-origin: 50% 65%;
             transition: transform 0.5s ease-in-out;
+        }
+
+        &.img-fluid-container {
+            img {
+                height: 320px;
+            }
         }
     }
     &__text {
