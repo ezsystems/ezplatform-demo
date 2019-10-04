@@ -15,24 +15,32 @@
         </div>
         <div class="banner__title container text-center">
             <h1 class="banner__heading">
-                <span>Home Design Ideas & Tips</span>
+                {{ ez_render_field(content, 'name') }}
             </h1>
         </div>
     </div>
     <div class="container">
         {% include '@ezdesign/parts/inspirations-menu.html.twig' %}
         <div class="row">
-            {% for i in 1..3 %}
-                <div class="col-md-6">
-                    {% include '@ezdesign/block_item/card/default.html.twig' %}
-                </div>
-
-                <div class="col-md-6">
-                    {% include '@ezdesign/block_item/card/default.html.twig' %}
-                </div>
-            {% endfor %}
+            {% if inspirations is defined and inspirations|length > 0  %}
+                {% for inspiration in inspirations %}
+                    <div class="col-md-6">
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            locationId: inspiration.contentInfo.mainLocationId,
+                            viewType: 'card'
+                        })) }}
+                    </div>
+                {% endfor %}
+                {% if inspirations.haveToPaginate() %}
+                    <div class="col-12">
+                        {{ pagerfanta(inspirations, 'maison_template', {
+                            routeName: location,
+                            routeParams: ezplatform.requestStack.masterRequest.query.all
+                        }) }}
+                    </div>
+                {% endif %}
+            {% endif %}
         </div>
     </div>
-
 </section>
 {% endblock %}
