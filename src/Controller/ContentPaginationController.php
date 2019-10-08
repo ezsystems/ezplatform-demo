@@ -15,9 +15,9 @@ use eZ\Publish\API\Repository\SearchService as SearchServiceInterface;
 use eZ\Publish\API\Repository\Values\Content\Content;
 use eZ\Publish\API\Repository\Values\Content\ContentInfo;
 use eZ\Publish\API\Repository\Values\Content\Query;
-use eZ\Publish\API\Repository\Values\ValueObject;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RouterInterface;
 
 final class ContentPaginationController extends AbstractController
@@ -34,12 +34,6 @@ final class ContentPaginationController extends AbstractController
     /** @var \App\QueryType\ContentSiblingQueryType */
     private $contentSiblingQueryType;
 
-    /**
-     * @param \eZ\Publish\API\Repository\SearchService $searchService
-     * @param \eZ\Publish\API\Repository\ContentService $contentService
-     * @param \Symfony\Component\Routing\RouterInterface $router
-     * @param \App\QueryType\ContentSiblingQueryType $contentSiblingQueryType
-     */
     public function __construct(
         SearchServiceInterface $searchService,
         ContentServiceInterface $contentService,
@@ -53,22 +47,26 @@ final class ContentPaginationController extends AbstractController
     }
 
     /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     *
      * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
      * @throws \eZ\Publish\API\Repository\Exceptions\NotFoundException
      * @throws \eZ\Publish\API\Repository\Exceptions\UnauthorizedException
      */
-    public function getContentPaginationAction(Request $request)
+    public function getContentPaginationAction(Request $request): Response
     {
         $contentId = (int) $request->get('contentId');
         $content = $this->contentService->loadContentInfo($contentId);
         $parentLocationId = (int) $request->get('parentLocationId');
 
-        $previousContent = $this->getSiblingContent($content, $parentLocationId, ContentSiblingQueryParameters::PREVIOUS_CONTENT);
-        $nextContent = $this->getSiblingContent($content, $parentLocationId, ContentSiblingQueryParameters::NEXT_CONTENT);
+        $previousContent = $this->getSiblingContent(
+            $content,
+            $parentLocationId,
+            ContentSiblingQueryParameters::PREVIOUS_CONTENT
+        );
+        $nextContent = $this->getSiblingContent(
+            $content,
+            $parentLocationId,
+            ContentSiblingQueryParameters::NEXT_CONTENT
+        );
 
         return $this->render('@ezdesign/parts/content_pagination.html.twig', [
             'previous' => $previousContent ? $this->getSiblingContentURL($previousContent) : null,
@@ -87,12 +85,12 @@ final class ContentPaginationController extends AbstractController
      */
     private function getSiblingContent(ContentInfo $content, int $parentLocationId, string $siblingContentPosition): ?Content
     {
-        $queryParameters = new ContentSiblingQueryParameters([
-            'parentLocationId' => $parentLocationId,
-            'modificationDate' => $content->modificationDate,
-            'operator' => $siblingContentPosition,
-            'limit' => 1
-        ]);
+        $queryParameters = new ContentSiblingQueryParameters(
+            $parentLocationId,
+            $content->modificationDate,
+            $siblingContentPosition,
+            1
+        );
 
         $query = $this->getQuery($queryParameters);
         $result = reset($this->searchService->findContent($query)->searchHits);

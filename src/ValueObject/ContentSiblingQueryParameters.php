@@ -11,11 +11,12 @@ namespace App\ValueObject;
 use eZ\Publish\API\Repository\Values\Content\Query;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator;
 use eZ\Publish\API\Repository\Values\ValueObject;
+use eZ\Publish\SPI\Exception\InvalidArgumentException;
 
 final class ContentSiblingQueryParameters extends ValueObject
 {
-    const NEXT_CONTENT = Operator::LT;
-    const PREVIOUS_CONTENT = Operator::GT;
+    public const NEXT_CONTENT = Operator::LT;
+    public const PREVIOUS_CONTENT = Operator::GT;
 
     private const ALLOWED_OPERATORS = [
         self::NEXT_CONTENT,
@@ -37,25 +38,30 @@ final class ContentSiblingQueryParameters extends ValueObject
     /** @var string */
     public $operator;
 
-    /**
-     * @return int
-     */
+    public function __construct(
+        int $parentLocationId,
+        \DateTime $modificationDate,
+        string $operator,
+        int $limit
+    ) {
+        parent::__construct([
+            'parentLocationId' => $parentLocationId,
+            'modificationDate' => $modificationDate,
+            'operator' => $this->isAllowedOperator($operator) ? $operator : null,
+            'limit' => $limit,
+        ]);
+    }
+
     public function getParentLocationId(): int
     {
         return $this->parentLocationId;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getModificationDate(): \DateTime
     {
         return $this->modificationDate;
     }
 
-    /**
-     * @return string
-     */
     public function getSortDirection(): string
     {
         if (!$this->sortDirection) {
@@ -65,35 +71,27 @@ final class ContentSiblingQueryParameters extends ValueObject
         return $this->sortDirection;
     }
 
-    /**
-     * @return int
-     */
     public function getLimit(): int
     {
         return $this->limit;
     }
 
-    /**
-     * @return string
-     */
     public function getOperator(): string
     {
         return $this->operator;
     }
 
     /**
-     * @param string $operator
-     *
-     * @return ContentSiblingQueryParameters
+     * @throws \eZ\Publish\SPI\Exception\InvalidArgumentException
      */
-    public function setOperator(string $operator): ContentSiblingQueryParameters
+    private function isAllowedOperator(string $operator): bool
     {
         if (!in_array($operator, self::ALLOWED_OPERATORS)) {
-            $this->operator = self::NEXT_CONTENT;
-        } else {
-            $this->operator = $operator;
+            throw new InvalidArgumentException('$operator', sprintf(
+                'Not allowed query operator: %s', $operator
+            ));
         }
 
-        return $this;
+        return true;
     }
 }

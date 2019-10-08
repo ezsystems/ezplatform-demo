@@ -14,8 +14,6 @@ use eZ\Publish\Core\QueryType\QueryType;
 final class ContentSiblingQueryType implements QueryType
 {
     /**
-     * @param array $parameters
-     *
      * @return \eZ\Publish\API\Repository\Values\Content\Query
      */
     public function getQuery(array $parameters = []): Query
@@ -32,9 +30,6 @@ final class ContentSiblingQueryType implements QueryType
         return $query;
     }
 
-    /**
-     * @return array
-     */
     public function getSupportedParameters(): array
     {
         return [
@@ -46,17 +41,12 @@ final class ContentSiblingQueryType implements QueryType
         ];
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'App:ContentSibling';
     }
 
     /**
-     * @param array $parameters
-     *
      * @return \eZ\Publish\API\Repository\Values\Content\Query\Criterion[]
      */
     private function prepareCriteria(array $parameters = []): array
