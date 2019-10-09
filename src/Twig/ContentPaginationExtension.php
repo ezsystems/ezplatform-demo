@@ -20,7 +20,7 @@ use Twig\Environment;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
-class ContentPaginationExtension extends AbstractExtension
+final class ContentPaginationExtension extends AbstractExtension
 {
     private const DEFAULT_TEMPLATE = '@ezdesign/pagination/default_content_pagination.html.twig';
 

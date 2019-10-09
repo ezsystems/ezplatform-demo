@@ -24,10 +24,6 @@ class PaginationQueryController
     /** @var \eZ\Publish\Core\QueryType\ContentViewQueryTypeMapper */
     private $contentViewQueryTypeMapper;
 
-    /**
-     * @param \eZ\Publish\API\Repository\SearchService $searchService
-     * @param \eZ\Publish\Core\QueryType\ContentViewQueryTypeMapper $contentViewQueryTypeMapper
-     */
     public function __construct(
         SearchServiceInterface $searchService,
         ContentViewQueryTypeMapperInterface $contentViewQueryTypeMapper
