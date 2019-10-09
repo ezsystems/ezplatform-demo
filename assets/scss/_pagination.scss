@@ -1,4 +1,5 @@
 $pagination: '.pagination';
+$content-pagination: '.content-pagination';
 
 #{($pagination)} {
     justify-content: center;
@@ -53,6 +54,36 @@ $pagination: '.pagination';
                 background-color: $grey-lighter;
                 border: 1px solid $grey-lighter;
                 color: $white;
+            }
+        }
+    }
+}
+
+#{($content-pagination)} {
+    &__container {
+        padding: 14px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__link {
+        color: $white;
+        font-size: 21px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: #E9E9E9;
+            text-decoration: none;
+        }
+
+        #{($content-pagination)}__icon {
+            font-size: 50px;
+
+            &--next {
+                transform: rotate(180deg);
             }
         }
     }
