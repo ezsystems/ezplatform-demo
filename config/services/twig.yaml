@@ -15,3 +15,7 @@ services:
             $allowedUserGroupsLocationIds: '%app.premium_content.allowed_user_groups.location_ids%'
         tags:
             - { name: twig.extension }
+
+    App\Twig\ContentPaginationExtension:
+        tags:
+            - { name: twig.extension }

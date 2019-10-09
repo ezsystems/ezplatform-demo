@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Twig;
 
 use App\QueryType\ContentSiblingQueryType;
 use App\ValueObject\ContentSiblingQueryParameters;
@@ -15,13 +15,15 @@ use eZ\Publish\API\Repository\SearchService as SearchServiceInterface;
 use eZ\Publish\API\Repository\Values\Content\Content;
 use eZ\Publish\API\Repository\Values\Content\ContentInfo;
 use eZ\Publish\API\Repository\Values\Content\Query;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\RouterInterface;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-final class ContentPaginationController extends AbstractController
+class ContentPaginationExtension extends AbstractExtension
 {
+    private const DEFAULT_TEMPLATE = '@ezdesign/pagination/default_content_pagination.html.twig';
+
     /** @var \eZ\Publish\API\Repository\SearchService */
     private $searchService;
 
@@ -34,41 +36,52 @@ final class ContentPaginationController extends AbstractController
     /** @var \App\QueryType\ContentSiblingQueryType */
     private $contentSiblingQueryType;
 
+    /** @var \Twig\Environment */
+    private $environment;
+
     public function __construct(
         SearchServiceInterface $searchService,
         ContentServiceInterface $contentService,
         RouterInterface $router,
-        ContentSiblingQueryType $contentSiblingQueryType
+        ContentSiblingQueryType $contentSiblingQueryType,
+        Environment $environment
     ) {
         $this->searchService = $searchService;
         $this->contentService = $contentService;
         $this->router = $router;
         $this->contentSiblingQueryType = $contentSiblingQueryType;
+        $this->environment = $environment;
+    }
+
+    public function getFunctions(): array
+    {
+        return [
+            new TwigFunction('content_pagination', [$this, 'contentPagination'], ['is_safe' => ['html']]),
+        ];
     }
 
     /**
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
      * @throws \eZ\Publish\API\Repository\Exceptions\NotFoundException
      * @throws \eZ\Publish\API\Repository\Exceptions\UnauthorizedException
      */
-    public function getContentPaginationAction(Request $request): Response
+    public function contentPagination(string $template, Content $content, int $parentLocationId)
     {
-        $contentId = (int) $request->get('contentId');
-        $content = $this->contentService->loadContentInfo($contentId);
-        $parentLocationId = (int) $request->get('parentLocationId');
-
         $previousContent = $this->getSiblingContent(
-            $content,
+            $content->contentInfo,
             $parentLocationId,
             ContentSiblingQueryParameters::PREVIOUS_CONTENT
         );
         $nextContent = $this->getSiblingContent(
-            $content,
+            $content->contentInfo,
             $parentLocationId,
             ContentSiblingQueryParameters::NEXT_CONTENT
         );
 
-        return $this->render('@ezdesign/parts/content_pagination.html.twig', [
+        return $this->environment->render($this->getTemplate($template), [
             'previous' => $previousContent ? $this->getSiblingContentURL($previousContent) : null,
             'next' => $nextContent ? $this->getSiblingContentURL($nextContent) : null,
         ]);
@@ -83,8 +96,11 @@ final class ContentPaginationController extends AbstractController
      *
      * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
      */
-    private function getSiblingContent(ContentInfo $content, int $parentLocationId, string $siblingContentPosition): ?Content
-    {
+    private function getSiblingContent(
+        ContentInfo $content,
+        int $parentLocationId,
+        string $siblingContentPosition
+    ): ?Content {
         $queryParameters = new ContentSiblingQueryParameters(
             $parentLocationId,
             $content->modificationDate,
@@ -93,7 +109,7 @@ final class ContentPaginationController extends AbstractController
         );
 
         $query = $this->getQuery($queryParameters);
-        $result = reset($this->searchService->findContent($query)->searchHits);
+        $result = current($this->searchService->findContent($query)->searchHits);
 
         return $result->valueObject ?? null;
     }
@@ -116,13 +132,16 @@ final class ContentPaginationController extends AbstractController
 
     /**
      * @param \eZ\Publish\API\Repository\Values\Content\Content $content
-     *
-     * @return string
      */
     private function getSiblingContentURL(Content $content): string
     {
         return $this->router->generate('ez_urlalias', [
             'locationId' => $content->getVersionInfo()->getContentInfo()->mainLocationId,
         ]);
+    }
+
+    private function getTemplate(?string $template = null): string
+    {
+        return $this->environment->getLoader()->exists($template) ? $template : self::DEFAULT_TEMPLATE;
     }
 }

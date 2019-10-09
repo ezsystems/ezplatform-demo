@@ -1,0 +1,17 @@
+<div class="content-pagination bg-blue-light">
+    <div class="container content-pagination__container">
+        {% if previous is defined and previous is not null %}
+            <a href="{{ previous }}" class="content-pagination__link">
+                <i class="material-icons content-pagination__icon content-pagination__icon--prev">keyboard_backspace</i>
+                Previous Idea
+            </a>
+        {% endif %}
+        <a href="/inspirations" class="content-pagination__link">Back to Inspirations</a>
+        {% if next is defined and next is not null %}
+            <a href="{{ next }}" class="content-pagination__link">
+                Next Idea
+                <i class="material-icons content-pagination__icon content-pagination__icon--next">keyboard_backspace</i>
+            </a>
+        {% endif %}
+    </div>
+</div>
