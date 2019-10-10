@@ -1,6 +1,8 @@
 $article: '.article';
 
 #{($article)} {
+    margin-bottom: 80px;
+
     &--full-page {
         #{($article)} {
             &__title {

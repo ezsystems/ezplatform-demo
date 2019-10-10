@@ -1,0 +1,8 @@
+<div class="content-pagination">
+    {% if previous is defined and previous is not null %}
+        <a href="{{ previous }}">Previous</a>
+    {% endif %}
+    {% if next is defined and next is not null %}
+        <a href="{{ next }}">Next</a>
+    {% endif %}
+</div>

@@ -6,12 +6,10 @@ services:
 
     App\Twig\ContentInfoByLocationIdExtension: ~
 
-    App\Twig\SearchResultExtractorExtension:
-        tags:
-            - { name: twig.extension }
+    App\Twig\SearchResultExtractorExtension: ~
 
     App\Twig\PremiumContentExtension:
         arguments:
             $allowedUserGroupsLocationIds: '%app.premium_content.allowed_user_groups.location_ids%'
-        tags:
-            - { name: twig.extension }
+
+    App\Twig\ContentPaginationExtension: ~
