@@ -114,7 +114,7 @@ ezplatform:
             design: main
             content:
                 tree_root:
-                    location_id: 70
+                    location_id: 56
 
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
