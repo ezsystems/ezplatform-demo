@@ -16,7 +16,7 @@ use eZ\Publish\Core\QueryType\ContentViewQueryTypeMapper as ContentViewQueryType
 use Pagerfanta\Pagerfanta;
 use Symfony\Component\HttpFoundation\Request;
 
-class PaginationQueryController
+final class PaginationQueryController
 {
     /** @var \eZ\Publish\API\Repository\SearchService */
     private $searchService;

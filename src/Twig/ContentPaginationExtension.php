@@ -22,7 +22,7 @@ use Twig\TwigFunction;
 
 final class ContentPaginationExtension extends AbstractExtension
 {
-    private const DEFAULT_TEMPLATE = '@ezdesign/pagination/default_content_pagination.html.twig';
+    private const DEFAULT_TEMPLATE = '@standard/pagination/default.html.twig';
 
     /** @var \eZ\Publish\API\Repository\SearchService */
     private $searchService;
@@ -65,10 +65,8 @@ final class ContentPaginationExtension extends AbstractExtension
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
-     * @throws \eZ\Publish\API\Repository\Exceptions\NotFoundException
-     * @throws \eZ\Publish\API\Repository\Exceptions\UnauthorizedException
      */
-    public function contentPagination(string $template, Content $content, int $parentLocationId)
+    public function contentPagination(string $template, Content $content, int $parentLocationId): string
     {
         $previousContent = $this->getSiblingContent(
             $content->contentInfo,
