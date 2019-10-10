@@ -1,0 +1,998 @@
+-
+    type: reference
+    mode: load
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true
+
+#Inspiration list content
+-
+    type: content
+    mode: create
+    content_type: inspiration_list
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 233d1bc052718df7f24d1aaf3b7f7aab
+    location_remote_id: eca892579845cf3c0b45fac350987e5e
+    section: reference:ref_section__standard
+    owner: 14
+    always_available: true
+    attributes:
+        name: Inspirations
+    references:
+        -
+            identifier: ref_location_folder__sites__maison__inspirations
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison__inspirations
+            attribute: content_id
+
+#Inspiration content
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 09b6bb2ebffda99bcc9b1e88a01b8aa6
+    location_remote_id: ad49eb621e3427542a88f98ae0900c20
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930271
+    publication_date: 1564761554
+    always_available: true
+    attributes:
+        name: 'Kitchen remodel tips'
+        intro: 'This elegant kitchen showcases a u-shaped wooden floor with brown and medium tones.  The look is completed with the use of white cabinets, an island, granite counters, and raised-panels all offset with a classic beige splashback.'
+        description: "This elegant kitchen showcases a u-shaped wooden floor with brown and medium tones.  The look is completed with the use of white cabinets, an island, granite counters, and raised-panels all offset with a classic beige splashback.\r\n\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__kitchen_remodeling
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: db6ea604c03c7c4e40ee77c54f0007c2
+    location_remote_id: b2726e3ae51e71aa4962033461795c5a
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930282
+    publication_date: 1564761582
+    always_available: true
+    attributes:
+        name: 'How to organize your office space at home'
+        intro: 'Making a feature of a traditional built-in desk in combination with medium and dark toned wood floor and gray walls sets the perfect scene for this study in San Francisco. For most of us, the perfect home means something that reflects our personality and needs, where everything works how we want it to – a place where it feels good to be.'
+        description: "Making a feature of a traditional built-in desk in combination with medium and dark toned wood floor and gray walls sets the perfect scene for this study in San Francisco. For most of us, the perfect home means something that reflects our personality and needs, where everything works how we want it to – a place where it feels good to be.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green.\""
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: b1c6c27af254c8da7a1ba7e3bc413dc6
+    location_remote_id: 4be960258f8550b8df246f0029115ccd
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930291
+    publication_date: 1564761601
+    always_available: true
+    attributes:
+        name: 'Luxurious Living Room for family'
+        intro: 'With a farmhouse sink, white glass-fronted cabinets and classic light wood flooring this kitchen is a great example of an eat-in design.  The kitchen, in Kansas City, also keeps the feeling streamlined and modern with stainless steel appliances, white subway tile splashbacks, and gray counter-tops.'
+        description: "With a farmhouse sink, white glass-fronted cabinets and classic light wood flooring this kitchen is a great example of an eat-in design.  The kitchen, in Kansas City, also keeps the feeling streamlined and modern with stainless steel appliances, white subway tile splashbacks, and gray counter-tops.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green. \""
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 1cf69c98abba881613120d7097c7e1ae
+    location_remote_id: 0c1723fcdc8ed0d8a1c100bc321a8da0
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930305
+    publication_date: 1564761624
+    always_available: true
+    attributes:
+        name: 'Custom master bathroom'
+        intro: 'Minneapolis – this master bathroom uses dark wooden and gray floors paired with white walls for a timeless traditional bathroom.'
+        description: "Minneapolis – this master bathroom uses dark wooden and gray floors paired with white walls for a timeless traditional bathroom.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__bathroom
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 83f06d9042d0e1e36a1115ffb786f4c7
+    location_remote_id: 4b63bcb0a79c2a1db62a8aef46690f10
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930314
+    publication_date: 1564761642
+    always_available: true
+    attributes:
+        name: 'Bedroom colors according to science'
+        intro: 'It is well known that colors have a big effect on our moods so we thought we would put some of the studies into practice.  Although we cannot guarantee how well you will sleep we can give you some great ideas for a colorful bedroom.'
+        description: "It is well known that colors have a big effect on our moods so we thought we would put some of the studies into practice.  Although we cannot guarantee how well you will sleep we can give you some great ideas for a colorful bedroom.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__bedroom
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 86d5082124f6fe18945907103cef19ab
+    location_remote_id: e835e7cf8d56721f18cb515716543771
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930323
+    publication_date: 1564761659
+    always_available: true
+    attributes:
+        name: 'A workspace for creative collaboration'
+        intro: 'New, modern working practices are flexible and often involve working for home.  If you need to plan a home office read on – we’ve got some great ideas for a productive workspace at home, and in the office.'
+        description: "New, modern working practices are flexible and often involve working for home.  If you need to plan a home office read on – we’ve got some great ideas for a productive workspace at home, and in the office. \r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: b5b943a43db8060821903e4f5bcc4d8a
+    location_remote_id: 7b0b15c5060ae69b89515c6ce28226a4
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930331
+    publication_date: 1564761683
+    always_available: true
+    attributes:
+        name: 'Transitional kitchen inspiration'
+        intro: 'This inspirational remodeled kitchen in Austin pairs a light wood with the beige floor.  Traditional features like a farmhouse sink, coupled with classic white shaker cabinets and offset with gray backsplash, ceramic tiling, and black counter-tops gives a timeless yet modern feel.'
+        description: "This inspirational remodeled kitchen in Austin pairs a light wood with the beige floor.  Traditional features like a farmhouse sink, coupled with classic white shaker cabinets and offset with gray backsplash, ceramic tiling, and black counter-tops gives a timeless yet modern feel.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__kitchen_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 73fdc6e378ebe638715507b6e7258f98
+    location_remote_id: 12980cb206a180c15738eef397a86d24
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930340
+    publication_date: 1564761732
+    always_available: true
+    attributes:
+        name: 'Refresh your home for spring'
+        intro: 'Santa Barbara:  This design gives up to the minute style for this concrete patio, the addition of a pergola and fireplace completes the look. Now you will have everything you need to start creating that special space that you’ll be happy to call home.'
+        description: "Santa Barbara:  This design gives up to the minute style for this concrete patio, the addition of a pergola and fireplace completes the look. Now you will have everything you need to start creating that special space that you’ll be happy to call home.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 9017b7c635cc5a64ec73c8c21687d567
+    location_remote_id: bff238ab7386d21c2bbb3e966b2e6098
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930348
+    publication_date: 1564761767
+    always_available: true
+    attributes:
+        name: 'Find place for work in a busy home'
+        intro: 'Brooklinteriors. Based in Brooklyn we provide a full interior design service.  Our business is female-owned and it is our mission to expand and beautify our community by supporting local Brooklyn artists and residents.'
+        description: "Brooklinteriors. Based in Brooklyn we provide a full interior design service.  Our business is female-owned and it is our mission to expand and beautify our community by supporting local Brooklyn artists and residents.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office_3
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 24283df166f7e7645eec400cea38a221
+    location_remote_id: 0d0e882e500e4ec5b4f4e27902090784
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930359
+    publication_date: 1564761785
+    always_available: true
+    attributes:
+        name: 'Traditional Living room'
+        intro: 'Formal living room style showing traditional beige flooring shows a touch of class in Boston.'
+        description: "Formal living room style showing traditional beige flooring shows a touch of class in Boston. \r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 7584fc39502d6219d8a882d5b61b9a48
+    location_remote_id: 85baa37cdf920aad714271835c51e8b0
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930369
+    publication_date: 1564761802
+    always_available: true
+    attributes:
+        name: 'Landscape and Backyards'
+        intro: 'This beautiful brick kitchen sits under a gazebo in the backyard of this home in Orange County.'
+        description: "This beautiful brick kitchen sits under a gazebo in the backyard of this home in Orange County.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__outside
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 8d6e2f52f4807509a9a018a4f4560736
+    location_remote_id: 67ac672d72b1e6a48481b53e4f088053
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930378
+    publication_date: 1564761816
+    always_available: true
+    attributes:
+        name: 'An architect workspace'
+        intro: 'Using your home as an office and showroom makes organization key – keep it modern and functional in a way that works for you.'
+        description: "Using your home as an office and showroom makes organization key – keep it modern and functional in a way that works for you. \r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office_4
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 63d0f2c99b9f948dcbc627a9544092ec
+    location_remote_id: defdd119e496c0310ba46ac3f379669c
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930387
+    publication_date: 1564761838
+    always_available: true
+    attributes:
+        name: 'Exterior Patio Dining Under Trellis'
+        intro: 'This pergola gives that something extra to a classic patio kitchen in San Francisco. Plus, we don’t want to have to spend a fortune to get it!  We have collected tons of ideas ranging from home decoration, to furniture and home organization, right through to tips and inspirations on how to get a green home.'
+        description: "This pergola gives that something extra to a classic patio kitchen in San Francisco. Plus, we don’t want to have to spend a fortune to get it!  We have collected tons of ideas ranging from home decoration, to furniture and home organization, right through to tips and inspirations on how to get a green home.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__outside_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 67f63ba75e4ae8eade6fbefc9e0178e5
+    location_remote_id: f348052603872d8be96ca266fa33e3fd
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930398
+    publication_date: 1564764492
+    always_available: true
+    attributes:
+        name: 'Master spacious bathroom'
+        intro: 'Minneapolis – this master bathroom uses dark wooden and gray floors paired with white walls for a timeless traditional bathroom.'
+        description: "Minneapolis – this master bathroom uses dark wooden and gray floors paired with white walls for a timeless traditional bathroom.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__bathroom_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 3142d573c87e5c284b41cb4abb0b5eb6
+    location_remote_id: 38de6794ae07d8c4569105fbb0c1d4a9
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930406
+    publication_date: 1565635327
+    always_available: true
+    attributes:
+        name: 'Modern Grey Kitchen'
+        intro: 'This elegant kitchen showcases a u-shaped wooden floor with brown and medium tones.  The look is completed with the use of white cabinets, an island, granite counters, and raised-panels all offset with a classic beige splashback.'
+        description: "This elegant kitchen showcases a u-shaped wooden floor with brown and medium tones.  The look is completed with the use of white cabinets, an island, granite counters, and raised-panels all offset with a classic beige splashback.\r\n\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__kitchen_3
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: f328968a32e6573a34297e6e537039db
+    location_remote_id: cbdddb63ace5d712c11dc4084eb12035
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930414
+    publication_date: 1565635459
+    always_available: true
+    attributes:
+        name: 'New idea to improve your workplace'
+        intro: 'Making a feature of a traditional built-in desk in combination with medium and dark toned wood floor and gray walls sets the perfect scene for this study in San Francisco. For most of us, the perfect home means something that reflects our personality and needs, where everything works how we want it to – a place where it feels good to be.'
+        description: "Making a feature of a traditional built-in desk in combination with medium and dark toned wood floor and gray walls sets the perfect scene for this study in San Francisco. For most of us, the perfect home means something that reflects our personality and needs, where everything works how we want it to – a place where it feels good to be.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green.\""
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office_5
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: a2ad3cdf2e32501d4fdb4dce10c25382
+    location_remote_id: a2789879d3cd40d5813b40a4326db8b0
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930422
+    publication_date: 1565635620
+    always_available: true
+    attributes:
+        name: 'Woods edge living room'
+        intro: 'With a farmhouse sink, white glass-fronted cabinets and classic light wood flooring this kitchen is a great example of an eat-in design.  The kitchen, in Kansas City, also keeps the feeling streamlined and modern with stainless steel appliances, white subway tile splashbacks, and gray counter-tops.'
+        description: "With a farmhouse sink, white glass-fronted cabinets and classic light wood flooring this kitchen is a great example of an eat-in design.  The kitchen, in Kansas City, also keeps the feeling streamlined and modern with stainless steel appliances, white subway tile splashbacks, and gray counter-tops.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green. \""
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room_3
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 4f94dfddd55ef8b5b0583f833566d61b
+    location_remote_id: d7b8d72df82aa40554100aeff395276e
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930430
+    publication_date: 1565635694
+    always_available: true
+    attributes:
+        name: 'Minimalist luxury in a small and stylish bedroom'
+        intro: 'It is well known that colors have a big effect on our moods so we thought we would put some of the studies into practice.  Although we cannot guarantee how well you will sleep we can give you some great ideas for a colorful bedroom.'
+        description: "It is well known that colors have a big effect on our moods so we thought we would put some of the studies into practice.  Although we cannot guarantee how well you will sleep we can give you some great ideas for a colorful bedroom.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__bedroom_2
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 03bf7358841096fae23bea76dc78b889
+    location_remote_id: e6a3d683373309d86fcf255d6dc43e54
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930438
+    publication_date: 1565635751
+    always_available: true
+    attributes:
+        name: 'The art of cooking'
+        intro: 'This inspirational remodeled kitchen in Austin pairs a light wood with the beige floor.  Traditional features like a farmhouse sink, coupled with classic white shaker cabinets and offset with gray backsplash, ceramic tiling, and black counter-tops gives a timeless yet modern feel.'
+        description: "This inspirational remodeled kitchen in Austin pairs a light wood with the beige floor.  Traditional features like a farmhouse sink, coupled with classic white shaker cabinets and offset with gray backsplash, ceramic tiling, and black counter-tops gives a timeless yet modern feel.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__kitchen_4
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: e29eb560fc96216d41db5c0a0b012831
+    location_remote_id: 1664182f465c100e141dddd091da64fb
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930447
+    publication_date: 1565635781
+    always_available: true
+    attributes:
+        name: 'The Patio with Dining options'
+        intro: 'Santa Barbara:  This design gives up to the minute style for this concrete patio, the addition of a pergola and fireplace completes the look. Now you will have everything you need to start creating that special space that you’ll be happy to call home.'
+        description: "Santa Barbara:  This design gives up to the minute style for this concrete patio, the addition of a pergola and fireplace completes the look. Now you will have everything you need to start creating that special space that you’ll be happy to call home.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__outside
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: a7c54cb80e5fcb5d3acc70822ddcd898
+    location_remote_id: 20a02b811e98a5dccebef24c78382e51
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930455
+    publication_date: 1565635816
+    always_available: true
+    attributes:
+        name: 'Borough Heights Residence'
+        intro: 'Brooklinteriors. Based in Brooklyn we provide a full interior design service.  Our business is female-owned and it is our mission to expand and beautify our community by supporting local Brooklyn artists and residents.'
+        description: "Brooklinteriors. Based in Brooklyn we provide a full interior design service.  Our business is female-owned and it is our mission to expand and beautify our community by supporting local Brooklyn artists and residents.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room_4
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: e23f1067439f29c851b4f7a025792a90
+    location_remote_id: 62a8f442ec22465621fc554e011edb26
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930465
+    publication_date: 1565635836
+    always_available: true
+    attributes:
+        name: 'Traditional Living space'
+        intro: 'Formal living room style showing traditional beige flooring shows a touch of class in Boston.'
+        description: "Formal living room style showing traditional beige flooring shows a touch of class in Boston. \r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__living_room_5
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: dfd4a9811ef2edac0671ac940776cef4
+    location_remote_id: 4d09ff8df6c3765c3d1db833d2df947f
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930474
+    publication_date: 1565635854
+    always_available: true
+    attributes:
+        name: 'Backyards and Landscape'
+        intro: 'This beautiful brick kitchen sits under a gazebo in the backyard of this home in Orange County.'
+        description: "This beautiful brick kitchen sits under a gazebo in the backyard of this home in Orange County.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__outside_3
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 985a92bd51abf3fa5622b574043634dc
+    location_remote_id: 06ca412f9afedfdcb141179b392c593a
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930484
+    publication_date: 1565635876
+    always_available: true
+    attributes:
+        name: 'Graphic designer office ideas'
+        intro: 'Using your home as an office and showroom makes organization key – keep it modern and functional in a way that works for you.'
+        description: "Using your home as an office and showroom makes organization key – keep it modern and functional in a way that works for you. \r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__office_4
+            alternativeText: null
+-
+    type: content
+    mode: create
+    content_type: inspiration
+    parent_location: reference:ref_location_folder__sites__maison__inspirations
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 2567d911e7e8815a8794e3a1c7bdd093
+    location_remote_id: bbd588f0e2da444a5562902a1f50203a
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1566930493
+    publication_date: 1565635902
+    always_available: true
+    attributes:
+        name: 'Outdoor space for breakfast outside'
+        intro: 'This pergola gives that something extra to a classic patio kitchen in San Francisco. Plus, we don’t want to have to spend a fortune to get it!  We have collected tons of ideas ranging from home decoration, to furniture and home organization, right through to tips and inspirations on how to get a green home.'
+        description: "This pergola gives that something extra to a classic patio kitchen in San Francisco. Plus, we don’t want to have to spend a fortune to get it!  We have collected tons of ideas ranging from home decoration, to furniture and home organization, right through to tips and inspirations on how to get a green home.\r\nWe believe that homes should perfectly reflect the people who live in them – there is no such thing as a one-size-fits-all perfect home.  If your home looks how you want it, everything works how you want it too and living there makes you feel good – that is your perfect place.  And it needn’t cost you a fortune!  So you have the time to make your home exactly the way you want it we have collected lots of inspirational ideas from décor to storage, to home organization and even tips on becoming more green."
+        image:
+            destinationContentId: reference:ref_content_image__media__images__inspirations__outside_2
+            alternativeText: null
+
+#Stores content
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: b6d6b59364b780206cf68c0f2c2cd44f
+    location_remote_id: ce10486a444f510d821a11ea5142a064
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Brooklyn'
+        intro: 'Community matters. We''re invested in the areas we serve and committed to making a difference, both locally and globally. This means carrying products from local makers, empowering store managers to tailor their own inventory and improving the lives of the handcrafted artisans we work with.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>We're invested in the areas we serve and committed to making a difference, both locally and globally. This means carrying products from local makers, empowering store managers to tailor their own inventory and improving the lives of the handcrafted artisans we work with.</para></section>\n"
+        email: info@ez.no
+        country:
+            - US
+        maplocation:
+            latitude: 40.702905
+            longitude: -73.990117
+            address: 'dumbo, brooklyn'
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: true
+        workinghours:
+            entries:
+                - { day: 'Monday - Friday', from: '9:00', to: '18:00' }
+                - { day: Saturday, from: '10:00', to: '18:00' }
+        storeArea: 1000
+        floors: 1
+        contactInfo:
+            entries:
+                - { departmentName: Product, email: product@ez.no, phone: 555-39-39 }
+                - { departmentName: Design, email: product@ez.no, phone: 555-39-39 }
+                - { departmentName: Marketing, email: Marketing@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds:
+        #                - reference:ref_content_tag__sites__maison__tags__kitchen
+        #                - reference:ref_content_tag__sites__maison__tags__home_office
+        #                - reference:ref_content_tag__sites__maison__tags__living_room
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 947a258dc53ca93a9befe7a7eca3565d
+    location_remote_id: 2e1c43e783571b48078afbaa18f9a5d3
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Katowice'
+        intro: 'If you are looking for simple but stylish things, Maison is what you need.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Many of our items have a timeless quality, and most of them are made using materials from sustainable sources - therefore, although yes, you will pay for a set of plates or glasses more than in regular store, you know that the quality will be good.</para></section>\n"
+        email: noreply@ez.no
+        country:
+            - PL
+        maplocation:
+            latitude: 50.259899
+            longitude: 19.021585
+            address: katowice
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: false
+        workinghours:
+            entries: {  }
+        storeArea: 2500
+        floors: 2
+        contactInfo:
+            entries:
+                - { departmentName: Product, email: product@ez.no, phone: 555-39-39 }
+                - { departmentName: 'Quality Assurance', email: qa@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds:
+        #                - reference:ref_content_tag__sites__maison__tags__home_office
+        #                - reference:ref_content_tag__sites__maison__tags__bathroom
+        #                - reference:ref_content_tag__sites__maison__tags__bedroom
+        #                - reference:ref_content_tag__sites__maison__tags__outdoor
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 648a430f0fc610933f69dba2d453390b
+    location_remote_id: 75a5dc30f6a3e6b6a423945a1c299d20
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Krakow'
+        intro: 'We curate inspiration for the home, combining the work of artisans and designers with people and places around the world.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>Our brands offer a lifestyle inspired by high-quality products, exclusive design and</para><para>Timeless style - all based on digital design and visualization tools that provide seamless shopping and online shopping solutions.</para><para>Thanks to the special architectural aesthetics, the experimental store environment, and the online community, we interact with our customers through social networks, mobile purchases, design services, a gift register and much more.</para></section>\n"
+        email: noreply@ez.no
+        country:
+            - PL
+        maplocation:
+            latitude: 50.061947
+            longitude: 19.936856
+            address: 'Krakow, Poland'
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: true
+        workinghours:
+            entries: {  }
+        storeArea: 3500
+        floors: 3
+        contactInfo:
+            entries:
+                - { departmentName: 'Product Department', email: product@ez.no, phone: 555-39-39 }
+                - { departmentName: 'Quality Assurance', email: qa@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds: {  }
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 1dc614f33aafb330f1ad7459ffd167ca
+    location_remote_id: fa9d773699e9956ddf0bdcf02511da3f
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Cologne'
+        intro: 'Welcome to our Cologne store, here you will find current dates and offers, our opening hours and your way to us.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>From the small company that sold its goods through a mail order catalog, we become one of the most well-known interior design brands in the world.\_</para></section>\n"
+        email: noreply@ez.no
+        country:
+            - DE
+        maplocation:
+            latitude: 50.938361
+            longitude: 6.959974
+            address: Cologne
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: false
+        workinghours:
+            entries: {  }
+        storeArea: 1500
+        floors: 2
+        contactInfo:
+            entries:
+                - { departmentName: Sales, email: sales@ez.no, phone: 555-39-39 }
+                - { departmentName: Marketing, email: marketing@ez.no, phone: 555-39-39 }
+                - { departmentName: 'Human Resources', email: hr@ez.no, phone: 555-39-39 }
+                - { departmentName: IT, email: it@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds:
+        #                - reference:ref_content_tag__sites__maison__tags__kitchen
+        #                - reference:ref_content_tag__sites__maison__tags__home_office
+        #                - reference:ref_content_tag__sites__maison__tags__living_room
+        #                - reference:ref_content_tag__sites__maison__tags__beedroom
+        #                - reference:ref_content_tag__sites__maison__tags__business
+        #                - reference:ref_content_tag__sites__maison__tags__outdoor
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 3f7ce2220d347a3be713f50102efbd87
+    location_remote_id: d15e45be530854a7ad6a8d28a03a0865
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - London'
+        intro: 'We''re looking forward to seeing you in the store.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>We're looking forward to seeing you in the store. We make it easy for you to pick up, take home and assemble your furniture by yourself. If you prefer, our optional services can save you some time and energy.</para></section>\n"
+        email: noreply@ez.no
+        country:
+            - GB
+        maplocation:
+            latitude: 51.507322
+            longitude: -0.127647
+            address: 'London, UK'
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: true
+        workinghours:
+            entries: {  }
+        storeArea: 1000
+        floors: 2
+        contactInfo:
+            entries:
+                - { departmentName: Sales, email: sales@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds:
+        #                - reference:ref_content_tag__sites__maison__tags__living_room
+        #                - reference:ref_content_tag__sites__maison__tags__bathroom
+        #                - reference:ref_content_tag__sites__maison__tags__bedroom
+        #                - reference:ref_content_tag__sites__maison__tags__business
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 52c695ca21fe8322218643bc2131dfdf
+    location_remote_id: 7cf16efe7971c5517d1c48fa96abdef0
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Paris'
+        intro: 'Discover our assortment of carefully selected products for you'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>In our furniture and decoration store in Paris, discover our assortment of carefully selected products for you. Discover our solutions for fittings for a functional interior. Do not hesitate to ask our store experts for advice.</para></section>\n"
+        email: noreply@ez.no
+        country:
+            - FR
+        maplocation:
+            latitude: 48.85661
+            longitude: 2.351499
+            address: 'Paris, Fr'
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: false
+        workinghours:
+            entries: {  }
+        storeArea: 1000
+        floors: 1
+        contactInfo:
+            entries:
+                - { departmentName: Sales, email: sales@ez.no, phone: 555-39-39 }
+                - { departmentName: Marketing, email: marketing@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds:
+        #                - reference:ref_content_tag__sites__maison__tags__living_room
+        #                - reference:ref_content_tag__sites__maison__tags__bathroom
+        #                - reference:ref_content_tag__sites__maison__tags__bedroom
+        #                - reference:ref_content_tag__sites__maison__tags__business
+        video: null
+        opensince: null
+
+-
+    type: content
+    mode: create
+    content_type: store
+    parent_location: reference:ref_location_folder__sites__maison__stores
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: d5db35bef048f9e2f839f738b1e1922f
+    location_remote_id: f0bc0d7f6e7ad45a6e6ffa4cec03e13c
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Maison - Oslo'
+        intro: 'The driving force behind Maison is the endless possibilities in interior design and interior decoration and the pleasure of exploring these.'
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:ezxhtml=\"http://ez.no/xmlns/ezpublish/docbook/xhtml\" xmlns:ezcustom=\"http://ez.no/xmlns/ezpublish/docbook/custom\" version=\"5.0-variant ezpublish-1.0\"><para>We are convinced that a well-furnished home will enhance the quality of life, and are in perpetual search for inspiration around the world. The store has its own mix of products hand-picked by the staff, and a distinctive style of styling that makes it a constant source of inspiration for both customers and stylists.\_</para></section>\n"
+        email: sales@ez.no
+        country:
+            - 'NO'
+        maplocation:
+            latitude: 59.91333
+            longitude: 10.73897
+            address: 'Oslo, No'
+        featuredProducts:
+            destinationContentIds: {  }
+        premiumStore: true
+        workinghours:
+            entries: {  }
+        storeArea: 1000
+        floors: 1
+        contactInfo:
+            entries:
+                - { departmentName: Sales, email: sales@ez.no, phone: 555-39-39 }
+                - { departmentName: Marketing, email: marketing@ez.no, phone: 555-39-39 }
+                - { departmentName: Support, email: support@ez.no, phone: 555-39-39 }
+        #        tags:
+        #            destinationContentIds: {  }
+        video: null
+        opensince: null
+
+-
+    type: reference
+    mode: save
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true

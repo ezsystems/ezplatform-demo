@@ -1,0 +1,120 @@
+# references
+-
+    type: reference
+    mode: load
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true
+
+#
+## ROOT Content update
+#-
+#    type: content
+#    mode: update
+#    content_type: folder
+#    match:
+#        location_id: 2
+#    section: reference:ref_section__standard
+#    owner: 14
+#    attributes:
+#        name: Sites
+#        short_name: Sites
+#        description: >- #json
+#            <section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+#                     xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml"
+#                     xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0">
+#            </section>
+#        image: null
+#    references:
+#        -
+#            identifier: ref_location_folder__sites
+#            attribute: location_id
+#        -
+#            identifier: ref_content_folder__sites
+#            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_folder__media__images
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 2c0a1f483415e49f9024e99f63a10c29
+    location_remote_id: ec425dfbee72878581c021228996b409
+    section: reference:ref_section__media
+    owner: 14
+    always_available: true
+    attributes:
+        name: Inspirations
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__media__images__inspirations
+            attribute: location_id
+
+## Maison folder
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 942e488291bbe59e95b30a63a0fbe72e
+    location_remote_id: 0fd37ac12ed149d6f7f00b010e4a3872
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Maison
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__maison
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: folder
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    remote_id: 04e29a5c432ee256425f30e5c9d98d1d
+    location_remote_id: 9c62875c6625fcf0637f06331ed0d656
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Stores
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+    references:
+        -
+            identifier: ref_location_folder__sites__maison__stores
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison__stores
+            attribute: content_id
+
+-
+    type: reference
+    mode: save
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true

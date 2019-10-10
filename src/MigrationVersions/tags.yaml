@@ -1,0 +1,236 @@
+-
+    type: content_type
+    mode: create
+    content_type_group: Tags
+    identifier: tag
+    name:
+        eng-GB: Tag
+    description: {  }
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 2d47e5823001515dafa5a024e92001a0
+    location_remote_id: 3cf52fce86606a59602faf8c94c87cf9
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Tags
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: fb313f7182081b6652b6e66fcca77069
+    location_remote_id: 1cba94bb1645a3f6019ec3eeca5dedc6
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Kitchen
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__kitchen
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__kitchen
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: a0ee6c4f25613bcab4639743f0dbae96
+    location_remote_id: 8bdb01d6665a81d6cef97e8c259f2f8e
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Home office'
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__home_office
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__home_office
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 3fd576e4a4b29ade047447cfb4c15950
+    location_remote_id: 12835f72c40cfc272b40e87b5a75a2a8
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: 'Living room'
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__living_room
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__living_room
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 040d79cb56861849fb304398f45caad1
+    location_remote_id: 909c8f6bbd04fa609957110fafee6215
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Bathroom
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__bathroom
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__bathroom
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: ec6b6eb51d4e63f7b209b64ca59a6d83
+    location_remote_id: 899af035aab520eebb7c417c52a94afa
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Bedroom
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__bedroom
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__bedroom
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 67d10e848a40849d17577f8e1289aac7
+    location_remote_id: 5fdf9738f52bbc8c49935aaf7f479a7b
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Business
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__business
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__business
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: tag
+    parent_location: reference:ref_location_tag__sites__maison__tags
+    priority: 0
+    is_hidden: false
+    sort_field: published
+    sort_order: DESC
+    remote_id: 9c59c0ae2c2c3a97fe7eba8bebdf104b
+    location_remote_id: 182e340f9a7fe7a1ca8d82b95c8696da
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Outdoor
+    references:
+        -
+            identifier: ref_location_tag__sites__maison__tags__outdoor
+            attribute: location_id
+        -
+            identifier: ref_content_tag__sites__maison__tags__outdoor
+            attribute: content_id
