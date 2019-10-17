@@ -78,6 +78,7 @@
         "dg/bypass-finals": "^1.1",
         "dmore/behat-chrome-extension": "^1.3",
         "dmore/chrome-mink-driver": "^2.7",
+        "ezsystems/allure-behat": "^3.0",
         "ezsystems/behat-screenshot-image-driver-cloudinary": "^1.1@dev",
         "ezsystems/behatbundle": "^8.0@dev",
         "liuggio/fastest": "^1.6",
