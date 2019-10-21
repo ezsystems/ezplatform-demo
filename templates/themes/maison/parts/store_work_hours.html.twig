@@ -1,0 +1,30 @@
+{% set workHours = ez_field_value(content, 'workinghours').rows %}
+
+{% if workHours|length == 0 %}
+    <p class="m-0 font-weight-bold">Work Hours</p>
+    <p> - </p>
+{% elseif workHours|length == 1 %}
+    {% for workHour in workHours %}
+        <p class="m-0 font-weight-bold">Work Hours</p>
+        <p>{{ workHour.cells['day'] }} | {{ workHour.cells['from'] }} - {{ workHour.cells['to'] }} </p>
+    {% endfor %}
+{% elseif workHours|length > 1 %}
+    <div class="dropdown">
+        <button class="dropdown-toggle pl-0 pb-1 mb-0 font-weight-bold"
+           id="workHoursDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Work Hours
+        </button>
+        {% for workHour in workHours %}
+            {% if loop.first %}
+                <p>{{ workHour.cells['day'] }} | {{ workHour.cells['from'] }} - {{ workHour.cells['to'] }} </p>
+                <div class="dropdown-menu" aria-labelledby="workHoursDropdownButton">
+            {% endif %}
+            <p class="dropdown-item mb-0">
+                {{ workHour.cells['day'] }} | {{ workHour.cells['from'] }} - {{ workHour.cells['to'] }}
+            </p>
+            {% if loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

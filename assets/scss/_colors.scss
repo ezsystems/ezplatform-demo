@@ -1,7 +1,31 @@
+$white-whisper: #e9e9e9;
 $white: #ffffff;
-$black: #000000;
+$white-smoke: #f5f5f5;
+$grey-very-light: #f2f2f2;
 $grey-lighter: #999999;
 $grey-light: #3d3d3d;
 $grey-dark: #333333;
-$blue-light: #4191ff;
+$black: #000000;
+$blue-lighter: #4191ff;
+$blue-light: #0056b3;
 $orange: #f06d1a;
+
+.black {
+    color: $black;
+}
+
+.bg-blue-light {
+    background-color: $blue-lighter;
+}
+
+.blue-lighter {
+    color: $blue-lighter;
+}
+
+.bg-grey-very-light {
+    background-color: $grey-very-light;
+}
+
+.grey-light {
+    color: $grey-light;
+}

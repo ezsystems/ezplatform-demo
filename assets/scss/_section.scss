@@ -1,0 +1,16 @@
+$section: '.section';
+
+#{($section)} {
+    color: $grey-light;
+
+    &--raised {
+        position: relative;
+        z-index: 1000;
+        padding: 49px;
+        max-width: $lg;
+        margin: 0 auto;
+        margin-top: -170px;
+        border-radius: 16px;
+        background-color: $white;
+    }
+}

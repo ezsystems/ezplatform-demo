@@ -3,7 +3,7 @@
         .nav-item {
             &.active {
                 .nav-link {
-                    color: $blue-light;
+                    color: $blue-lighter;
                 }
             }
             &:last-child .nav-link {
@@ -19,7 +19,7 @@
             padding-right: 1em;
 
             &:hover {
-                color: $blue-light;
+                color: $blue-lighter;
             }
         }
     }
@@ -45,7 +45,7 @@
             line-height: 23px;
 
             &:hover {
-                color: $blue-light;
+                color: $blue-lighter;
             }
         }
     }

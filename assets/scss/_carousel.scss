@@ -5,13 +5,13 @@ $carousel: '.carousel';
         max-width: 128px;
         height: 128px;
         border-radius: 8px;
-        border: 1px solid #e9e9e9;
+        border: 1px solid $white-whisper;
         margin: 0 8px;
         overflow: hidden;
         padding: 0;
 
         &:hover {
-            border-color: $blue-light;
+            border-color: $blue-lighter;
         }
     }
 
@@ -22,7 +22,7 @@ $carousel: '.carousel';
         height: 100%;
 
         &:hover {
-            color: $blue-light;
+            color: $blue-lighter;
             text-decoration: none;
         }
     }
@@ -59,16 +59,16 @@ $carousel: '.carousel';
         &-control {
             &-next,
             &-prev {
-                border: 1px solid #e9e9e9;
+                border: 1px solid $white-whisper;
                 border-radius: 8px;
                 width: 48px;
                 background-color: $white;
                 opacity: 1;
-                color:  #e9e9e9;
+                color: $white-whisper;
 
                 &:hover {
-                    border-color: $blue-light;
-                    color: $blue-light;
+                    border-color: $blue-lighter;
+                    color: $blue-lighter;
                 }
             }
         }

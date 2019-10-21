@@ -1,9 +1,13 @@
 @import 'public/bundles/ezplatformadminuiassets/vendors/bootstrap/scss/bootstrap.scss';
 @import "assets/scss/_colors.scss";
+@import "assets/scss/_variables.scss";
+@import "assets/scss/_functions.scss";
 @import "assets/scss/_article.scss";
 @import "assets/scss/_banner.scss";
+@import "assets/scss/_buttons.scss";
 @import "assets/scss/_card.scss";
 @import "assets/scss/_carousel.scss";
+@import "assets/scss/_custom.scss";
 @import "assets/scss/_default.scss";
 @import "assets/scss/_fonts.scss";
 @import "assets/scss/_footer.scss";
@@ -12,3 +16,4 @@
 @import "assets/scss/_images.scss";
 @import "assets/scss/_navigation.scss";
 @import "assets/scss/_pagination.scss";
+@import "assets/scss/_section.scss";

@@ -1,0 +1,96 @@
+$col: '.col';
+
+.box-shadow {
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.15);
+}
+
+.heading {
+    &-xs {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+    }
+    &-sm {
+        font-size: 21px;
+        line-height: 31px;
+        font-weight: 500;
+    }
+    &-md {
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+    &-lg {
+        font-size: 43px;
+        line-height: 54px;
+        font-weight: 500;
+    }
+}
+
+.text-inline {
+    & > * {
+        display: inline-block;
+    }
+}
+
+#{($col)} {
+    &--img {
+        img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.transform-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(-50%, -50%);
+}
+
+// Additional margin and padding classes
+@for $i from 6 through 10 {
+    $calc: ($spacer * ($i * 0.5) + 1);
+
+    .mt-#{$i} {
+        margin-top: $calc;
+    }
+    .my-#{$i} {
+        margin-top: $calc;
+        margin-bottom: $calc;
+    }
+}
+
+// Additional border-radius (rounded) classes
+$multiplier: .25;
+
+@for $i from 1 through 5 {
+    @if $i > 1 {
+        $multiplier: $multiplier + $multiplier;
+    }
+
+    @if $multiplier > 1 {
+        $multiplier: ($multiplier + ($multiplier * 0.5)) * 0.5;
+    }
+
+    $calc: ($spacer * $multiplier);
+
+    .rounded-#{$i} {
+        border-radius: $calc;
+        -webkit-border-radius: $calc;
+    }
+    .rounded-left-#{$i} {
+        border-top-left-radius: $calc;
+        border-bottom-left-radius: $calc;
+        -webkit-border-top-left-radius: $calc;
+        -webkit-border-bottom-left-radius: $calc;
+    }
+    .rounded-right-#{$i} {
+        border-top-right-radius: $calc;
+        border-bottom-right-radius: $calc;
+        -webkit-border-top-right-radius: $calc;
+        -webkit-border-bottom-right-radius: $calc;
+    }
+}

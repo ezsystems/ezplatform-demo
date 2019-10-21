@@ -739,7 +739,9 @@
             destinationContentIds: {  }
         premiumStore: false
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '9:00', to: '18:00' }
+                - { day: Saturday, from: '10:00', to: '18:00' }
         storeArea: 2500
         floors: 2
         contactInfo:
@@ -930,7 +932,8 @@
             destinationContentIds: {  }
         premiumStore: false
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '8:30', to: '17:30' }
         storeArea: 1000
         floors: 1
         contactInfo:
@@ -978,7 +981,8 @@
             destinationContentIds: {  }
         premiumStore: true
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '9:00 am', to: '6:00 pm' }
         storeArea: 1000
         floors: 1
         contactInfo:
