@@ -28,3 +28,19 @@ ezplatform:
                         template: "@ezdesign/card/inspiration.html.twig"
                         match:
                             Identifier\ContentType: inspiration
+
+        professionals:
+            pagelayout: "@ezdesign/pagelayout.html.twig"
+            content_view:
+                full:
+                    home:
+                        controller: "ez_query:contentQueryAction"
+                        template: "@ezdesign/full/home.html.twig"
+                        match:
+                            Identifier\ContentType: folder
+                        params:
+                            query:
+                                query_type: "App:Children"
+                                parameters:
+                                    parent_location_id: "@=location.id"
+                                assign_results_to: professionals

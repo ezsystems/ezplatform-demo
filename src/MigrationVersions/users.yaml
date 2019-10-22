@@ -468,7 +468,7 @@
             limitations:
                 -
                     identifier: SiteAccess
-                    values: [site, fr, de, no]
+                    values: [maison, fr, de, no, professionals]
         -
             module: user
             function: register

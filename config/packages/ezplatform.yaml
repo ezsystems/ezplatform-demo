@@ -70,7 +70,7 @@ ezplatform:
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
         list:
-            - site
+            - maison
             - admin
             - fr
             - de
@@ -78,7 +78,7 @@ ezplatform:
             - professionals
         groups:
             site_group:
-                - site
+                - maison
                 - fr
                 - de
                 - no
@@ -86,7 +86,7 @@ ezplatform:
             # It's used to distinguish common siteaccesses from admin ones.
             # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
             admin_group: [admin]
-        default_siteaccess: site
+        default_siteaccess: maison
         match:
             URIElement: 1
 
@@ -111,7 +111,7 @@ ezplatform:
                 # varnish_invalidate_token: '%varnish_invalidate_token%' # @todo enable ezplatform-http-cache first
 
         site_group:
-            design: main
+            design: maison
             content:
                 tree_root:
                     location_id: 56
@@ -133,7 +133,7 @@ ezplatform:
                 content: /1/2/
                 media: /1/43/
 
-        site:
+        maison:
             languages: [eng-GB, fre-FR, ger-DE, nor-NO]
 
         fr:
@@ -147,16 +147,19 @@ ezplatform:
 
         professionals:
             languages: [eng-GB]
-            subtree_paths:
-                content: /1/2/56/
+            design: professionals
+            content:
+                tree_root:
+                    location_id: 136
 
     url_alias:
         slug_converter:
             transformation: 'urlalias_lowercase'
 ezdesign:
     design_list:
-        main: [maison]
+        maison: [maison]
         admin: [admin, maison]
+        professionals: [professionals, maison]
 
 ez_platform_standard_design:
     # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
