@@ -23,7 +23,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center heading heading-sm mt-4">All Maison Stores</h2>
+                        <h2 class="text-center heading heading-sm mt-4">
+                            {{ 'All Maison Stores'|trans }}
+                        </h2>
                     </div>
                 </div>
                 <div class="row mt-4">
@@ -44,9 +46,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
-                        <h4 class="heading-lg">Find a professional to help you with</h4>
-                        <h5 class="heading-sm mt-4">delivery, assembling, painting, renovation, etc.</h5>
-                        <a href="" class="btn btn--lg btn--blue mt-5">Find Professionals</a>
+                        <h4 class="heading-lg">{{ 'Find a professional to help you with'|trans }}</h4>
+                        <h5 class="heading-sm mt-4">{{ 'delivery, assembling, painting, renovation, etc.'|trans }}</h5>
+                        <a href="" class="btn btn--lg btn--blue mt-5">{{ 'Find Professionals'|trans }}</a>
                     </div>
                     <div class="col-md-4 col--img d-lg-block d-none">
                         <img src="{{ asset('assets/images/store-col-img1.png') }}">
@@ -61,10 +63,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-lg-center my-5">
-                        <h4 class="heading-lg">Become a Masion Pro</h4>
-                        <p class="mt-4">We're always looking for outstanding local contractors!</p>
-                        <a href="" class="btn btn--lg btn--blue mt-4">Apply Now</a>
-                        <p class="mt-5">Click here to view <a href="">Maison licensing information</a></p>
+                        <h4 class="heading-lg">{{ 'Become a Maison Pro'|trans }}</h4>
+                        <p class="mt-4">{{ 'We\'re always looking for outstanding local contractors!'|raw|trans }}</p>
+                        <a href="" class="btn btn--lg btn--blue mt-4">{{ 'Apply Now'|trans }}</a>
+                        <p class="mt-5">{{ 'Click here to view <a href="%path%">Maison licensing information</a>'|trans({
+                                '%path%': '#' })|raw }}
+                        </p>
                     </div>
                 </div>
             </div>

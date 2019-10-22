@@ -9,7 +9,7 @@
         <div class="card__body">
             <div class="card__desc">
                 <div class="card__row">
-                    <p class="font-weight-bold">Address:</p>
+                    <p class="font-weight-bold">{{ 'Address'|trans }}:</p>
                     {{ ez_field_value(content, 'maplocation') }}
                 </div>
                 <div class="card__row">
@@ -18,7 +18,7 @@
                 {% set contactInfo = ez_field_value(content, 'contactInfo').rows|first %}
                 {% if contactInfo is defined and contactInfo|length > 0 %}
                     <div class="card__row">
-                        <p class="font-weight-bold">Phone:</p>
+                        <p class="font-weight-bold">{{ 'Phone'|trans }}:</p>
                         <p>{{ contactInfo.cells['phone'] }}</p>
                     </div>
                     <div class="card__row">
@@ -27,13 +27,17 @@
                     </div>
                 {% endif %}
                 <div class="card__row">
-                    <p>*Hours may vary based on holidays and store events. Please visit <a href="">your local store page</a> for details</p>
+                    <p>*
+                        {{ 'Hours may vary based on holidays and store events. Please visit <a href="%path%">your local store page</a> for details'|trans({
+                            '%path%': '#'
+                        })|raw }}
+                    </p>
                 </div>
             </div>
         </div>
         <div class="card__footer">
             <a href="{{ path(location) }}" class="card__link">
-                Visit store page
+                {{ 'Visit store page'|trans }}
                 <i class="material-icons">arrow_forward</i>
             </a>
         </div>
