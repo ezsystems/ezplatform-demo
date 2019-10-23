@@ -656,6 +656,40 @@
             destinationContentId: reference:ref_content_image__media__images__inspirations__outside_2
             alternativeText: null
 
+#Store list
+-
+    type: content
+    mode: create
+    content_type: store_list
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 7f99bf203cbc19273824916f0ce905ea
+    location_remote_id: 981925f817bb9daf29f2a4fff735743b
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1571907257
+    publication_date: 1571907257
+    always_available: true
+    attributes:
+        name: Stores
+        title: 'Find a Maison Store'
+        banner:
+            path: vendor/ezsystems/ezplatform-demo-assets/images/map.png
+            filename: map.png
+            alternativeText: maison-map
+    references:
+        -
+            identifier: ref_location_folder__sites__maison__stores
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison__stores
+            attribute: content_id
+
 #Stores content
 -
     type: content
@@ -933,7 +967,7 @@
         premiumStore: false
         workinghours:
             entries:
-                - { day: 'Monday - Friday', from: '8:30', to: '17:30' }
+                - { day: 'Monday - Friday', from: '8:30 am', to: '5:30 pm' }
         storeArea: 1000
         floors: 1
         contactInfo:

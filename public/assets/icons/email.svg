@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>icons/email</title>
-    <desc>Created with Sketch.</desc>
-    <g id="icons/email" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M23,4 L23,20 L1,20 L1,4 L23,4 Z M3,6.881 L3,18 L21,18 L21,6.974 L11.9953948,13.2201323 L3,6.881 Z M18.896,6 L5.223,6 L12.0046052,10.7798677 L18.896,6 Z" id="Combined-Shape" fill="#333333"></path>
-    </g>
-</svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M23 4v16H1V4h22zM3 6.881V18h18V6.974l-9.005 6.246L3 6.881zM18.896 6H5.223l6.782 4.78L18.896 6z" fill="#333" fill-rule="evenodd"/></svg>

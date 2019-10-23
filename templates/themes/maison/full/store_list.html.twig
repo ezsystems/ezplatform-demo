@@ -9,13 +9,11 @@
     <div class="page">
         <section class="section banner banner--full-width banner--map">
             <div class="banner__image">
-                <figure class="ezimage-field">
-                    <img src="{{ asset('assets/images/map.png') }}">
-                </figure>
+                {{ ez_render_field(content, 'banner') }}
             </div>
             <div class="banner__title transform-center container text-center">
                 <h1 class="banner__heading">
-                    {{ ez_render_field(content, 'name') }}
+                    {{ ez_render_field(content, 'title') }}
                 </h1>
             </div>
         </section>
@@ -24,7 +22,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="text-center heading heading-sm mt-4">
-                            {{ 'All Maison Stores'|trans }}
+                            {{ 'All Maison Stores'| trans }}
                         </h2>
                     </div>
                 </div>
@@ -46,9 +44,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
-                        <h4 class="heading-lg">{{ 'Find a professional to help you with'|trans }}</h4>
-                        <h5 class="heading-sm mt-4">{{ 'delivery, assembling, painting, renovation, etc.'|trans }}</h5>
-                        <a href="" class="btn btn--lg btn--blue mt-5">{{ 'Find Professionals'|trans }}</a>
+                        <h4 class="heading-lg">{{ 'Find a professional to help you with'| trans }}</h4>
+                        <h5 class="heading-sm mt-4">{{ 'delivery, assembling, painting, renovation, etc.'| trans }}</h5>
+                        <a href="#" class="btn btn--lg btn--blue mt-5">{{ 'Find Professionals'|trans }}</a>
                     </div>
                     <div class="col-md-4 col--img d-lg-block d-none">
                         <img src="{{ asset('assets/images/store-col-img1.png') }}">
@@ -63,9 +61,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-lg-center my-5">
-                        <h4 class="heading-lg">{{ 'Become a Maison Pro'|trans }}</h4>
-                        <p class="mt-4">{{ 'We\'re always looking for outstanding local contractors!'|raw|trans }}</p>
-                        <a href="" class="btn btn--lg btn--blue mt-4">{{ 'Apply Now'|trans }}</a>
+                        <h4 class="heading-lg">{{ 'Become a Maison Pro'| trans }}</h4>
+                        <p class="mt-4">{{ 'We\'re always looking for outstanding local contractors!'| raw | trans }}</p>
+                        <a href="" class="btn btn--lg btn--blue mt-4">{{ 'Apply Now' | trans }}</a>
                         <p class="mt-5">{{ 'Click here to view <a href="%path%">Maison licensing information</a>'|trans({
                                 '%path%': '#' })|raw }}
                         </p>
