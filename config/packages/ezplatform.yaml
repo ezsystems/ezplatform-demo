@@ -89,6 +89,7 @@ ezplatform:
         default_siteaccess: maison
         match:
             URIElement: 1
+            HostElement: 2
 
     # System settings, read in following order: `default`, <siteaccess-group>, <siteacces>, and `global`
     # TIP: For multisite installations organize shared config into SiteAccess groups,
