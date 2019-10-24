@@ -738,7 +738,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__kitchen
         #                - reference:ref_content_tag__sites__maison__tags__home_office
         #                - reference:ref_content_tag__sites__maison__tags__living_room
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -788,7 +796,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__outdoor
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -832,7 +848,15 @@
                 - { departmentName: 'Quality Assurance', email: qa@ez.no, phone: 555-39-39 }
         #        tags:
         #            destinationContentIds: {  }
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -884,7 +908,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__beedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
         #                - reference:ref_content_tag__sites__maison__tags__outdoor
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -931,7 +963,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -980,7 +1020,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -1026,7 +1074,15 @@
                 - { departmentName: Support, email: support@ez.no, phone: 555-39-39 }
         #        tags:
         #            destinationContentIds: {  }
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -

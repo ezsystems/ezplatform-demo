@@ -27,7 +27,7 @@ ezplatform:
                         controller: "ez_query:contentQueryAction"
                         template: "@ezdesign/full/store_list.html.twig"
                         match:
-                            Identifier\ContentType: folder
+                            Identifier\ContentType: store_list
                         params:
                             query:
                                 query_type: "App:Children"

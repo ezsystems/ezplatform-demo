@@ -2,7 +2,8 @@ ezplatform:
     system:
         site_group:
             pagelayout: "@ezdesign/pagelayout.html.twig"
-
+            field_templates:
+                - { template: '@ezdesign/fields/content_fields.html.twig', priority: 20 }
             content_view:
                 full:
                     inspiration_list:

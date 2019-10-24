@@ -1,0 +1,64 @@
+{% block ezmedia_field %}
+    {% if not ez_field_is_empty( content, field ) %}
+        {% apply spaceless %}
+            {% set type = fieldSettings.mediaType %}
+            {% set value = field.value %}
+            {% set route_reference = ez_route( 'ez_content_download', {'content': content, 'fieldIdentifier': field.fieldDefIdentifier} ) %}
+            {% set download = path( route_reference ) %}
+            {% set width = value.width > 0 ? 'width="' ~ value.width ~ '"' : "" %}
+            {% set height = value.height > 0 ? 'height="' ~ value.height ~ '"' : "" %}
+            <div {{ block( 'field_attributes' ) }}>
+                {% autoescape false %}
+                    {% if type == "html5_video"
+                        or type == "quick_time"
+                        or type == "windows_media_player"
+                        or type == "real_player" %}
+                        <video src="{{ download }}" {{ width }} {{ height }}
+                                {{ value.autoplay ? 'autoplay="autoplay" muted playsinline' : "" }}
+                                {{ value.hasController ? 'controls="controls"' : "" }}
+                                {{ value.loop ? 'loop="loop"' : "" }}>
+                            Your browser does not support html5 video.
+                        </video>
+                        {% elseif type == "html5_audio" %}
+                        <audio src="{{ download }}"
+                                {{ value.autoplay ? 'autoplay="autoplay"' : "" }}
+                                {{ value.hasController ? 'controls="controls"' : "" }}
+                                {{ value.loop ? 'loop="loop"' : "" }}
+                               preload="none">
+                            Your browser does not support html5 audio.
+                        </audio>
+                        {% elseif type == 'flash' %}
+                        <object type="application/x-shockwave-flash" {{ width }} {{ height }} data="{{ download }}">
+                            <param name="movie" value="{{ download }}" />
+                            <param name="play" value="{{ value.autoplay ? 'true' : 'false' }}" />
+                            <param name="loop" value="{{ value.loop ? 'true' : 'false' }}" />
+                            <param name="quality" value="{{ value.quality }}" />
+                        </object>
+                        {% elseif type == 'silverlight' %}
+                        <script type="text/javascript">
+                            function onErrorHandler(sender, args) { }
+                            function onResizeHandler(sender, args) { }
+                        </script>
+                        <object data="data:application/x-silverlight," type="application/x-silverlight-2" {{ width }} {{ height }}>
+                            <param name="source" value="{{ download }}" />
+                            <param name="onError" value="onErrorHandler" />
+                            <param name="onResize" value="onResizeHandler" />
+                            <a href="http://go.microsoft.com/fwlink/?LinkID=108182">
+                                <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" />
+                            </a>
+                        </object>
+                        <iframe style="visibility: hidden; height: 0; width: 0; border: 0px;"></iframe>
+                    {% endif %}
+                {% endautoescape %}
+            </div>
+        {% endapply %}
+    {% endif %}
+{% endblock %}
+
+{# Block for field attributes rendering. Useful to add a custom class, id or whatever HTML attribute to the field markup #}
+{% block field_attributes %}
+    {% apply spaceless %}
+        {% set attr = attr|default( {} ) %}
+        {% for attrname, attrvalue in attr %}{{ attrname }}="{{ attrvalue }}" {% endfor %}
+    {% endapply %}
+{% endblock %}
