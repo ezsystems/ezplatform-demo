@@ -1,0 +1,9 @@
+{% set workHours = ez_field_value(content, 'workinghours').rows %}
+<p class="m-0 font-weight-bold">{{ 'Work Hours'|trans }}</p>
+{% if workHours|length > 0 %}
+    {% for workHour in workHours %}
+        <p class="mb-0">{{ workHour.cells['day'] }} | {{ workHour.cells['from'] }} - {{ workHour.cells['to'] }} </p>
+    {% endfor %}
+{% else %}
+    <p> - </p>
+{% endif %}

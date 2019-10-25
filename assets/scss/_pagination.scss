@@ -21,7 +21,6 @@ $content-pagination: '.content-pagination';
                 color: $white;
             }
         }
-
         &.prev {
             border-radius: 4px 0 0 4px;
 
@@ -29,7 +28,6 @@ $content-pagination: '.content-pagination';
                 padding: 8px;
             }
         }
-
         &.next {
             border-radius: 0 4px 4px 0;
 
@@ -40,15 +38,13 @@ $content-pagination: '.content-pagination';
                 margin-right: 10px;
             }
         }
-
         &.prev, &.next {
             .page-link {
-                background-color: $blue-light;
-                border: 1px solid $blue-light;
+                background-color: $blue-lighter;
+                border: 1px solid $blue-lighter;
                 color: $white;
             }
         }
-
         &.active {
             .page-link {
                 background-color: $grey-lighter;
@@ -78,7 +74,6 @@ $content-pagination: '.content-pagination';
             color: #e3e3e3;
             text-decoration: none;
         }
-
         #{($content-pagination)}__icon {
             font-size: 50px;
 

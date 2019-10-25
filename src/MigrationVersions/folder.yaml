@@ -86,34 +86,6 @@
             attribute: content_id
 
 -
-    type: content
-    mode: create
-    content_type: folder
-    parent_location: reference:ref_location_folder__sites__maison
-    priority: 0
-    is_hidden: false
-    sort_field: path
-    sort_order: ASC
-    remote_id: 04e29a5c432ee256425f30e5c9d98d1d
-    location_remote_id: 9c62875c6625fcf0637f06331ed0d656
-    section: reference:ref_section__standard
-    lang: eng-GB
-    owner: 14
-    always_available: true
-    attributes:
-        name: Stores
-        description:
-            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
-        image: null
-    references:
-        -
-            identifier: ref_location_folder__sites__maison__stores
-            attribute: location_id
-        -
-            identifier: ref_content_folder__sites__maison__stores
-            attribute: content_id
-
--
     type: reference
     mode: save
     file: 'src/MigrationVersions/References/references.yml'

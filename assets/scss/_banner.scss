@@ -5,20 +5,24 @@
     &__image {
         opacity: 0.3;
     }
+    &--full-width {
+        height: 306px;
+
+        img {
+            width: 100%;
+            height:306px;
+            object-fit: cover;
+        }
+    }
     &__title {
         position: absolute;
         top: 25%;
         left: 50%;
-        -ms-transform: translateY(-25%);
-        transform: translateY(-25%);
-        transform: translateX(-50%);
+        @include transform(-50%, -25%);
         color: $grey-light;
     }
-    &--full-width {
-        img {
-            width: 100%;
-            height: 306px;
-            object-fit: cover;
-        }
+    &--map {
+        background-color: $white-smoke;
     }
 }
+

@@ -1,6 +1,31 @@
-.card {
+$card: '.card';
+
+#{($card)} {
     border: none;
 
+    &__header {
+        border-bottom: 1px solid $white-whisper;
+    }
+    &__body {
+        padding-top: 20px;
+    }
+    &__footer {
+        padding-top: 20px;
+        border-top: 1px solid $white-whisper;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: auto;
+
+        & > * {
+            display: flex;
+            align-items: center;
+            color: $grey-light;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
     &:hover img {
         transform: scale(1.2);
     }
@@ -14,7 +39,6 @@
             transform-origin: 50% 65%;
             transition: transform 0.5s ease-in-out;
         }
-
         &.img-fluid-container {
             img {
                 height: 320px;
@@ -22,28 +46,73 @@
         }
     }
     &__text {
-        width: 95%;
         border-radius: 8px;
-        background-color: #FFFFFF;
+        background-color: $white;
         color: $grey-light;
         padding: 24px 28px;
         position: relative;
-        bottom: 75px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        &--overlap {
+            margin-top: -75px;
+            width: 95%;
+            max-height: 200px;
+        }
     }
     &__title {
-        font-size: 21px;
-        font-weight: 500;
-        line-height: 31px;
         margin-bottom: 5px;
     }
     &__desc {
         font-size: 14px;
         line-height: 20px;
     }
+    &__row {
+        clear: both;
+        margin-bottom: 20px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
     &__link {
         &:hover {
             text-decoration: none;
+        }
+    }
+    &--recommendation {
+        border-radius: 8px;
+
+        #{($card)}__body {
+            border: solid 1px $white-whisper;
+        }
+        #{($card)}__footer {
+            border: solid 1px $white-whisper;
+            border-top: none;
+            padding: 12px 16px;
+        }
+
+        a {
+            color: $grey-light;
+            font-size: 14px;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+
+        .product-price {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            background-color: $white-whisper;
+            font-size: 14px;
+            padding: 4px 15px 3px 8px;
+            border-radius: 0 30px 30px 0;
+        }
+
+        &:hover img {
+            transform: none;
         }
     }
 }

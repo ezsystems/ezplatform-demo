@@ -106,6 +106,66 @@
             field-settings: {  }
             validator-configuration: {  }
 
+#store list content type
+-
+    type: content_type
+    mode: create
+    content_type_group: Content
+    identifier: store_list
+    name:
+        eng-GB: 'Store List'
+    description: {  }
+    name_pattern: '<name>'
+    url_name_pattern: ''
+    is_container: true
+    lang: eng-GB
+    attributes:
+        -
+            identifier: name
+            type: ezstring
+            name:
+                eng-GB: Name
+            description: {  }
+            required: true
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 1
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: title
+            type: ezstring
+            name:
+                eng-GB: Title
+            description: {  }
+            required: false
+            searchable: true
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 2
+            field-settings: {  }
+            validator-configuration:
+                StringLengthValidator: { maxStringLength: null, minStringLength: null }
+        -
+            identifier: banner
+            type: ezimage
+            name:
+                eng-GB: Banner
+            description: {  }
+            required: true
+            searchable: false
+            info-collector: false
+            disable-translation: false
+            category: content
+            position: 3
+            field-settings: {  }
+            validator-configuration:
+                FileSizeValidator: { maxFileSize: null }
+
 #store content type
 -
     type: content_type

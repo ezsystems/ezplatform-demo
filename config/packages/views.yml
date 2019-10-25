@@ -2,8 +2,7 @@ ezplatform:
     system:
         site_group:
             pagelayout: "@ezdesign/pagelayout.html.twig"
-            field_templates:
-                - { template: '@ezdesign/fields/content_fields.html.twig', priority: 20 }
+
             content_view:
                 full:
                     inspiration_list:
@@ -51,19 +50,3 @@ ezplatform:
                         template: "@ezdesign/card/store.html.twig"
                         match:
                             Identifier\ContentType: store
-
-        professionals:
-            pagelayout: "@ezdesign/pagelayout.html.twig"
-            content_view:
-                full:
-                    home:
-                        controller: "ez_query:contentQueryAction"
-                        template: "@ezdesign/full/home.html.twig"
-                        match:
-                            Identifier\ContentType: folder
-                        params:
-                            query:
-                                query_type: "App:Children"
-                                parameters:
-                                    parent_location_id: "@=location.id"
-                                assign_results_to: professionals

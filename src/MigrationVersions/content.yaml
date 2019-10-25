@@ -656,6 +656,40 @@
             destinationContentId: reference:ref_content_image__media__images__inspirations__outside_2
             alternativeText: null
 
+#Store list
+-
+    type: content
+    mode: create
+    content_type: store_list
+    parent_location: reference:ref_location_folder__sites__maison
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    remote_id: 7f99bf203cbc19273824916f0ce905ea
+    location_remote_id: 981925f817bb9daf29f2a4fff735743b
+    section: 1
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    modification_date: 1571907257
+    publication_date: 1571907257
+    always_available: true
+    attributes:
+        name: Stores
+        title: 'Find a Maison Store'
+        banner:
+            path: vendor/ezsystems/ezplatform-demo-assets/images/map.png
+            filename: map.png
+            alternativeText: maison-map
+    references:
+        -
+            identifier: ref_location_folder__sites__maison__stores
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison__stores
+            attribute: content_id
+
 #Stores content
 -
     type: content
@@ -704,7 +738,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__kitchen
         #                - reference:ref_content_tag__sites__maison__tags__home_office
         #                - reference:ref_content_tag__sites__maison__tags__living_room
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -739,7 +781,9 @@
             destinationContentIds: {  }
         premiumStore: false
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '9:00', to: '18:00' }
+                - { day: Saturday, from: '10:00', to: '18:00' }
         storeArea: 2500
         floors: 2
         contactInfo:
@@ -752,7 +796,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__outdoor
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -796,7 +848,15 @@
                 - { departmentName: 'Quality Assurance', email: qa@ez.no, phone: 555-39-39 }
         #        tags:
         #            destinationContentIds: {  }
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -848,7 +908,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__beedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
         #                - reference:ref_content_tag__sites__maison__tags__outdoor
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -895,7 +963,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -930,7 +1006,8 @@
             destinationContentIds: {  }
         premiumStore: false
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '8:30 am', to: '5:30 pm' }
         storeArea: 1000
         floors: 1
         contactInfo:
@@ -943,7 +1020,15 @@
         #                - reference:ref_content_tag__sites__maison__tags__bathroom
         #                - reference:ref_content_tag__sites__maison__tags__bedroom
         #                - reference:ref_content_tag__sites__maison__tags__business
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -
@@ -978,7 +1063,8 @@
             destinationContentIds: {  }
         premiumStore: true
         workinghours:
-            entries: {  }
+            entries:
+                - { day: 'Monday - Friday', from: '9:00 am', to: '6:00 pm' }
         storeArea: 1000
         floors: 1
         contactInfo:
@@ -988,7 +1074,15 @@
                 - { departmentName: Support, email: support@ez.no, phone: 555-39-39 }
         #        tags:
         #            destinationContentIds: {  }
-        video: null
+        video:
+            path: vendor/ezsystems/ezplatform-demo-assets/videos/maison_demo_video.mp4
+            filename: maison_demo_video.mp4
+            mime_type: video/mp4
+            has_controller: false
+            autoplay: true
+            loop: true
+            width: 0
+            height: 0
         opensince: null
 
 -

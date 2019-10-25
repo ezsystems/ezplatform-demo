@@ -2,12 +2,21 @@
 
 body {
     font-family: $fira-sans;
+    $color: $grey-light;
 }
 
-.box-shadow {
-    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.15);
+a {
+    color: $blue-lighter;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
-.bg-blue-light {
-    background-color: $blue-light;
+.font-weight-bold {
+    font-weight: 600!important;
+}
+
+video {
+    max-width: 100%;
 }
