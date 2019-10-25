@@ -84,6 +84,7 @@ ezplatform:
                 - fr
                 - de
                 - no
+                - professionals
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
             # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
@@ -91,7 +92,7 @@ ezplatform:
         default_siteaccess: maison
         match:
             URIElement: 1
-            HostElement: 2
+            HostElement: 1
 
     # System settings, read in following order: `default`, <siteaccess-group>, <siteacces>, and `global`
     # TIP: For multisite installations organize shared config into SiteAccess groups,
