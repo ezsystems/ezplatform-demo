@@ -13,3 +13,5 @@ services:
             $allowedUserGroupsLocationIds: '%app.premium_content.allowed_user_groups.location_ids%'
 
     App\Twig\ContentPaginationExtension: ~
+
+    App\Twig\AppLayoutExtension: ~

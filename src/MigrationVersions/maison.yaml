@@ -1,0 +1,44 @@
+# references
+-
+    type: reference
+    mode: load
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true
+
+## Maison folder
+-
+    type: content
+    mode: create
+    content_type: home
+    parent_location: reference:ref_location_folder__sites
+    priority: 0
+    is_hidden: false
+    sort_field: path
+    sort_order: ASC
+    section: reference:ref_section__standard
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: Maison
+        description:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image: null
+        logo:
+            destinationContentId: reference:ref_content_image__media__images__logo__maison_logo
+            alternativeText: ''
+        css: ~
+        js: ~
+    references:
+        -
+            identifier: ref_location_folder__sites__maison
+            attribute: location_id
+        -
+            identifier: ref_content_folder__sites__maison
+            attribute: content_id
+
+-
+    type: reference
+    mode: save
+    file: 'src/MigrationVersions/References/references.yml'
+    overwrite: true

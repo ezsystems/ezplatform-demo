@@ -22,6 +22,7 @@
 
         {% block head_styles %}
             {{ encore_entry_link_tags('demo') }}
+            {{ app_render_css(ezplatform.rootLocation.content.id)|raw }}
         {% endblock %}
 
     </head>
@@ -55,6 +56,7 @@
                     crossorigin=""></script>
 
             {{ encore_entry_script_tags('demo') }}
+            {{ app_render_js(ezplatform.rootLocation.content.id)|raw }}
         {% endblock %}
     </body>
 </html>

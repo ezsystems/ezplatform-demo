@@ -41,8 +41,6 @@
     is_hidden: false
     sort_field: path
     sort_order: ASC
-    remote_id: 2c0a1f483415e49f9024e99f63a10c29
-    location_remote_id: ec425dfbee72878581c021228996b409
     section: reference:ref_section__media
     owner: 14
     always_available: true
@@ -56,34 +54,27 @@
             identifier: ref_location_folder__media__images__inspirations
             attribute: location_id
 
-## Maison folder
 -
     type: content
     mode: create
     content_type: folder
-    parent_location: reference:ref_location_folder__sites
+    parent_location: reference:ref_folder__media__images
     priority: 0
     is_hidden: false
     sort_field: path
     sort_order: ASC
-    remote_id: 942e488291bbe59e95b30a63a0fbe72e
-    location_remote_id: 0fd37ac12ed149d6f7f00b010e4a3872
-    section: reference:ref_section__standard
-    lang: eng-GB
+    section: reference:ref_section__media
     owner: 14
     always_available: true
     attributes:
-        name: Maison
+        name: Logo
         description:
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
         image: null
     references:
         -
-            identifier: ref_location_folder__sites__maison
+            identifier: ref_location_folder__media__images__logo
             attribute: location_id
-        -
-            identifier: ref_content_folder__sites__maison
-            attribute: content_id
 
 -
     type: reference

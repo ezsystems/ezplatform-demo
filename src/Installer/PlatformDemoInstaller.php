@@ -37,14 +37,16 @@ class PlatformDemoInstaller extends CoreInstaller
         $migrationCommands = [
             'cache:clear',
 //            'kaliop:migration:migrate --path=src/App/MigrationVersions/tags.yml -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/user-policy_mysql.sql -v -n',
             'kaliop:migration:migrate --path=src/MigrationVersions/languages.yaml -v -n',
             'kaliop:migration:migrate --path=src/MigrationVersions/all.yaml -v -n',
-            'kaliop:migration:migrate --path=src/MigrationVersions/folder.yaml -v -n',
-            'kaliop:migration:migrate --path=src/MigrationVersions/images.yaml -v -n',
             'kaliop:migration:migrate --path=src/MigrationVersions/content_type_group.yaml -v -n',
             'kaliop:migration:migrate --path=src/MigrationVersions/content_type.yaml -v -n',
-            'kaliop:migration:migrate --path=src/MigrationVersions/content.yaml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/folder.yaml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/images.yaml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/maison.yaml -v -n',
             'kaliop:migration:migrate --path=src/MigrationVersions/professionals.yaml -v -n',
+            'kaliop:migration:migrate --path=src/MigrationVersions/content.yaml -v -n',
 //            'kaliop:migration:migrate --path=src/MigrationVersions/users.yml -v -n',
         ];
 

@@ -6,6 +6,11 @@ ezplatform:
                 - { template: '@ezdesign/fields/content_fields.html.twig', priority: 20 }
             content_view:
                 full:
+                    home:
+                        template: "@ezdesign/full/home.html.twig"
+                        match:
+                            Identifier\ContentType: home
+
                     inspiration_list:
                         controller: "App\\Controller\\PaginationQueryController:contentQueryAction"
                         template: "@ezdesign/full/inspiration_list.html.twig"
@@ -60,7 +65,7 @@ ezplatform:
                         controller: "ez_query:contentQueryAction"
                         template: "@ezdesign/full/home.html.twig"
                         match:
-                            Identifier\ContentType: folder
+                            Identifier\ContentType: home
                         params:
                             query:
                                 query_type: "App:Children"

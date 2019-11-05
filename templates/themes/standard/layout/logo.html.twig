@@ -1,0 +1,7 @@
+{% set logo = app_render_logo(contentId) %}
+
+{% if logo|length %}
+    <img src="{{ logo }}" alt="maison-logo" />
+{% else %}
+    <img src="{{ asset('assets/images/maison-logo.svg') }}" alt="maison-logo">
+{% endif %}

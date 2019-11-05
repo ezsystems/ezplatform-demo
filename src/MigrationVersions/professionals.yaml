@@ -8,15 +8,13 @@
 -
     type: content
     mode: create
-    content_type: folder
-    parent_location: 'reference:ref_location_folder__sites'
+    content_type: home
+    parent_location: reference:ref_location_folder__sites
     priority: 0
     is_hidden: false
     sort_field: path
     sort_order: ASC
-    remote_id: b920c1cf86877d76046360dc169fc66e
-    location_remote_id: ba01b43ae8a5a565c6f9965f54398ef4
-    section: 'reference:ref_section__standard'
+    section: reference:ref_section__standard
     lang: eng-GB
     owner: 14
     always_available: true
@@ -25,6 +23,11 @@
         description:
             xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
         image: null
+        logo:
+            destinationContentId: reference:ref_content_image__media__images__logo__professionals_logo
+            alternativeText: ''
+        css: ~
+        js: ~
     references:
         -
             identifier: ref_location_folder__sites__professionals
