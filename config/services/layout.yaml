@@ -6,3 +6,15 @@ services:
 
     App\Layout\:
         resource: '../../src/Layout/*'
+
+    App\Layout\LogoRenderer:
+        tags:
+            - { name: layout.renderer, key: 'logo' }
+
+    App\Layout\CSSRenderer:
+        tags:
+            - { name: layout.renderer, key: 'css' }
+
+    App\Layout\JSRenderer:
+        tags:
+            - { name: layout.renderer, key: 'js' }

@@ -14,4 +14,6 @@ services:
 
     App\Twig\ContentPaginationExtension: ~
 
-    App\Twig\AppLayoutExtension: ~
+    App\Twig\AppLayoutExtension:
+        arguments:
+            $renderers: !tagged { tag: layout.renderer, index_by: key }

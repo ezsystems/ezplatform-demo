@@ -8,9 +8,6 @@ declare(strict_types=1);
 
 namespace App\Twig;
 
-use App\Layout\CSSRenderer;
-use App\Layout\JSRenderer;
-use App\Layout\LogoRenderer;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -19,6 +16,14 @@ use Twig\TwigFunction;
  */
 final class AppLayoutExtension extends AbstractExtension
 {
+    /** @var iterable */
+    private $renderers;
+
+    public function __construct(iterable $renderers)
+    {
+        $this->renderers = $renderers;
+    }
+
     public const RENDER_METHOD_NAME = 'render';
 
     /**
@@ -38,10 +43,15 @@ final class AppLayoutExtension extends AbstractExtension
      */
     public function getFunctions(): array
     {
-        return [
-            new TwigFunction('app_render_logo', [LogoRenderer::class, self::RENDER_METHOD_NAME]),
-            new TwigFunction('app_render_css', [CSSRenderer::class, self::RENDER_METHOD_NAME]),
-            new TwigFunction('app_render_js', [JSRenderer::class, self::RENDER_METHOD_NAME]),
-        ];
+        $functions = [];
+
+        foreach ($this->renderers as $key => $renderer) {
+            $functions[] = new TwigFunction(
+                'app_render_' . $key,
+                [$renderer, self::RENDER_METHOD_NAME]
+            );
+        }
+
+        return $functions;
     }
 }
