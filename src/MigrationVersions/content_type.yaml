@@ -604,7 +604,7 @@
             type: eztext
             name:
                 eng-GB: CSS
-            description: {  }
+            description: 'All css definitions in this field will be available for the whole site in current siteaccess.'
             required: false
             searchable: false
             info-collector: false
@@ -619,7 +619,7 @@
             type: eztext
             name:
                 eng-GB: JS
-            description: {  }
+            description: 'All js definitions in this field will be available for the whole site in current siteaccess.'
             required: false
             searchable: false
             info-collector: false
