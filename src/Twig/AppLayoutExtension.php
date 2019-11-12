@@ -16,6 +16,8 @@ use Twig\TwigFunction;
  */
 final class AppLayoutExtension extends AbstractExtension
 {
+    public const RENDER_METHOD_NAME = 'render';
+
     /** @var iterable */
     private $renderers;
 
@@ -23,8 +25,6 @@ final class AppLayoutExtension extends AbstractExtension
     {
         $this->renderers = $renderers;
     }
-
-    public const RENDER_METHOD_NAME = 'render';
 
     /**
      * Returns the name of the extension.

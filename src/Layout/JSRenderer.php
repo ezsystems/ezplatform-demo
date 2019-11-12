@@ -13,6 +13,7 @@ use Twig\Extension\RuntimeExtensionInterface;
 final class JSRenderer extends AbstractRenderer implements LayoutRendererInterface, RuntimeExtensionInterface
 {
     public const JS_FIELD_NAME = 'js';
+    public const JS_TAG = '<script>%s</script>';
 
     /**
      * @inheritDoc
@@ -24,6 +25,6 @@ final class JSRenderer extends AbstractRenderer implements LayoutRendererInterfa
     {
         $jsText = $this->contentHelper->getContentFieldValue($contentId, self::JS_FIELD_NAME);
 
-        return $jsText ? sprintf('<script type="application/javascript">%s</script>', $jsText) : '';
+        return $jsText ? sprintf(self::JS_TAG, $jsText) : '';
     }
 }

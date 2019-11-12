@@ -13,6 +13,7 @@ use Twig\Extension\RuntimeExtensionInterface;
 final class CSSRenderer extends AbstractRenderer implements LayoutRendererInterface, RuntimeExtensionInterface
 {
     public const CSS_FIELD_NAME = 'css';
+    public const CSS_TAG = '<style>%s</style>';
 
     /**
      * @inheritDoc
@@ -24,6 +25,6 @@ final class CSSRenderer extends AbstractRenderer implements LayoutRendererInterf
     {
         $cssText = $this->contentHelper->getContentFieldValue($contentId, self::CSS_FIELD_NAME);
 
-        return $cssText ? sprintf('<style>%s</style>', $cssText) : '';
+        return $cssText ? sprintf(self::CSS_TAG, $cssText) : '';
     }
 }

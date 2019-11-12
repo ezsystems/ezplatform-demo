@@ -11,11 +11,6 @@
     identifier: Professionals
 
 -
-    type: content_type_group
-    mode: create
-    identifier: Design
-
--
     type: reference
     mode: save
     file: 'src/MigrationVersions/References/references.yml'
