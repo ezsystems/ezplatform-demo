@@ -56,6 +56,7 @@
         "incenteev/composer-parameter-handler": "^2.1.3",
         "kaliop/ezmigrationbundle": "^5.9",
         "knplabs/knp-menu-bundle": "^2.2.1",
+        "monolog/monolog": "^1.25.2",
         "netgen/tagsbundle": "^3.4.1",
         "novactive/ezseobundle": "^3.0.0@rc",
         "oneup/flysystem-bundle": "^3.0",
