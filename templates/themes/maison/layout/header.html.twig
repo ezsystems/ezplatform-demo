@@ -47,7 +47,7 @@
     <nav class="navbar navbar-expand-lg header__bottom px-0">
         <div class="container">
             <a href="{{ path(ezplatform.rootLocation()) }}" class="navbar-brand">
-                <img src="{{ asset('assets/images/maison-logo.svg') }}" alt="maison-logo">
+                {% include '@ezdesign/layout/logo.html.twig' with {'contentId': ezplatform.rootLocation.content.id} %}
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenuNavbar" aria-controls="mainMenuNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

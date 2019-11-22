@@ -1459,6 +1459,69 @@
             alternativeText: ''
 #        tags: {  }
 
+#logo
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__logo
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: maison-logo.png
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/assets/images/logo/maison-logo.png
+            filename: maison-logo.png
+            alternativeText: ''
+#        tags: {  }
+    references:
+        -
+            identifier: ref_location_image__media__images__logo__maison_logo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__logo__maison_logo
+            attribute: content_id
+
+-
+    type: content
+    mode: create
+    content_type: image
+    parent_location: reference:ref_location_folder__media__images__logo
+    priority: 0
+    is_hidden: false
+    sort_field: name
+    sort_order: ASC
+    section: 3
+    object_states: {  }
+    lang: eng-GB
+    owner: 14
+    always_available: true
+    attributes:
+        name: maison-professionals.png
+        caption:
+            xml: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<section xmlns=\"http://docbook.org/ns/docbook\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"5.0-variant ezpublish-1.0\"/>\n"
+        image:
+            path: public/assets/images/logo/maison-professionals.png
+            filename: maison-professionals.png
+            alternativeText: ''
+    #        tags: {  }
+    references:
+        -
+            identifier: ref_location_image__media__images__logo__professionals_logo
+            attribute: location_id
+        -
+            identifier: ref_content_image__media__images__logo__professionals_logo
+            attribute: content_id
+
 -
     type: reference
     mode: save

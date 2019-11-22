@@ -10,6 +10,7 @@ imports:
     - { resource: services/events.yaml }
     - { resource: services/helpers.yaml }
     - { resource: services/installer.yaml }
+    - { resource: services/layout.yaml }
     - { resource: services/mailer.yaml }
     - { resource: services/migration.yaml }
     - { resource: services/pagerfanta.yaml }

@@ -8,7 +8,6 @@
 -
     type: content_type_group
     mode: create
-    content_type_group: 1
     identifier: Professionals
 
 -
