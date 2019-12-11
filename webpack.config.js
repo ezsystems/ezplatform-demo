@@ -12,10 +12,13 @@ Encore.setOutputPath('public/assets/build')
     .enableReactPreset()
     .enableSingleRuntimeChunk();
 
-Encore.addEntry('demo', [
-    path.resolve(__dirname, './assets/scss/demo.scss'),
-    path.resolve(__dirname, './assets/js/carouselMenu.js'),
-]);
+Encore.addEntry('maison', [
+        path.resolve(__dirname, './assets/scss/maison/maison.scss'),
+        path.resolve(__dirname, './assets/js/carouselMenu.js'),
+    ])
+    .addEntry('professionals', [
+        path.resolve(__dirname, './assets/scss/professionals/professionals.scss'),
+    ]);
 
 const projectConfig = Encore.getWebpackConfig();
 module.exports = [ eZConfig, ...customConfigs, projectConfig ];
