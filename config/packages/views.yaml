@@ -56,9 +56,7 @@ ezplatform:
                         template: "@ezdesign/card/store.html.twig"
                         match:
                             Identifier\ContentType: store
-
         professionals:
-            pagelayout: "@ezdesign/pagelayout.html.twig"
             content_view:
                 full:
                     home:
