@@ -41,7 +41,7 @@
         "knplabs/knp-menu-bundle": "^2.2",
         "monolog/monolog": "^1.25.2",
         "php-http/guzzle6-adapter": "^2.0",
-        "platformsh/symfonyflex-bridge": "^2.1",
+        "platformsh/symfonyflex-bridge": "^2.2",
         "sensio/framework-extra-bundle": "^5.1",
         "gregwar/captcha-bundle": "^2.0",
         "kaliop/ezmigrationbundle": "dev-ezplatform3.0-support",
