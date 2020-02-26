@@ -123,6 +123,9 @@ parameters:
     varnish_invalidate_token: '%env(HTTPCACHE_VARNISH_INVALIDATE_TOKEN)%'
     env(HTTPCACHE_VARNISH_INVALIDATE_TOKEN): ~
 
+    # LiipImagineBundle - imagine driver
+    liip_imagine_driver: 'gd'
+
     # Top menu parameters
     app.top_menu.parent_location_id: 2
     app.top_menu.includedContentTypeIdentifier: ["folder", "article", "place_list", "product_list", "blog", "about"]

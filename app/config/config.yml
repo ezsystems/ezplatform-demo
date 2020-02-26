@@ -178,3 +178,7 @@ ez_platform_automated_translation:
             configurations:
                 google:
                     apiKey: '%env(GOOGLE_TRANSLATE_API_KEY)%'
+
+liip_imagine:
+    # valid drivers options include "gd" or "gmagick" or "imagick"
+    driver: "%liip_imagine_driver%"
