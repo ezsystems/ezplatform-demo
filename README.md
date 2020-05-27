@@ -1,4 +1,4 @@
-# eZ Platform Demo
+# eZ Platform Demo (discontinued)
 
 ## Demo status
 
