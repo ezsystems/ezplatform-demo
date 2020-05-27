@@ -1,16 +1,16 @@
 # eZ Platform Demo
 
+## Demo status
+
+This repository contains the **discontinued** example website for *[eZ Platform](https://github.com/ezsystems/ezplatform)*.
+A currently-maintained demo website is available at [ezplatform-ee-demo](https://github.com/ezsystems/ezplatform-ee-demo).
+
 ![Screenshot](https://cloud.githubusercontent.com/assets/3033038/11806375/e116d414-a312-11e5-8675-02a23e2a7788.jpg "Screenshot")
 
 [![Build Status](https://img.shields.io/travis/ezsystems/ezplatform.svg?style=flat-square)](https://travis-ci.org/ezsystems/ezplatform)
 [![Downloads](https://img.shields.io/packagist/dt/ezsystems/ezplatform.svg?style=flat-square)](https://packagist.org/packages/ezsystems/ezplatform)
 [![Latest release](https://img.shields.io/github/release/ezsystems/ezplatform.svg?style=flat-square)](https://github.com/ezsystems/ezplatform/releases)
 [![License](https://img.shields.io/packagist/l/ezsystems/ezplatform.svg?style=flat-square)](LICENSE)
-
-## Demo status
-
-This repository contains the **discontinued** example website for *[eZ Platform](https://github.com/ezsystems/ezplatform)*.
-A currently-maintained demo website is available at [ezplatform-ee-demo](https://github.com/ezsystems/ezplatform-ee-demo).
 
 **Do not use the demo website as a basis for your projects.**
 Use [the clean eZ Platform](https://github.com/ezsystems/ezplatform) instead.
