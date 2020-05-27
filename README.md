@@ -7,6 +7,14 @@
 [![Latest release](https://img.shields.io/github/release/ezsystems/ezplatform.svg?style=flat-square)](https://github.com/ezsystems/ezplatform/releases)
 [![License](https://img.shields.io/packagist/l/ezsystems/ezplatform.svg?style=flat-square)](LICENSE)
 
+## Demo status
+
+This repository contains the **discontinued** example website for *[eZ Platform](https://github.com/ezsystems/ezplatform)*.
+A currently-maintained demo website is available at [ezplatform-ee-demo](https://github.com/ezsystems/ezplatform-ee-demo).
+
+**Do not use the demo website as a basis for your projects.**
+Use [the clean eZ Platform](https://github.com/ezsystems/ezplatform) instead.
+
 ## What is eZ Platform ?
 *eZ Platform* is a 100% open source professional CMS (Content Management System) developed by eZ Systems and the eZ Community.
 
